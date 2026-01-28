@@ -1,3 +1,15 @@
 [gd_scene format=3 uid="uid://bgl5ikhsftsmm"]
 
-[node name="PlayerAlex" type="CharacterBody2D" unique_id=1511516036]
+[ext_resource type="Texture2D" uid="uid://c8k3fovxw627" path="res://Assets/Test Tileset/Test_Tileset.png" id="1_p71sf"]
+[ext_resource type="Texture2D" uid="uid://dfne181c3n2f7" path="res://Assets/Player/Alex/light.png" id="2_m0ade"]
+
+[node name="PlayerAlex" type="CharacterBody2D" unique_id=18031249]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=406784952]
+position = Vector2(1, 1)
+scale = Vector2(0.3046875, 0.3046875)
+texture = ExtResource("1_p71sf")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1371751508]
+energy = 1.5
+texture = ExtResource("2_m0ade")
