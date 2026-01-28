@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://qd8ro7kjvhsk"]
+
+[ext_resource type="Script" uid="uid://bu3p3fd05f3pe" path="res://Scenes/Player/Sadie/player_sadie.gd" id="1_d5yuk"]
+[ext_resource type="Texture2D" uid="uid://b3hwvfoyttlua" path="res://Assets/Player/Sadie/Sadie_Placeholder.png" id="1_j7jhw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_she3h"]
+radius = 32.0
+height = 136.0
+
+[node name="PlayerSadie" type="CharacterBody2D" unique_id=1795143295]
+script = ExtResource("1_d5yuk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=657766910]
+shape = SubResource("CapsuleShape2D_she3h")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1989224772]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_j7jhw")
