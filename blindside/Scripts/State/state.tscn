@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d02vm63ernn0q"]
+
+[ext_resource type="Script" uid="uid://xbei0loqgdc5" path="res://Scenes/Player/Alex/state.gd" id="1_i7q18"]
+
+[node name="State" type="Node" unique_id=220387020]
+script = ExtResource("1_i7q18")

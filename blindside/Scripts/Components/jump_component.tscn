@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://btlgcc88pdfbb"]
+
+[ext_resource type="Script" uid="uid://db0bpwaslr154" path="res://Scenes/Player/Alex/jump_component.gd" id="1_mi87c"]
+
+[node name="Jump Component" type="Node" unique_id=1240464433 node_paths=PackedStringArray("velocity_comp")]
+script = ExtResource("1_mi87c")
+jump_strength = 600.0
+velocity_comp = NodePath("")

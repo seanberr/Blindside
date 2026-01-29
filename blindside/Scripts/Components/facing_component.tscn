@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dlobqil202c0r"]
+
+[ext_resource type="Script" uid="uid://irr38l8dvurs" path="res://Scenes/Player/Alex/facing_component.gd" id="1_35q14"]
+
+[node name="Facing Component" type="Node" unique_id=1869476832 node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_35q14")
+sprite = NodePath("")

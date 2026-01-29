@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://pgbmj66itpmd"]
+
+[ext_resource type="Script" uid="uid://7s05gkdq8fjn" path="res://Scenes/Player/Alex/velocity_component.gd" id="1_k1qhx"]
+
+[node name="Velocity Component" type="Node" unique_id=556735024]
+script = ExtResource("1_k1qhx")
+max_speed = 800.0
+air_acceleration_time = 0.2
+ground_friction_time = 0.25
+air_friction_time = 0.5
