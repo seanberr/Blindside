@@ -1,9 +1,24 @@
 [gd_scene format=3 uid="uid://bgl5ikhsftsmm"]
 
+[ext_resource type="Script" uid="uid://c875fqqrub2m5" path="res://Scenes/Player/Alex/player_alex.gd" id="1_m0ade"]
 [ext_resource type="Texture2D" uid="uid://c8k3fovxw627" path="res://Assets/Test Tileset/Test_Tileset.png" id="1_p71sf"]
-[ext_resource type="Texture2D" uid="uid://dfne181c3n2f7" path="res://Assets/Player/Alex/light.png" id="2_m0ade"]
+
+[sub_resource type="Gradient" id="Gradient_p71sf"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_m0ade"]
+gradient = SubResource("Gradient_p71sf")
+width = 320
+height = 320
+fill = 1
+fill_from = Vector2(0.5086705, 0.50289017)
+fill_to = Vector2(0.8179191, 0.23410405)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p71sf"]
+radius = 126.1943
 
 [node name="PlayerAlex" type="CharacterBody2D" unique_id=18031249]
+script = ExtResource("1_m0ade")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=406784952]
 position = Vector2(1, 1)
@@ -11,5 +26,31 @@ scale = Vector2(0.3046875, 0.3046875)
 texture = ExtResource("1_p71sf")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1371751508]
-energy = 1.5
-texture = ExtResource("2_m0ade")
+position = Vector2(2, 2)
+texture = SubResource("GradientTexture2D_m0ade")
+texture_scale = 1.5
+
+[node name="AlexCircle" type="Area2D" parent="." unique_id=1013455086]
+collision_layer = 2
+collision_mask = 2
+
+[node name="AlexBox" type="CollisionShape2D" parent="AlexCircle" unique_id=565562624]
+light_mask = 4
+visibility_layer = 4
+shape = SubResource("CircleShape2D_p71sf")
+debug_color = Color(0.76862746, 0.6, 0.69803923, 0.41960785)
+
+[node name="InteractingCircle" type="Area2D" parent="." unique_id=566663306]
+collision_layer = 8
+collision_mask = 8
+
+[node name="AlexBox" type="CollisionShape2D" parent="InteractingCircle" unique_id=344464374]
+light_mask = 4
+visibility_layer = 4
+shape = SubResource("CircleShape2D_p71sf")
+debug_color = Color(0.76862746, 0.6, 0.69803923, 0.41960785)
+
+[connection signal="area_entered" from="AlexCircle" to="." method="_on_alex_circle_area_entered"]
+[connection signal="area_exited" from="AlexCircle" to="." method="_on_alex_circle_area_exited"]
+[connection signal="area_entered" from="InteractingCircle" to="." method="_on_interacting_circle_area_entered"]
+[connection signal="area_exited" from="InteractingCircle" to="." method="_on_interacting_circle_area_exited"]

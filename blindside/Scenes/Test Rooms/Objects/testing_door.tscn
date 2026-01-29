@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://csib7gppo1jn8"]
+
+[ext_resource type="Script" uid="uid://b4hxngpc8amtd" path="res://Scenes/Test Rooms/Objects/testing_door.gd" id="1_im52y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdhwb"]
+size = Vector2(160, 231)
+
+[sub_resource type="Gradient" id="Gradient_2abfi"]
+colors = PackedColorArray(0.827451, 0.37254903, 1, 1, 0.3137255, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_eun55"]
+gradient = SubResource("Gradient_2abfi")
+fill_from = Vector2(0.10404624, 0.095375724)
+fill_to = Vector2(0.99421966, 1)
+
+[sub_resource type="Gradient" id="Gradient_1jm4p"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8buo2"]
+gradient = SubResource("Gradient_1jm4p")
+
+[node name="Testing Door" type="Area2D" unique_id=905818396]
+collision_layer = 24
+collision_mask = 24
+script = ExtResource("1_im52y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1652494998]
+position = Vector2(-3, -32.5)
+shape = SubResource("RectangleShape2D_bdhwb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1727838655]
+position = Vector2(-0.5, -36)
+scale = Vector2(1.015625, 2.125)
+texture = SubResource("GradientTexture2D_eun55")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=413759786]
+visible = false
+position = Vector2(-0.50004387, -35.5)
+scale = Vector2(1.0468744, 2.109375)
+energy = 0.21
+texture = SubResource("GradientTexture2D_8buo2")

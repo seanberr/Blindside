@@ -7,6 +7,16 @@
 radius = 32.0
 height = 136.0
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_d5yuk"]
+light_mode = 1
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d5yuk"]
+radius = 144.22205
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d5yuk"]
+radius = 31.0
+height = 136.0
+
 [node name="PlayerSadie" type="CharacterBody2D" unique_id=1795143295]
 script = ExtResource("1_d5yuk")
 
@@ -14,5 +24,25 @@ script = ExtResource("1_d5yuk")
 shape = SubResource("CapsuleShape2D_she3h")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1989224772]
+material = SubResource("CanvasItemMaterial_d5yuk")
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_j7jhw")
+
+[node name="AlexArea" type="Area2D" parent="." unique_id=1101346387]
+visible = false
+collision_layer = 2
+collision_mask = 2
+
+[node name="AlexCircle" type="CollisionShape2D" parent="AlexArea" unique_id=1515643159]
+shape = SubResource("CircleShape2D_d5yuk")
+debug_color = Color(0.7411765, 0.6, 0.69803923, 0.41960785)
+
+[node name="Interacting Area" type="Area2D" parent="." unique_id=653693394]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interacting Area" unique_id=1360072449]
+shape = SubResource("CapsuleShape2D_d5yuk")
+
+[connection signal="area_entered" from="Interacting Area" to="." method="_on_interacting_area_area_entered"]
+[connection signal="area_exited" from="Interacting Area" to="." method="_on_interacting_area_area_exited"]
