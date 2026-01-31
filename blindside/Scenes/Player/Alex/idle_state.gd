@@ -1,6 +1,6 @@
 extends State
 
-@onready var player : CharacterBody2D = get_node("../..")
+@export var player : CharacterBody2D
 
 func enter():
 	pass

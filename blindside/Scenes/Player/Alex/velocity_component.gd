@@ -1,6 +1,8 @@
 class_name VelocityComponent
 extends Node
 
+@export var character : CharacterBody2D
+
 @export var max_speed: float = 1000
 @export var ground_acceleration_time : float = 0.1
 @onready var ground_acceleration : float = max_speed / ground_acceleration_time
@@ -13,6 +15,12 @@ extends Node
 
 var velocity : Vector2 = Vector2.ZERO
 
+func _physics_process(delta: float) -> void:
+	if character:
+		if character.is_on_floor() or character.is_on_ceiling():
+			velocity.y = 0
+		if character.is_on_wall():
+			velocity.x = 0
 func apply_acceleration(
 	delta : float,
 	direction : float,

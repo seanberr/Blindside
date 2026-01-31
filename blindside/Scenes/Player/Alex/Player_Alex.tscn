@@ -23,6 +23,7 @@ script = ExtResource("1_p71sf")
 input_left = &"Player2_Left"
 input_right = &"Player2_Right"
 input_jump = &"Player2_Jump"
+variable_jump_window = 0.3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=554272374]
 position = Vector2(-12, 14)
@@ -37,19 +38,23 @@ texture = ExtResource("2_m0ade")
 [node name="Movement FSM" parent="." unique_id=459573243 node_paths=PackedStringArray("initial_state") instance=ExtResource("3_5w000")]
 initial_state = NodePath("Idle State")
 
-[node name="Ground Movement State" type="Node" parent="Movement FSM" unique_id=1330053322]
+[node name="Ground Movement State" type="Node" parent="Movement FSM" unique_id=1330053322 node_paths=PackedStringArray("player")]
 script = ExtResource("4_70705")
+player = NodePath("../..")
 metadata/_custom_type_script = "uid://xbei0loqgdc5"
 
-[node name="Air Movement State" type="Node" parent="Movement FSM" unique_id=1579686958]
+[node name="Air Movement State" type="Node" parent="Movement FSM" unique_id=1579686958 node_paths=PackedStringArray("player")]
 script = ExtResource("5_dlrfw")
+player = NodePath("../..")
 metadata/_custom_type_script = "uid://xbei0loqgdc5"
 
-[node name="Idle State" type="Node" parent="Movement FSM" unique_id=1322097585]
+[node name="Idle State" type="Node" parent="Movement FSM" unique_id=1322097585 node_paths=PackedStringArray("player")]
 script = ExtResource("6_car5t")
+player = NodePath("../..")
 metadata/_custom_type_script = "uid://xbei0loqgdc5"
 
-[node name="Velocity Component" parent="." unique_id=556735024 instance=ExtResource("3_w2xx2")]
+[node name="Velocity Component" parent="." unique_id=556735024 node_paths=PackedStringArray("character") instance=ExtResource("3_w2xx2")]
+character = NodePath("..")
 max_speed = 550.0
 air_acceleration_time = 0.25
 

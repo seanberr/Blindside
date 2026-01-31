@@ -11,9 +11,22 @@ extends CharacterBody2D
 
 @onready var state_machine : StateMachine = $"Movement FSM"
 
+var is_jumping : bool
+var variable_jump_timer : SceneTreeTimer
+@export var variable_jump_window : float
+
+func _ready() -> void:
+	jump_comp.jump.connect(register_jump)
+	
 func _physics_process(delta: float) -> void:
-	if is_on_floor() or is_on_ceiling():
-		velocity_comp.velocity.y = 0
-	if is_on_wall():
-		velocity_comp.velocity.x = 0
-		
+	if is_on_floor():
+		is_jumping = false
+	
+func register_jump():
+	is_jumping = true
+	variable_jump_timer = get_tree().create_timer(variable_jump_window)
+	variable_jump_timer.timeout.connect(end_jump)
+	
+func end_jump():
+	if !is_on_floor():
+		is_jumping = false

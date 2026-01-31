@@ -1,6 +1,7 @@
 extends State
 
-@onready var player : CharacterBody2D = get_node("../..")
+@export var player : CharacterBody2D
+var variable_jump_timer : Timer
 
 func enter():
 	pass
@@ -19,20 +20,23 @@ func physics_update(delta: float):
 		player.velocity_comp.apply_air_acceleration(delta, direction)
 	else:
 		player.velocity_comp.apply_air_friction(delta)
-
-	#handle jump
-	if Input.is_action_pressed(player.input_jump):
-		pass
 	
 	#apply gravity
 	if player.velocity.y <= 0:
 		player.gravity_comp.gravity_multiplier = 1
-	else: 
-		player.gravity_comp.gravity_multiplier = 2
+	else:
+		player.gravity_comp.gravity_multiplier = 3
+		
+	if player.is_jumping and !Input.is_action_pressed(player.input_jump): 
+		player.gravity_comp.gravity_multiplier = 3
+
+		
 	player.gravity_comp.apply_gravity(delta)
 	
 	player.velocity = player.velocity_comp.velocity
 	player.move_and_slide()
+	
+	#handle variable jump (if player just jumped and lets go of jump button within timer, apply higher gravity
 
 func evaluate_state():
 	if player.is_on_floor():
