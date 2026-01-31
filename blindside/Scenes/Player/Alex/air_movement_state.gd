@@ -24,19 +24,20 @@ func physics_update(delta: float):
 	#apply gravity
 	if player.velocity.y <= 0:
 		player.gravity_comp.gravity_multiplier = 1
-	else:
+	else: #fast fall gravity if velocity is downward
 		player.gravity_comp.gravity_multiplier = 3
-		
+	#fast fall gravity if jump key not pressed in window
 	if player.is_jumping and !Input.is_action_pressed(player.input_jump): 
 		player.gravity_comp.gravity_multiplier = 3
 
-		
 	player.gravity_comp.apply_gravity(delta)
+	
+	#handle jump buffering
+	if Input.is_action_just_pressed(player.input_jump):
+		player.buffer_jump()
 	
 	player.velocity = player.velocity_comp.velocity
 	player.move_and_slide()
-	
-	#handle variable jump (if player just jumped and lets go of jump button within timer, apply higher gravity
 
 func evaluate_state():
 	if player.is_on_floor():

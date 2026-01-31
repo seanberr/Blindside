@@ -3,15 +3,15 @@
 [ext_resource type="Script" uid="uid://bu3p3fd05f3pe" path="res://Scenes/Player/Sadie/player_sadie.gd" id="1_d5yuk"]
 [ext_resource type="Texture2D" uid="uid://b3hwvfoyttlua" path="res://Assets/Player/Sadie/Sadie_Placeholder.png" id="1_j7jhw"]
 [ext_resource type="PackedScene" uid="uid://bqqxoufgwdn60" path="res://Scripts/State/state_machine.tscn" id="3_rfr6o"]
-[ext_resource type="Script" uid="uid://mdwy3jc22rjs" path="res://Scenes/Player/Alex/ground_movement_state.gd" id="4_emu54"]
+[ext_resource type="Script" path="res://Scenes/Player/Alex/ground_movement_state.gd" id="4_emu54"]
 [ext_resource type="Script" uid="uid://cbalphwxfjy8p" path="res://Scenes/Player/Alex/air_movement_state.gd" id="5_tv43m"]
-[ext_resource type="Script" uid="uid://drngo457oambp" path="res://Scenes/Player/Alex/idle_state.gd" id="6_316yk"]
+[ext_resource type="Script" path="res://Scenes/Player/Alex/idle_state.gd" id="6_316yk"]
 [ext_resource type="PackedScene" uid="uid://pgbmj66itpmd" path="res://Scripts/Components/velocity_component.tscn" id="7_4u4v1"]
 [ext_resource type="PackedScene" uid="uid://btlgcc88pdfbb" path="res://Scripts/Components/jump_component.tscn" id="8_bplxg"]
 [ext_resource type="PackedScene" uid="uid://bnqloiaexy8u2" path="res://Scripts/Components/gravity_component.tscn" id="9_7v2ke"]
 [ext_resource type="PackedScene" uid="uid://dlobqil202c0r" path="res://Scripts/Components/facing_component.tscn" id="10_8t87h"]
-[ext_resource type="Script" uid="uid://dm0xv64upqwgc" path="res://Scenes/Player/Alex/velocity_debug.gd" id="11_oly0s"]
-[ext_resource type="Script" uid="uid://dboisr8xh4yab" path="res://Scenes/Player/Alex/state_debug.gd" id="12_hkjr5"]
+[ext_resource type="Script" path="res://Scenes/Player/Alex/velocity_debug.gd" id="11_oly0s"]
+[ext_resource type="Script" path="res://Scenes/Player/Alex/state_debug.gd" id="12_hkjr5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pnvk2"]
 radius = 36.5
@@ -23,7 +23,7 @@ script = ExtResource("1_d5yuk")
 input_left = &"Player1_Left"
 input_right = &"Player1_Right"
 input_jump = &"Player1_Jump"
-variable_jump_window = 0.3
+jump_buffer_window = 0.15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1965245649]
 position = Vector2(8.5, 10)
@@ -40,17 +40,14 @@ initial_state = NodePath("Idle State")
 [node name="Ground Movement State" type="Node" parent="Movement FSM" unique_id=1559964013 node_paths=PackedStringArray("player")]
 script = ExtResource("4_emu54")
 player = NodePath("../..")
-metadata/_custom_type_script = "uid://xbei0loqgdc5"
 
 [node name="Air Movement State" type="Node" parent="Movement FSM" unique_id=1589552367 node_paths=PackedStringArray("player")]
 script = ExtResource("5_tv43m")
 player = NodePath("../..")
-metadata/_custom_type_script = "uid://xbei0loqgdc5"
 
 [node name="Idle State" type="Node" parent="Movement FSM" unique_id=1057545233 node_paths=PackedStringArray("player")]
 script = ExtResource("6_316yk")
 player = NodePath("../..")
-metadata/_custom_type_script = "uid://xbei0loqgdc5"
 
 [node name="Velocity Component" parent="." unique_id=556735024 node_paths=PackedStringArray("character") instance=ExtResource("7_4u4v1")]
 character = NodePath("..")

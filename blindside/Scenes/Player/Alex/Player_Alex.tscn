@@ -4,14 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://6p88wnccpii8" path="res://Assets/Player/Alex/alex_placeholder.png" id="2_m0ade"]
 [ext_resource type="PackedScene" uid="uid://bqqxoufgwdn60" path="res://Scripts/State/state_machine.tscn" id="3_5w000"]
 [ext_resource type="PackedScene" uid="uid://pgbmj66itpmd" path="res://Scripts/Components/velocity_component.tscn" id="3_w2xx2"]
-[ext_resource type="Script" uid="uid://mdwy3jc22rjs" path="res://Scenes/Player/Alex/ground_movement_state.gd" id="4_70705"]
+[ext_resource type="Script" path="res://Scenes/Player/Alex/ground_movement_state.gd" id="4_70705"]
 [ext_resource type="PackedScene" uid="uid://btlgcc88pdfbb" path="res://Scripts/Components/jump_component.tscn" id="4_f624q"]
 [ext_resource type="PackedScene" uid="uid://bnqloiaexy8u2" path="res://Scripts/Components/gravity_component.tscn" id="5_5w000"]
 [ext_resource type="Script" uid="uid://cbalphwxfjy8p" path="res://Scenes/Player/Alex/air_movement_state.gd" id="5_dlrfw"]
-[ext_resource type="Script" uid="uid://drngo457oambp" path="res://Scenes/Player/Alex/idle_state.gd" id="6_car5t"]
+[ext_resource type="Script" path="res://Scenes/Player/Alex/idle_state.gd" id="6_car5t"]
 [ext_resource type="PackedScene" uid="uid://dlobqil202c0r" path="res://Scripts/Components/facing_component.tscn" id="6_otsd1"]
-[ext_resource type="Script" uid="uid://dm0xv64upqwgc" path="res://Scenes/Player/Alex/velocity_debug.gd" id="11_dlrfw"]
-[ext_resource type="Script" uid="uid://dboisr8xh4yab" path="res://Scenes/Player/Alex/state_debug.gd" id="12_car5t"]
+[ext_resource type="Script" path="res://Scenes/Player/Alex/velocity_debug.gd" id="11_dlrfw"]
+[ext_resource type="Script" path="res://Scenes/Player/Alex/state_debug.gd" id="12_car5t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_car5t"]
 radius = 41.0
@@ -23,7 +23,7 @@ script = ExtResource("1_p71sf")
 input_left = &"Player2_Left"
 input_right = &"Player2_Right"
 input_jump = &"Player2_Jump"
-variable_jump_window = 0.3
+jump_buffer_window = 0.15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=554272374]
 position = Vector2(-12, 14)
@@ -41,17 +41,14 @@ initial_state = NodePath("Idle State")
 [node name="Ground Movement State" type="Node" parent="Movement FSM" unique_id=1330053322 node_paths=PackedStringArray("player")]
 script = ExtResource("4_70705")
 player = NodePath("../..")
-metadata/_custom_type_script = "uid://xbei0loqgdc5"
 
 [node name="Air Movement State" type="Node" parent="Movement FSM" unique_id=1579686958 node_paths=PackedStringArray("player")]
 script = ExtResource("5_dlrfw")
 player = NodePath("../..")
-metadata/_custom_type_script = "uid://xbei0loqgdc5"
 
 [node name="Idle State" type="Node" parent="Movement FSM" unique_id=1322097585 node_paths=PackedStringArray("player")]
 script = ExtResource("6_car5t")
 player = NodePath("../..")
-metadata/_custom_type_script = "uid://xbei0loqgdc5"
 
 [node name="Velocity Component" parent="." unique_id=556735024 node_paths=PackedStringArray("character") instance=ExtResource("3_w2xx2")]
 character = NodePath("..")
