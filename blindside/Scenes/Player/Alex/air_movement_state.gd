@@ -2,6 +2,8 @@ extends State
 
 @export var player : CharacterBody2D
 var variable_jump_timer : Timer
+@export var gravity_normal : float = 1
+@export var gravity_strong : float = 2
 
 func enter():
 	pass
@@ -23,12 +25,12 @@ func physics_update(delta: float):
 	
 	#apply gravity
 	if player.velocity.y <= 0:
-		player.gravity_comp.gravity_multiplier = 1
+		player.gravity_comp.gravity_multiplier = gravity_normal
 	else: #fast fall gravity if velocity is downward
-		player.gravity_comp.gravity_multiplier = 3
+		player.gravity_comp.gravity_multiplier = gravity_strong
 	#fast fall gravity if jump key not pressed in window
 	if player.is_jumping and !Input.is_action_pressed(player.input_jump): 
-		player.gravity_comp.gravity_multiplier = 3
+		player.gravity_comp.gravity_multiplier = gravity_strong
 
 	player.gravity_comp.apply_gravity(delta)
 	

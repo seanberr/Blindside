@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 	if character:
 		if character.is_on_floor() or character.is_on_ceiling():
 			velocity.y = 0
-		if character.is_on_wall():
+		if character.is_on_wall() and !character.is_on_floor():
 			velocity.x = 0
 func apply_acceleration(
 	delta : float,
