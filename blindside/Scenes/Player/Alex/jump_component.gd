@@ -3,10 +3,10 @@ extends Node
 
 signal jump
 @export var jump_strength : float
-@export var velocity_comp : VelocityComponent
+@export var character : CharacterBody2D
 
 func apply_jump_impulse() -> Vector2:
 	jump.emit()
 	
-	velocity_comp.velocity.y = -jump_strength
-	return velocity_comp.velocity
+	character.velocity.y = -jump_strength
+	return character.velocity

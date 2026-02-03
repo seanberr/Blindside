@@ -6,21 +6,19 @@ extends Node
 @export var max_speed: float = 1000
 @export var ground_acceleration_time : float = 0.1
 @onready var ground_acceleration : float = max_speed / ground_acceleration_time
-@export var air_acceleration_time : float = 0.0
+@export var air_acceleration_time : float = 0.1
 @onready var air_acceleration : float = max_speed / air_acceleration_time
 @export var ground_friction_time : float = 0.5
 @onready var ground_friction : float = max_speed / ground_friction_time
-@export var air_friction_time : float = 0.0
+@export var air_friction_time : float = 0.1
 @onready var air_friction : float = max_speed / air_friction_time
-
-var velocity : Vector2 = Vector2.ZERO
-
-func _physics_process(delta: float) -> void:
-	if character:
-		if character.is_on_floor() or character.is_on_ceiling():
-			velocity.y = 0
-		if character.is_on_wall() and !character.is_on_floor():
-			velocity.x = 0
+			
+func recalculate_values():
+	ground_acceleration = max_speed / ground_acceleration_time
+	air_acceleration = max_speed / air_acceleration_time
+	ground_friction = max_speed / ground_friction_time
+	air_friction = max_speed / air_friction_time
+	
 func apply_acceleration(
 	delta : float,
 	direction : float,
@@ -28,14 +26,14 @@ func apply_acceleration(
 ) -> Vector2:
 	direction = clamp(direction, -1.0, 1.0)
 		
-	velocity.x += acceleration * direction * delta
+	character.velocity.x += acceleration * direction * delta
 	
-	if velocity.x > max_speed:
-		velocity.x = min(velocity.x, max_speed)
-	elif velocity.x < -max_speed:
-		velocity.x = max(velocity.x, -max_speed)
+	if character.velocity.x > max_speed:
+		character.velocity.x = min(character.velocity.x, max_speed)
+	elif character.velocity.x < -max_speed:
+		character.velocity.x = max(character.velocity.x, -max_speed)
 		
-	return velocity
+	return character.velocity
 	
 func apply_ground_acceleration(
 	delta : float,
@@ -53,18 +51,18 @@ func apply_friction(
 	delta : float,
 	friction: float,
 ) -> Vector2:
-	if velocity.x == 0:
-		return velocity
-	elif velocity.x < 0:
-		velocity.x += friction * delta
-		if velocity.x > 0: #prevent friction overshooting 0
-			velocity.x = 0
-	elif velocity.x > 0:
-		velocity.x -= friction * delta
-		if velocity.x < 0:
-			velocity.x = 0
+	if character.velocity.x == 0:
+		return character.velocity
+	elif character.velocity.x < 0:
+		character.velocity.x += friction * delta
+		if character.velocity.x > 0: #prevent friction overshooting 0
+			character.velocity.x = 0
+	elif character.velocity.x > 0:
+		character.velocity.x -= friction * delta
+		if character.velocity.x < 0:
+			character.velocity.x = 0
 	
-	return velocity
+	return character.velocity
 func apply_ground_friction(
 	delta : float,
 ) -> Vector2:

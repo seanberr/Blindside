@@ -20,7 +20,6 @@ func physics_update(delta: float):
 		player.jump_comp.apply_jump_impulse()
 		player.state_machine.change_state("Air Movement State")
 	
-	player.velocity = player.velocity_comp.velocity
 	player.move_and_slide()
 
 func evaluate_state():

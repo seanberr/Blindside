@@ -38,7 +38,6 @@ func physics_update(delta: float):
 	if Input.is_action_just_pressed(player.input_jump):
 		player.buffer_jump()
 	
-	player.velocity = player.velocity_comp.velocity
 	player.move_and_slide()
 
 func evaluate_state():

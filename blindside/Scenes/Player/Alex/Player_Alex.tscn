@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://drngo457oambp" path="res://Scenes/Player/Alex/idle_state.gd" id="6_car5t"]
 [ext_resource type="PackedScene" uid="uid://dlobqil202c0r" path="res://Scripts/Components/facing_component.tscn" id="6_otsd1"]
 [ext_resource type="Script" uid="uid://dm0xv64upqwgc" path="res://Scenes/Player/Alex/velocity_debug.gd" id="11_dlrfw"]
-[ext_resource type="Script" uid="uid://dboisr8xh4yab" path="res://Scenes/Player/Alex/state_debug.gd" id="12_car5t"]
+[ext_resource type="Script" path="res://Scenes/Player/Alex/state_debug.gd" id="12_car5t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_car5t"]
 radius = 41.0
@@ -60,12 +60,12 @@ air_acceleration_time = 0.6
 ground_friction_time = 0.4
 air_friction_time = 0.6
 
-[node name="Jump Component" parent="." unique_id=1240464433 node_paths=PackedStringArray("velocity_comp") instance=ExtResource("4_f624q")]
+[node name="Jump Component" parent="." unique_id=1240464433 node_paths=PackedStringArray("character") instance=ExtResource("4_f624q")]
 jump_strength = 650.0
-velocity_comp = NodePath("../Velocity Component")
+character = NodePath("..")
 
-[node name="Gravity Component" parent="." unique_id=711362967 node_paths=PackedStringArray("velocity_comp") instance=ExtResource("5_5w000")]
-velocity_comp = NodePath("../Velocity Component")
+[node name="Gravity Component" parent="." unique_id=711362967 node_paths=PackedStringArray("character") instance=ExtResource("5_5w000")]
+character = NodePath("..")
 
 [node name="Direction Component" parent="." unique_id=1869476832 node_paths=PackedStringArray("sprite") instance=ExtResource("6_otsd1")]
 sprite = NodePath("../Sprite2D")

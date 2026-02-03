@@ -28,6 +28,7 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		is_jumping = false
 		if is_jump_queued:
+			is_jump_queued = false
 			jump_comp.apply_jump_impulse()
 	
 func buffer_jump():
@@ -36,8 +37,7 @@ func buffer_jump():
 	jump_buffer_timer.timeout.connect(end_jump_buffer)
 	
 func end_jump_buffer():
-	if !is_on_floor():
-		is_jump_queued = false
+	is_jump_queued = false
 	
 func begin_variable_jump():
 	is_jumping = true
