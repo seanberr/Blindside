@@ -11,11 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://bnqloiaexy8u2" path="res://Scripts/Components/gravity_component.tscn" id="9_7v2ke"]
 [ext_resource type="PackedScene" uid="uid://dlobqil202c0r" path="res://Scripts/Components/facing_component.tscn" id="10_8t87h"]
 [ext_resource type="Script" uid="uid://dm0xv64upqwgc" path="res://Scenes/Player/Alex/velocity_debug.gd" id="11_oly0s"]
-[ext_resource type="Script" path="res://Scenes/Player/Alex/state_debug.gd" id="12_hkjr5"]
+[ext_resource type="Script" uid="uid://dboisr8xh4yab" path="res://Scenes/Player/Alex/state_debug.gd" id="12_hkjr5"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pnvk2"]
-radius = 36.5
-height = 136.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfr6o"]
+size = Vector2(60, 148)
 
 [node name="PlayerSadie" type="CharacterBody2D" unique_id=1795143295]
 collision_mask = 2
@@ -26,8 +25,8 @@ input_jump = &"Player1_Jump"
 jump_buffer_window = 0.15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1965245649]
-position = Vector2(8.5, 10)
-shape = SubResource("CapsuleShape2D_pnvk2")
+position = Vector2(10, 3)
+shape = SubResource("RectangleShape2D_rfr6o")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2018788768]
 texture = ExtResource("1_j7jhw")

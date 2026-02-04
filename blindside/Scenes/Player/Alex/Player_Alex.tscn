@@ -11,11 +11,10 @@
 [ext_resource type="Script" uid="uid://drngo457oambp" path="res://Scenes/Player/Alex/idle_state.gd" id="6_car5t"]
 [ext_resource type="PackedScene" uid="uid://dlobqil202c0r" path="res://Scripts/Components/facing_component.tscn" id="6_otsd1"]
 [ext_resource type="Script" uid="uid://dm0xv64upqwgc" path="res://Scenes/Player/Alex/velocity_debug.gd" id="11_dlrfw"]
-[ext_resource type="Script" path="res://Scenes/Player/Alex/state_debug.gd" id="12_car5t"]
+[ext_resource type="Script" uid="uid://dboisr8xh4yab" path="res://Scenes/Player/Alex/state_debug.gd" id="12_car5t"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_car5t"]
-radius = 41.0
-height = 88.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_car5t"]
+size = Vector2(149, 76)
 
 [node name="PlayerAlex" type="CharacterBody2D" unique_id=1511516036]
 collision_mask = 2
@@ -26,8 +25,8 @@ input_jump = &"Player2_Jump"
 jump_buffer_window = 0.15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=554272374]
-position = Vector2(-12, 14)
-shape = SubResource("CapsuleShape2D_car5t")
+position = Vector2(3.5, 17)
+shape = SubResource("RectangleShape2D_car5t")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=93531145]
 scale = Vector2(-1, 1)
