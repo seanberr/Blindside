@@ -37,24 +37,44 @@ func _physics_process(delta: float) -> void:
 	
 	# Handles interacting with objects
 	if Input.is_action_just_pressed("ui_accept"):
+						
+			## Checks if there is an object nearby
+			if NEAR_OBJECT != null:
 			
 			## Checks if the nearest object is interactable
-			if NEAR_OBJECT.interactable == true:
+				# Checks for the Interactable group
+				if NEAR_OBJECT.is_in_group("Interactable"):
+						
+					if NEAR_OBJECT.get_node("Interactable").interactable == true:
+							
+							## Debug code to check functionality
+							position = Vector2(0,0)
+				
+				## Checks for the Memory group
+				elif NEAR_OBJECT.is_in_group("Memory"):
 					
-					## Debug code to check functionality
-					position = Vector2(0,0)
+					## Checks if the object is interactable
+					if NEAR_OBJECT.get_node("Interactable").interactable == true:
+						
+						## Debug code to check functionality
+						var tempColour = $Sprite2D.get_modulate() 
+						tempColour.r = 1 - tempColour.r
+						tempColour.g = 1 - tempColour.g
+						tempColour.b = 1 - tempColour.b
+						$Sprite2D.modulate = tempColour
 
+
+				
 
 func _on_interacting_area_area_entered(area: Area2D) -> void:
 	
 	# When overlapping an area with collision layer 5
-	# Checks for the interactable group
-	if area.is_in_group("Interactable"):
-		
-		# Sets a reference for that object to the nearest object
-		NEAR_OBJECT = area
-
+	
+	# Sets a reference for that object to the nearest object
+	NEAR_OBJECT = area
+	
 
 func _on_interacting_area_area_exited(area: Area2D) -> void:
+			
 	# Removes the reference to the closest object
 	NEAR_OBJECT = null

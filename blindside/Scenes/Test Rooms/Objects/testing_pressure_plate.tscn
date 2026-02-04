@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bui05tqig5ktw"]
+
+[ext_resource type="Script" uid="uid://bv50uueu8eg40" path="res://Assets/PressurePlate.gd" id="1_d048n"]
+
+[sub_resource type="Gradient" id="Gradient_dnuin"]
+colors = PackedColorArray(1, 0, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_d048n"]
+gradient = SubResource("Gradient_dnuin")
+
+[sub_resource type="Gradient" id="Gradient_3i52u"]
+offsets = PackedFloat32Array(0, 0.462406, 0.7932331)
+colors = PackedColorArray(0, 1, 0, 1, 0.10980392, 1, 1, 1, 1, 1, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fa1uq"]
+gradient = SubResource("Gradient_3i52u")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ik8ha"]
+size = Vector2(96.000015, 69)
+
+[node name="Area2D" type="Area2D" unique_id=1510602801]
+collision_layer = 16
+collision_mask = 16
+
+[node name="Button" type="Sprite2D" parent="." unique_id=776107601]
+position = Vector2(-23.999996, -17.999996)
+scale = Vector2(1.5, 0.5624999)
+texture = SubResource("GradientTexture2D_d048n")
+
+[node name="Plate" type="Sprite2D" parent="." unique_id=543957536]
+position = Vector2(-24, 16.285713)
+scale = Vector2(1.71875, 0.49107143)
+texture = SubResource("GradientTexture2D_fa1uq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1831281619]
+position = Vector2(-24, -2.4999971)
+scale = Vector2(0.9999997, 0.9999998)
+shape = SubResource("RectangleShape2D_ik8ha")
+
+[node name="PressurePlate" type="Node" parent="." unique_id=457793226]
+script = ExtResource("1_d048n")
+metadata/_custom_type_script = "uid://bv50uueu8eg40"
+
+[connection signal="area_entered" from="." to="PressurePlate" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="." to="PressurePlate" method="_on_area_2d_area_exited"]

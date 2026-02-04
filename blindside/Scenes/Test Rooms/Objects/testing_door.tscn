@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://csib7gppo1jn8"]
 
 [ext_resource type="Script" uid="uid://b4hxngpc8amtd" path="res://Scenes/Test Rooms/Objects/testing_door.gd" id="1_im52y"]
+[ext_resource type="Script" uid="uid://c78wpky22cwp" path="res://Assets/Interactable.gd" id="2_i1hqd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdhwb"]
 size = Vector2(160, 231)
@@ -39,3 +40,7 @@ position = Vector2(-0.50004387, -35.5)
 scale = Vector2(1.0468744, 2.109375)
 energy = 0.21
 texture = SubResource("GradientTexture2D_8buo2")
+
+[node name="Interactable" type="Node" parent="." unique_id=367549320]
+script = ExtResource("2_i1hqd")
+metadata/_custom_type_script = "uid://c78wpky22cwp"

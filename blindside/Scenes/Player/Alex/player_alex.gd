@@ -45,7 +45,7 @@ func _on_interacting_circle_area_entered(area: Area2D) -> void:
 	# Uses collision layer 4
 	
 	if area.is_in_group("Interactable"):
-		area.interactable = true
+		area.get_node("Interactable").interactable  = true
 		
 	# Debug code to check functionality
 	$PointLight2D.color = Color(0.71, 0.224, 0.796, 1.0)
@@ -56,8 +56,8 @@ func _on_interacting_circle_area_exited(area: Area2D) -> void:
 	# Uses collision layer 4
 	
 	if area.is_in_group("Interactable"):
-		area.interactable = false
-	
+		area.get_node("Interactable").interactable  = false
+			
 	# Debug code to check functionality
 	$PointLight2D.color = Color(1.0, 1.0, 1.0, 1.0)
 	

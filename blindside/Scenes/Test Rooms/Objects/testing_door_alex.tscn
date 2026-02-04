@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://hml5t3u0yw3a"]
+
+[ext_resource type="Script" uid="uid://c78wpky22cwp" path="res://Assets/Interactable.gd" id="1_08q7m"]
+
+[sub_resource type="Gradient" id="Gradient_8buo2"]
+offsets = PackedFloat32Array(0, 0.53125, 1)
+colors = PackedColorArray(0, 1, 0, 1, 0, 0, 1, 1, 1, 0.07058824, 0.07058824, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wqwpf"]
+gradient = SubResource("Gradient_8buo2")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jm4p"]
+size = Vector2(133, 209)
+
+[node name="Testing Door" type="Area2D" unique_id=1624919901 groups=["Interactable"]]
+collision_layer = 16
+collision_mask = 16
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=351950978]
+position = Vector2(-4.000014, 1.9073486e-06)
+scale = Vector2(1.1249995, 2.53125)
+texture = SubResource("GradientTexture2D_wqwpf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=393259682]
+position = Vector2(-2.5, -3.5)
+shape = SubResource("RectangleShape2D_1jm4p")
+
+[node name="Interactable" type="Node" parent="." unique_id=721688586 groups=["Interactable"]]
+script = ExtResource("1_08q7m")
+interactable = true
+metadata/_custom_type_script = "uid://c78wpky22cwp"

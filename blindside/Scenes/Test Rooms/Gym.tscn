@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://bgl5ikhsftsmm" path="res://Scenes/Player/Alex/Player_Alex.tscn" id="5_g5j7i"]
 [ext_resource type="Texture2D" uid="uid://c8k3fovxw627" path="res://Assets/Test Tileset/Test_Tileset.png" id="7_2abfi"]
 [ext_resource type="PackedScene" uid="uid://csib7gppo1jn8" path="res://Scenes/Test Rooms/Objects/testing_door.tscn" id="7_eun55"]
+[ext_resource type="PackedScene" uid="uid://hml5t3u0yw3a" path="res://Scenes/Test Rooms/Objects/testing_door_alex.tscn" id="8_eun55"]
+[ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="9_1jm4p"]
+[ext_resource type="PackedScene" uid="uid://bui05tqig5ktw" path="res://Scenes/Test Rooms/Objects/testing_pressure_plate.tscn" id="10_8buo2"]
+[ext_resource type="PackedScene" uid="uid://dl6lckb1ahnpm" path="res://Scenes/Test Rooms/Objects/testing_locked_door.tscn" id="11_wqwpf"]
 
 [sub_resource type="Gradient" id="Gradient_bdhwb"]
 offsets = PackedFloat32Array(0.3, 1)
@@ -36,6 +40,11 @@ position = Vector2(1583, 174)
 scale = Vector2(0.4453125, 0.4453125)
 texture = ExtResource("7_2abfi")
 
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=2128488591]
+position = Vector2(1.5258789e-05, 0)
+scale = Vector2(0.99999994, 1)
+color = Color(0, 0, 0, 1)
+
 [node name="Background" type="Sprite2D" parent="." unique_id=1293423204]
 position = Vector2(0.0034332275, 149)
 scale = Vector2(2.2291312, 2.4592593)
@@ -50,13 +59,25 @@ position = Vector2(-27, 20)
 
 [node name="MainCamera" parent="PlayerSadie" unique_id=1417079101 instance=ExtResource("3_wbxn3")]
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=2128488591]
-position = Vector2(1.5258789e-05, 0)
-scale = Vector2(0.99999994, 1)
-color = Color(0.019607844, 0.019607844, 0.019607844, 1)
-
 [node name="PlayerAlex" parent="." unique_id=18031249 instance=ExtResource("5_g5j7i")]
 position = Vector2(61, 7)
 
-[node name="Testing Door" parent="." unique_id=905818396 groups=["Interactable"] instance=ExtResource("7_eun55")]
-position = Vector2(815, 257)
+[node name="Testing Door Alex" parent="." unique_id=905818396 groups=["Interactable"] instance=ExtResource("7_eun55")]
+position = Vector2(276, 364)
+
+[node name="Testing Door" parent="." unique_id=1624919901 instance=ExtResource("8_eun55")]
+position = Vector2(-410, 329)
+
+[node name="Testing Memory" parent="." unique_id=1901975611 groups=["Memory"] instance=ExtResource("9_1jm4p")]
+position = Vector2(-801, 123)
+
+[node name="Testing Pressure Plate" parent="." unique_id=1510602801 instance=ExtResource("10_8buo2")]
+position = Vector2(686, 250)
+
+[node name="Testing Door Locked" parent="." unique_id=2002012968 instance=ExtResource("11_wqwpf")]
+position = Vector2(851, 257)
+
+[connection signal="is_activated" from="Testing Pressure Plate/PressurePlate" to="Testing Door Locked" method="_on_pressure_plate_is_activated"]
+
+[editable path="Testing Pressure Plate"]
+[editable path="Testing Door Locked"]

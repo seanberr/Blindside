@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dk6kso1q6jnw0"]
+
+[ext_resource type="Script" uid="uid://c78wpky22cwp" path="res://Assets/Interactable.gd" id="1_07rh8"]
+[ext_resource type="Script" uid="uid://hyap1cnxm44g" path="res://Scenes/Test Rooms/Objects/testing_memory.gd" id="1_p57ou"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p57ou"]
+radius = 45.310043
+
+[sub_resource type="Gradient" id="Gradient_eciof"]
+colors = PackedColorArray(1, 0, 0, 1, 0, 0, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_54rhk"]
+gradient = SubResource("Gradient_eciof")
+fill = 1
+fill_to = Vector2(1, 1)
+
+[sub_resource type="Gradient" id="Gradient_07rh8"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_p57ou"]
+gradient = SubResource("Gradient_07rh8")
+
+[node name="Area2D" type="Area2D" unique_id=1901975611]
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("1_p57ou")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2142263405]
+shape = SubResource("CircleShape2D_p57ou")
+
+[node name="Interactable" type="Node" parent="." unique_id=759402792]
+script = ExtResource("1_07rh8")
+interactable = true
+metadata/_custom_type_script = "uid://c78wpky22cwp"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=218301399]
+modulate = Color(0.78431374, 0, 0.7372549, 1)
+texture = SubResource("GradientTexture2D_54rhk")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1184887235]
+texture = SubResource("GradientTexture2D_p57ou")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
