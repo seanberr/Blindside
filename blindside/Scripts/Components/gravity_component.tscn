@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bnqloiaexy8u2"]
+
+[ext_resource type="Script" uid="uid://cgcqpk62frbpo" path="res://Scenes/Player/Alex/gravity_component.gd" id="1_8y0hd"]
+
+[node name="Gravity Component" type="Node" unique_id=711362967 node_paths=PackedStringArray("velocity_comp")]
+script = ExtResource("1_8y0hd")
+velocity_comp = NodePath("")

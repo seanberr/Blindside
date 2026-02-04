@@ -2,31 +2,93 @@
 
 [ext_resource type="Script" uid="uid://bu3p3fd05f3pe" path="res://Scenes/Player/Sadie/player_sadie.gd" id="1_d5yuk"]
 [ext_resource type="Texture2D" uid="uid://b3hwvfoyttlua" path="res://Assets/Player/Sadie/Sadie_Placeholder.png" id="1_j7jhw"]
+[ext_resource type="PackedScene" uid="uid://bqqxoufgwdn60" path="res://Scripts/State/state_machine.tscn" id="3_rfr6o"]
+[ext_resource type="Script" uid="uid://mdwy3jc22rjs" path="res://Scenes/Player/Alex/ground_movement_state.gd" id="4_emu54"]
+[ext_resource type="Script" uid="uid://cbalphwxfjy8p" path="res://Scenes/Player/Alex/air_movement_state.gd" id="5_tv43m"]
+[ext_resource type="Script" uid="uid://drngo457oambp" path="res://Scenes/Player/Alex/idle_state.gd" id="6_316yk"]
+[ext_resource type="PackedScene" uid="uid://pgbmj66itpmd" path="res://Scripts/Components/velocity_component.tscn" id="7_4u4v1"]
+[ext_resource type="PackedScene" uid="uid://btlgcc88pdfbb" path="res://Scripts/Components/jump_component.tscn" id="8_bplxg"]
+[ext_resource type="PackedScene" uid="uid://bnqloiaexy8u2" path="res://Scripts/Components/gravity_component.tscn" id="9_7v2ke"]
+[ext_resource type="PackedScene" uid="uid://dlobqil202c0r" path="res://Scripts/Components/facing_component.tscn" id="10_8t87h"]
+[ext_resource type="Script" uid="uid://dm0xv64upqwgc" path="res://Scenes/Player/Alex/velocity_debug.gd" id="11_oly0s"]
+[ext_resource type="Script" uid="uid://dboisr8xh4yab" path="res://Scenes/Player/Alex/state_debug.gd" id="12_hkjr5"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_she3h"]
-radius = 32.0
-height = 136.0
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_d5yuk"]
-light_mode = 1
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfr6o"]
+size = Vector2(60, 148)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d5yuk"]
 radius = 144.22205
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d5yuk"]
 radius = 31.0
-height = 136.0
+height = 152.0
 
 [node name="PlayerSadie" type="CharacterBody2D" unique_id=1795143295]
+collision_mask = 3
 script = ExtResource("1_d5yuk")
+input_left = &"Player1_Left"
+input_right = &"Player1_Right"
+input_jump = &"Player1_Jump"
+jump_buffer_window = 0.15
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=657766910]
-shape = SubResource("CapsuleShape2D_she3h")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1965245649]
+position = Vector2(10, 3)
+shape = SubResource("RectangleShape2D_rfr6o")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1989224772]
-material = SubResource("CanvasItemMaterial_d5yuk")
-scale = Vector2(0.3, 0.3)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2018788768]
 texture = ExtResource("1_j7jhw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1175354036]
+
+[node name="Movement FSM" parent="." unique_id=459573243 node_paths=PackedStringArray("initial_state") instance=ExtResource("3_rfr6o")]
+initial_state = NodePath("Idle State")
+
+[node name="Ground Movement State" type="Node" parent="Movement FSM" unique_id=1559964013 node_paths=PackedStringArray("player")]
+script = ExtResource("4_emu54")
+player = NodePath("../..")
+
+[node name="Air Movement State" type="Node" parent="Movement FSM" unique_id=1589552367 node_paths=PackedStringArray("player")]
+script = ExtResource("5_tv43m")
+player = NodePath("../..")
+
+[node name="Idle State" type="Node" parent="Movement FSM" unique_id=1057545233 node_paths=PackedStringArray("player")]
+script = ExtResource("6_316yk")
+player = NodePath("../..")
+
+[node name="Velocity Component" parent="." unique_id=556735024 node_paths=PackedStringArray("character") instance=ExtResource("7_4u4v1")]
+character = NodePath("..")
+max_speed = 500.0
+ground_acceleration_time = 0.15
+air_acceleration_time = 0.3
+ground_friction_time = 0.15
+air_friction_time = 0.3
+
+[node name="Jump Component" parent="." unique_id=1240464433 node_paths=PackedStringArray("character") instance=ExtResource("8_bplxg")]
+character = NodePath("..")
+
+[node name="Gravity Component" parent="." unique_id=711362967 node_paths=PackedStringArray("character") instance=ExtResource("9_7v2ke")]
+character = NodePath("..")
+
+[node name="Direction Component" parent="." unique_id=1869476832 node_paths=PackedStringArray("sprite") instance=ExtResource("10_8t87h")]
+sprite = NodePath("../Sprite2D")
+direction_left = &"Player1_Left"
+direction_right = &"Player1_Right"
+
+[node name="Velocity Debug" type="Label" parent="." unique_id=801361241]
+visible = false
+offset_left = -67.0
+offset_top = -76.0
+offset_right = 42.0
+offset_bottom = -44.0
+script = ExtResource("11_oly0s")
+
+[node name="State Debug" type="Label" parent="." unique_id=819038227]
+visible = false
+offset_left = -80.0
+offset_top = -106.0
+offset_right = -40.0
+offset_bottom = -83.0
+script = ExtResource("12_hkjr5")
 
 [node name="AlexArea" type="Area2D" parent="." unique_id=1101346387]
 visible = false
@@ -42,6 +104,7 @@ collision_layer = 16
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interacting Area" unique_id=1360072449]
+position = Vector2(10, 3)
 shape = SubResource("CapsuleShape2D_d5yuk")
 
 [connection signal="area_entered" from="Interacting Area" to="." method="_on_interacting_area_area_entered"]

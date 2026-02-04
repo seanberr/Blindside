@@ -1,40 +1,39 @@
 extends CharacterBody2D
 
+@onready var velocity_comp : VelocityComponent = $"Velocity Component"
+@onready var jump_comp : JumpComponent = $"Jump Component"
+@onready var gravity_comp : GravityComponent = $"Gravity Component"
+@onready var direction_comp : DirectionComponent = $"Direction Component"
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -600.0
+@export var input_left : StringName
+@export var input_right : StringName
+@export var input_jump : StringName
 
-# Nearest object variable for the closest object to the player
+@onready var state_machine : StateMachine = $"Movement FSM"
+
+##
 var NEAR_OBJECT
 
+#variable jump values
+var is_jumping : bool
+var variable_jump_timer : SceneTreeTimer
+@export var variable_jump_window : float = 0.2
 
+#jump buffer values
+var is_jump_queued : bool = false
+var jump_buffer_timer : SceneTreeTimer
+@export var jump_buffer_window : float = 0.2
+
+func _ready() -> void:
+	jump_comp.jump.connect(begin_variable_jump)
+	
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+	if is_on_floor():
+		is_jumping = false
+		if is_jump_queued:
+			is_jump_queued = false
+			jump_comp.apply_jump_impulse()
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_up") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-		
-		# Based on direction the sprite will flip
-		if direction > 0:
-			$Sprite2D.flip_h = false
-			
-		elif direction < 0:
-			$Sprite2D.flip_h = true
-	
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-	move_and_slide()
-	
 	# Handles interacting with objects
 	if Input.is_action_just_pressed("ui_accept"):
 						
@@ -78,3 +77,21 @@ func _on_interacting_area_area_exited(area: Area2D) -> void:
 			
 	# Removes the reference to the closest object
 	NEAR_OBJECT = null
+
+	
+func buffer_jump():
+	is_jump_queued = true
+	jump_buffer_timer = get_tree().create_timer(jump_buffer_window)
+	jump_buffer_timer.timeout.connect(end_jump_buffer)
+	
+func end_jump_buffer():
+	is_jump_queued = false
+	
+func begin_variable_jump():
+	is_jumping = true
+	variable_jump_timer = get_tree().create_timer(variable_jump_window)
+	variable_jump_timer.timeout.connect(end_variable_jump)
+	
+func end_variable_jump():
+	if !is_on_floor():
+		is_jumping = false
