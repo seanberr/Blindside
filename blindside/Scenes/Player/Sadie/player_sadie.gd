@@ -62,9 +62,6 @@ func _physics_process(delta: float) -> void:
 						tempColour.b = 1 - tempColour.b
 						$Sprite2D.modulate = tempColour
 
-
-				
-
 func _on_interacting_area_area_entered(area: Area2D) -> void:
 	
 	# When overlapping an area with collision layer 5

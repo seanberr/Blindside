@@ -33,6 +33,7 @@ fill_from = Vector2(0.49061033, 0.52816904)
 fill_to = Vector2(1, 1)
 
 [node name="PlayerAlex" type="CharacterBody2D" unique_id=1511516036]
+z_index = 1
 collision_mask = 2
 script = ExtResource("1_p71sf")
 input_left = &"Player2_Left"

@@ -14,6 +14,10 @@ config/name="Blindside"
 run/main_scene="uid://brnhx6qq73jef"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
+[autoload]
+
+Global="*uid://b2cwe6vh5elp0"
+
 [display]
 
 window/size/viewport_width=1920

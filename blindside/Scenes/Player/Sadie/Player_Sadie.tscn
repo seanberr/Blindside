@@ -24,7 +24,8 @@ radius = 31.0
 height = 152.0
 
 [node name="PlayerSadie" type="CharacterBody2D" unique_id=1795143295]
-collision_mask = 3
+z_index = 1
+collision_mask = 2
 script = ExtResource("1_d5yuk")
 input_left = &"Player1_Left"
 input_right = &"Player1_Right"
