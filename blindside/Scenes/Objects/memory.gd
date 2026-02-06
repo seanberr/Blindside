@@ -2,7 +2,7 @@ extends Sprite2D
 @export var animation_player : AnimationPlayer
 @export var timer : Timer
 @export var memory_length : int
-var memory_textures = ["res://Assets/Memory Assets/memory_placeholder.png"]
+var memory_textures = ["res://Assets/Memory Assets/memory_placeholder.png", "res://Assets/Memory Assets/memory_hospital.png"]
 
 func start(id : int):
 	timer.timeout.connect(end_memory)
@@ -12,6 +12,7 @@ func start(id : int):
 	animation_player.play("Memory/Play Memory")
 	
 func end_memory():
+	timer.timeout.disconnect(end_memory)
 	animation_player.play("Memory/End Memory")
 	get_tree().paused = false
 	
