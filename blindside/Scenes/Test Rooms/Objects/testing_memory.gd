@@ -21,7 +21,7 @@ func _on_area_entered(area: Area2D) -> void:
 func show_memory():
 	var new_memory = memory_scene.instantiate()
 	memory_layer.add_child(new_memory)
-	new_memory.position = DisplayServer.window_get_size() / 2
+	new_memory.position = get_viewport_rect().size / 2
 	new_memory.start(image_id)
 	
 
