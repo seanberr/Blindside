@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://cdsm47gpa8oj2" path="res://Assets/Background/tree.png" id="6_bdhwb"]
 [ext_resource type="Texture2D" uid="uid://bqfpk8n3j1fpm" path="res://Assets/Background/bush.png" id="7_2abfi"]
 [ext_resource type="PackedScene" uid="uid://bgl5ikhsftsmm" path="res://Scenes/Player/Alex/Player_Alex.tscn" id="8_1jm4p"]
-[ext_resource type="Texture2D" uid="uid://cq0gp3rqgo3va" path="res://Assets/Background/Rock_1.png" id="8_dsrrh"]
 [ext_resource type="Texture2D" uid="uid://yepkdkvjhcmr" path="res://Assets/Background/vines.png" id="8_eun55"]
 [ext_resource type="PackedScene" uid="uid://csib7gppo1jn8" path="res://Scenes/Test Rooms/Objects/testing_door.tscn" id="9_1jm4p"]
 [ext_resource type="PackedScene" uid="uid://hml5t3u0yw3a" path="res://Scenes/Test Rooms/Objects/testing_door_alex.tscn" id="10_8buo2"]
@@ -92,14 +91,6 @@ position = Vector2(-671.71234, -558.3911)
 rotation = -3.159046
 scale = Vector2(0.6626183, 1.2016844)
 texture = ExtResource("8_eun55")
-
-[node name="Rock_1" type="Sprite2D" parent="." unique_id=1798555967]
-position = Vector2(279.00943, 270.54095)
-rotation = 3.1396453
-scale = Vector2(0.832922, 1.2016844)
-texture = ExtResource("8_dsrrh")
-flip_h = true
-flip_v = true
 
 [node name="Foreground_1" type="Parallax2D" parent="." unique_id=2033525275]
 z_index = 2
