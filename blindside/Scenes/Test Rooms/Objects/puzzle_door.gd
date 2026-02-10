@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends Area2D
 
 ## Counter for how many pressure plates have been activated
 var counter = 0

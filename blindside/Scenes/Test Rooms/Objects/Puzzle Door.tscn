@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ch2drbgntda0t"]
+
+[ext_resource type="Script" uid="uid://d0oad7b2qenky" path="res://Scenes/Test Rooms/Objects/puzzle_door.gd" id="1_a3y2l"]
+
+[node name="PuzzleDoor" type="Area2D" unique_id=1815678951]
+script = ExtResource("1_a3y2l")

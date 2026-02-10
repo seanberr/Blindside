@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://b2200kxj8nfrr" path="res://Scenes/Test Rooms/Objects/testing_locked_door.gd" id="1_5h48l"]
 [ext_resource type="Texture2D" uid="uid://c66p3iiu7afnt" path="res://Assets/Objects/Locked_door.png" id="1_5yprk"]
-[ext_resource type="PackedScene" uid="uid://brnhx6qq73jef" path="res://Scenes/Test Rooms/Gym.tscn" id="2_30wrn"]
 [ext_resource type="Texture2D" uid="uid://bc3e53q4f0hte" path="res://Assets/Objects/Unlocked_door.png" id="2_kg268"]
 [ext_resource type="Script" uid="uid://c78wpky22cwp" path="res://Assets/Interactable.gd" id="4_kg268"]
 
@@ -31,7 +30,6 @@ animations = [{
 [node name="Door" type="Area2D" unique_id=768586046]
 script = ExtResource("1_5h48l")
 is_locked = true
-scene_to_load = ExtResource("2_30wrn")
 
 [node name="Interactable" type="Node" parent="." unique_id=1415508334]
 script = ExtResource("4_kg268")
