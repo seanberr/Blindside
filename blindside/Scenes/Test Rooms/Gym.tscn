@@ -120,9 +120,9 @@ position = Vector2(755, 242)
 visible = false
 position = Vector2(-235, 317)
 
-[node name="Testing Memory" parent="." unique_id=1901975611 groups=["Memory"] instance=ExtResource("11_wqwpf")]
-visible = false
+[node name="Testing Memory" parent="." unique_id=1901975611 node_paths=PackedStringArray("memory_layer") groups=["Memory"] instance=ExtResource("11_wqwpf")]
 position = Vector2(-787, 106)
+memory_layer = NodePath("../Background_1")
 
 [node name="Testing Pressure Plate" parent="." unique_id=1510602801 instance=ExtResource("12_4tlik")]
 visible = false
