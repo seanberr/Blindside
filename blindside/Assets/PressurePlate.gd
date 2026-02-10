@@ -4,7 +4,7 @@ extends Node
 class_name PressurePlate
 
 ## Allows both variables to be changed from the Inspector
-@export var interactable: bool = true
+@export var interactable: bool = false
 
 ## Sets a signal to control other objects
 signal is_activated(value)

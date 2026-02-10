@@ -13,12 +13,15 @@
 [ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="11_wqwpf"]
 [ext_resource type="PackedScene" uid="uid://bui05tqig5ktw" path="res://Scenes/Test Rooms/Objects/testing_pressure_plate.tscn" id="12_4tlik"]
 [ext_resource type="PackedScene" uid="uid://dl6lckb1ahnpm" path="res://Scenes/Test Rooms/Objects/testing_locked_door.tscn" id="13_dsrrh"]
+[ext_resource type="PackedScene" uid="uid://exe8h1ooo651" path="res://Scenes/Test Rooms/puzzle_room_one.tscn" id="14_glyu1"]
+[ext_resource type="Script" uid="uid://d0oad7b2qenky" path="res://Scenes/Test Rooms/Objects/puzzle_door.gd" id="15_cbxol"]
 
 [node name="Gym" type="Node2D" unique_id=227950371]
+position = Vector2(17, -154)
 
 [node name="PlayerSadie" parent="." unique_id=1795143295 instance=ExtResource("1_tati3")]
 z_index = 1
-position = Vector2(-144, -11)
+position = Vector2(-307, 20)
 
 [node name="MainCamera" parent="PlayerSadie" unique_id=1417079101 instance=ExtResource("3_wbxn3")]
 position = Vector2(144, 11)
@@ -104,27 +107,51 @@ scale = Vector2(2.6444821, 2.5275838)
 texture = ExtResource("7_2abfi")
 
 [node name="PlayerAlex" parent="." unique_id=1511516036 instance=ExtResource("8_1jm4p")]
+position = Vector2(148, -17)
 
 [node name="Blindness" type="CanvasModulate" parent="." unique_id=600418665]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Testing Door Alex" parent="." unique_id=905818396 groups=["Interactable"] instance=ExtResource("9_1jm4p")]
+visible = false
 position = Vector2(755, 242)
 
 [node name="Testing Door" parent="." unique_id=1624919901 instance=ExtResource("10_8buo2")]
+visible = false
 position = Vector2(-235, 317)
 
 [node name="Testing Memory" parent="." unique_id=1901975611 groups=["Memory"] instance=ExtResource("11_wqwpf")]
+visible = false
 position = Vector2(-787, 106)
 
 [node name="Testing Pressure Plate" parent="." unique_id=1510602801 instance=ExtResource("12_4tlik")]
-position = Vector2(1308, 392)
+visible = false
+position = Vector2(805, 241)
 
 [node name="Testing Locked Door" parent="." unique_id=1493316841 instance=ExtResource("13_dsrrh")]
+visible = false
 position = Vector2(1771, 237)
+
+[node name="Puzzle Room One" parent="." unique_id=219259479 instance=ExtResource("14_glyu1")]
+
+[node name="Puzzle Door" parent="Puzzle Room One" unique_id=994137020 instance=ExtResource("13_dsrrh")]
+position = Vector2(1778, 245)
+script = ExtResource("15_cbxol")
+
+[node name="Pressure Plate Two" parent="Puzzle Room One" unique_id=2010032069 instance=ExtResource("12_4tlik")]
+position = Vector2(1176, 371)
+
+[node name="Pressure Plate One" parent="Puzzle Room One" unique_id=599185716 instance=ExtResource("12_4tlik")]
+position = Vector2(1435, 376)
 
 [connection signal="area_entered" from="Testing Pressure Plate" to="Testing Pressure Plate/PressurePlate" method="_on_testing_pressure_plate_area_entered"]
 [connection signal="is_activated" from="Testing Pressure Plate/PressurePlate" to="Testing Locked Door" method="_on_pressure_plate_is_activated"]
+[connection signal="is_activated" from="Puzzle Room One/Pressure Plate Two/PressurePlate" to="Puzzle Room One/Puzzle Door" method="_on_pressure_plate_is_activated"]
+[connection signal="is_activated" from="Puzzle Room One/Pressure Plate One/PressurePlate" to="Puzzle Room One/Puzzle Door" method="_on_pressure_plate_is_activated"]
 
 [editable path="Testing Pressure Plate"]
 [editable path="Testing Locked Door"]
+[editable path="Puzzle Room One/Puzzle Door"]
+[editable path="Puzzle Room One/Pressure Plate Two"]
+[editable path="Puzzle Room One/Pressure Plate One"]
