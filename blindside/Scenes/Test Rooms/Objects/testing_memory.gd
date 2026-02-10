@@ -8,7 +8,7 @@ func _on_area_entered(area: Area2D) -> void:
 	
 	## Checks if the object is interactable
 	if $Interactable.interactable == true:
-						
+		
 		## Debug code to check functionality
 		var tempColour = $Sprite2D.get_modulate() 
 		tempColour.r = 1 - tempColour.r

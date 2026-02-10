@@ -1,26 +1,46 @@
 [gd_scene format=3 uid="uid://dl6lckb1ahnpm"]
 
 [ext_resource type="Script" uid="uid://b2200kxj8nfrr" path="res://Scenes/Test Rooms/Objects/testing_locked_door.gd" id="1_5h48l"]
-
-[sub_resource type="Gradient" id="Gradient_yaym8"]
-offsets = PackedFloat32Array(0.16917293, 1)
-colors = PackedColorArray(0.47843137, 0, 1, 1, 0, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_yaym8"]
-gradient = SubResource("Gradient_yaym8")
-fill_from = Vector2(1, 1)
+[ext_resource type="Texture2D" uid="uid://c66p3iiu7afnt" path="res://Assets/Objects/Locked_door.png" id="1_5yprk"]
+[ext_resource type="PackedScene" uid="uid://brnhx6qq73jef" path="res://Scenes/Test Rooms/Gym.tscn" id="2_30wrn"]
+[ext_resource type="Texture2D" uid="uid://bc3e53q4f0hte" path="res://Assets/Objects/Unlocked_door.png" id="2_kg268"]
+[ext_resource type="Script" uid="uid://c78wpky22cwp" path="res://Assets/Interactable.gd" id="4_kg268"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5h48l"]
-size = Vector2(149, 313)
+size = Vector2(149, 332)
 
-[node name="StaticBody2D" type="StaticBody2D" unique_id=1493316841]
+[sub_resource type="SpriteFrames" id="SpriteFrames_kg268"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5yprk")
+}],
+"loop": true,
+"name": &"Locked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kg268")
+}],
+"loop": true,
+"name": &"Unlocked",
+"speed": 5.0
+}]
+
+[node name="Door" type="Area2D" unique_id=768586046]
 script = ExtResource("1_5h48l")
+is_locked = true
+scene_to_load = ExtResource("2_30wrn")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=411513040]
-position = Vector2(-42, -125.00001)
-scale = Vector2(2.3125, 4.90625)
-texture = SubResource("GradientTexture2D_yaym8")
+[node name="Interactable" type="Node" parent="." unique_id=1415508334]
+script = ExtResource("4_kg268")
+metadata/_custom_type_script = "uid://c78wpky22cwp"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1006806243]
-position = Vector2(-43.5, -124.5)
+position = Vector2(0, 37)
 shape = SubResource("RectangleShape2D_5h48l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=698706707]
+sprite_frames = SubResource("SpriteFrames_kg268")
+animation = &"Locked"

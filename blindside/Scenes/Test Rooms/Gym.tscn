@@ -29,9 +29,6 @@ rotation_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
-[node name="Background_1" type="CanvasLayer" parent="." unique_id=1101274370]
-layer = -1
-
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=447779523]
 visible = false
 color = Color(0.6192392, 0.7650376, 0.93063515, 1)
@@ -91,12 +88,6 @@ texture = ExtResource("8_dsrrh")
 flip_h = true
 flip_v = true
 
-[node name="Main BG" type="Sprite2D" parent="." unique_id=1394359206]
-self_modulate = Color(0.24313726, 0.2627451, 0.31764707, 1)
-position = Vector2(982.49994, 543.00006)
-scale = Vector2(2.0878305, 2.1789265)
-texture = ExtResource("5_2abfi")
-
 [node name="Foreground_1" type="Parallax2D" parent="." unique_id=2033525275]
 z_index = 2
 scroll_scale = Vector2(1.3, 1.3)
@@ -118,7 +109,7 @@ color = Color(0, 0, 0, 1)
 position = Vector2(755, 242)
 
 [node name="Testing Door" parent="." unique_id=1624919901 instance=ExtResource("10_8buo2")]
-position = Vector2(-235, 317)
+position = Vector2(-235, 316)
 
 [node name="Testing Memory" parent="." unique_id=1901975611 node_paths=PackedStringArray("memory_layer") groups=["Memory"] instance=ExtResource("11_wqwpf")]
 position = Vector2(-787, 106)
@@ -136,6 +127,15 @@ tile_map_data = PackedByteArray("AAD+/wcAAAABAAEAAAD//wcAAAACAAEAAAAAAAcAAAABAAE
 
 [node name="Memory" type="CanvasLayer" parent="." unique_id=1287969670]
 layer = 3
+
+[node name="Background_1" type="CanvasLayer" parent="." unique_id=1101274370]
+layer = -1
+
+[node name="Main BG" type="Sprite2D" parent="Background_1" unique_id=1394359206]
+self_modulate = Color(0.24313726, 0.2627451, 0.31764707, 1)
+position = Vector2(982.49994, 543.00006)
+scale = Vector2(2.0878305, 2.1789265)
+texture = ExtResource("5_2abfi")
 
 [connection signal="area_entered" from="Testing Pressure Plate" to="Testing Pressure Plate/PressurePlate" method="_on_testing_pressure_plate_area_entered"]
 [connection signal="is_activated" from="Testing Pressure Plate/PressurePlate" to="Testing Locked Door" method="_on_pressure_plate_is_activated"]
