@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://03id2qymji8m"
-path="res://.godot/imported/4.png-1eff07635f9b3d15e71967a16ada422f.ctex"
+uid="uid://b8s70ibo7x0wd"
+path="res://.godot/imported/Rock_1920x1080_Shape_4_1_Blockout.png-4c505c99fb6e0ca88d2d255623c49b29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/Sadie_Walk_Cycle/4.png"
-dest_files=["res://.godot/imported/4.png-1eff07635f9b3d15e71967a16ada422f.ctex"]
+source_file="res://Assets/Rocks/Foreground Rocks 1920 x 1080/Rock_1920x1080_Shape_4_1_Blockout.png"
+dest_files=["res://.godot/imported/Rock_1920x1080_Shape_4_1_Blockout.png-4c505c99fb6e0ca88d2d255623c49b29.ctex"]
 
 [params]
 

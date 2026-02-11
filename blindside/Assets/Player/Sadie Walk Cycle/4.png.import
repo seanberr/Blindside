@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dykvt3b3u8aek"
-path="res://.godot/imported/7.png-6605569fb47e9fcff0c55e53a1524dd6.ctex"
+uid="uid://03id2qymji8m"
+path="res://.godot/imported/4.png-99b2c2b624fbb48396341b9c680b29d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/Sadie_Walk_Cycle/7.png"
-dest_files=["res://.godot/imported/7.png-6605569fb47e9fcff0c55e53a1524dd6.ctex"]
+source_file="res://Assets/Player/Sadie Walk Cycle/4.png"
+dest_files=["res://.godot/imported/4.png-99b2c2b624fbb48396341b9c680b29d8.ctex"]
 
 [params]
 

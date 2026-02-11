@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8s70ibo7x0wd"
-path="res://.godot/imported/Rock_1920x1080_Shape_4_1_Blockout.png-529f6381aee36722f1dc4bad04fe53e9.ctex"
+uid="uid://cugvwp5hx75u6"
+path="res://.godot/imported/Tree_1920x1080_Shape_2_1_Blockout.png-5cc721176747e79d3fa03b294a4c85f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Rocks/Rocks 1920x1080/Rock_1920x1080_Shape_4_1_Blockout.png"
-dest_files=["res://.godot/imported/Rock_1920x1080_Shape_4_1_Blockout.png-529f6381aee36722f1dc4bad04fe53e9.ctex"]
+source_file="res://Assets/Trees/Foreground Trees 1920x1080/Tree_1920x1080_Shape_2_1_Blockout.png"
+dest_files=["res://.godot/imported/Tree_1920x1080_Shape_2_1_Blockout.png-5cc721176747e79d3fa03b294a4c85f8.ctex"]
 
 [params]
 

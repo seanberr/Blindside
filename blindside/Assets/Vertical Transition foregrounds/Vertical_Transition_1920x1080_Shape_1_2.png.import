@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://du2wv5det0jdo"
-path="res://.godot/imported/Rock_1920x1080_Shape_2_1_Blockout.png-c1510b0d56250ac8b1722ca7d2e2f8f8.ctex"
+uid="uid://b5m2nx3wemc6l"
+path="res://.godot/imported/Vertical_Transition_1920x1080_Shape_1_2.png-7c0970d54f5ad7630beae54e5e06de53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Rocks/Rocks 1920x1080/Rock_1920x1080_Shape_2_1_Blockout.png"
-dest_files=["res://.godot/imported/Rock_1920x1080_Shape_2_1_Blockout.png-c1510b0d56250ac8b1722ca7d2e2f8f8.ctex"]
+source_file="res://Assets/Vertical Transition foregrounds/Vertical_Transition_1920x1080_Shape_1_2.png"
+dest_files=["res://.godot/imported/Vertical_Transition_1920x1080_Shape_1_2.png-7c0970d54f5ad7630beae54e5e06de53.ctex"]
 
 [params]
 
