@@ -48,7 +48,7 @@ func _physics_process(delta: float) -> void:
 			interact()
 			
 func change_scene():
-	get_tree().change_scene_to_packed(scene_to_load)
+	TransitionHandler.transition_to_scene(scene_to_load)
 	
 func lock():
 	is_locked = true
