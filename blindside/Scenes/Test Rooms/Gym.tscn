@@ -4,10 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dyjicgdjdwsip" path="res://Scenes/Tileset/Test_Tileset.tscn" id="2_26523"]
 [ext_resource type="PackedScene" uid="uid://dqtxbiwsuci5u" path="res://Scenes/Camera/Main_Camera.tscn" id="3_wbxn3"]
 [ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/sketch_4.png" id="5_2abfi"]
-[ext_resource type="Texture2D" uid="uid://cdsm47gpa8oj2" path="res://Assets/Background/tree.png" id="6_bdhwb"]
-[ext_resource type="Texture2D" uid="uid://bqfpk8n3j1fpm" path="res://Assets/Background/bush.png" id="7_2abfi"]
 [ext_resource type="PackedScene" uid="uid://bgl5ikhsftsmm" path="res://Scenes/Player/Alex/Player_Alex.tscn" id="8_1jm4p"]
-[ext_resource type="Texture2D" uid="uid://yepkdkvjhcmr" path="res://Assets/Background/vines.png" id="8_eun55"]
 [ext_resource type="PackedScene" uid="uid://csib7gppo1jn8" path="res://Scenes/Test Rooms/Objects/testing_door.tscn" id="9_1jm4p"]
 [ext_resource type="PackedScene" uid="uid://hml5t3u0yw3a" path="res://Scenes/Test Rooms/Objects/testing_door_alex.tscn" id="10_8buo2"]
 [ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="11_wqwpf"]
@@ -17,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://dl6lckb1ahnpm" path="res://Scenes/Test Rooms/Objects/testing_locked_door.tscn" id="15_glyu1"]
 
 [node name="Gym" type="Node2D" unique_id=227950371]
-position = Vector2(17, -154)
 
 [node name="PlayerSadie" parent="." unique_id=1795143295 instance=ExtResource("1_tati3")]
 position = Vector2(-307, 20)
@@ -43,74 +39,11 @@ position = Vector2(982.49994, 543.00006)
 scale = Vector2(2.0878305, 2.1789265)
 texture = ExtResource("5_2abfi")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=447779523]
-visible = false
-color = Color(0.6192392, 0.7650376, 0.93063515, 1)
-
-[node name="Foreground_2" type="Parallax2D" parent="." unique_id=851971122]
-z_index = 1
-scroll_scale = Vector2(1.15, 1.15)
-
-[node name="Tree" type="Sprite2D" parent="Foreground_2" unique_id=710189332]
-z_index = 2
-position = Vector2(575.5001, -1077)
-scale = Vector2(1.2745001, 2.253913)
-texture = ExtResource("6_bdhwb")
-
-[node name="Bush" type="Sprite2D" parent="Foreground_2" unique_id=887290208]
-z_index = 2
-position = Vector2(-1489.683, 440.88345)
-rotation = 0.2321288
-scale = Vector2(2.0923312, 2.056784)
-texture = ExtResource("7_2abfi")
-
-[node name="Bush2" type="Sprite2D" parent="Foreground_2" unique_id=778843726]
-z_index = 2
-position = Vector2(-547.0358, 608.6257)
-rotation = 0.46425757
-scale = Vector2(2.7816508, 2.6353827)
-texture = ExtResource("7_2abfi")
-
-[node name="Bush3" type="Sprite2D" parent="Foreground_2" unique_id=1639033242]
-z_index = 2
-position = Vector2(646.00006, -676.00006)
-rotation = 3.837979
-scale = Vector2(3.2302115, 5.4856215)
-texture = ExtResource("7_2abfi")
-
-[node name="Vine" type="Sprite2D" parent="Foreground_2" unique_id=642721001]
-self_modulate = Color(0, 0, 0, 1)
-z_index = 2
-position = Vector2(-795.00006, -505)
-rotation = -3.159046
-scale = Vector2(1.0080259, 1.3993803)
-texture = ExtResource("8_eun55")
-
-[node name="Vine2" type="Sprite2D" parent="Foreground_2" unique_id=1031007910]
-self_modulate = Color(0, 0, 0, 1)
-z_index = 2
-position = Vector2(-671.71234, -558.3911)
-rotation = -3.159046
-scale = Vector2(0.6626183, 1.2016844)
-texture = ExtResource("8_eun55")
-
-[node name="Foreground_1" type="Parallax2D" parent="." unique_id=2033525275]
-z_index = 2
-scroll_scale = Vector2(1.3, 1.3)
-
-[node name="Bush4" type="Sprite2D" parent="Foreground_1" unique_id=1973313414]
-z_index = 2
-position = Vector2(346.50192, 668.9789)
-rotation = -0.23387413
-scale = Vector2(2.6444821, 2.5275838)
-texture = ExtResource("7_2abfi")
-
 [node name="PlayerAlex" parent="." unique_id=1511516036 instance=ExtResource("8_1jm4p")]
 position = Vector2(148, -17)
 
 [node name="Blindness" type="CanvasModulate" parent="." unique_id=600418665]
-visible = false
-color = Color(0, 0, 0, 1)
+color = Color(0.24477637, 0.2447764, 0.24477637, 1)
 
 [node name="Testing Door Alex" parent="." unique_id=905818396 groups=["Interactable"] instance=ExtResource("9_1jm4p")]
 visible = false
@@ -142,7 +75,6 @@ position = Vector2(1435, 376)
 
 [node name="Door" parent="Puzzle Room One" unique_id=768586046 node_paths=PackedStringArray("pressure_plate_one", "pressure_plate_two") instance=ExtResource("15_glyu1")]
 position = Vector2(1728, 83)
-scene_to_load = null
 pressure_plate_one = NodePath("../Pressure Plate One")
 pressure_plate_two = NodePath("../Pressure Plate Two")
 
