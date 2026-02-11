@@ -6,17 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://dyjicgdjdwsip" path="res://Scenes/Tileset/Test_Tileset.tscn" id="4_glmga"]
 [ext_resource type="PackedScene" uid="uid://bui05tqig5ktw" path="res://Scenes/Test Rooms/Objects/testing_pressure_plate.tscn" id="5_1udun"]
 [ext_resource type="PackedScene" uid="uid://dl6lckb1ahnpm" path="res://Scenes/Test Rooms/Objects/testing_locked_door.tscn" id="6_1g2nm"]
-[ext_resource type="PackedScene" uid="uid://brnhx6qq73jef" path="res://Scenes/Test Rooms/Gym.tscn" id="6_8cf2k"]
-
-[sub_resource type="Gradient" id="Gradient_rivyw"]
-offsets = PackedFloat32Array(0, 0.9736842)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_1udun"]
-gradient = SubResource("Gradient_rivyw")
-fill = 1
-fill_from = Vector2(0.49061033, 0.52816904)
-fill_to = Vector2(1, 1)
+[ext_resource type="PackedScene" uid="uid://cg0dshw0liqxe" path="res://Scenes/Levels/platforming_room_one.tscn" id="6_8cf2k"]
+[ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="8_8cf2k"]
 
 [node name="Puzzle Room One" type="Node2D" unique_id=1429758268]
 
@@ -50,11 +41,5 @@ position = Vector2(1537, 137)
 [node name="Pressure Plate2" parent="." unique_id=2067589373 instance=ExtResource("5_1udun")]
 position = Vector2(1212, 443)
 
-[node name="Blindness" type="CanvasModulate" parent="." unique_id=1751921123]
-color = Color(0.096204825, 0.09620472, 0.09620472, 1)
-
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=2052938024]
-position = Vector2(568, 68.99999)
-scale = Vector2(3.5507376, 3.4711244)
-color = Color(1, 1, 0.49411765, 1)
-texture = SubResource("GradientTexture2D_1udun")
+[node name="Blindless Modulate" parent="." unique_id=1509691114 instance=ExtResource("8_8cf2k")]
+color = Color(0.06800488, 0.07132318, 0.12444902, 1)

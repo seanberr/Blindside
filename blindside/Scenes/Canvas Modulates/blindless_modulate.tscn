@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bvojyqwoxgdac"]
+
+[node name="Blindness Modulate" type="CanvasModulate" unique_id=1509691114]
+color = Color(0.096204825, 0.09620472, 0.09620472, 1)

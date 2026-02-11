@@ -10,8 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://btlgcc88pdfbb" path="res://Scripts/Components/jump_component.tscn" id="8_bplxg"]
 [ext_resource type="PackedScene" uid="uid://bnqloiaexy8u2" path="res://Scripts/Components/gravity_component.tscn" id="9_7v2ke"]
 [ext_resource type="PackedScene" uid="uid://dlobqil202c0r" path="res://Scripts/Components/facing_component.tscn" id="10_8t87h"]
-[ext_resource type="Script" uid="uid://dm0xv64upqwgc" path="res://Scenes/Player/Alex/velocity_debug.gd" id="11_oly0s"]
-[ext_resource type="Script" uid="uid://dboisr8xh4yab" path="res://Scenes/Player/Alex/state_debug.gd" id="12_hkjr5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rfr6o"]
 size = Vector2(60, 148)
@@ -74,22 +72,6 @@ character = NodePath("..")
 sprite = NodePath("../Sprite2D")
 direction_left = &"Player1_Left"
 direction_right = &"Player1_Right"
-
-[node name="Velocity Debug" type="Label" parent="." unique_id=801361241]
-visible = false
-offset_left = -67.0
-offset_top = -76.0
-offset_right = 42.0
-offset_bottom = -44.0
-script = ExtResource("11_oly0s")
-
-[node name="State Debug" type="Label" parent="." unique_id=819038227]
-visible = false
-offset_left = -80.0
-offset_top = -106.0
-offset_right = -40.0
-offset_bottom = -83.0
-script = ExtResource("12_hkjr5")
 
 [node name="AlexArea" type="Area2D" parent="." unique_id=1101346387]
 visible = false

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c66p3iiu7afnt" path="res://Assets/Objects/Locked_door.png" id="1_5yprk"]
 [ext_resource type="Texture2D" uid="uid://bc3e53q4f0hte" path="res://Assets/Objects/Unlocked_door.png" id="2_kg268"]
 [ext_resource type="Script" uid="uid://c78wpky22cwp" path="res://Assets/Interactable.gd" id="4_kg268"]
+[ext_resource type="Gradient" uid="uid://fv23spyv3syk" path="res://Scenes/Levels/circle_gradient.tres" id="5_30wrn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5h48l"]
 size = Vector2(149, 332)
@@ -27,6 +28,12 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8np13"]
+gradient = ExtResource("5_30wrn")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.78695655, 0.21304348)
+
 [node name="Door" type="Area2D" unique_id=768586046]
 script = ExtResource("1_5h48l")
 is_locked = true
@@ -42,3 +49,8 @@ shape = SubResource("RectangleShape2D_5h48l")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=698706707]
 sprite_frames = SubResource("SpriteFrames_kg268")
 animation = &"Locked"
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=2130058943]
+color = Color(1, 1, 0.69411767, 1)
+texture = SubResource("GradientTexture2D_8np13")
+texture_scale = 8.0

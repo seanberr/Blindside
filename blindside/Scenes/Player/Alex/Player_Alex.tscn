@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dlobqil202c0r" path="res://Scripts/Components/facing_component.tscn" id="6_otsd1"]
 [ext_resource type="Script" uid="uid://dm0xv64upqwgc" path="res://Scenes/Player/Alex/velocity_debug.gd" id="11_dlrfw"]
 [ext_resource type="Script" uid="uid://dboisr8xh4yab" path="res://Scenes/Player/Alex/state_debug.gd" id="12_car5t"]
+[ext_resource type="Gradient" uid="uid://fv23spyv3syk" path="res://Scenes/Levels/circle_gradient.tres" id="13_a54k1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_car5t"]
 size = Vector2(149, 76)
@@ -22,23 +23,21 @@ radius = 116.10771
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a54k1"]
 size = Vector2(145, 73)
 
-[sub_resource type="Gradient" id="Gradient_rivyw"]
-offsets = PackedFloat32Array(0, 0.9736842)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_fx4nq"]
-gradient = SubResource("Gradient_rivyw")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_a54k1"]
+gradient = ExtResource("13_a54k1")
 fill = 1
-fill_from = Vector2(0.49061033, 0.52816904)
-fill_to = Vector2(1, 1)
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8173913, 0.20869565)
 
-[node name="PlayerAlex" type="CharacterBody2D" unique_id=1511516036]
+[node name="PlayerAlex" type="CharacterBody2D" unique_id=1511516036 node_paths=PackedStringArray("light")]
 z_index = 1
 collision_mask = 2
 script = ExtResource("1_p71sf")
+light = NodePath("PointLight2D")
 input_left = &"Player2_Left"
 input_right = &"Player2_Right"
 input_jump = &"Player2_Jump"
+max_light_scale = 6.0
 jump_buffer_window = 0.15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=554272374]
@@ -114,8 +113,6 @@ shape = SubResource("CircleShape2D_car5t")
 debug_color = Color(0.9254902, 0, 0.67058825, 0.16862746)
 
 [node name="InteractingCircle" type="Area2D" parent="." unique_id=484704781]
-collision_layer = 8
-collision_mask = 8
 collision_layer = 24
 collision_mask = 24
 
@@ -126,8 +123,8 @@ shape = SubResource("RectangleShape2D_a54k1")
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1130853262]
 position = Vector2(13, 3.9999962)
 scale = Vector2(3.5507376, 3.4711244)
-texture = SubResource("GradientTexture2D_fx4nq")
-texture_scale = 1.78
+texture = SubResource("GradientTexture2D_a54k1")
+texture_scale = 2.0
 
 [connection signal="area_entered" from="AlexCircle" to="." method="_on_alex_circle_area_entered"]
 [connection signal="area_exited" from="AlexCircle" to="." method="_on_alex_circle_area_exited"]
