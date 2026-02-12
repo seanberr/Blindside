@@ -1,6 +1,7 @@
 extends Area2D
 
 @export var is_locked : bool
+var has_entered : bool = false
 @export var scene_to_load : PackedScene
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 
@@ -59,5 +60,6 @@ func unlock():
 	sprite.play("Unlocked")
 	
 func interact():
-	if !is_locked:
+	if !is_locked and !has_entered:
+		has_entered = true
 		change_scene()

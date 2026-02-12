@@ -1,7 +1,7 @@
 class_name DirectionComponent
 extends Node
 
-@export var sprite : Sprite2D
+@export var sprite : AnimatedSprite2D
 @export var direction_left : StringName
 @export var direction_right : StringName
 var direction_facing : int = 1
