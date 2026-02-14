@@ -43,9 +43,9 @@ func _physics_process(delta: float) -> void:
 		var distance = position.distance_to(sadie.position)
 		distance = clamp(distance, 1, 1000)
 		distance /= 100
-		var scale = 8 - distance
-		scale = clamp(scale, min_light_scale, max_light_scale)
-		light.scale = Vector2(scale, scale)
+		var light_scale = 8 - distance
+		light_scale = clamp(light_scale, min_light_scale, max_light_scale)
+		light.scale = Vector2(light_scale, light_scale)
 	
 func get_sadie():
 	sadie = get_tree().get_first_node_in_group("Player")

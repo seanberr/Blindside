@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c8pmtlhrk7nrd"]
+
+[ext_resource type="Script" uid="uid://lckk5h1sgsyo" path="res://Scenes/Test Rooms/Objects/interactable_component.gd" id="1_m5r35"]
+
+[node name="Interactable Component" type="Node2D" unique_id=1580344963 node_paths=PackedStringArray("interaction_area")]
+script = ExtResource("1_m5r35")
+is_sadie_interactable = true
+is_alex_interactable = true
+interaction_area = NodePath("")

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dddc45n5ss4es"]
+
+[ext_resource type="Script" uid="uid://cd4018lgq0qom" path="res://Scenes/Objects/door.gd" id="1_gc7pt"]
+[ext_resource type="PackedScene" uid="uid://c8pmtlhrk7nrd" path="res://Scenes/Components/interactable_component.tscn" id="2_gc7pt"]
+[ext_resource type="Texture2D" uid="uid://c66p3iiu7afnt" path="res://Assets/Objects/Locked_door.png" id="3_xpycd"]
+[ext_resource type="Texture2D" uid="uid://bc3e53q4f0hte" path="res://Assets/Objects/Unlocked_door.png" id="4_1k8bm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kg268"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xpycd")
+}],
+"loop": true,
+"name": &"Locked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_1k8bm")
+}],
+"loop": true,
+"name": &"Unlocked",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ynea2"]
+size = Vector2(151, 346)
+
+[node name="Door" type="Node2D" unique_id=1600814949]
+script = ExtResource("1_gc7pt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=698706707]
+sprite_frames = SubResource("SpriteFrames_kg268")
+animation = &"Locked"
+
+[node name="Interactable Component" parent="." unique_id=1580344963 node_paths=PackedStringArray("parent", "interaction_area") instance=ExtResource("2_gc7pt")]
+parent = NodePath("..")
+interaction_area = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="Interactable Component" unique_id=1690511813]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable Component/Area2D" unique_id=1775537693]
+position = Vector2(0.5, 27)
+shape = SubResource("RectangleShape2D_ynea2")
+debug_color = Color(0.36558542, 0.6167273, 9.62615e-07, 0.41960785)

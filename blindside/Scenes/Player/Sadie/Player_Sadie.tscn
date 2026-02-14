@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dykvt3b3u8aek" path="res://Assets/Player/Sadie_Walk_Cycle/7.png" id="17_2nd5c"]
 [ext_resource type="Script" uid="uid://dlcjtkd0041oj" path="res://Scenes/Player/Sadie/animation_controller.gd" id="18_7v2ke"]
 [ext_resource type="Texture2D" uid="uid://bmukorbrv86x7" path="res://Assets/Player/Sadie_Walk_Cycle/8.png" id="18_lduab"]
+[ext_resource type="Script" uid="uid://ck2l07atitx3v" path="res://Scenes/Player/Sadie/interaction_component.gd" id="19_8t87h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rfr6o"]
 size = Vector2(60, 148)
@@ -82,6 +83,10 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oly0s"]
+radius = 74.0
+height = 186.0
+
 [node name="PlayerSadie" type="CharacterBody2D" unique_id=1795143295 groups=["Player"]]
 z_index = 2
 collision_mask = 2
@@ -141,6 +146,7 @@ shape = SubResource("CircleShape2D_d5yuk")
 debug_color = Color(0.7411765, 0.6, 0.69803923, 0.41960785)
 
 [node name="Interacting Area" type="Area2D" parent="." unique_id=653693394]
+visible = false
 collision_layer = 16
 collision_mask = 16
 
@@ -158,6 +164,18 @@ autoplay = "Idle"
 script = ExtResource("18_7v2ke")
 player = NodePath("..")
 sprite = NodePath("../AnimatedSprite2D")
+
+[node name="Interaction Component" type="Node2D" parent="." unique_id=696146550 node_paths=PackedStringArray("area_of_interaction")]
+script = ExtResource("19_8t87h")
+area_of_interaction = NodePath("Area of Interaction")
+interaction_input = "Player1_Interact"
+player_id = 1
+
+[node name="Area of Interaction" type="Area2D" parent="Interaction Component" unique_id=440354219]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Component/Area of Interaction" unique_id=540378843]
+shape = SubResource("CapsuleShape2D_oly0s")
+debug_color = Color(0.20829293, 0.4834839, 0, 0.41960785)
 
 [connection signal="area_entered" from="Interacting Area" to="." method="_on_interacting_area_area_entered"]
 [connection signal="area_exited" from="Interacting Area" to="." method="_on_interacting_area_area_exited"]

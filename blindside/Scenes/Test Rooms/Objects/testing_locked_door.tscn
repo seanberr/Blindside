@@ -3,13 +3,9 @@
 [ext_resource type="Script" uid="uid://b2200kxj8nfrr" path="res://Scenes/Test Rooms/Objects/testing_locked_door.gd" id="1_5h48l"]
 [ext_resource type="Texture2D" uid="uid://c66p3iiu7afnt" path="res://Assets/Objects/Locked_door.png" id="1_5yprk"]
 [ext_resource type="Texture2D" uid="uid://bc3e53q4f0hte" path="res://Assets/Objects/Unlocked_door.png" id="2_kg268"]
-[ext_resource type="Script" uid="uid://c78wpky22cwp" path="res://Assets/Interactable.gd" id="4_kg268"]
-[ext_resource type="Gradient" uid="uid://fv23spyv3syk" path="res://Scenes/Levels/circle_gradient.tres" id="5_30wrn"]
+[ext_resource type="PackedScene" uid="uid://c8pmtlhrk7nrd" path="res://Scenes/Components/interactable_component.tscn" id="4_kg268"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5h48l"]
-size = Vector2(149, 332)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_kg268"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_5yprk"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -28,29 +24,25 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_8np13"]
-gradient = ExtResource("5_30wrn")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.78695655, 0.21304348)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kg268"]
+size = Vector2(151, 346)
 
-[node name="Door" type="Area2D" unique_id=768586046]
+[node name="Door" type="Node2D" unique_id=407261955]
 script = ExtResource("1_5h48l")
 is_locked = true
+metadata/_custom_type_script = "uid://cd4018lgq0qom"
 
-[node name="Interactable" type="Node" parent="." unique_id=1415508334]
-script = ExtResource("4_kg268")
-metadata/_custom_type_script = "uid://c78wpky22cwp"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1006806243]
-position = Vector2(0, 37)
-shape = SubResource("RectangleShape2D_5h48l")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=698706707]
-sprite_frames = SubResource("SpriteFrames_kg268")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=61932517]
+sprite_frames = SubResource("SpriteFrames_5yprk")
 animation = &"Locked"
 
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=2130058943]
-color = Color(1, 1, 0.69411767, 1)
-texture = SubResource("GradientTexture2D_8np13")
-texture_scale = 8.0
+[node name="Interactable Component" parent="." unique_id=1580344963 node_paths=PackedStringArray("parent", "interaction_area") instance=ExtResource("4_kg268")]
+parent = NodePath("..")
+interaction_area = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="Interactable Component" unique_id=293412263]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable Component/Area2D" unique_id=1048360602]
+position = Vector2(0.5, 27)
+shape = SubResource("RectangleShape2D_kg268")
+debug_color = Color(0.36558542, 0.6167273, 9.62615e-07, 0.41960785)

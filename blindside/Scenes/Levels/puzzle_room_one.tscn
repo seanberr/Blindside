@@ -34,6 +34,7 @@ tile_map_data = PackedByteArray("AAD+/wcAAAABAAEAAAD//wcAAAACAAEAAAAAAAcAAAABAAE
 
 [node name="Door" parent="." unique_id=768586046 node_paths=PackedStringArray("pressure_plate_one", "pressure_plate_two") instance=ExtResource("6_1g2nm")]
 position = Vector2(570, 86)
+is_locked = null
 scene_to_load = ExtResource("6_8cf2k")
 pressure_plate_one = NodePath("../Pressure Plate")
 pressure_plate_two = NodePath("../Pressure Plate2")
@@ -45,6 +46,7 @@ position = Vector2(1537, 137)
 position = Vector2(1212, 443)
 
 [node name="Blindless Modulate" parent="." unique_id=1509691114 instance=ExtResource("8_8cf2k")]
+visible = false
 color = Color(0.06800488, 0.07132318, 0.12444902, 1)
 
 [node name="Background_1" type="CanvasLayer" parent="." unique_id=2001575990]
