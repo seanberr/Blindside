@@ -5,11 +5,18 @@ extends CharacterBody2D
 @onready var gravity_comp : GravityComponent = $"Gravity Component"
 @onready var direction_comp : DirectionComponent = $"Direction Component"
 
+@export var light : PointLight2D
+
 @export var input_left : StringName
 @export var input_right : StringName
 @export var input_jump : StringName
 
+@export var max_light_scale : float = 10
+@export var min_light_scale : float = 2
+
 @onready var state_machine : StateMachine = $"Movement FSM"
+
+var sadie : CharacterBody2D
 
 #variable jump values
 var is_jumping : bool
@@ -22,6 +29,7 @@ var jump_buffer_timer : SceneTreeTimer
 @export var jump_buffer_window : float = 0.2
 
 func _ready() -> void:
+	get_sadie()
 	jump_comp.jump.connect(begin_variable_jump)
 	
 func _physics_process(delta: float) -> void:
@@ -30,6 +38,17 @@ func _physics_process(delta: float) -> void:
 		if is_jump_queued:
 			is_jump_queued = false
 			jump_comp.apply_jump_impulse()
+			
+	if sadie:
+		var distance = position.distance_to(sadie.position)
+		distance = clamp(distance, 1, 1000)
+		distance /= 100
+		var scale = 8 - distance
+		scale = clamp(scale, min_light_scale, max_light_scale)
+		light.scale = Vector2(scale, scale)
+	
+func get_sadie():
+	sadie = get_tree().get_first_node_in_group("Player")
 	
 func buffer_jump():
 	is_jump_queued = true
@@ -53,14 +72,16 @@ func _on_alex_circle_area_entered(area: Area2D) -> void:
 	# When Alex and Sadie are close double the size of the light
 	# Uses collision layer 3
 	
-	$PointLight2D.scale = Vector2 ($PointLight2D.scale.x * 2, $PointLight2D.scale.y * 2)
+	pass
+	#$PointLight2D.scale = Vector2 ($PointLight2D.scale.x * 2, $PointLight2D.scale.y * 2)
 	
 
 func _on_alex_circle_area_exited(area: Area2D) -> void:
 	# When Alex and Sadie are far away half the size of the light
 	# Uses collision layer 3
 	
-	$PointLight2D.scale = Vector2 ($PointLight2D.scale.x / 2, $PointLight2D.scale.y / 2)
+	pass
+	#$PointLight2D.scale = Vector2 ($PointLight2D.scale.x / 2, $PointLight2D.scale.y / 2)
 	
 
 
@@ -72,7 +93,7 @@ func _on_interacting_circle_area_entered(area: Area2D) -> void:
 		area.get_node("Interactable").interactable  = true
 		
 	# Debug code to check functionality
-	$PointLight2D.color = Color(0.71, 0.224, 0.796, 1.0)
+	#$PointLight2D.color = Color(0.71, 0.224, 0.796, 1.0)
 	
 
 func _on_interacting_circle_area_exited(area: Area2D) -> void:
@@ -83,5 +104,5 @@ func _on_interacting_circle_area_exited(area: Area2D) -> void:
 		area.get_node("Interactable").interactable  = false
 			
 	# Debug code to check functionality
-	$PointLight2D.color = Color(1.0, 1.0, 1.0, 1.0)
+	#$PointLight2D.color = Color(1.0, 1.0, 1.0, 1.0)
 	

@@ -18,9 +18,10 @@ gradient = SubResource("Gradient_3i52u")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ik8ha"]
 size = Vector2(96.000015, 69)
 
-[node name="Area2D" type="Area2D" unique_id=1510602801]
+[node name="Pressure Plate" type="Area2D" unique_id=1510602801]
 collision_layer = 16
 collision_mask = 16
+script = ExtResource("1_d048n")
 
 [node name="Button" type="Sprite2D" parent="." unique_id=776107601]
 position = Vector2(-23.999996, -17.999996)
@@ -37,9 +38,5 @@ position = Vector2(-24, -2.4999971)
 scale = Vector2(0.9999997, 0.9999998)
 shape = SubResource("RectangleShape2D_ik8ha")
 
-[node name="PressurePlate" type="Node" parent="." unique_id=457793226]
-script = ExtResource("1_d048n")
-metadata/_custom_type_script = "uid://bv50uueu8eg40"
-
-[connection signal="area_entered" from="." to="PressurePlate" method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="." to="PressurePlate" method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

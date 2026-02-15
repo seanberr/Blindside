@@ -1,31 +1,14 @@
 extends Area2D
 
 @export var is_locked : bool
+var has_entered : bool = false
 @export var scene_to_load : PackedScene
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 
 @export var pressure_plate_one : Area2D
 @export var pressure_plate_two : Area2D
 
-
 var counter = 0
-
-
-
-func _pressure_plate_check(value: bool):
-	
-	## If the pressure plate is activated then:
-	if value == true:
-		
-		## Add one to pressure plate total
-		counter += 1
-		
-		## Check if the lock should be unlocked
-		_check_lock()
-		
-	elif value == false:
-		
-		counter -= 1	
 		
 func _open_door():
 	
@@ -35,21 +18,19 @@ func _open_door():
 	
 ## Function to check the lock condition
 func _check_lock():
-	
 	## Currently checks if two pressure plates have been activated then:
-	if counter == 2:
-		
+	if pressure_plate_one.is_activated and pressure_plate_two.is_activated:
 		## Calls the function to open the door
 		unlock()
 	
 ## Whenever a pressure plate is stepped on or off
-func _on_pressure_plate_is_activated(value: Variant) -> void:
+func _on_pressure_plate_is_pressed() -> void:
 	## Calls the function to check the behaviour of the pressure plate
-	_pressure_plate_check(value)
+	_check_lock()
 
 func _ready() -> void:
-	pressure_plate_one.get_node("PressurePlate").is_activated.connect(_on_pressure_plate_is_activated)
-	pressure_plate_two.get_node("PressurePlate").is_activated.connect(_on_pressure_plate_is_activated)
+	pressure_plate_one.is_pressed.connect(_on_pressure_plate_is_pressed)
+	pressure_plate_two.is_pressed.connect(_on_pressure_plate_is_pressed)
 	
 	if is_locked:
 		lock()
@@ -68,10 +49,7 @@ func _physics_process(delta: float) -> void:
 			interact()
 			
 func change_scene():
-	if scene_to_load == get_tree().get_current_scene():
-		get_tree().change_scene_to_packed(scene_to_load)
-	else:
-		get_tree().reload_current_scene()
+	TransitionHandler.transition_to_scene(scene_to_load)
 	
 func lock():
 	is_locked = true
@@ -82,5 +60,6 @@ func unlock():
 	sprite.play("Unlocked")
 	
 func interact():
-	if !is_locked:
+	if !is_locked and !has_entered:
+		has_entered = true
 		change_scene()

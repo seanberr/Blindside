@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://qd8ro7kjvhsk"]
 
 [ext_resource type="Script" uid="uid://bu3p3fd05f3pe" path="res://Scenes/Player/Sadie/player_sadie.gd" id="1_d5yuk"]
-[ext_resource type="Texture2D" uid="uid://b3hwvfoyttlua" path="res://Assets/Player/Sadie/Sadie_Placeholder.png" id="1_j7jhw"]
 [ext_resource type="PackedScene" uid="uid://bqqxoufgwdn60" path="res://Scripts/State/state_machine.tscn" id="3_rfr6o"]
 [ext_resource type="Script" uid="uid://mdwy3jc22rjs" path="res://Scenes/Player/Alex/ground_movement_state.gd" id="4_emu54"]
 [ext_resource type="Script" uid="uid://cbalphwxfjy8p" path="res://Scenes/Player/Alex/air_movement_state.gd" id="5_tv43m"]
@@ -10,8 +9,15 @@
 [ext_resource type="PackedScene" uid="uid://btlgcc88pdfbb" path="res://Scripts/Components/jump_component.tscn" id="8_bplxg"]
 [ext_resource type="PackedScene" uid="uid://bnqloiaexy8u2" path="res://Scripts/Components/gravity_component.tscn" id="9_7v2ke"]
 [ext_resource type="PackedScene" uid="uid://dlobqil202c0r" path="res://Scripts/Components/facing_component.tscn" id="10_8t87h"]
-[ext_resource type="Script" uid="uid://dm0xv64upqwgc" path="res://Scenes/Player/Alex/velocity_debug.gd" id="11_oly0s"]
-[ext_resource type="Script" uid="uid://dboisr8xh4yab" path="res://Scenes/Player/Alex/state_debug.gd" id="12_hkjr5"]
+[ext_resource type="Texture2D" uid="uid://mk4goumgplxf" path="res://Assets/Player/Sadie_Walk_Cycle/1.png" id="11_7v2ke"]
+[ext_resource type="Texture2D" uid="uid://v8q7vi8xu7co" path="res://Assets/Player/Sadie_Walk_Cycle/2.png" id="12_8t87h"]
+[ext_resource type="Texture2D" uid="uid://cqkaylofea6ui" path="res://Assets/Player/Sadie_Walk_Cycle/3.png" id="13_oly0s"]
+[ext_resource type="Texture2D" uid="uid://03id2qymji8m" path="res://Assets/Player/Sadie_Walk_Cycle/4.png" id="14_hkjr5"]
+[ext_resource type="Texture2D" uid="uid://fgqujt6lc5a4" path="res://Assets/Player/Sadie_Walk_Cycle/5.png" id="15_pnvk2"]
+[ext_resource type="Texture2D" uid="uid://bhsdps760ibrd" path="res://Assets/Player/Sadie_Walk_Cycle/6.png" id="16_ualsr"]
+[ext_resource type="Texture2D" uid="uid://dykvt3b3u8aek" path="res://Assets/Player/Sadie_Walk_Cycle/7.png" id="17_2nd5c"]
+[ext_resource type="Script" uid="uid://dlcjtkd0041oj" path="res://Scenes/Player/Sadie/animation_controller.gd" id="18_7v2ke"]
+[ext_resource type="Texture2D" uid="uid://bmukorbrv86x7" path="res://Assets/Player/Sadie_Walk_Cycle/8.png" id="18_lduab"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rfr6o"]
 size = Vector2(60, 148)
@@ -23,8 +29,61 @@ radius = 144.22205
 radius = 31.0
 height = 152.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_i4gtq"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"Fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_7v2ke")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_7v2ke")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_7v2ke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8t87h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_oly0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hkjr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_pnvk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ualsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_2nd5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_lduab")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 10.0
+}]
+
 [node name="PlayerSadie" type="CharacterBody2D" unique_id=1795143295 groups=["Player"]]
-z_index = 1
+z_index = 2
 collision_mask = 2
 script = ExtResource("1_d5yuk")
 input_left = &"Player1_Left"
@@ -35,9 +94,6 @@ jump_buffer_window = 0.15
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1965245649]
 position = Vector2(10, 3)
 shape = SubResource("RectangleShape2D_rfr6o")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2018788768]
-texture = ExtResource("1_j7jhw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1175354036]
 
@@ -71,25 +127,9 @@ character = NodePath("..")
 character = NodePath("..")
 
 [node name="Direction Component" parent="." unique_id=1869476832 node_paths=PackedStringArray("sprite") instance=ExtResource("10_8t87h")]
-sprite = NodePath("../Sprite2D")
+sprite = NodePath("../AnimatedSprite2D")
 direction_left = &"Player1_Left"
 direction_right = &"Player1_Right"
-
-[node name="Velocity Debug" type="Label" parent="." unique_id=801361241]
-visible = false
-offset_left = -67.0
-offset_top = -76.0
-offset_right = 42.0
-offset_bottom = -44.0
-script = ExtResource("11_oly0s")
-
-[node name="State Debug" type="Label" parent="." unique_id=819038227]
-visible = false
-offset_left = -80.0
-offset_top = -106.0
-offset_right = -40.0
-offset_bottom = -83.0
-script = ExtResource("12_hkjr5")
 
 [node name="AlexArea" type="Area2D" parent="." unique_id=1101346387]
 visible = false
@@ -107,6 +147,17 @@ collision_mask = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interacting Area" unique_id=1360072449]
 position = Vector2(10, 3)
 shape = SubResource("CapsuleShape2D_d5yuk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1975063042]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_i4gtq")
+animation = &"Walk"
+autoplay = "Idle"
+
+[node name="Animation Controller" type="Node" parent="." unique_id=805799869 node_paths=PackedStringArray("player", "sprite")]
+script = ExtResource("18_7v2ke")
+player = NodePath("..")
+sprite = NodePath("../AnimatedSprite2D")
 
 [connection signal="area_entered" from="Interacting Area" to="." method="_on_interacting_area_area_entered"]
 [connection signal="area_exited" from="Interacting Area" to="." method="_on_interacting_area_area_exited"]
