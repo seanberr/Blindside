@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="11_wqwpf"]
 [ext_resource type="PackedScene" uid="uid://bui05tqig5ktw" path="res://Scenes/Test Rooms/Objects/testing_pressure_plate.tscn" id="12_4tlik"]
 [ext_resource type="PackedScene" uid="uid://drv558ohbtajd" path="res://Scenes/Test Rooms/Objects/puzzle_pressure_plate.tscn" id="13_dsrrh"]
-[ext_resource type="PackedScene" uid="uid://exe8h1ooo651" path="res://Scenes/Test Rooms/puzzle_room_one.tscn" id="14_glyu1"]
 [ext_resource type="PackedScene" uid="uid://dl6lckb1ahnpm" path="res://Scenes/Test Rooms/Objects/testing_locked_door.tscn" id="15_glyu1"]
 
 [node name="Gym" type="Node2D" unique_id=227950371]
@@ -18,7 +17,7 @@
 [node name="PlayerSadie" parent="." unique_id=1795143295 instance=ExtResource("1_tati3")]
 position = Vector2(-307, 20)
 
-[node name="MainCamera" parent="PlayerSadie" unique_id=1417079101 instance=ExtResource("3_wbxn3")]
+[node name="MainCamera2" parent="PlayerSadie" unique_id=1417079101 instance=ExtResource("3_wbxn3")]
 position = Vector2(144, 11)
 process_callback = 0
 limit_bottom = 600
@@ -65,7 +64,7 @@ position = Vector2(805, 241)
 visible = false
 position = Vector2(1771, 237)
 
-[node name="Puzzle Room One" parent="." unique_id=219259479 instance=ExtResource("14_glyu1")]
+[node name="Puzzle Room One" parent="." unique_id=219259479]
 
 [node name="Pressure Plate Two" parent="Puzzle Room One" unique_id=2010032069 instance=ExtResource("12_4tlik")]
 position = Vector2(1176, 371)
@@ -77,9 +76,6 @@ position = Vector2(1435, 376)
 position = Vector2(1728, 83)
 pressure_plate_one = NodePath("../Pressure Plate One")
 pressure_plate_two = NodePath("../Pressure Plate Two")
-
-[connection signal="area_entered" from="Testing Pressure Plate" to="Testing Pressure Plate/PressurePlate" method="_on_testing_pressure_plate_area_entered"]
-[connection signal="is_activated" from="Testing Pressure Plate/PressurePlate" to="Testing Locked Door" method="_on_pressure_plate_is_activated"]
 
 [editable path="Testing Pressure Plate"]
 [editable path="Testing Locked Door"]

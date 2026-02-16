@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ree5a56w7ues"]
+
+[ext_resource type="Script" uid="uid://ck2l07atitx3v" path="res://Scenes/Player/Sadie/interaction_component.gd" id="1_oiojg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oly0s"]
+radius = 74.0
+height = 186.0
+
+[node name="Interaction Component" type="Node2D" unique_id=2081682071 node_paths=PackedStringArray("area_of_interaction")]
+script = ExtResource("1_oiojg")
+area_of_interaction = NodePath("Area of Interaction")
+interaction_input = "Player1_Interact"
+player_id = 1
+
+[node name="Area of Interaction" type="Area2D" parent="." unique_id=1235411602]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area of Interaction" unique_id=185656977]
+shape = SubResource("CapsuleShape2D_oly0s")
+debug_color = Color(0.20829293, 0.4834839, 0, 0.41960785)

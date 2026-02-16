@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://dm0xv64upqwgc" path="res://Scenes/Player/Alex/velocity_debug.gd" id="11_dlrfw"]
 [ext_resource type="Script" uid="uid://dboisr8xh4yab" path="res://Scenes/Player/Alex/state_debug.gd" id="12_car5t"]
 [ext_resource type="Gradient" uid="uid://fv23spyv3syk" path="res://Scenes/Levels/circle_gradient.tres" id="13_a54k1"]
+[ext_resource type="PackedScene" uid="uid://ree5a56w7ues" path="res://Scenes/Components/interaction_component.tscn" id="14_rivyw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_car5t"]
 size = Vector2(149, 76)
@@ -40,7 +41,7 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.8173913, 0.20869565)
 
-[node name="PlayerAlex" type="CharacterBody2D" unique_id=1511516036 node_paths=PackedStringArray("light")]
+[node name="PlayerAlex" type="CharacterBody2D" unique_id=1511516036 node_paths=PackedStringArray("light") groups=["Player"]]
 z_index = 1
 collision_mask = 2
 script = ExtResource("1_p71sf")
@@ -137,6 +138,10 @@ position = Vector2(13, 3.9999962)
 scale = Vector2(3.5507376, 3.4711244)
 texture = SubResource("GradientTexture2D_a54k1")
 texture_scale = 2.0
+
+[node name="Interaction Component" parent="." unique_id=2081682071 instance=ExtResource("14_rivyw")]
+interaction_input = "Player2_Interact"
+player_id = 2
 
 [connection signal="area_entered" from="AlexCircle" to="." method="_on_alex_circle_area_entered"]
 [connection signal="area_exited" from="AlexCircle" to="." method="_on_alex_circle_area_exited"]

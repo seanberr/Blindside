@@ -4,6 +4,7 @@ class_name Door
 @export var is_locked : bool
 var has_entered : bool = false
 @export var scene_to_load : PackedScene
+@export var player_coords : Array[Vector2]
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 	
 func _ready() -> void:
@@ -13,7 +14,7 @@ func _ready() -> void:
 		unlock()
 			
 func change_scene():
-	TransitionHandler.transition_to_scene(scene_to_load)
+	TransitionHandler.transition_to_scene(scene_to_load, player_coords)
 	
 func lock():
 	is_locked = true

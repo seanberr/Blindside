@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://boyl6on4w552a"]
+
+[ext_resource type="PackedScene" uid="uid://qd8ro7kjvhsk" path="res://Scenes/Player/Sadie/Player_Sadie.tscn" id="1_p7tw6"]
+[ext_resource type="PackedScene" uid="uid://bgl5ikhsftsmm" path="res://Scenes/Player/Alex/Player_Alex.tscn" id="2_6wuao"]
+
+[sub_resource type="GDScript" id="GDScript_44lhs"]
+script/source = "extends Node2D
+
+var spawn_positions : Array[Vector2]
+var parent_scene
+@export var player_scenes : Array[PackedScene]
+
+func spawn_players():
+	var sadie = player_scenes[0].instantiate()
+	parent_scene.add_child(sadie)
+	var alex = player_scenes[1].instantiate()
+	parent_scene.add_child(alex)
+	sadie.position = spawn_positions[0]
+	alex.position = spawn_positions[1]"
+
+[node name="PlayerLoader" type="Node2D" unique_id=386559410]
+script = SubResource("GDScript_44lhs")
+player_scenes = Array[PackedScene]([ExtResource("1_p7tw6"), ExtResource("2_6wuao")])
