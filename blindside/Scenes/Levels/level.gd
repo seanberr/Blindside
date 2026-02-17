@@ -1,9 +1,10 @@
 extends Node2D
 class_name Level
-
+@export var spawn_positions : Array[Vector2]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	PlayerLoader.spawn_positions = spawn_positions
 	PlayerLoader.spawn_players()
 
 
