@@ -4,7 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://dyjicgdjdwsip" path="res://Scenes/Tileset/Test_Tileset.tscn" id="4_glmga"]
 [ext_resource type="PackedScene" uid="uid://bui05tqig5ktw" path="res://Scenes/Test Rooms/Objects/testing_pressure_plate.tscn" id="5_1udun"]
 [ext_resource type="PackedScene" uid="uid://dl6lckb1ahnpm" path="res://Scenes/Test Rooms/Objects/testing_locked_door.tscn" id="6_1g2nm"]
+[ext_resource type="PackedScene" uid="uid://cg0dshw0liqxe" path="res://Scenes/Levels/platforming_room_one.tscn" id="6_8cf2k"]
 [ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="8_8cf2k"]
+[ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="9_qr0r2"]
 [ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/sketch_4.png" id="9_vb710"]
 [ext_resource type="Texture2D" uid="uid://cj8gbcthusjt8" path="res://Assets/Rocks/Rocks 1920x1080/Rock_1920x1080_Shape_4_1_BaseShadow.png" id="10_qr0r2"]
 [ext_resource type="Texture2D" uid="uid://df0he2yx35v3h" path="res://Assets/Rocks/Rocks 364x190/Rock_364x190_Shape_2_2_BaseShadow.png" id="11_b7gxw"]
@@ -20,6 +22,7 @@ tile_map_data = PackedByteArray("AAD+/wcAAAABAAEAAAD//wcAAAACAAEAAAAAAAcAAAABAAE
 position = Vector2(570, 86)
 pressure_plate_one = NodePath("../Pressure Plate")
 pressure_plate_two = NodePath("../Pressure Plate2")
+scene_to_load = ExtResource("6_8cf2k")
 player_coords = Array[Vector2]([Vector2(-500, 0), Vector2(0, 0)])
 
 [node name="Pressure Plate" parent="." unique_id=1510602801 instance=ExtResource("5_1udun")]
@@ -56,3 +59,10 @@ texture = ExtResource("11_b7gxw")
 
 [node name="small rock2" type="Sprite2D" parent="Parallax2D" unique_id=210786329]
 position = Vector2(-1224, 362)
+
+[node name="Memory Layer" type="CanvasLayer" parent="." unique_id=2097671302]
+layer = 99
+
+[node name="Memory" parent="." unique_id=1928423465 node_paths=PackedStringArray("memory_layer") instance=ExtResource("9_qr0r2")]
+position = Vector2(-155, 322)
+memory_layer = NodePath("../Memory Layer")
