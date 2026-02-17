@@ -16,9 +16,8 @@ func interact():
 		
 	if is_sadie_interactable and is_alex_interactable:
 		if interactable.last_id == 1:
-			pass
+			new_memory.start(sadie_only_id)
 		else:
-			pass
-		
+			new_memory.start(alex_only_id)
 	else:
 		new_memory.start(image_id)
