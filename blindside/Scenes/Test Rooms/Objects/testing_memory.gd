@@ -1,10 +1,24 @@
 extends Node2D
+@onready var interactable = $Interactable
 @export var image_id : int #id of image to be displayed on collection
+@export var sadie_only_id : int
+@export var alex_only_id : int
 @export var memory_layer : CanvasLayer
+@export var is_sadie_interactable : bool = false
+@export var is_alex_interactable : bool = false
 var memory_scene = preload("res://Scenes/Objects/memory.tscn")
 
 func interact():
+	
 	var new_memory = memory_scene.instantiate()
 	memory_layer.add_child(new_memory)
 	new_memory.position = get_viewport_rect().size / 2
-	new_memory.start(image_id)
+		
+	if is_sadie_interactable and is_alex_interactable:
+		if interactable.last_id == 1:
+			pass
+		else:
+			pass
+		
+	else:
+		new_memory.start(image_id)

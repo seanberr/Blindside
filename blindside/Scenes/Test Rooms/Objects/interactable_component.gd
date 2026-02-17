@@ -7,6 +7,7 @@ class_name Interactable
 @export var is_sadie_interactable : bool = false
 @export var is_alex_interactable : bool = false
 @export var interaction_area : Area2D
+var last_id : int = 0
 
 func interact(id : int):
 	if id == 1 and !is_sadie_interactable:
