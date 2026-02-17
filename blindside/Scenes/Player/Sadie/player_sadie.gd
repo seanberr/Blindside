@@ -27,12 +27,22 @@ var jump_buffer_timer : SceneTreeTimer
 func _ready() -> void:
 	jump_comp.jump.connect(begin_variable_jump)
 	
+# This represents the player's inertia.
+var push_force = 80.0
+
 func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		is_jumping = false
 		if is_jump_queued:
 			is_jump_queued = false
 			jump_comp.apply_jump_impulse()
+					
+	 # after calling move_and_slide()
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)	
+
 
 func buffer_jump():
 	is_jump_queued = true
