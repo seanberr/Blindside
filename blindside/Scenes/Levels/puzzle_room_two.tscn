@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bc3e53q4f0hte" path="res://Assets/Objects/Unlocked_door.png" id="5_2nygi"]
 [ext_resource type="PackedScene" uid="uid://dbekps3ajrvxj" path="res://Scenes/Objects/middeling_boulder.tscn" id="6_2nygi"]
 [ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="7_on4bf"]
+[ext_resource type="PackedScene" uid="uid://dgh4hibopiubx" path="res://Scenes/Objects/ample_boulder.tscn" id="7_tgk04"]
 
 [node name="Puzzle Room Two" type="Node2D" unique_id=1061331956]
 script = ExtResource("1_1epbv")
@@ -23,7 +24,10 @@ texture = ExtResource("5_2nygi")
 position = Vector2(-647, 408)
 
 [node name="Middeling" parent="." unique_id=1762666173 instance=ExtResource("6_2nygi")]
-position = Vector2(31, 423)
+position = Vector2(-580, 86)
 
 [node name="Blindness Modulate" parent="." unique_id=1509691114 instance=ExtResource("7_on4bf")]
 visible = false
+
+[node name="Ample" parent="." unique_id=794698021 instance=ExtResource("7_tgk04")]
+position = Vector2(19, -338)

@@ -4,6 +4,8 @@ extends CharacterBody2D
 @onready var jump_comp : JumpComponent = $"Jump Component"
 @onready var gravity_comp : GravityComponent = $"Gravity Component"
 @onready var direction_comp : DirectionComponent = $"Direction Component"
+@onready var interaction_comp : InteractionComponent = $"Interation Component"
+
 
 @export var input_left : StringName
 @export var input_right : StringName

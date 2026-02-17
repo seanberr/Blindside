@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b1nvra4uqgge6" path="res://Assets/Rocks/Rocks 364x190/Rock_364x190_Shape_1_3_BaseShadow.png" id="1_06g4f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a7ph3"]
-radius = 154.01299
+radius = 154.02922
 
 [node name="Middeling" type="RigidBody2D" unique_id=372066649]
 collision_layer = 7

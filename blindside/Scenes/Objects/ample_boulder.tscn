@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dgh4hibopiubx"]
+
+[ext_resource type="Texture2D" uid="uid://b1nvra4uqgge6" path="res://Assets/Rocks/Rocks 364x190/Rock_364x190_Shape_1_3_BaseShadow.png" id="1_u3dxs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a7ph3"]
+radius = 199.16074
+
+[node name="Middeling" type="RigidBody2D" unique_id=372066649]
+collision_layer = 7
+collision_mask = 6
+freeze_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1037806848]
+position = Vector2(-114, 6)
+shape = SubResource("CircleShape2D_a7ph3")
+debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="Rock 1" type="Sprite2D" parent="." unique_id=1222469127]
+position = Vector2(-110.51006, -10.250011)
+scale = Vector2(1.227817, 2.1131577)
+texture = ExtResource("1_u3dxs")
