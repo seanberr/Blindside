@@ -39,6 +39,7 @@ animation = &"Locked"
 [node name="Interactable Component" parent="." unique_id=1580344963 node_paths=PackedStringArray("parent", "interaction_area") instance=ExtResource("4_kg268")]
 parent = NodePath("..")
 interaction_area = NodePath("Area2D")
+icon_position = Vector2(0, -250)
 
 [node name="Area2D" type="Area2D" parent="Interactable Component" unique_id=293412263]
 

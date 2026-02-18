@@ -1,5 +1,5 @@
 extends Node2D
-@onready var interactable = $Interactable
+@onready var interactable = $"Interactable Component"
 @export var image_id : int #id of image to be displayed on collection
 @export var sadie_only_id : int
 @export var alex_only_id : int

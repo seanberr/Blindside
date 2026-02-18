@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dk6kso1q6jnw0"]
 
 [ext_resource type="Script" uid="uid://hyap1cnxm44g" path="res://Scenes/Test Rooms/Objects/testing_memory.gd" id="1_p57ou"]
-[ext_resource type="Script" uid="uid://lckk5h1sgsyo" path="res://Scenes/Test Rooms/Objects/interactable_component.gd" id="2_p57ou"]
+[ext_resource type="PackedScene" uid="uid://c8pmtlhrk7nrd" path="res://Scenes/Components/interactable_component.tscn" id="2_p57ou"]
 
 [sub_resource type="Gradient" id="Gradient_eciof"]
 colors = PackedColorArray(1, 0, 0, 1, 0, 0, 1, 1)
@@ -29,16 +29,13 @@ texture = SubResource("GradientTexture2D_54rhk")
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1184887235]
 texture = SubResource("GradientTexture2D_p57ou")
 
-[node name="Interactable" type="Node2D" parent="." unique_id=609388094 node_paths=PackedStringArray("parent", "interaction_area")]
-script = ExtResource("2_p57ou")
+[node name="Interactable Component" parent="." unique_id=1580344963 node_paths=PackedStringArray("parent", "interaction_area") instance=ExtResource("2_p57ou")]
 parent = NodePath("..")
-is_sadie_interactable = true
-is_alex_interactable = true
 interaction_area = NodePath("Area2D")
-metadata/_custom_type_script = "uid://lckk5h1sgsyo"
+icon_position = Vector2(0, -100)
 
-[node name="Area2D" type="Area2D" parent="Interactable" unique_id=101686599]
+[node name="Area2D" type="Area2D" parent="Interactable Component" unique_id=101686599]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable/Area2D" unique_id=662414086]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable Component/Area2D" unique_id=662414086]
 shape = SubResource("CircleShape2D_eciof")
 debug_color = Color(0, 0.65166306, 0.0045816624, 0.41960785)
