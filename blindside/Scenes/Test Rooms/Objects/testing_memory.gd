@@ -6,10 +6,14 @@ extends Node2D
 @export var memory_layer : CanvasLayer
 @export var is_sadie_interactable : bool = false
 @export var is_alex_interactable : bool = false
+
 var memory_scene = preload("res://Scenes/Objects/memory.tscn")
 
+func _ready() -> void:
+	interactable.is_alex_interactable = is_alex_interactable
+	interactable.is_sadie_interactable = is_sadie_interactable
+
 func interact():
-	
 	var new_memory = memory_scene.instantiate()
 	memory_layer.add_child(new_memory)
 	new_memory.position = get_viewport_rect().size / 2

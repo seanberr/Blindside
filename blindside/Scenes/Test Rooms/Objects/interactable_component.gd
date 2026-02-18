@@ -10,6 +10,7 @@ class_name Interactable
 var last_id : int = 0
 
 func interact(id : int):
+	last_id = id
 	if id == 1 and !is_sadie_interactable:
 		return
 	if id == 2 and !is_alex_interactable:

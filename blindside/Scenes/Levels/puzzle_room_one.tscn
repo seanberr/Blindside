@@ -32,7 +32,6 @@ position = Vector2(1537, 137)
 position = Vector2(1212, 443)
 
 [node name="Blindless Modulate" parent="." unique_id=1509691114 instance=ExtResource("8_8cf2k")]
-visible = false
 color = Color(0.06800488, 0.07132318, 0.12444902, 1)
 
 [node name="Background_1" type="CanvasLayer" parent="." unique_id=2001575990]
@@ -65,4 +64,7 @@ layer = 99
 
 [node name="Memory" parent="." unique_id=1928423465 node_paths=PackedStringArray("memory_layer") instance=ExtResource("9_qr0r2")]
 position = Vector2(-155, 322)
+alex_only_id = 1
 memory_layer = NodePath("../Memory Layer")
+is_sadie_interactable = true
+is_alex_interactable = true
