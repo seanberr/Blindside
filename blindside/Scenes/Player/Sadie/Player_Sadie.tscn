@@ -9,15 +9,15 @@
 [ext_resource type="PackedScene" uid="uid://btlgcc88pdfbb" path="res://Scripts/Components/jump_component.tscn" id="8_bplxg"]
 [ext_resource type="PackedScene" uid="uid://bnqloiaexy8u2" path="res://Scripts/Components/gravity_component.tscn" id="9_7v2ke"]
 [ext_resource type="PackedScene" uid="uid://dlobqil202c0r" path="res://Scripts/Components/facing_component.tscn" id="10_8t87h"]
-[ext_resource type="Texture2D" uid="uid://mk4goumgplxf" path="res://Assets/Player/Sadie Walk Cycle/1.png" id="11_7v2ke"]
-[ext_resource type="Texture2D" uid="uid://v8q7vi8xu7co" path="res://Assets/Player/Sadie Walk Cycle/2.png" id="12_8t87h"]
-[ext_resource type="Texture2D" uid="uid://cqkaylofea6ui" path="res://Assets/Player/Sadie Walk Cycle/3.png" id="13_oly0s"]
-[ext_resource type="Texture2D" uid="uid://03id2qymji8m" path="res://Assets/Player/Sadie Walk Cycle/4.png" id="14_hkjr5"]
-[ext_resource type="Texture2D" uid="uid://fgqujt6lc5a4" path="res://Assets/Player/Sadie Walk Cycle/5.png" id="15_pnvk2"]
-[ext_resource type="Texture2D" uid="uid://bhsdps760ibrd" path="res://Assets/Player/Sadie Walk Cycle/6.png" id="16_ualsr"]
-[ext_resource type="Texture2D" uid="uid://dykvt3b3u8aek" path="res://Assets/Player/Sadie Walk Cycle/7.png" id="17_2nd5c"]
+[ext_resource type="Texture2D" uid="uid://mk4goumgplxf" path="res://Assets/Player/Sadie_Walk_Cycle/1.png" id="11_7v2ke"]
+[ext_resource type="Texture2D" uid="uid://v8q7vi8xu7co" path="res://Assets/Player/Sadie_Walk_Cycle/2.png" id="12_8t87h"]
+[ext_resource type="Texture2D" uid="uid://cqkaylofea6ui" path="res://Assets/Player/Sadie_Walk_Cycle/3.png" id="13_oly0s"]
+[ext_resource type="Texture2D" uid="uid://03id2qymji8m" path="res://Assets/Player/Sadie_Walk_Cycle/4.png" id="14_hkjr5"]
+[ext_resource type="Texture2D" uid="uid://fgqujt6lc5a4" path="res://Assets/Player/Sadie_Walk_Cycle/5.png" id="15_pnvk2"]
+[ext_resource type="Texture2D" uid="uid://bhsdps760ibrd" path="res://Assets/Player/Sadie_Walk_Cycle/6.png" id="16_ualsr"]
+[ext_resource type="Texture2D" uid="uid://dykvt3b3u8aek" path="res://Assets/Player/Sadie_Walk_Cycle/7.png" id="17_2nd5c"]
 [ext_resource type="Script" uid="uid://dlcjtkd0041oj" path="res://Scenes/Player/Sadie/animation_controller.gd" id="18_7v2ke"]
-[ext_resource type="Texture2D" uid="uid://bmukorbrv86x7" path="res://Assets/Player/Sadie Walk Cycle/8.png" id="18_lduab"]
+[ext_resource type="Texture2D" uid="uid://bmukorbrv86x7" path="res://Assets/Player/Sadie_Walk_Cycle/8.png" id="18_lduab"]
 [ext_resource type="PackedScene" uid="uid://ree5a56w7ues" path="res://Scenes/Components/interaction_component.tscn" id="19_8t87h"]
 [ext_resource type="PackedScene" uid="uid://dqtxbiwsuci5u" path="res://Scenes/Camera/Main_Camera.tscn" id="20_oly0s"]
 
@@ -123,7 +123,6 @@ ground_friction_time = 0.15
 air_friction_time = 0.3
 
 [node name="Jump Component" parent="." unique_id=1240464433 node_paths=PackedStringArray("character") instance=ExtResource("8_bplxg")]
-jump_strength = 700.0
 character = NodePath("..")
 
 [node name="Gravity Component" parent="." unique_id=711362967 node_paths=PackedStringArray("character") instance=ExtResource("9_7v2ke")]
@@ -166,10 +165,6 @@ sprite = NodePath("../AnimatedSprite2D")
 [node name="Interaction Component" parent="." unique_id=2081682071 instance=ExtResource("19_8t87h")]
 
 [node name="MainCamera" parent="." unique_id=1417079101 instance=ExtResource("20_oly0s")]
-process_callback = 0
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
 
 [connection signal="area_entered" from="Interacting Area" to="." method="_on_interacting_area_area_entered"]
 [connection signal="area_exited" from="Interacting Area" to="." method="_on_interacting_area_area_exited"]
