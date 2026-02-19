@@ -6,7 +6,7 @@ var has_entered : bool = false
 @export var scene_to_load : PackedScene
 @export var player_coords : Array[Vector2]
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
-	
+
 func _ready() -> void:
 	if is_locked:
 		lock()
