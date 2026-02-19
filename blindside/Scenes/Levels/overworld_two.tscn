@@ -1,10 +1,18 @@
 [gd_scene format=4 uid="uid://chfo7m0gwps5d"]
 
 [ext_resource type="PackedScene" uid="uid://dyjicgdjdwsip" path="res://Scenes/Tileset/Test_Tileset.tscn" id="1_k6fo2"]
+[ext_resource type="Script" uid="uid://cjhmncsqmv8m6" path="res://player_loader.gd" id="1_oecpd"]
+[ext_resource type="Texture2D" uid="uid://bqfpk8n3j1fpm" path="res://Assets/Background/bush.png" id="2_djpvy"]
 [ext_resource type="PackedScene" uid="uid://qd8ro7kjvhsk" path="res://Scenes/Player/Sadie/Player_Sadie.tscn" id="2_fkn2j"]
 [ext_resource type="PackedScene" uid="uid://bgl5ikhsftsmm" path="res://Scenes/Player/Alex/Player_Alex.tscn" id="3_oecpd"]
 [ext_resource type="PackedScene" uid="uid://dddc45n5ss4es" path="res://Scenes/Objects/door.tscn" id="4_oecpd"]
 [ext_resource type="PackedScene" uid="uid://rytqp8xg8cab" path="res://Scenes/Levels/puzzle_room_two.tscn" id="5_xh675"]
+[ext_resource type="Texture2D" uid="uid://csk57yy8l126y" path="res://Assets/Rocks/Rocks 364x190/Rock_364x190_Shape_4_1_BaseShadow.png" id="6_phykn"]
+[ext_resource type="PackedScene" uid="uid://dvfktk3cubbiv" path="res://Scenes/Levels/puzzle_room_three.tscn" id="8_68oyy"]
+[ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="8_alkur"]
+[ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/sketch_4.png" id="9_alkur"]
+[ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player Icon/Sadie_Player_Icon.png" id="11_y75yi"]
+[ext_resource type="Texture2D" uid="uid://bmpg5yy6k7c6o" path="res://Assets/Player Icon/Alex_Player_Icon.png" id="12_h8u0f"]
 
 [node name="Overworld Two" type="Node2D" unique_id=1472133511]
 
@@ -20,3 +28,33 @@ position = Vector2(166, 480)
 [node name="Door" parent="." unique_id=1600814949 instance=ExtResource("4_oecpd")]
 position = Vector2(29, 1211)
 scene_to_load = ExtResource("5_xh675")
+
+[node name="Door" parent="." unique_id=1488523286 instance=ExtResource("4_oecpd")]
+position = Vector2(-1960, 1226)
+scene_to_load = ExtResource("8_68oyy")
+
+[node name="Blindless Modulate" parent="." unique_id=1509691114 instance=ExtResource("8_alkur")]
+visible = false
+color = Color(0.06800488, 0.07132318, 0.12444902, 1)
+
+[node name="Background_1" type="CanvasLayer" parent="." unique_id=1368519360]
+layer = -1
+
+[node name="Main BG" type="Sprite2D" parent="Background_1" unique_id=193508551]
+self_modulate = Color(0.24313726, 0.2627451, 0.31764707, 1)
+position = Vector2(1001.00006, 575)
+scale = Vector2(2.0878305, 2.1789265)
+texture = ExtResource("9_alkur")
+
+[node name="PlayerSadie" parent="." unique_id=1795143295 instance=ExtResource("2_fkn2j")]
+position = Vector2(-1179, 1248)
+
+[node name="SadiePlayerIcon" type="Sprite2D" parent="." unique_id=500805975]
+position = Vector2(-2451, 1618.6)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_y75yi")
+
+[node name="AlexPlayerIcon" type="Sprite2D" parent="." unique_id=2080931993]
+position = Vector2(-2396, 1621.6)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("12_h8u0f")
