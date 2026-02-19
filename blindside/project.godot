@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Blindside"
+run/main_scene="uid://cdlqgiadt8tu8"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
