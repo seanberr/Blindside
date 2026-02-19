@@ -4,8 +4,6 @@ extends CharacterBody2D
 @onready var jump_comp : JumpComponent = $"Jump Component"
 @onready var gravity_comp : GravityComponent = $"Gravity Component"
 @onready var direction_comp : DirectionComponent = $"Direction Component"
-@onready var interaction_comp : InteractionComponent = $"Interation Component"
-
 
 @export var input_left : StringName
 @export var input_right : StringName
@@ -39,13 +37,14 @@ func _physics_process(delta: float) -> void:
 			is_jump_queued = false
 			jump_comp.apply_jump_impulse()
 					
-	 # after calling move_and_slide()
-	for i in get_slide_collision_count():
-		var c = get_slide_collision(i)
-		if c.get_collider() is RigidBody2D:
-			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)	
 
-
+	if Input.is_action_just_pressed("Player1_Interact"):
+		state_machine.change_state("Pushing State")
+		
+		
+	if Input.is_action_just_released("Player1_Interact"):
+		state_machine.change_state("Idle State")
+		
 func buffer_jump():
 	is_jump_queued = true
 	jump_buffer_timer = get_tree().create_timer(jump_buffer_window)

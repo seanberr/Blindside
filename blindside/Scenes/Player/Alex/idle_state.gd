@@ -14,6 +14,10 @@ func update(delta: float):
 	
 func physics_update(delta: float):
 	#handle velocity
+	
+	if !player:
+		player = get_node("../..")
+		
 	player.velocity_comp.apply_ground_friction(delta)
 	#handle jump
 	if Input.is_action_just_pressed(player.input_jump):
