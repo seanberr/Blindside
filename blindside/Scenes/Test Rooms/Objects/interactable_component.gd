@@ -15,18 +15,7 @@ class_name Interactable
 var last_id : int = 0
 
 func _ready() -> void:
-	if is_alex_interactable and is_sadie_interactable:
-		alex_icon.position = icon_position
-		sadie_icon.position = icon_position
-		alex_icon.position.x -= 40
-		sadie_icon.position.x += 40
-	elif is_alex_interactable:
-		alex_icon.position = icon_position
-	elif is_sadie_interactable:
-		sadie_icon.position = icon_position
-		
-	alex_icon.real_position = alex_icon.position
-	sadie_icon.real_position = sadie_icon.position
+	set_icon_positions()
 func interact(id : int):
 	last_id = id
 	if id == 1 and !is_sadie_interactable:
@@ -48,6 +37,20 @@ func _physics_process(delta: float) -> void:
 		sadie_icon.disable()
 		alex_icon.disable()
 
+func set_icon_positions():
+	if is_alex_interactable and is_sadie_interactable:
+		alex_icon.position = icon_position
+		sadie_icon.position = icon_position
+		alex_icon.position.x -= 40
+		sadie_icon.position.x += 40
+	elif is_alex_interactable:
+		alex_icon.position = icon_position
+	elif is_sadie_interactable:
+		sadie_icon.position = icon_position
+		
+	alex_icon.real_position = alex_icon.position
+	sadie_icon.real_position = sadie_icon.position
+	
 func scan_for_players() -> bool:
 	var areas = interaction_area.get_overlapping_areas()
 	if !areas:

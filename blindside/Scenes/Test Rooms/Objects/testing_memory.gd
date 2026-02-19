@@ -12,6 +12,7 @@ var memory_scene = preload("res://Scenes/Objects/memory.tscn")
 func _ready() -> void:
 	interactable.is_alex_interactable = is_alex_interactable
 	interactable.is_sadie_interactable = is_sadie_interactable
+	interactable.set_icon_positions()
 
 func interact():
 	var new_memory = memory_scene.instantiate()

@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://bmpg5yy6k7c6o" path="res://Assets/Player Icon/Alex_Player_Icon.png" id="1_6qqmf"]
 [ext_resource type="Script" uid="uid://b4qtakuer4n38" path="res://Scenes/Components/player_icon.gd" id="2_efh16"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6qqmf"]
+light_mode = 1
+
 [sub_resource type="Animation" id="Animation_6qqmf"]
 resource_name = "Icon Float"
 loop_mode = 1
@@ -41,6 +44,7 @@ _data = {
 }
 
 [node name="Player Icon" type="Sprite2D" unique_id=1951650079]
+material = SubResource("CanvasItemMaterial_6qqmf")
 position = Vector2(0, 10)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_6qqmf")
