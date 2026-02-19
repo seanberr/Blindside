@@ -4,9 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://dydnds0gcrbai" path="res://Scenes/Objects/boulder.tscn" id="4_2nygi"]
 [ext_resource type="PackedScene" uid="uid://dyjicgdjdwsip" path="res://Scenes/Tileset/Test_Tileset.tscn" id="4_on4bf"]
 [ext_resource type="Texture2D" uid="uid://bc3e53q4f0hte" path="res://Assets/Objects/Unlocked_door.png" id="5_2nygi"]
+[ext_resource type="Script" uid="uid://yqxrxe65rk32" path="res://Scenes/Objects/tiny_boulder.gd" id="5_tgk04"]
 [ext_resource type="PackedScene" uid="uid://dbekps3ajrvxj" path="res://Scenes/Objects/middeling_boulder.tscn" id="6_2nygi"]
 [ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="7_on4bf"]
 [ext_resource type="PackedScene" uid="uid://dgh4hibopiubx" path="res://Scenes/Objects/ample_boulder.tscn" id="7_tgk04"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2upf6"]
+radius = 71.17584
 
 [node name="Puzzle Room Two" type="Node2D" unique_id=1061331956]
 script = ExtResource("1_1epbv")
@@ -22,6 +26,7 @@ texture = ExtResource("5_2nygi")
 
 [node name="Tiny" parent="." unique_id=372066649 instance=ExtResource("4_2nygi")]
 position = Vector2(-647, 408)
+script = ExtResource("5_tgk04")
 
 [node name="Middeling" parent="." unique_id=1762666173 instance=ExtResource("6_2nygi")]
 position = Vector2(-580, 86)
@@ -31,3 +36,14 @@ visible = false
 
 [node name="Ample" parent="." unique_id=794698021 instance=ExtResource("7_tgk04")]
 position = Vector2(19, -338)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=10164234]
+collision_layer = 65
+collision_mask = 65
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2124514968]
+position = Vector2(-381, 535)
+shape = SubResource("CircleShape2D_2upf6")
+debug_color = Color(0.8465047, 0.0009866804, 0.9095459, 0.41960785)
+
+[connection signal="area_entered" from="Area2D" to="Tiny" method="_on_area_2d_area_entered"]

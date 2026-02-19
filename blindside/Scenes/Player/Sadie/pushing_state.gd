@@ -7,7 +7,11 @@ func enter():
 	
 func exit():
 	player.set_collision_mask_value(7, false)
-		
+
+func update(delta: float):
+	player.direction_comp.update_sprite_direction()
+	evaluate_state()
+	
 func physics_update(delta: float):
 	
 	#handle velocity
@@ -25,3 +29,10 @@ func physics_update(delta: float):
 		if c.get_collider() is RigidBody2D:
 			c.get_collider().apply_central_impulse(-c.get_normal() * player.push_force)	
 			
+
+func evaluate_state():
+	if player.is_on_floor():
+		if !player.direction_comp.is_direction_held():
+			player.state_machine.change_state("Idle State")
+	else:
+		player.state_machine.change_state("Air Movement State")
