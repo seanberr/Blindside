@@ -1,6 +1,6 @@
 extends Node
 var transition_fade_scene : PackedScene = preload("res://Scenes/Objects/transition_fade.tscn")
-
+var transitioning : bool = false
 var transition_fade : Node2D
 
 # Called when the node enters the scene tree for the first time.
@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 
 func transition_to_scene(scene : PackedScene, player_positions : Array[Vector2]):
 	if transition_fade_scene.can_instantiate():
+		transitioning = true
 		transition_fade = transition_fade_scene.instantiate()
 		var transition_layer = CanvasLayer.new()
 		transition_layer.layer = 999

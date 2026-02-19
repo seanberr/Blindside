@@ -12,3 +12,4 @@ func spawn_players():
 	parent_scene.add_child(sadie)
 	sadie.position = spawn_positions[0]
 	alex.position = spawn_positions[1]
+	TransitionHandler.transitioning = false

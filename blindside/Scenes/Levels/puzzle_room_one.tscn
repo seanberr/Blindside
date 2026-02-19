@@ -28,7 +28,7 @@ position = Vector2(570, 86)
 pressure_plate_one = NodePath("../Pressure Plate")
 pressure_plate_two = NodePath("../Pressure Plate2")
 scene_to_load = ExtResource("4_6thti")
-player_coords = Array[Vector2]([Vector2(0, 0), Vector2(0, 0)])
+player_coords = Array[Vector2]([Vector2(0, 0), Vector2(500, 0)])
 
 [node name="Pressure Plate" parent="." unique_id=1510602801 instance=ExtResource("5_1udun")]
 position = Vector2(1925, 36)
