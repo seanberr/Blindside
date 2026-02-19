@@ -6,7 +6,6 @@ extends CharacterBody2D
 @onready var direction_comp : DirectionComponent = $"Direction Component"
 
 @export var light : PointLight2D
-
 @export var input_left : StringName
 @export var input_right : StringName
 @export var input_jump : StringName
@@ -39,6 +38,9 @@ func _physics_process(delta: float) -> void:
 			is_jump_queued = false
 			jump_comp.apply_jump_impulse()
 			
+	if !sadie:
+		get_sadie()
+		
 	if sadie:
 		var distance = position.distance_to(sadie.position)
 		distance = clamp(distance, 1, 1000)
@@ -48,7 +50,10 @@ func _physics_process(delta: float) -> void:
 		light.scale = Vector2(light_scale, light_scale)
 	
 func get_sadie():
-	sadie = get_tree().get_first_node_in_group("Player")
+	var players = get_tree().get_nodes_in_group("Player")
+	for player in players:
+		if player.name == "PlayerSadie":
+			sadie = player
 	
 func buffer_jump():
 	is_jump_queued = true

@@ -22,3 +22,4 @@ func transition_out():
 func init():
 	animator = $AnimationPlayer
 	sprite = $Sprite2D
+	sprite.self_modulate.a = 0

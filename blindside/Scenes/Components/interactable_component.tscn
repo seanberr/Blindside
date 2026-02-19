@@ -1,9 +1,20 @@
 [gd_scene format=3 uid="uid://c8pmtlhrk7nrd"]
 
 [ext_resource type="Script" uid="uid://lckk5h1sgsyo" path="res://Scenes/Test Rooms/Objects/interactable_component.gd" id="1_m5r35"]
+[ext_resource type="PackedScene" uid="uid://t8m7skbs0j0n" path="res://Scenes/Player/player_icon.tscn" id="2_0o1oo"]
+[ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player Icon/Sadie_Player_Icon.png" id="4_t447q"]
 
-[node name="Interactable Component" type="Node2D" unique_id=1580344963 node_paths=PackedStringArray("interaction_area")]
+[node name="Interactable Component" type="Node2D" unique_id=1580344963 node_paths=PackedStringArray("alex_icon", "sadie_icon")]
 script = ExtResource("1_m5r35")
 is_sadie_interactable = true
 is_alex_interactable = true
-interaction_area = NodePath("")
+alex_icon = NodePath("Player Icon")
+sadie_icon = NodePath("Player Icon2")
+
+[node name="Player Icon" parent="." unique_id=1951650079 instance=ExtResource("2_0o1oo")]
+visible = false
+position = Vector2(-3.500002, -14.500004)
+
+[node name="Player Icon2" parent="." unique_id=1260027088 instance=ExtResource("2_0o1oo")]
+visible = false
+texture = ExtResource("4_t447q")
