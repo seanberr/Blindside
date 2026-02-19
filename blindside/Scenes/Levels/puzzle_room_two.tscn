@@ -7,9 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://bc3e53q4f0hte" path="res://Assets/Objects/Unlocked_door.png" id="5_2nygi"]
 [ext_resource type="Texture2D" uid="uid://bmvvmnoqu56qw" path="res://Assets/Rocks/Rocks 364x190/Rock_364x190_Shape_1_1_BaseShadow.png" id="6_on4bf"]
 [ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="7_on4bf"]
-[ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/sketch_4.png" id="8_tgk04"]
-[ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player Icon/Sadie_Player_Icon.png" id="9_o2lhj"]
-[ext_resource type="Texture2D" uid="uid://bmpg5yy6k7c6o" path="res://Assets/Player Icon/Alex_Player_Icon.png" id="10_1jlcf"]
 
 [node name="Puzzle Room Two" type="Node2D" unique_id=1061331956]
 
@@ -57,22 +54,3 @@ texture = ExtResource("6_on4bf")
 
 [node name="Blindness Modulate" parent="." unique_id=1509691114 instance=ExtResource("7_on4bf")]
 visible = false
-
-[node name="Background_1" type="CanvasLayer" parent="." unique_id=212439775]
-layer = -1
-
-[node name="Main BG" type="Sprite2D" parent="Background_1" unique_id=833283190]
-self_modulate = Color(0.24313726, 0.2627451, 0.31764707, 1)
-position = Vector2(1001.00006, 575)
-scale = Vector2(2.0878305, 2.1789265)
-texture = ExtResource("8_tgk04")
-
-[node name="SadiePlayerIcon" type="Sprite2D" parent="." unique_id=1602265105]
-position = Vector2(1369, 311.6)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("9_o2lhj")
-
-[node name="AlexPlayerIcon" type="Sprite2D" parent="." unique_id=418225852]
-position = Vector2(1424.0002, 314.59995)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("10_1jlcf")

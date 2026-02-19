@@ -1,18 +1,16 @@
 [gd_scene format=4 uid="uid://cdlqgiadt8tu8"]
 
 [ext_resource type="Script" uid="uid://b6dfhua1w4u1p" path="res://Scenes/Levels/level.gd" id="1_vb710"]
-[ext_resource type="PackedScene" uid="uid://b73bau5gdga1o" path="res://Scenes/Levels/overworld_one.tscn" id="4_6thti"]
 [ext_resource type="PackedScene" uid="uid://dyjicgdjdwsip" path="res://Scenes/Tileset/Test_Tileset.tscn" id="4_glmga"]
 [ext_resource type="PackedScene" uid="uid://bui05tqig5ktw" path="res://Scenes/Test Rooms/Objects/testing_pressure_plate.tscn" id="5_1udun"]
 [ext_resource type="PackedScene" uid="uid://dl6lckb1ahnpm" path="res://Scenes/Test Rooms/Objects/testing_locked_door.tscn" id="6_1g2nm"]
+[ext_resource type="PackedScene" uid="uid://cg0dshw0liqxe" path="res://Scenes/Levels/platforming_room_one.tscn" id="6_8cf2k"]
 [ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="8_8cf2k"]
 [ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/sketch_4.png" id="9_vb710"]
 [ext_resource type="Texture2D" uid="uid://dm6gkrnl54anv" path="res://Assets/Trees/Trees 1920 x 1080/Tree_1920x1080_Shape_5_3.png" id="10_6thti"]
 [ext_resource type="Texture2D" uid="uid://biqefscvrilyx" path="res://Assets/Rocks/Rocks 364x190/Rock_364x190_Shape_2_1_BaseShadow.png" id="10_t04cc"]
 [ext_resource type="Texture2D" uid="uid://ft80w3vswxjy" path="res://Assets/Rocks/Foreground Rocks 1920 x 1080/Rock_1920x1080_Shape_1_1_Blockout.png" id="12_wo23v"]
 [ext_resource type="Texture2D" uid="uid://dtgna48q1s80y" path="res://Assets/Trees/Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_7_1_Blockout.png" id="13_t04cc"]
-[ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player Icon/Sadie_Player_Icon.png" id="14_2miem"]
-[ext_resource type="Texture2D" uid="uid://bmpg5yy6k7c6o" path="res://Assets/Player Icon/Alex_Player_Icon.png" id="15_wo23v"]
 [ext_resource type="Texture2D" uid="uid://csjtmrvhr45bo" path="res://Assets/Trees/Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_3_3.png" id="17_1ciky"]
 [ext_resource type="Texture2D" uid="uid://ca6n840q05apa" path="res://Assets/Trees/Leaves 1920 x 1080/Tree_Leaves_1920x1080_Shape_2_3.png" id="17_kttiu"]
 
@@ -26,7 +24,7 @@ tile_map_data = PackedByteArray("AAD+/wcAAAABAAIAAAD//wcAAAABAAIAAAAAAAcAAAADAAE
 position = Vector2(570, 86)
 pressure_plate_one = NodePath("../Pressure Plate")
 pressure_plate_two = NodePath("../Pressure Plate2")
-scene_to_load = ExtResource("4_6thti")
+scene_to_load = ExtResource("6_8cf2k")
 player_coords = Array[Vector2]([Vector2(0, 0), Vector2(0, 0)])
 
 [node name="Pressure Plate" parent="." unique_id=1510602801 instance=ExtResource("5_1udun")]
@@ -95,13 +93,3 @@ flip_h = true
 position = Vector2(2343, -126)
 scale = Vector2(1.3571428, 2.0319445)
 texture = ExtResource("13_t04cc")
-
-[node name="SadiePlayerIcon" type="Sprite2D" parent="." unique_id=1190723555]
-position = Vector2(865.99994, 192)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("14_2miem")
-
-[node name="AlexPlayerIcon" type="Sprite2D" parent="." unique_id=1352990282]
-position = Vector2(-1232, 300)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("15_wo23v")
