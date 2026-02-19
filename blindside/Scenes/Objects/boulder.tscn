@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dydnds0gcrbai"]
+[gd_scene format=3 uid="uid://dtvcye11saprq"]
 
 [ext_resource type="Gradient" uid="uid://8yyxodotlk4u" path="res://Assets/Objects/temp_rock_gradient.tres" id="1_gxnv5"]
 
@@ -12,8 +12,8 @@ fill_from = Vector2(0.5093897, 0.5046948)
 fill_to = Vector2(0.86619717, 0.2370892)
 
 [node name="Tiny" type="RigidBody2D" unique_id=372066649]
-collision_layer = 64
-collision_mask = 2
+collision_layer = 192
+collision_mask = 130
 freeze_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1037806848]

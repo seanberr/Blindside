@@ -3,9 +3,11 @@ extends "res://Scenes/Player/Alex/state.gd"
 @export var player : CharacterBody2D
 
 func enter():
+	## Allows the player to push objects on the collision mask 7
 	player.set_collision_mask_value(7, true)
 	
 func exit():
+	## Stops the player from pushing objects on the collision mask 7
 	player.set_collision_mask_value(7, false)
 
 func update(delta: float):
@@ -24,6 +26,7 @@ func physics_update(delta: float):
 	
 	player.move_and_slide()
 	
+	## Apply a force to relevant objects
 	for i in player.get_slide_collision_count():
 		var c = player.get_slide_collision(i)
 		if c.get_collider() is RigidBody2D:
@@ -31,8 +34,5 @@ func physics_update(delta: float):
 			
 
 func evaluate_state():
-	if player.is_on_floor():
-		if !player.direction_comp.is_direction_held():
-			player.state_machine.change_state("Idle State")
-	else:
+	if !player.is_on_floor():
 		player.state_machine.change_state("Air Movement State")
