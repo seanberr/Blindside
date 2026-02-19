@@ -19,6 +19,7 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 Global="*uid://b2cwe6vh5elp0"
 TransitionHandler="*uid://b7k2ycj5qn74r"
 PlayerLoader="*uid://cjhmncsqmv8m6"
+CameraTransition="*uid://dbml3441q5d0o"
 
 [display]
 
@@ -42,6 +43,7 @@ folder_colors={
 [global_group]
 
 Player=""
+"Player Camera"=""
 
 [input]
 

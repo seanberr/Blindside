@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ccqeg5kw75naw"]
+
+[ext_resource type="Script" uid="uid://bj8m5a8gqa52f" path="res://Scenes/Levels/player_detection_area.gd" id="1_yfe16"]
+
+[node name="Player Detection Area" type="Area2D" unique_id=48072499]
+script = ExtResource("1_yfe16")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

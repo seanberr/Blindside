@@ -10,6 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://biqefscvrilyx" path="res://Assets/Rocks/Rocks 364x190/Rock_364x190_Shape_2_1_BaseShadow.png" id="7_tpafy"]
 [ext_resource type="PackedScene" uid="uid://c3jwa7r1tb61w" path="res://Scenes/Levels/overworld_three.tscn" id="8_qo53q"]
 [ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/sketch_4.png" id="9_abv05"]
+[ext_resource type="PackedScene" uid="uid://ccqeg5kw75naw" path="res://Scenes/Objects/player_detection_area.tscn" id="11_6uuda"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bqv5r"]
+size = Vector2(962, 1875)
 
 [node name="Puzzle Room Three" type="Node2D" unique_id=1382614291]
 script = ExtResource("1_qo53q")
@@ -67,3 +71,16 @@ texture = ExtResource("5_f55q5")
 position = Vector2(260, -400)
 enabled = false
 zoom = Vector2(0.6, 0.6)
+
+[node name="Player Detection Area" parent="." unique_id=48072499 node_paths=PackedStringArray("camera_level") instance=ExtResource("11_6uuda")]
+camera_level = NodePath("../Camera2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player Detection Area" unique_id=822101136]
+position = Vector2(-598, -476.5)
+shape = SubResource("RectangleShape2D_bqv5r")
+debug_color = Color(0.96441406, 1.2513995e-05, 0.6359843, 0.41960785)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player Detection Area" unique_id=2018168366]
+position = Vector2(1107, -520)
+shape = SubResource("RectangleShape2D_bqv5r")
+debug_color = Color(0.96441406, 1.2513995e-05, 0.6359843, 0.41960785)
