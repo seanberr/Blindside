@@ -5,7 +5,6 @@ extends Sprite2D
 var memory_textures = ["res://Assets/Memory Assets/memory_placeholder.png", "res://Assets/Memory Assets/memory_hospital.png"]
 
 func start(id : int):
-	self_modulate.a = 0
 	timer.timeout.connect(end_memory)
 	timer.start(memory_length)
 	texture = load(memory_textures[id])

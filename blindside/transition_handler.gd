@@ -1,6 +1,7 @@
 extends Node
 var transition_fade_scene : PackedScene = preload("res://Scenes/Objects/transition_fade.tscn")
 
+var scene_to_load : PackedScene
 var transition_fade : Node2D
 
 # Called when the node enters the scene tree for the first time.
