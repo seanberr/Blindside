@@ -1,5 +1,6 @@
 extends Node
 class_name State
+@onready var parent = get_node("../../CameraTransition")
 
 func enter():
 	pass

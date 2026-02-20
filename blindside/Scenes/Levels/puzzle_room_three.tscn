@@ -71,16 +71,24 @@ texture = ExtResource("5_f55q5")
 position = Vector2(260, -400)
 enabled = false
 zoom = Vector2(0.6, 0.6)
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
 
 [node name="Player Detection Area" parent="." unique_id=48072499 node_paths=PackedStringArray("camera_level") instance=ExtResource("11_6uuda")]
 camera_level = NodePath("../Camera2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player Detection Area" unique_id=822101136]
-position = Vector2(-598, -476.5)
+position = Vector2(-590, -533)
 shape = SubResource("RectangleShape2D_bqv5r")
 debug_color = Color(0.96441406, 1.2513995e-05, 0.6359843, 0.41960785)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Player Detection Area" unique_id=2018168366]
 position = Vector2(1107, -520)
+shape = SubResource("RectangleShape2D_bqv5r")
+debug_color = Color(0.96441406, 1.2513995e-05, 0.6359843, 0.41960785)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Player Detection Area" unique_id=1566529779]
+position = Vector2(240, -1683)
 shape = SubResource("RectangleShape2D_bqv5r")
 debug_color = Color(0.96441406, 1.2513995e-05, 0.6359843, 0.41960785)

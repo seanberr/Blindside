@@ -167,9 +167,6 @@ sprite = NodePath("../AnimatedSprite2D")
 
 [node name="MainCamera" parent="." unique_id=1417079101 groups=["Player Camera"] instance=ExtResource("20_oly0s")]
 process_callback = 0
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
 
 [connection signal="area_entered" from="Interacting Area" to="." method="_on_interacting_area_area_entered"]
 [connection signal="area_exited" from="Interacting Area" to="." method="_on_interacting_area_area_exited"]

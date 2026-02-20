@@ -5,5 +5,5 @@
 [node name="Camera Transition" type="Node" unique_id=1734522059]
 script = ExtResource("1_g68bj")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1396154050]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1071266473]
 enabled = false

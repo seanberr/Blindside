@@ -7,13 +7,13 @@ var players_in_area : Array[CharacterBody2D]
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		players_in_area.append(body)
-
+	camera_transition()
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		players_in_area.erase(body)
+		camera_transition()
 
 func _physics_process(delta: float) -> void:
-	camera_transition()
 	
 	match(players_in_area.size()):
 		0: print("0")
@@ -23,7 +23,9 @@ func _physics_process(delta: float) -> void:
 func camera_transition():
 	if !camera_player or !camera_level:
 		camera_player = get_tree().get_first_node_in_group("Player Camera")
-	if players_in_area.size() == 2:
-		CameraTransition.transition_camera2D(camera_player, camera_level, 1)
+	if players_in_area.size() >= 1:
+		if !camera_level.is_current():
+			CameraTransition.transition_camera2D(camera_player, camera_level, 0.02)
 	elif !players_in_area:
-		CameraTransition.transition_camera2D(camera_level, camera_player, 1)
+		if !camera_player.is_current():
+			CameraTransition.transition_camera2D(camera_level, camera_player, 0.02)
