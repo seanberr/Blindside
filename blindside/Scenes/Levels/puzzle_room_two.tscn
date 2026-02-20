@@ -43,6 +43,7 @@ size = Vector2(241, 50)
 [node name="Puzzle Room Two" type="Node2D" unique_id=1061331956]
 script = ExtResource("1_1epbv")
 spawn_positions = Array[Vector2]([Vector2(-1100, 0), Vector2(-1100, 0)])
+metadata/_edit_horizontal_guides_ = [218.0]
 
 [node name="Background_1" type="CanvasLayer" parent="." unique_id=212439775]
 layer = -1
@@ -65,7 +66,7 @@ scale = Vector2(1, 0.9225)
 texture = ExtResource("5_2nygi")
 
 [node name="Tiny Boulder" parent="." unique_id=372066649 instance=ExtResource("4_2nygi")]
-position = Vector2(-647, 408)
+position = Vector2(-533, 406)
 script = ExtResource("5_tgk04")
 
 [node name="Middeling Boulder" parent="." unique_id=1762666173 instance=ExtResource("6_2nygi")]
@@ -81,11 +82,13 @@ collision_layer = 128
 collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tiny Hole" unique_id=2124514968]
-position = Vector2(-383, 493)
+position = Vector2(-384, 497)
 shape = SubResource("CircleShape2D_2upf6")
 debug_color = Color(0.8465047, 0.0009866804, 0.9095459, 0.41960785)
 
 [node name="Middeling Hole" type="Area2D" parent="." unique_id=592770695]
+collision_layer = 128
+collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Middeling Hole" unique_id=1454013473]
 position = Vector2(-35, 485)
@@ -94,6 +97,8 @@ debug_color = Color(0.84705883, 0, 0.9098039, 0.41960785)
 
 [node name="Ample Hole" type="Area2D" parent="." unique_id=1371612127]
 position = Vector2(342, 488)
+collision_layer = 128
+collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ample Hole" unique_id=582522879]
 position = Vector2(163, 3)
@@ -180,6 +185,30 @@ texture = ExtResource("15_ttvy8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform Three2" unique_id=1541588044]
 position = Vector2(-55.5, 22)
 shape = SubResource("RectangleShape2D_t0vj2")
+
+[node name="Testing Semi Circle" type="StaticBody2D" parent="." unique_id=700927640]
+visible = false
+position = Vector2(-388, 468)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Testing Semi Circle" unique_id=502548595]
+visible = false
+position = Vector2(-138, 256)
+scale = Vector2(10.822046, 7.203465)
+polygon = PackedVector2Array(7.421688, -0.5470123, 8.487061, -1.696991, 9.503502, -2.5299225, 10.427542, -3.5016747, 11.662653, -4.512821, 5.3975906, 3.8290558, -0.5180702, -4.5897446, 0.48192978, -3.5897446, 1.4819298, -2.5897446, 3.5896492, -0.8640518, 5.437729, 0.66298676)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Testing Semi Circle" unique_id=1697424829]
+visible = false
+position = Vector2(94.000015, -1.9999981)
+scale = Vector2(0.7276119, 0.75959)
+polygon = PackedVector2Array(-213.02567, 60.55896, -153.92819, 59.24243, -213.02567, 40.811462)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Testing Semi Circle" unique_id=1239008471]
+visible = false
+position = Vector2(149, 10)
+scale = Vector2(0.52941906, 0.576977)
+polygon = PackedVector2Array(-239.88556, 58.927795, -154.88672, 58.927795, -154.88672, -39.862976, -162.4422, -29.463928, -169.99762, -20.798096, -175.66425, -13.8654175, -188.88629, -1.7332153, -198.33057, 5.199463, -207.7749, 10.398987, -217.21924, 15.598511, -228.55237, 19.06488, -237.9967, 22.531189)
 
 [connection signal="body_entered" from="Tiny Hole" to="Tiny Boulder" method="_on_tiny_hole_body_entered"]
 [connection signal="body_entered" from="Middeling Hole" to="Middeling Boulder" method="_on_middeling_hole_body_entered"]
