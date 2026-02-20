@@ -1,27 +1,21 @@
 [gd_scene format=3 uid="uid://xd0tqko77cut"]
 
-[ext_resource type="Gradient" uid="uid://8yyxodotlk4u" path="res://Assets/Objects/temp_rock_gradient.tres" id="1_u3dxs"]
+[ext_resource type="Texture2D" uid="uid://dd5cggbh7u2ut" path="res://Assets/Puzzle Rocks/Puzzle_Rock_728x452_Shape_3.png" id="1_u3dxs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a7ph3"]
 radius = 137.0146
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_tj70r"]
-gradient = ExtResource("1_u3dxs")
-fill = 1
-fill_from = Vector2(0.52347416, 0.5)
-fill_to = Vector2(0.86619717, 0.096244134)
 
 [node name="Middeling" type="RigidBody2D" unique_id=372066649]
 collision_layer = 192
 collision_mask = 130
 freeze_mode = 1
 
+[node name="Rock 1" type="Sprite2D" parent="." unique_id=1222469127]
+position = Vector2(-119.99999, 1)
+scale = Vector2(0.6334593, 0.61785686)
+texture = ExtResource("1_u3dxs")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1037806848]
 position = Vector2(-114, 6)
 shape = SubResource("CircleShape2D_a7ph3")
 debug_color = Color(0, 1, 0, 0.41960785)
-
-[node name="Rock 1" type="Sprite2D" parent="." unique_id=1222469127]
-position = Vector2(-115, 11.000003)
-scale = Vector2(4.9179688, 4.796837)
-texture = SubResource("GradientTexture2D_tj70r")
