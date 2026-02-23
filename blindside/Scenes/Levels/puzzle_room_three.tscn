@@ -41,7 +41,6 @@ position = Vector2(-790, 162)
 texture = ExtResource("7_tpafy")
 
 [node name="Blindless Modulate" parent="." unique_id=1509691114 instance=ExtResource("6_f55q5")]
-visible = false
 color = Color(0.06800488, 0.07132318, 0.12444902, 1)
 
 [node name="Door" parent="." unique_id=1600814949 instance=ExtResource("7_abv05")]
@@ -85,10 +84,5 @@ debug_color = Color(0.96441406, 1.2513995e-05, 0.6359843, 0.41960785)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Player Detection Area" unique_id=2018168366]
 position = Vector2(1107, -520)
-shape = SubResource("RectangleShape2D_bqv5r")
-debug_color = Color(0.96441406, 1.2513995e-05, 0.6359843, 0.41960785)
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Player Detection Area" unique_id=1566529779]
-position = Vector2(240, -1683)
 shape = SubResource("RectangleShape2D_bqv5r")
 debug_color = Color(0.96441406, 1.2513995e-05, 0.6359843, 0.41960785)
