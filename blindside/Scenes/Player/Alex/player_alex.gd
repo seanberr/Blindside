@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var gravity_comp : GravityComponent = $"Gravity Component"
 @onready var direction_comp : DirectionComponent = $"Direction Component"
 
+@export var id = 1
 @export var light : PointLight2D
 @export var input_left : StringName
 @export var input_right : StringName

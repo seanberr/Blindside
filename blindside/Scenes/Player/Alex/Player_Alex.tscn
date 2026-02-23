@@ -43,7 +43,7 @@ fill_to = Vector2(0.8173913, 0.20869565)
 
 [node name="PlayerAlex" type="CharacterBody2D" unique_id=1511516036 node_paths=PackedStringArray("light") groups=["Player"]]
 z_index = 1
-collision_mask = 2
+collision_mask = 10
 script = ExtResource("1_p71sf")
 light = NodePath("PointLight2D")
 input_left = &"Player2_Left"

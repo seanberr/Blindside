@@ -86,7 +86,7 @@ animations = [{
 
 [node name="PlayerSadie" type="CharacterBody2D" unique_id=1795143295 groups=["Player"]]
 z_index = 2
-collision_mask = 2
+collision_mask = 6
 script = ExtResource("1_d5yuk")
 input_left = &"Player1_Left"
 input_right = &"Player1_Right"
