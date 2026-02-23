@@ -7,14 +7,23 @@
 [ext_resource type="PackedScene" uid="uid://dl6lckb1ahnpm" path="res://Scenes/Test Rooms/Objects/testing_locked_door.tscn" id="6_1g2nm"]
 [ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="8_8cf2k"]
 [ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/sketch_4.png" id="9_vb710"]
-[ext_resource type="Texture2D" uid="uid://dm6gkrnl54anv" path="res://Assets/Trees/Trees 1920 x 1080/Tree_1920x1080_Shape_5_3.png" id="10_6thti"]
+[ext_resource type="Shader" uid="uid://bbx0aks44plfh" path="res://colourswap.gdshader" id="10_kttiu"]
+[ext_resource type="Texture2D" uid="uid://d2jygat7yay0j" path="res://Assets/Trees/Tree Leaves 3840 x 2160 for Background Parallax/Tree_Leaves_3840x2160_Shape_5_4_Background.png" id="10_qq2eo"]
 [ext_resource type="Texture2D" uid="uid://biqefscvrilyx" path="res://Assets/Rocks/Rocks 364x190/Rock_364x190_Shape_2_1_BaseShadow.png" id="10_t04cc"]
+[ext_resource type="Texture2D" uid="uid://d4hu5yr0h65mc" path="res://Assets/Trees/Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_12_1.png" id="11_kttiu"]
+[ext_resource type="Texture2D" uid="uid://b1p44t7lbrots" path="res://Assets/Trees/Tree Leaves 3840 x 2160/Tree_Leaves_3840x2160_Shape_5_1.png" id="12_fisls"]
 [ext_resource type="Texture2D" uid="uid://ft80w3vswxjy" path="res://Assets/Rocks/Foreground Rocks 1920 x 1080/Rock_1920x1080_Shape_1_1_Blockout.png" id="12_wo23v"]
 [ext_resource type="Texture2D" uid="uid://dtgna48q1s80y" path="res://Assets/Trees/Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_7_1_Blockout.png" id="13_t04cc"]
 [ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player Icon/Sadie_Player_Icon.png" id="14_2miem"]
 [ext_resource type="Texture2D" uid="uid://bmpg5yy6k7c6o" path="res://Assets/Player Icon/Alex_Player_Icon.png" id="15_wo23v"]
 [ext_resource type="Texture2D" uid="uid://csjtmrvhr45bo" path="res://Assets/Trees/Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_3_3.png" id="17_1ciky"]
-[ext_resource type="Texture2D" uid="uid://ca6n840q05apa" path="res://Assets/Trees/Leaves 1920 x 1080/Tree_Leaves_1920x1080_Shape_2_3.png" id="17_kttiu"]
+[ext_resource type="Texture2D" uid="uid://ca6n840q05apa" path="res://Assets/Trees/Tree Leaves 1920 x 1080/Tree_Leaves_1920x1080_Shape_2_3.png" id="17_kttiu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fisls"]
+shader = ExtResource("10_kttiu")
+shader_parameter/target_color = Color(0, 0, 0, 1)
+shader_parameter/replace_color = Color(0.33, 0.1419, 0.23595002, 1)
+shader_parameter/tolerance = 1.0
 
 [node name="Puzzle Room One" type="Node2D" unique_id=1429758268]
 script = ExtResource("1_vb710")
@@ -62,10 +71,25 @@ position = Vector2(2332.0002, -121)
 scale = Vector2(0.33958334, 0.38425925)
 texture = ExtResource("12_wo23v")
 
-[node name="Tree1920x1080Shape53" type="Sprite2D" parent="Parallax2D - background" unique_id=1127390957]
-position = Vector2(1301, -510.00006)
-scale = Vector2(1.0348959, 1.8425928)
-texture = ExtResource("10_6thti")
+[node name="TreeLeaves3840x2160Shape54Background" type="Sprite2D" parent="Parallax2D - background/shadow rock" unique_id=936951086]
+show_behind_parent = true
+material = SubResource("ShaderMaterial_fisls")
+position = Vector2(-2246.8718, -1217.9277)
+rotation = -0.11036188
+scale = Vector2(1.9785525, 1.9141252)
+texture = ExtResource("10_qq2eo")
+
+[node name="TreeTrunk1920x1080Shape121" type="Sprite2D" parent="Parallax2D - background/shadow rock" unique_id=1708514298]
+show_behind_parent = true
+position = Vector2(-2185.0313, 156.14459)
+scale = Vector2(2.5420892, 2.5420892)
+texture = ExtResource("11_kttiu")
+
+[node name="TreeLeaves3840x2160Shape51" type="Sprite2D" parent="Parallax2D - background/shadow rock" unique_id=248641883]
+position = Vector2(-2267.6006, -1466.9614)
+rotation = -0.15007104
+scale = Vector2(2.1548645, 2.0400345)
+texture = ExtResource("12_fisls")
 
 [node name="Parallax2D - foreground" type="Parallax2D" parent="." unique_id=1609302850]
 z_index = 5

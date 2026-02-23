@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca6n840q05apa"
-path="res://.godot/imported/Tree_Leaves_1920x1080_Shape_2_3.png-1c92938b037e3e04022affa2f32d7a27.ctex"
+uid="uid://dbixrbx57jnxq"
+path="res://.godot/imported/Tree_1920x1080_Shape_1_1_Blockout.png-d93be88b7acb7ff7b944e5631e8148bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Trees/Leaves 1920 x 1080/Tree_Leaves_1920x1080_Shape_2_3.png"
-dest_files=["res://.godot/imported/Tree_Leaves_1920x1080_Shape_2_3.png-1c92938b037e3e04022affa2f32d7a27.ctex"]
+source_file="res://Assets/Trees/Foreground Trees 1920 x 1080/Tree_1920x1080_Shape_1_1_Blockout.png"
+dest_files=["res://.godot/imported/Tree_1920x1080_Shape_1_1_Blockout.png-d93be88b7acb7ff7b944e5631e8148bf.ctex"]
 
 [params]
 

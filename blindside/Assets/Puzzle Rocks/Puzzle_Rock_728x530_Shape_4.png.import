@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm6gkrnl54anv"
-path="res://.godot/imported/Tree_1920x1080_Shape_5_3.png-279d3466db8ee45ffd7d6a81abccaf0c.ctex"
+uid="uid://ulyjo4u3fj74"
+path="res://.godot/imported/Puzzle_Rock_728x530_Shape_4.png-e76e290324bbf202924ec56cc5648498.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Trees/Trees 1920 x 1080/Tree_1920x1080_Shape_5_3.png"
-dest_files=["res://.godot/imported/Tree_1920x1080_Shape_5_3.png-279d3466db8ee45ffd7d6a81abccaf0c.ctex"]
+source_file="res://Assets/Puzzle Rocks/Puzzle_Rock_728x530_Shape_4.png"
+dest_files=["res://.godot/imported/Puzzle_Rock_728x530_Shape_4.png-e76e290324bbf202924ec56cc5648498.ctex"]
 
 [params]
 
