@@ -2,7 +2,7 @@ extends Sprite2D
 @export var animation_player : AnimationPlayer
 @export var timer : Timer
 @export var memory_length : int
-var memory_textures = ["res://Assets/Memory Assets/memory_placeholder.png", "res://Assets/Memory Assets/memory_hospital.png"]
+var memory_textures = ["res://Assets/Memory Assets/memory_placeholder.png", "res://Assets/Memory Assets/Memory_half_res_with_bg_alex_example.png"]
 
 func start(id : int):
 	self_modulate.a = 0

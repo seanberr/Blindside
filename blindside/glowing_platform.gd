@@ -8,15 +8,14 @@ var is_glowing : bool = false
 func _ready() -> void:
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if is_player_standing():
+	if player_standing:
 		is_glowing = true
-		sprite.self_modulate = sprite.self_modulate.lightened(0.5)
+		#sprite.self_modulate = sprite.self_modulate.lightened(0.5)
 	else:
 		is_glowing = false
-		sprite.self_modulate = sprite.self_modulate.darkened(0.5)
+		#sprite.self_modulate = sprite.self_modulate.darkened(0.5)
 		
 	manage_glow()
 

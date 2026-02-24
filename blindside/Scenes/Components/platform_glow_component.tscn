@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dunqftesboqn8"]
+
+[ext_resource type="Script" uid="uid://cwskp27iskkv" path="res://Scenes/Objects/platform_glow_component.gd" id="1_tv1hq"]
+
+[sub_resource type="Gradient" id="Gradient_mi3jq"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ks2wq"]
+gradient = SubResource("Gradient_mi3jq")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.83475786, 0.8262108)
+
+[node name="Platform Glow Component" type="Node2D" unique_id=141248574 node_paths=PackedStringArray("platform", "light")]
+script = ExtResource("1_tv1hq")
+platform = NodePath("")
+light = NodePath("PointLight2D")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1278338924]
+texture = SubResource("GradientTexture2D_ks2wq")
+texture_scale = 4.0

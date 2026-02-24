@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c1kgbte2e0ony"]
 
 [ext_resource type="Script" uid="uid://oro2mtf7lgfq" path="res://platform.gd" id="1_3apk8"]
-[ext_resource type="Script" uid="uid://bbt0qnbnordvs" path="res://Scenes/Objects/label.gd" id="2_6ws1b"]
 
 [sub_resource type="Gradient" id="Gradient_3apk8"]
 offsets = PackedFloat32Array(0, 0.42168674, 1)
@@ -21,14 +20,12 @@ size = Vector2(190, 126)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ks2wq"]
 size = Vector2(190, 3)
 
-[node name="Platform" type="Node2D" unique_id=1742705568 node_paths=PackedStringArray("standing_area", "underneath_area", "collision_sadie", "collision_alex", "label_sadie", "label_alex")]
+[node name="Platform" type="Node2D" unique_id=1742705568 node_paths=PackedStringArray("standing_area", "underneath_area", "collision_sadie", "collision_alex")]
 script = ExtResource("1_3apk8")
 standing_area = NodePath("Standing Area")
 underneath_area = NodePath("Underneath Area")
 collision_sadie = NodePath("Sadie Collision/CollisionShapeSadie")
 collision_alex = NodePath("Alex Collision/CollisionShapeAlex")
-label_sadie = NodePath("Sadie")
-label_alex = NodePath("Alex")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=967434923]
 position = Vector2(0, -2)
@@ -65,17 +62,3 @@ collision_mask = 0
 [node name="CollisionShapeAlex" type="CollisionShape2D" parent="Alex Collision" unique_id=1998124265]
 position = Vector2(0, -2.5)
 shape = SubResource("RectangleShape2D_ks2wq")
-
-[node name="Sadie" type="Label" parent="." unique_id=441803476]
-offset_left = 102.0
-offset_top = -8.0
-offset_right = 142.0
-offset_bottom = 15.0
-script = ExtResource("2_6ws1b")
-
-[node name="Alex" type="Label" parent="." unique_id=347311968]
-offset_left = 102.0
-offset_top = 17.0
-offset_right = 142.0
-offset_bottom = 40.0
-script = ExtResource("2_6ws1b")

@@ -5,15 +5,11 @@ class_name Platform
 @export var underneath_area : Area2D
 @export var collision_sadie : CollisionShape2D
 @export var collision_alex : CollisionShape2D
-@export var label_sadie : Label
-@export var label_alex : Label
 
 var player_standing : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	label_sadie.text = "collision sadie"
-	label_alex.text = "collision alex"
 	collision_sadie.disabled = false
 	collision_alex.disabled = false
 	
@@ -25,20 +21,16 @@ func _ready() -> void:
 func body_enter_underneath(body: Node):
 	if body.is_in_group("Player"):
 		if body.id == 0:
-			label_sadie.text = "NO collision sadie"
 			collision_sadie.set_deferred("disabled", true)
 		elif body.id == 1:
-			label_alex.text = "NO collision alex"
 			collision_alex.set_deferred("disabled", true)
 
 
 func body_exit_underneath(body: Node):
 	if body.is_in_group("Player"):
 		if body.id == 0:
-			label_sadie.text = "collision sadie"
 			collision_sadie.set_deferred("disabled", false)
 		elif body.id == 1:
-			label_alex.text = "collision alex"
 			collision_alex.set_deferred("disabled", false)
 
 func body_enter_standing(body: Node2D):

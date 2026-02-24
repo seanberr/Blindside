@@ -1,66 +1,11 @@
 [gd_scene format=3 uid="uid://c5wkmoo2jh5is"]
 
-[ext_resource type="Script" uid="uid://dkxipvmdgvf3m" path="res://glowing_platform.gd" id="1_ahltx"]
+[ext_resource type="PackedScene" uid="uid://c1kgbte2e0ony" path="res://Scenes/Objects/platform.tscn" id="1_448ek"]
+[ext_resource type="PackedScene" uid="uid://dunqftesboqn8" path="res://Scenes/Components/platform_glow_component.tscn" id="2_np0i7"]
 
-[sub_resource type="Gradient" id="Gradient_6ws1b"]
-offsets = PackedFloat32Array(0, 0.42168674, 1)
-colors = PackedColorArray(0.14810371, 0.16893974, 0.18643588, 1, 0.3784136, 0.41853613, 0.45228332, 1, 1, 1, 0.93333334, 1)
+[node name="Glowing Platform" type="Node2D" unique_id=1269208228]
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_448ek"]
-gradient = SubResource("Gradient_6ws1b")
-fill_from = Vector2(0, 0.8130435)
-fill_to = Vector2(0.004347826, 0)
+[node name="Platform" parent="." unique_id=1742705568 instance=ExtResource("1_448ek")]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_np0i7"]
-size = Vector2(190, 3)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xi8cr"]
-size = Vector2(190, 4)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_as7gw"]
-size = Vector2(190, 126)
-
-[sub_resource type="Gradient" id="Gradient_51rm1"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_yddob"]
-gradient = SubResource("Gradient_51rm1")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.82608694, 0.19130434)
-
-[node name="Glowing Platform" type="StaticBody2D" unique_id=1813505474 node_paths=PackedStringArray("light", "standing_area", "underneath_area")]
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("1_ahltx")
-light = NodePath("PointLight2D")
-standing_area = NodePath("Standing Area")
-underneath_area = NodePath("Underneath Area")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=13146744]
-position = Vector2(0, -2)
-scale = Vector2(2.96875, 0.0625)
-texture = SubResource("GradientTexture2D_448ek")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1880618647]
-position = Vector2(0, -2.5)
-shape = SubResource("RectangleShape2D_np0i7")
-
-[node name="Standing Area" type="Area2D" parent="." unique_id=1692828249]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Standing Area" unique_id=1868351432]
-position = Vector2(0, -6)
-shape = SubResource("RectangleShape2D_xi8cr")
-debug_color = Color(0, 0.64868724, 0.18271685, 0.41960785)
-
-[node name="Underneath Area" type="Area2D" parent="." unique_id=98231355]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Underneath Area" unique_id=604897912]
-position = Vector2(0, 62)
-shape = SubResource("RectangleShape2D_as7gw")
-debug_color = Color(0.8850255, 0, 0.40452638, 0.41960785)
-
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1690069418]
-position = Vector2(0, -51)
-scale = Vector2(4, 4)
-texture = SubResource("GradientTexture2D_yddob")
+[node name="Platform Glow Component2" parent="Platform" unique_id=141248574 node_paths=PackedStringArray("platform") instance=ExtResource("2_np0i7")]
+platform = NodePath("..")
