@@ -25,7 +25,6 @@ func body_enter_underneath(body: Node):
 		elif body.id == 1:
 			collision_alex.set_deferred("disabled", true)
 
-
 func body_exit_underneath(body: Node):
 	if body.is_in_group("Player"):
 		if body.id == 0:

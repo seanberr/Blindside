@@ -7,5 +7,5 @@
 
 [node name="Platform" parent="." unique_id=1742705568 instance=ExtResource("1_448ek")]
 
-[node name="Platform Glow Component2" parent="Platform" unique_id=141248574 node_paths=PackedStringArray("platform") instance=ExtResource("2_np0i7")]
+[node name="Platform Glow Component" parent="Platform" unique_id=141248574 node_paths=PackedStringArray("platform") instance=ExtResource("2_np0i7")]
 platform = NodePath("..")

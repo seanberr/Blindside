@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dk6kso1q6jnw0"]
 
 [ext_resource type="Script" uid="uid://hyap1cnxm44g" path="res://Scenes/Test Rooms/Objects/testing_memory.gd" id="1_p57ou"]
+[ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Light/new_gradient_texture_2d.tres" id="2_eciof"]
 [ext_resource type="PackedScene" uid="uid://c8pmtlhrk7nrd" path="res://Scenes/Components/interactable_component.tscn" id="2_p57ou"]
 
 [sub_resource type="Gradient" id="Gradient_p57ou"]
@@ -11,7 +12,7 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.8509804, 1, 1, 1, 0.5372549, 1,
 gradient = SubResource("Gradient_p57ou")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.83475786, 0.9059829)
+fill_to = Vector2(0.78695655, 0.70434785)
 
 [sub_resource type="Animation" id="Animation_p57ou"]
 length = 0.001
@@ -107,15 +108,6 @@ emission_sphere_radius = 1.0
 gravity = Vector3(0, -50, 0)
 alpha_curve = SubResource("CurveTexture_spqwq")
 
-[sub_resource type="Gradient" id="Gradient_07rh8"]
-colors = PackedColorArray(1, 1, 0.8666667, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_p57ou"]
-gradient = SubResource("Gradient_07rh8")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.76353276, 0.7806268)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_eciof"]
 radius = 64.629715
 
@@ -147,7 +139,7 @@ process_material = SubResource("ParticleProcessMaterial_spqwq")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1184887235]
 color = Color(1, 1, 1, 0.5686275)
-texture = SubResource("GradientTexture2D_p57ou")
+texture = ExtResource("2_eciof")
 texture_scale = 4.0
 
 [node name="Interactable Component" parent="." unique_id=1580344963 node_paths=PackedStringArray("parent", "interaction_area") instance=ExtResource("2_p57ou")]

@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+var in_control : bool = true
 @onready var velocity_comp : VelocityComponent = $"Velocity Component"
 @onready var jump_comp : JumpComponent = $"Jump Component"
 @onready var gravity_comp : GravityComponent = $"Gravity Component"

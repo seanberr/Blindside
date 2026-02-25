@@ -16,7 +16,7 @@ func physics_update(delta: float):
 	#handle velocity
 	player.velocity_comp.apply_ground_friction(delta)
 	#handle jump
-	if Input.is_action_just_pressed(player.input_jump):
+	if Input.is_action_just_pressed(player.input_jump) and player.in_control:
 		player.jump_comp.apply_jump_impulse()
 		player.state_machine.change_state("Air Movement State")
 	

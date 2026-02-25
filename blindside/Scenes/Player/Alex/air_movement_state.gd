@@ -18,9 +18,9 @@ func update(delta: float):
 func physics_update(delta: float):
 	#handle velocity
 	var direction : int = player.direction_comp.update_direction()
-	if direction:
+	if direction and player.in_control:
 		player.velocity_comp.apply_air_acceleration(delta, direction)
-	else:
+	elif player.in_control:
 		player.velocity_comp.apply_air_friction(delta)
 	
 	#apply gravity
