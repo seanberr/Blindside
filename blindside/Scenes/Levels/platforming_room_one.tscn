@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://cg0dshw0liqxe"]
+[gd_scene format=4 uid="uid://cjfj4u266y7vj"]
 
 [ext_resource type="Script" uid="uid://b6dfhua1w4u1p" path="res://Scenes/Levels/level.gd" id="1_sapwg"]
 [ext_resource type="PackedScene" uid="uid://dddc45n5ss4es" path="res://Scenes/Objects/door.tscn" id="3_td5sf"]
