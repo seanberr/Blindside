@@ -46,7 +46,6 @@ scale = Vector2(2.0878305, 2.1789265)
 texture = ExtResource("6_csdph")
 
 [node name="Blindless Modulate" parent="." unique_id=1509691114 instance=ExtResource("9_1tvsh")]
-visible = false
 color = Color(0.06800488, 0.07132318, 0.12444902, 1)
 
 [node name="Parallax2D-background" type="Parallax2D" parent="." unique_id=1128335542]
