@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://bmpg5yy6k7c6o" path="res://Assets/Player Icon/Alex_Player_Icon.png" id="15_wo23v"]
 [ext_resource type="Texture2D" uid="uid://csjtmrvhr45bo" path="res://Assets/Trees/Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_3_3.png" id="17_1ciky"]
 [ext_resource type="Texture2D" uid="uid://ca6n840q05apa" path="res://Assets/Trees/Tree Leaves 1920 x 1080/Tree_Leaves_1920x1080_Shape_2_3.png" id="17_kttiu"]
+[ext_resource type="Script" uid="uid://iu1gogkp5rn7" path="res://Scenes/Levels/input_tooltip.gd" id="19_fisls"]
 [ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="20_1ciky"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fisls"]
@@ -144,3 +145,6 @@ pressure_plate_one = NodePath("../Pressure Plate")
 pressure_plate_two = NodePath("../Pressure Plate2")
 scene_to_load = ExtResource("4_6thti")
 player_coords = Array[Vector2]([Vector2(0, 0), Vector2(0, 0)])
+
+[node name="Input Tooltip" type="Node" parent="." unique_id=1443934396]
+script = ExtResource("19_fisls")
