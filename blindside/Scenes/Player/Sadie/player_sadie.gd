@@ -29,13 +29,25 @@ var jump_buffer_timer : SceneTreeTimer
 func _ready() -> void:
 	jump_comp.jump.connect(begin_variable_jump)
 	
+# This represents the player's inertia.
+var push_force = 80.0
+
 func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		is_jumping = false
 		if is_jump_queued:
 			is_jump_queued = false
 			jump_comp.apply_jump_impulse()
-
+					
+	
+	## Enter the pushing state when E is pressed
+	if Input.is_action_just_pressed("Player1_Interact"):
+		state_machine.change_state("Pushing State")
+		
+	## Exit the pushing state when E is released
+	if Input.is_action_just_released("Player1_Interact"):
+		state_machine.change_state("Idle State")
+		
 func buffer_jump():
 	is_jump_queued = true
 	jump_buffer_timer = get_tree().create_timer(jump_buffer_window)

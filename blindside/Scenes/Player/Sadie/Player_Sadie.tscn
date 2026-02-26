@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://mdwy3jc22rjs" path="res://Scenes/Player/Alex/ground_movement_state.gd" id="4_emu54"]
 [ext_resource type="Script" uid="uid://cbalphwxfjy8p" path="res://Scenes/Player/Alex/air_movement_state.gd" id="5_tv43m"]
 [ext_resource type="Script" uid="uid://drngo457oambp" path="res://Scenes/Player/Alex/idle_state.gd" id="6_316yk"]
+[ext_resource type="Script" uid="uid://v2k3uctjftv1" path="res://Scenes/Player/Sadie/pushing_state.gd" id="6_hkjr5"]
 [ext_resource type="PackedScene" uid="uid://pgbmj66itpmd" path="res://Scripts/Components/velocity_component.tscn" id="7_4u4v1"]
 [ext_resource type="PackedScene" uid="uid://btlgcc88pdfbb" path="res://Scripts/Components/jump_component.tscn" id="8_bplxg"]
 [ext_resource type="PackedScene" uid="uid://bnqloiaexy8u2" path="res://Scripts/Components/gravity_component.tscn" id="9_7v2ke"]
@@ -117,8 +118,11 @@ player = NodePath("../..")
 script = ExtResource("5_tv43m")
 player = NodePath("../..")
 
-[node name="Idle State" type="Node" parent="Movement FSM" unique_id=1057545233 node_paths=PackedStringArray("player")]
+[node name="Idle State" type="Node" parent="Movement FSM" unique_id=1057545233]
 script = ExtResource("6_316yk")
+
+[node name="Pushing State" type="Node" parent="Movement FSM" unique_id=950541112 node_paths=PackedStringArray("player")]
+script = ExtResource("6_hkjr5")
 player = NodePath("../..")
 
 [node name="Velocity Component" parent="." unique_id=556735024 node_paths=PackedStringArray("character") instance=ExtResource("7_4u4v1")]
