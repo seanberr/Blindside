@@ -59,7 +59,7 @@ func play_cutscene():
 		
 	await get_tree().create_timer(1.5).timeout
 	cutscene.play("Cutscenes/Move To Edge")
-	await get_tree().create_timer(1.5).timeout
+	await get_tree().create_timer(3.5).timeout
 	cutscene.pause()
 	await get_tree().create_timer(1).timeout
 	cutscene.play("Cutscenes/Jump")
