@@ -9,6 +9,9 @@ func exit():
 	pass
 	
 func update(delta: float):
+	if !player:
+		player = get_node("../..")
+		
 	player.direction_comp.update_direction()
 	evaluate_state()
 	
