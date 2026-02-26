@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://blwjhpbd6ehmi"]
+
+[ext_resource type="AudioStream" uid="uid://cj3ynqd8fhx7x" path="res://Audio/Music/blindside_overworld.mp3" id="1_760hw"]
+
+[node name="Music Manager" type="Node2D" unique_id=1557401017]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1360062201]
+process_mode = 3
+stream = ExtResource("1_760hw")
+volume_db = -19.033
+autoplay = true
+parameters/looping = true

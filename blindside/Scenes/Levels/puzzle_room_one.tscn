@@ -40,7 +40,6 @@ position = Vector2(1925, 36)
 position = Vector2(1212, 443)
 
 [node name="Blindless Modulate" parent="." unique_id=1509691114 instance=ExtResource("8_8cf2k")]
-visible = false
 show_behind_parent = true
 color = Color(0.06800488, 0.07132318, 0.12444902, 1)
 

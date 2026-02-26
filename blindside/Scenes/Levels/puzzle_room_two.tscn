@@ -56,7 +56,6 @@ scale = Vector2(0.80494505, 0.7157895)
 texture = ExtResource("6_on4bf")
 
 [node name="Blindness Modulate" parent="." unique_id=1509691114 instance=ExtResource("7_on4bf")]
-visible = false
 
 [node name="Background_1" type="CanvasLayer" parent="." unique_id=212439775]
 layer = -1

@@ -22,6 +22,7 @@ PlayerLoader="*uid://cjhmncsqmv8m6"
 CameraTransition="*uid://dbml3441q5d0o"
 TooltipManager="*uid://woveedsiqeak"
 ExitHandler="*uid://chuwypsyhr4vu"
+MusicManager="*uid://blwjhpbd6ehmi"
 
 [display]
 
