@@ -6,11 +6,6 @@ func enter():
 	## Allows the player to push objects on the collision mask 7
 	player.set_collision_mask_value(7, true)
 	
-	for i in player.get_slide_collision_count():
-		var c = player.get_slide_collision(i)
-		if c.get_collider() is RigidBody2D:
-			player.position = Vector2(0,0)
-		print(c)
 			
 func exit():
 	## Stops the player from pushing objects on the collision mask 7
