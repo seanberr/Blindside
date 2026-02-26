@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dunqftesboqn8"]
+
+[ext_resource type="Script" uid="uid://cwskp27iskkv" path="res://Scenes/Objects/platform_glow_component.gd" id="1_tv1hq"]
+[ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Light/new_gradient_texture_2d.tres" id="2_cx3ko"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tv1hq"]
+radius = 198.1237
+
+[node name="Platform Glow Component" type="Node2D" unique_id=141248574 node_paths=PackedStringArray("light", "area", "disable_timer")]
+script = ExtResource("1_tv1hq")
+light = NodePath("PointLight2D")
+area = NodePath("Area2D")
+disable_timer = NodePath("")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1278338924]
+enabled = false
+color = Color(0.25291693, 0.83282995, 0.93344665, 1)
+texture = ExtResource("2_cx3ko")
+texture_scale = 10.0
+
+[node name="Area2D" type="Area2D" parent="." unique_id=961302014]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=18546965]
+shape = SubResource("CircleShape2D_tv1hq")

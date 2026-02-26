@@ -1,33 +1,146 @@
 [gd_scene format=3 uid="uid://dk6kso1q6jnw0"]
 
 [ext_resource type="Script" uid="uid://hyap1cnxm44g" path="res://Scenes/Test Rooms/Objects/testing_memory.gd" id="1_p57ou"]
+[ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Light/new_gradient_texture_2d.tres" id="2_eciof"]
 [ext_resource type="PackedScene" uid="uid://c8pmtlhrk7nrd" path="res://Scenes/Components/interactable_component.tscn" id="2_p57ou"]
 
+[sub_resource type="Gradient" id="Gradient_p57ou"]
+offsets = PackedFloat32Array(0.0922619, 0.4672619, 0.6994048, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.8509804, 1, 1, 1, 0.5372549, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_eciof"]
+gradient = SubResource("Gradient_p57ou")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.78695655, 0.70434785)
+
+[sub_resource type="Animation" id="Animation_p57ou"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.9961699, 1.9961699)]
+}
+
+[sub_resource type="Animation" id="Animation_eciof"]
+resource_name = "float"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(-2, 2),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -30)]
+}
+
+[sub_resource type="Animation" id="Animation_54rhk"]
+resource_name = "scale"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(2.25, 2.25)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_54rhk"]
+_data = {
+&"RESET": SubResource("Animation_p57ou"),
+&"float": SubResource("Animation_eciof"),
+&"scale": SubResource("Animation_54rhk")
+}
+
 [sub_resource type="Gradient" id="Gradient_eciof"]
-colors = PackedColorArray(1, 0, 0, 1, 0, 0, 1, 1)
+offsets = PackedFloat32Array(0, 0.88095236)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_54rhk"]
 gradient = SubResource("Gradient_eciof")
+width = 32
+height = 32
 fill = 1
-fill_to = Vector2(1, 1)
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.65527064, 0.66381764)
 
-[sub_resource type="Gradient" id="Gradient_07rh8"]
+[sub_resource type="Curve" id="Curve_14d2s"]
+_data = [Vector2(0.3181818, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_p57ou"]
-gradient = SubResource("Gradient_07rh8")
+[sub_resource type="CurveTexture" id="CurveTexture_spqwq"]
+curve = SubResource("Curve_14d2s")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_spqwq"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(30, 30, 30)
+emission_shape = 1
+emission_sphere_radius = 1.0
+gravity = Vector3(0, -50, 0)
+alpha_curve = SubResource("CurveTexture_spqwq")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eciof"]
 radius = 64.629715
 
 [node name="Memory" type="Node2D" unique_id=1928423465]
 script = ExtResource("1_p57ou")
+is_sadie_interactable = true
+is_alex_interactable = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=218301399]
-modulate = Color(0.78431374, 0, 0.7372549, 1)
+scale = Vector2(1.9961699, 1.9961699)
+texture = SubResource("GradientTexture2D_eciof")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=1874209785]
+libraries/ = SubResource("AnimationLibrary_54rhk")
+autoplay = &"float"
+speed_scale = 0.6
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Sprite2D" unique_id=1440868518]
+libraries/ = SubResource("AnimationLibrary_54rhk")
+autoplay = &"scale"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Sprite2D" unique_id=1178948532]
+sub_emitter = NodePath(".")
 texture = SubResource("GradientTexture2D_54rhk")
+lifetime = 2.0
+explosiveness = 0.17
+randomness = 0.24
+process_material = SubResource("ParticleProcessMaterial_spqwq")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1184887235]
-texture = SubResource("GradientTexture2D_p57ou")
+color = Color(1, 1, 1, 0.5686275)
+texture = ExtResource("2_eciof")
+texture_scale = 4.0
 
 [node name="Interactable Component" parent="." unique_id=1580344963 node_paths=PackedStringArray("parent", "interaction_area") instance=ExtResource("2_p57ou")]
 parent = NodePath("..")
@@ -35,6 +148,7 @@ interaction_area = NodePath("Area2D")
 icon_position = Vector2(0, -100)
 
 [node name="Area2D" type="Area2D" parent="Interactable Component" unique_id=101686599]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable Component/Area2D" unique_id=662414086]
 shape = SubResource("CircleShape2D_eciof")

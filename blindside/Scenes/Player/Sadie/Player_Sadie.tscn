@@ -85,9 +85,16 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_oly0s"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hkjr5"]
+gradient = SubResource("Gradient_oly0s")
+
 [node name="PlayerSadie" type="CharacterBody2D" unique_id=1795143295 groups=["Player"]]
+light_mask = 0
 z_index = 2
-collision_mask = 2
+collision_mask = 6
 script = ExtResource("1_d5yuk")
 input_left = &"Player1_Left"
 input_right = &"Player1_Right"
@@ -132,6 +139,7 @@ character = NodePath("..")
 
 [node name="Gravity Component" parent="." unique_id=711362967 node_paths=PackedStringArray("character") instance=ExtResource("9_7v2ke")]
 character = NodePath("..")
+max_fall_speed = 1300
 
 [node name="Direction Component" parent="." unique_id=1869476832 node_paths=PackedStringArray("sprite") instance=ExtResource("10_8t87h")]
 sprite = NodePath("../AnimatedSprite2D")
@@ -157,6 +165,7 @@ position = Vector2(10, 3)
 shape = SubResource("CapsuleShape2D_d5yuk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1975063042]
+light_mask = 4
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_i4gtq")
 animation = &"Walk"
@@ -169,11 +178,14 @@ sprite = NodePath("../AnimatedSprite2D")
 
 [node name="Interaction Component" parent="." unique_id=2081682071 instance=ExtResource("19_8t87h")]
 
-[node name="MainCamera" parent="." unique_id=1417079101 instance=ExtResource("20_oly0s")]
+[node name="MainCamera" parent="." unique_id=1417079101 groups=["Player Camera"] instance=ExtResource("20_oly0s")]
 process_callback = 0
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=780761959]
+energy = 0.3
+range_item_cull_mask = 4
+texture = SubResource("GradientTexture2D_hkjr5")
+texture_scale = 3.0
 
 [connection signal="area_entered" from="Interacting Area" to="." method="_on_interacting_area_area_entered"]
 [connection signal="area_exited" from="Interacting Area" to="." method="_on_interacting_area_area_exited"]

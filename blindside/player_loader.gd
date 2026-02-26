@@ -10,6 +10,10 @@ func spawn_players():
 	parent_scene.add_child(alex)
 	var sadie = player_scenes[1].instantiate()
 	parent_scene.add_child(sadie)
+	var camera : Camera2D = sadie.get_node("MainCamera")
+	camera.enabled = true
+	camera.make_current()
+	
 	sadie.position = spawn_positions[0]
 	alex.position = spawn_positions[1]
 	TransitionHandler.transitioning = false

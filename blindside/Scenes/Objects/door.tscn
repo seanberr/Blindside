@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c8pmtlhrk7nrd" path="res://Scenes/Components/interactable_component.tscn" id="2_gc7pt"]
 [ext_resource type="Texture2D" uid="uid://c66p3iiu7afnt" path="res://Assets/Objects/Locked_door.png" id="3_xpycd"]
 [ext_resource type="Texture2D" uid="uid://bc3e53q4f0hte" path="res://Assets/Objects/Unlocked_door.png" id="4_1k8bm"]
+[ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Light/new_gradient_texture_2d.tres" id="5_gc7pt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kg268"]
 animations = [{
@@ -45,5 +46,9 @@ icon_position = Vector2(0, -250)
 position = Vector2(0.5, 27)
 shape = SubResource("RectangleShape2D_ynea2")
 debug_color = Color(0.36558542, 0.6167273, 9.62615e-07, 0.41960785)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=545533116]
+texture = ExtResource("5_gc7pt")
+texture_scale = 4.0
 
 [editable path="Interactable Component"]

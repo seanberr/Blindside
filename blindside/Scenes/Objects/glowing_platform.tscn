@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c5wkmoo2jh5is"]
+
+[ext_resource type="PackedScene" uid="uid://c1kgbte2e0ony" path="res://Scenes/Objects/platform.tscn" id="1_448ek"]
+[ext_resource type="PackedScene" uid="uid://dunqftesboqn8" path="res://Scenes/Components/platform_glow_component.tscn" id="2_np0i7"]
+
+[node name="Glowing Platform" type="Node2D" unique_id=1269208228]
+
+[node name="Platform" parent="." unique_id=1742705568 instance=ExtResource("1_448ek")]
+
+[node name="Platform Glow Component" parent="Platform" unique_id=141248574 node_paths=PackedStringArray("platform") instance=ExtResource("2_np0i7")]
+platform = NodePath("..")

@@ -20,7 +20,7 @@ func interact():
 	new_memory.position = get_viewport_rect().size / 2
 		
 	if is_sadie_interactable and is_alex_interactable:
-		if interactable.last_id == 1:
+		if interactable.last_id == 0:
 			new_memory.start(sadie_only_id)
 		else:
 			new_memory.start(alex_only_id)

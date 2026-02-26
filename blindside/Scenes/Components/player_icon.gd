@@ -2,8 +2,9 @@ extends Sprite2D
 
 @export var alpha_step : float = 0.05
 @export var max_alpha : float
+@export var glow_animator : AnimationPlayer
 
-var enabled : bool = false
+@export var enabled : bool = false
 var real_position : Vector2
 @export var y_offset : float = 0
 

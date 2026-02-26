@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://c1kgbte2e0ony"]
+
+[ext_resource type="Script" uid="uid://oro2mtf7lgfq" path="res://platform.gd" id="1_3apk8"]
+
+[sub_resource type="Gradient" id="Gradient_3apk8"]
+offsets = PackedFloat32Array(0, 0.42168674, 1)
+colors = PackedColorArray(0.14810371, 0.16893974, 0.18643588, 1, 0.3784136, 0.41853613, 0.45228332, 1, 1, 1, 0.93333334, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mi3jq"]
+gradient = SubResource("Gradient_3apk8")
+fill_from = Vector2(0, 0.8130435)
+fill_to = Vector2(0.004347826, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvi8v"]
+size = Vector2(190, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bq8v2"]
+size = Vector2(190, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ks2wq"]
+size = Vector2(190, 3)
+
+[node name="Platform" type="Node2D" unique_id=1742705568 node_paths=PackedStringArray("standing_area", "underneath_area", "collision_sadie", "collision_alex")]
+script = ExtResource("1_3apk8")
+standing_area = NodePath("Standing Area")
+underneath_area = NodePath("Underneath Area")
+collision_sadie = NodePath("Sadie Collision/CollisionShapeSadie")
+collision_alex = NodePath("Alex Collision/CollisionShapeAlex")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=967434923]
+position = Vector2(0, -2)
+scale = Vector2(2.96875, 0.0625)
+texture = SubResource("GradientTexture2D_mi3jq")
+
+[node name="Standing Area" type="Area2D" parent="." unique_id=487256461]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Standing Area" unique_id=1518716155]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_uvi8v")
+debug_color = Color(0, 0.64868724, 0.18271685, 0.41960785)
+
+[node name="Underneath Area" type="Area2D" parent="." unique_id=44096077]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Underneath Area" unique_id=1745422050]
+position = Vector2(0, 62)
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_bq8v2")
+debug_color = Color(0.8850255, 0, 0.40452638, 0.41960785)
+
+[node name="Sadie Collision" type="StaticBody2D" parent="." unique_id=1245849684]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShapeSadie" type="CollisionShape2D" parent="Sadie Collision" unique_id=920572150]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_ks2wq")
+
+[node name="Alex Collision" type="StaticBody2D" parent="." unique_id=737421753]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShapeAlex" type="CollisionShape2D" parent="Alex Collision" unique_id=1998124265]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_ks2wq")

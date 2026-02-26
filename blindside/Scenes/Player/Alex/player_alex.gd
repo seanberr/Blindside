@@ -1,10 +1,12 @@
 extends CharacterBody2D
 
+var in_control : bool = true
 @onready var velocity_comp : VelocityComponent = $"Velocity Component"
 @onready var jump_comp : JumpComponent = $"Jump Component"
 @onready var gravity_comp : GravityComponent = $"Gravity Component"
 @onready var direction_comp : DirectionComponent = $"Direction Component"
 
+@export var id = 1
 @export var light : PointLight2D
 @export var input_left : StringName
 @export var input_right : StringName
