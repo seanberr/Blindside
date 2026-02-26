@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dddc45n5ss4es" path="res://Scenes/Objects/door.tscn" id="4_oecpd"]
 [ext_resource type="PackedScene" uid="uid://rytqp8xg8cab" path="res://Scenes/Levels/puzzle_room_two.tscn" id="5_xh675"]
 [ext_resource type="Texture2D" uid="uid://csk57yy8l126y" path="res://Assets/Rocks/Rocks 364x190/Rock_364x190_Shape_4_1_BaseShadow.png" id="6_phykn"]
-[ext_resource type="PackedScene" uid="uid://dvfktk3cubbiv" path="res://Scenes/Levels/puzzle_room_three.tscn" id="8_68oyy"]
 [ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="8_alkur"]
 [ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/sketch_4.png" id="9_alkur"]
 [ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player Icon/Sadie_Player_Icon.png" id="11_y75yi"]
@@ -29,13 +28,9 @@ position = Vector2(-345, 1058)
 texture = ExtResource("6_phykn")
 
 [node name="Door2" parent="." unique_id=1600814949 instance=ExtResource("4_oecpd")]
-position = Vector2(337, 959)
+position = Vector2(-1500, 959)
 scene_to_load = ExtResource("5_xh675")
-player_coords = Array[Vector2]([Vector2(0, 0), Vector2(0, 0)])
-
-[node name="Door" parent="." unique_id=1488523286 instance=ExtResource("4_oecpd")]
-position = Vector2(-1573, 966)
-scene_to_load = ExtResource("8_68oyy")
+player_coords = Array[Vector2]([Vector2(-1060, 300), Vector2(-1055, 300)])
 
 [node name="Blindless Modulate" parent="." unique_id=1509691114 instance=ExtResource("8_alkur")]
 color = Color(0.06800488, 0.07132318, 0.12444902, 1)

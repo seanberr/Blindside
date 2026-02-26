@@ -29,6 +29,12 @@ tile_map_data = PackedByteArray("AAAAAAQAAAACAAAAAAD//wQAAAACAAAAAAD+/wQAAAACAAA
 [node name="Door" parent="." unique_id=1600814949 instance=ExtResource("7_uy0g3")]
 position = Vector2(2807, 19)
 scene_to_load = ExtResource("8_1tvsh")
+player_coords = Array[Vector2]([Vector2(0, 959), Vector2(0, 959)])
+
+[node name="Door" parent="Door" unique_id=2096311542 instance=ExtResource("7_uy0g3")]
+position = Vector2(-3179, -3)
+is_locked = true
+scene_to_load = ExtResource("8_1tvsh")
 player_coords = Array[Vector2]([Vector2(-1573, 966), Vector2(-1573, 966)])
 
 [node name="Background_1" type="CanvasLayer" parent="." unique_id=990515804]
