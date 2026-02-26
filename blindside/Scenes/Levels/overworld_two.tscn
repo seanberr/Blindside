@@ -38,7 +38,6 @@ position = Vector2(-1573, 966)
 scene_to_load = ExtResource("8_68oyy")
 
 [node name="Blindless Modulate" parent="." unique_id=1509691114 instance=ExtResource("8_alkur")]
-visible = false
 color = Color(0.06800488, 0.07132318, 0.12444902, 1)
 
 [node name="Background_1" type="CanvasLayer" parent="." unique_id=1368519360]

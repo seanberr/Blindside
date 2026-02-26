@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://d0m2yuwvlp6mb" path="res://Assets/Trees/Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_3_2.png" id="14_mf2xe"]
 [ext_resource type="Texture2D" uid="uid://87hx88tmj22b" path="res://Assets/Rocks/Rocks 728x380/Rock_728x380_Shape_4_1_BaseShadow.png" id="14_u3q4d"]
 [ext_resource type="Texture2D" uid="uid://qr1qoqgjc20i" path="res://Assets/Trees/Tree Leaves 1920 x 1080/Tree_Leaves_1920x1080_Shape_2_2.png" id="15_70mk8"]
+[ext_resource type="Texture2D" uid="uid://dmfj78tkucpl4" path="res://Assets/Vines/Vines_219x904_Shape_1_2.png" id="16_sjqak"]
+[ext_resource type="Texture2D" uid="uid://bk26g6oujheq8" path="res://Assets/Vines/Vines_219x904_Shape_3_2.png" id="17_kjshs"]
 
 [node name="Overworld One" type="Node2D" unique_id=1972606243]
 script = ExtResource("1_wpepl")
@@ -39,7 +41,6 @@ scale = Vector2(2.0878305, 2.1789265)
 texture = ExtResource("6_csdph")
 
 [node name="Blindless Modulate" parent="." unique_id=1509691114 instance=ExtResource("9_1tvsh")]
-visible = false
 color = Color(0.06800488, 0.07132318, 0.12444902, 1)
 
 [node name="SadiePlayerIcon" type="Sprite2D" parent="." unique_id=1547864105]
@@ -60,6 +61,7 @@ position = Vector2(1646, -693)
 texture = ExtResource("5_bdtki")
 
 [node name="TreeTrunk1920x1080Shape33" type="Sprite2D" parent="Parallax2D-background" unique_id=2131087678]
+z_index = -1
 position = Vector2(1635, -342)
 texture = ExtResource("4_csdph")
 
@@ -77,15 +79,31 @@ position = Vector2(1440, 2)
 texture = ExtResource("14_u3q4d")
 
 [node name="TreeLeaves1920x1080Shape22" type="Sprite2D" parent="Parallax2D-background" unique_id=525463456]
-z_index = -1
 position = Vector2(928, -363)
 scale = Vector2(0.58684903, 0.6050926)
 texture = ExtResource("15_70mk8")
 
 [node name="TreeTrunk1920x1080Shape32" type="Sprite2D" parent="Parallax2D-background" unique_id=1549749744]
+z_index = -1
 position = Vector2(938.00006, -165.00002)
 scale = Vector2(0.53229165, 0.54351854)
 texture = ExtResource("14_mf2xe")
+
+[node name="Vines219x904Shape13" type="Sprite2D" parent="Parallax2D-background" unique_id=1788974503]
+z_index = -2
+position = Vector2(1930, -531)
+texture = ExtResource("16_sjqak")
+
+[node name="Vines219x904Shape12" type="Sprite2D" parent="Parallax2D-background" unique_id=225104411]
+z_index = -2
+position = Vector2(1327, -426)
+texture = ExtResource("16_sjqak")
+
+[node name="Vines219x904Shape32" type="Sprite2D" parent="Parallax2D-background" unique_id=911719148]
+z_index = -2
+position = Vector2(1113, -205)
+scale = Vector2(0.6004566, 0.6659292)
+texture = ExtResource("17_kjshs")
 
 [node name="Parallax2D - foreground" type="Parallax2D" parent="." unique_id=938469175]
 z_index = 5
