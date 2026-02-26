@@ -111,7 +111,7 @@ animation = &"Idle"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1206903230]
 
 [node name="Movement FSM" parent="." unique_id=459573243 node_paths=PackedStringArray("initial_state") instance=ExtResource("3_5w000")]
-initial_state = NodePath("Idle State")
+initial_state = NodePath("Ground Movement State")
 
 [node name="Ground Movement State" type="Node" parent="Movement FSM" unique_id=1330053322 node_paths=PackedStringArray("player")]
 script = ExtResource("4_70705")

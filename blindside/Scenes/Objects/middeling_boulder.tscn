@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ck8uic3tgkep1"]
+
+[ext_resource type="Texture2D" uid="uid://bl2ygo0v5cqjr" path="res://Assets/Puzzle Rocks/Puzzle_Rock_728x380_Shape_2.png" id="1_06g4f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a7ph3"]
+radius = 122.00409
+
+[node name="Middeling" type="RigidBody2D" unique_id=372066649]
+collision_layer = 192
+collision_mask = 130
+freeze_mode = 1
+
+[node name="Rock 1" type="Sprite2D" parent="." unique_id=1222469127]
+position = Vector2(-63, -40.000004)
+scale = Vector2(0.58457965, 0.5940388)
+texture = ExtResource("1_06g4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1037806848]
+position = Vector2(-46.999992, -45.999996)
+shape = SubResource("CircleShape2D_a7ph3")
+debug_color = Color(0, 1, 0, 0.41960785)

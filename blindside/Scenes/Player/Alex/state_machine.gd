@@ -37,6 +37,9 @@ func exit_state():
 	print("Exiting state: " + current_state.name.to_lower())
 	current_state.exit()
 	
+func get_state():
+	return current_state
+	
 func populate_dictionary():
 	#Loop through children and add to state list dictionary
 	state_list.clear()
