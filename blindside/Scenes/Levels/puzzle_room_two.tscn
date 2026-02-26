@@ -160,8 +160,8 @@ collision_layer = 195
 collision_mask = 195
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform One" unique_id=2118577605]
-position = Vector2(-56.000008, 21.999998)
-scale = Vector2(1.4062499, 0.19531249)
+position = Vector2(-58, 21.999998)
+scale = Vector2(0.6874999, 0.19531249)
 texture = ExtResource("15_ttvy8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform One" unique_id=812783669]
@@ -174,8 +174,8 @@ collision_layer = 195
 collision_mask = 195
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform Two" unique_id=938898340]
-position = Vector2(-14.500011, 21.999998)
-scale = Vector2(1.4023436, 0.19531249)
+position = Vector2(-14, 21.999998)
+scale = Vector2(0.6992188, 0.19531249)
 texture = ExtResource("15_ttvy8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform Two" unique_id=728860249]
@@ -188,8 +188,8 @@ collision_layer = 195
 collision_mask = 195
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform Three" unique_id=1221291569]
-position = Vector2(-96.499985, 21.999998)
-scale = Vector2(0.61328125, 0.19531249)
+position = Vector2(-96.500015, 21.999998)
+scale = Vector2(0.30273438, 0.19531249)
 texture = ExtResource("15_ttvy8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform Three" unique_id=407300635]
@@ -203,8 +203,8 @@ collision_layer = 66
 collision_mask = 66
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform Four" unique_id=289504729]
-position = Vector2(-86.49998, 21.999998)
-scale = Vector2(0.6914063, 0.19531249)
+position = Vector2(-87.49999, 21.999998)
+scale = Vector2(0.3496093, 0.19531249)
 texture = ExtResource("15_ttvy8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform Four" unique_id=1541588044]
