@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://dib3u6wfvt43w" path="res://Scenes/Levels/end_tree.gd" id="16_t0vj2"]
 [ext_resource type="PackedScene" uid="uid://dddc45n5ss4es" path="res://Scenes/Objects/door.tscn" id="18_rn02p"]
 [ext_resource type="PackedScene" uid="uid://dvfktk3cubbiv" path="res://Scenes/Levels/puzzle_room_three.tscn" id="19_1qgvn"]
+[ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="20_1qgvn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2upf6"]
 radius = 71.17584
@@ -244,6 +245,16 @@ position = Vector2(1761, 268)
 scale = Vector2(0.9, 0.9)
 scene_to_load = ExtResource("19_1qgvn")
 player_coords = Array[Vector2]([Vector2(350, -2000), Vector2(350, -2000)])
+
+[node name="Main Memory" parent="." unique_id=1928423465 node_paths=PackedStringArray("memory_layer") instance=ExtResource("20_1qgvn")]
+position = Vector2(1574, 376)
+image_id = 4
+sadie_only_id = 1
+memory_layer = NodePath("../Memory Layer")
+is_alex_interactable = false
+
+[node name="Memory Layer" type="CanvasLayer" parent="." unique_id=564273173]
+layer = 999
 
 [connection signal="body_entered" from="Tiny Hole" to="Tiny Boulder" method="_on_tiny_hole_body_entered"]
 [connection signal="body_entered" from="Middeling Hole" to="Middeling Boulder" method="_on_middeling_hole_body_entered"]
