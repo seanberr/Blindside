@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="Blindside"
-run/main_scene="uid://cdlqgiadt8tu8"
+run/main_scene="uid://bdwqpu7hq1iqu"
 config/features=PackedStringArray("4.6", "Forward Plus")
+
+[audio]
+
+buses/default_bus_layout="uid://cnfqfc0e03lt"
 
 [autoload]
 
