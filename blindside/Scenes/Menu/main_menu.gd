@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready() -> void:
+	$"CenterContainer/Main Buttons/Play".grab_focus()
 	$"CenterContainer/Settings Menu/Fullscreen".button_pressed = true if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN else false
 	$"CenterContainer/Settings Menu/Main Volume".value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master")))
 	$"CenterContainer/Settings Menu/SFX Volume".value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX")))
@@ -15,6 +16,7 @@ func _on_extras_pressed() -> void:
 
 
 func _on_options_pressed() -> void:
+	$"CenterContainer/Settings Menu/Back".grab_focus()
 	$"CenterContainer/Main Buttons".visible = false
 	$"CenterContainer/Settings Menu".visible = true
 
@@ -23,6 +25,7 @@ func _on_quit_pressed() -> void:
 
 
 func _on_back_pressed() -> void:
+	$"CenterContainer/Main Buttons/Play".grab_focus()
 	$"CenterContainer/Main Buttons".visible = true
 	$"CenterContainer/Settings Menu".visible = false
 
