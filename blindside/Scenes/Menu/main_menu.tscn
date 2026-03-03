@@ -6,8 +6,8 @@
 script = ExtResource("1_bkwd7")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1039816023]
-offset_right = 1966.0
-offset_bottom = 1352.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
@@ -119,7 +119,43 @@ text = "back"
 visible = false
 layout_mode = 2
 
+[node name="Memories" type="Button" parent="CenterContainer/Extras Menu" unique_id=859845668]
+custom_minimum_size = Vector2(353, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 75
+text = "memories"
+
+[node name="Concept Art" type="Button" parent="CenterContainer/Extras Menu" unique_id=2048115788]
+custom_minimum_size = Vector2(353, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 75
+text = "concept art"
+
 [node name="Back" type="Button" parent="CenterContainer/Extras Menu" unique_id=1027836151]
+custom_minimum_size = Vector2(353, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 75
+text = "back"
+
+[node name="Memories Menu" type="VBoxContainer" parent="CenterContainer" unique_id=2143046397]
+visible = false
+layout_mode = 2
+
+[node name="Back" type="Button" parent="CenterContainer/Memories Menu" unique_id=366158345]
+custom_minimum_size = Vector2(353, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 75
+text = "back"
+
+[node name="Concept Art Menu" type="VBoxContainer" parent="CenterContainer" unique_id=1192138553]
+visible = false
+layout_mode = 2
+
+[node name="Back" type="Button" parent="CenterContainer/Concept Art Menu" unique_id=159110113]
 custom_minimum_size = Vector2(353, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -135,4 +171,8 @@ text = "back"
 [connection signal="value_changed" from="CenterContainer/Settings Menu/SFX Volume" to="." method="_on_sfx_volume_value_changed"]
 [connection signal="value_changed" from="CenterContainer/Settings Menu/Music Volume" to="." method="_on_music_volume_value_changed"]
 [connection signal="pressed" from="CenterContainer/Settings Menu/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CenterContainer/Extras Menu/Memories" to="." method="_on_memories_pressed"]
+[connection signal="pressed" from="CenterContainer/Extras Menu/Concept Art" to="." method="_on_concept_art_pressed"]
 [connection signal="pressed" from="CenterContainer/Extras Menu/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CenterContainer/Memories Menu/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CenterContainer/Concept Art Menu/Back" to="." method="_on_back_pressed"]

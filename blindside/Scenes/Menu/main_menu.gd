@@ -27,16 +27,29 @@ func _on_quit_pressed() -> void:
 
 
 func _on_back_pressed() -> void:
-	$"CenterContainer/Main Buttons/Play".grab_focus()
-	$"CenterContainer/Main Buttons".visible = true
+		
+	if $"CenterContainer/Memories Menu".visible == true:
+		$"CenterContainer/Memories Menu".visible = false
+		$"CenterContainer/Extras Menu".visible = true
+		$"CenterContainer/Extras Menu/Back".grab_focus()
 	
-	if $"CenterContainer/Settings Menu".visible == true:
-		$"CenterContainer/Settings Menu".visible = false
-		$"CenterContainer/Main Buttons/Options".grab_focus()
+	elif $"CenterContainer/Concept Art Menu".visible == true:
+		$"CenterContainer/Concept Art Menu".visible = false
+		$"CenterContainer/Extras Menu".visible = true
+		$"CenterContainer/Extras Menu/Back".grab_focus()
 	
 	else:
-		$"CenterContainer/Extras Menu".visible = false
-		$"CenterContainer/Main Buttons/Extras".grab_focus()
+		$"CenterContainer/Main Buttons/Play".grab_focus()
+		$"CenterContainer/Main Buttons".visible = true
+		
+		if $"CenterContainer/Settings Menu".visible == true:
+			$"CenterContainer/Settings Menu".visible = false
+			$"CenterContainer/Main Buttons/Options".grab_focus()
+		
+		
+		else:
+			$"CenterContainer/Extras Menu".visible = false
+			$"CenterContainer/Main Buttons/Extras".grab_focus()
 		
 func _on_fullscreen_toggled(toggled_on: bool) -> void:
 	if toggled_on:
@@ -54,3 +67,15 @@ func _on_music_volume_value_changed(value: float) -> void:
 
 func _on_sfx_volume_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index("SFX"), value)
+
+
+func _on_memories_pressed() -> void:
+	$"CenterContainer/Memories Menu/Back".grab_focus()
+	$"CenterContainer/Memories Menu".visible = true
+	$"CenterContainer/Extras Menu".visible = false
+
+
+func _on_concept_art_pressed() -> void:
+	$"CenterContainer/Concept Art Menu/Back".grab_focus()
+	$"CenterContainer/Concept Art Menu".visible = true
+	$"CenterContainer/Extras Menu".visible = false
