@@ -115,6 +115,17 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 75
 text = "back"
 
+[node name="Extras Menu" type="VBoxContainer" parent="CenterContainer" unique_id=1722465516]
+visible = false
+layout_mode = 2
+
+[node name="Back" type="Button" parent="CenterContainer/Extras Menu" unique_id=1027836151]
+custom_minimum_size = Vector2(353, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 75
+text = "back"
+
 [connection signal="pressed" from="CenterContainer/Main Buttons/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="CenterContainer/Main Buttons/Extras" to="." method="_on_extras_pressed"]
 [connection signal="pressed" from="CenterContainer/Main Buttons/Options" to="." method="_on_options_pressed"]
@@ -124,3 +135,4 @@ text = "back"
 [connection signal="value_changed" from="CenterContainer/Settings Menu/SFX Volume" to="." method="_on_sfx_volume_value_changed"]
 [connection signal="value_changed" from="CenterContainer/Settings Menu/Music Volume" to="." method="_on_music_volume_value_changed"]
 [connection signal="pressed" from="CenterContainer/Settings Menu/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CenterContainer/Extras Menu/Back" to="." method="_on_back_pressed"]

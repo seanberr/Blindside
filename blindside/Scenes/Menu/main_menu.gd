@@ -12,7 +12,9 @@ func _on_play_pressed() -> void:
 
 
 func _on_extras_pressed() -> void:
-	pass # Replace with function body.
+	$"CenterContainer/Extras Menu/Back".grab_focus()
+	$"CenterContainer/Main Buttons".visible = false
+	$"CenterContainer/Extras Menu".visible = true
 
 
 func _on_options_pressed() -> void:
@@ -27,9 +29,15 @@ func _on_quit_pressed() -> void:
 func _on_back_pressed() -> void:
 	$"CenterContainer/Main Buttons/Play".grab_focus()
 	$"CenterContainer/Main Buttons".visible = true
-	$"CenterContainer/Settings Menu".visible = false
-
-
+	
+	if $"CenterContainer/Settings Menu".visible == true:
+		$"CenterContainer/Settings Menu".visible = false
+		$"CenterContainer/Main Buttons/Options".grab_focus()
+	
+	else:
+		$"CenterContainer/Extras Menu".visible = false
+		$"CenterContainer/Main Buttons/Extras".grab_focus()
+		
 func _on_fullscreen_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
