@@ -23,6 +23,9 @@
 [ext_resource type="PackedScene" uid="uid://dvfktk3cubbiv" path="res://Scenes/Levels/puzzle_room_three.tscn" id="19_1qgvn"]
 [ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="20_1qgvn"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbehg"]
+size = Vector2(157, 453)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_2upf6"]
 radius = 71.17584
 
@@ -34,9 +37,6 @@ radius = 153.0294
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ps0di"]
 radius = 81.02469
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbehg"]
-size = Vector2(157, 453)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eaf6r"]
 size = Vector2(355, 48)
@@ -90,6 +90,35 @@ script = ExtResource("11_7o6jt")
 position = Vector2(1634, -268)
 script = ExtResource("13_ps0di")
 
+[node name="Tree" type="StaticBody2D" parent="." unique_id=692195601]
+position = Vector2(1345, 324)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("16_t0vj2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree" unique_id=2016737863]
+position = Vector2(-11.5, -98.5)
+shape = SubResource("RectangleShape2D_wbehg")
+
+[node name="Sprite2D" type="Sprite2D" parent="Tree" unique_id=905175058]
+visible = false
+position = Vector2(29.999939, -99.999985)
+scale = Vector2(0.425, 0.425)
+texture = ExtResource("12_d2y5i")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Tree" unique_id=81856696]
+
+[node name="TreeTrunk1920x1080Shape33" type="Sprite2D" parent="Tree/Sprite2D2" unique_id=969982047]
+position = Vector2(46, -196)
+scale = Vector2(0.600926, 0.6009259)
+texture = ExtResource("17_fl1qa")
+
+[node name="TreeLeaves1920x1080Shape22" type="Sprite2D" parent="Tree/Sprite2D2" unique_id=1649328679]
+position = Vector2(50.99994, -316)
+rotation = 0.049974635
+scale = Vector2(0.4961085, 0.4961085)
+texture = ExtResource("18_31m4j")
+
 [node name="Tiny Hole" type="Area2D" parent="." unique_id=10164234]
 collision_layer = 128
 collision_mask = 128
@@ -137,35 +166,6 @@ texture = ExtResource("9_o2lhj")
 position = Vector2(1424.0002, 314.59995)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("10_1jlcf")
-
-[node name="Tree" type="StaticBody2D" parent="." unique_id=692195601]
-position = Vector2(1345, 324)
-collision_layer = 3
-collision_mask = 3
-script = ExtResource("16_t0vj2")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree" unique_id=2016737863]
-position = Vector2(-11.5, -98.5)
-shape = SubResource("RectangleShape2D_wbehg")
-
-[node name="Sprite2D" type="Sprite2D" parent="Tree" unique_id=905175058]
-visible = false
-position = Vector2(29.999939, -99.999985)
-scale = Vector2(0.425, 0.425)
-texture = ExtResource("12_d2y5i")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Tree" unique_id=81856696]
-
-[node name="TreeTrunk1920x1080Shape33" type="Sprite2D" parent="Tree/Sprite2D2" unique_id=969982047]
-position = Vector2(46, -196)
-scale = Vector2(0.600926, 0.6009259)
-texture = ExtResource("17_fl1qa")
-
-[node name="TreeLeaves1920x1080Shape22" type="Sprite2D" parent="Tree/Sprite2D2" unique_id=1649328679]
-position = Vector2(50.99994, -316)
-rotation = 0.049974635
-scale = Vector2(0.4961085, 0.4961085)
-texture = ExtResource("18_31m4j")
 
 [node name="Platform One" type="StaticBody2D" parent="." unique_id=60085154]
 position = Vector2(-680, 177)
