@@ -12,11 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://biqefscvrilyx" path="res://Assets/Rocks/Rocks 364x190/Rock_364x190_Shape_2_1_BaseShadow.png" id="10_t04cc"]
 [ext_resource type="Texture2D" uid="uid://d4hu5yr0h65mc" path="res://Assets/Trees/Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_12_1.png" id="11_kttiu"]
 [ext_resource type="Texture2D" uid="uid://b1p44t7lbrots" path="res://Assets/Trees/Tree Leaves 3840 x 2160/Tree_Leaves_3840x2160_Shape_5_1.png" id="12_fisls"]
+[ext_resource type="Texture2D" uid="uid://cugvwp5hx75u6" path="res://Assets/Trees/Foreground Trees 1920 x 1080/Tree_1920x1080_Shape_2_1_Blockout.png" id="12_kttiu"]
 [ext_resource type="Texture2D" uid="uid://ft80w3vswxjy" path="res://Assets/Rocks/Foreground Rocks 1920 x 1080/Rock_1920x1080_Shape_1_1_Blockout.png" id="12_wo23v"]
 [ext_resource type="Texture2D" uid="uid://dtgna48q1s80y" path="res://Assets/Trees/Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_7_1_Blockout.png" id="13_t04cc"]
 [ext_resource type="Texture2D" uid="uid://bmpg5yy6k7c6o" path="res://Assets/Player Icon/Alex_Player_Icon.png" id="15_wo23v"]
-[ext_resource type="Texture2D" uid="uid://csjtmrvhr45bo" path="res://Assets/Trees/Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_3_3.png" id="17_1ciky"]
-[ext_resource type="Texture2D" uid="uid://ca6n840q05apa" path="res://Assets/Trees/Tree Leaves 1920 x 1080/Tree_Leaves_1920x1080_Shape_2_3.png" id="17_kttiu"]
 [ext_resource type="Script" uid="uid://iu1gogkp5rn7" path="res://Scenes/Levels/input_tooltip.gd" id="19_fisls"]
 [ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="20_1ciky"]
 
@@ -40,6 +39,7 @@ position = Vector2(1925, 36)
 position = Vector2(1212, 443)
 
 [node name="Blindless Modulate" parent="." unique_id=1509691114 instance=ExtResource("8_8cf2k")]
+visible = false
 show_behind_parent = true
 color = Color(0.06800488, 0.07132318, 0.12444902, 1)
 
@@ -89,26 +89,10 @@ texture = ExtResource("12_fisls")
 z_index = 5
 scroll_scale = Vector2(1.1, 1.1)
 
-[node name="blue tree" type="Sprite2D" parent="Parallax2D - foreground" unique_id=146784352]
-position = Vector2(-1470, 275)
-scale = Vector2(0.81796896, 1.237963)
-texture = ExtResource("17_1ciky")
-
-[node name="TreeLeaves1920x1080Shape23" type="Sprite2D" parent="Parallax2D - foreground/blue tree" unique_id=1853615162]
-position = Vector2(158.93028, -395.81155)
-rotation = 0.2519709
-scale = Vector2(1.0624228, 0.8171108)
-skew = 0.22555494
-texture = ExtResource("17_kttiu")
-flip_h = true
-
-[node name="TreeLeaves1920x1080Shape24" type="Sprite2D" parent="Parallax2D - foreground/blue tree" unique_id=507878052]
-position = Vector2(-191.93884, -210.83022)
-rotation = -0.4086826
-scale = Vector2(0.67052954, 0.6874375)
-skew = -0.30758226
-texture = ExtResource("17_kttiu")
-flip_h = true
+[node name="Tree1920x1080Shape21Blockout" type="Sprite2D" parent="Parallax2D - foreground" unique_id=1611672954]
+position = Vector2(-1083, 157.00003)
+scale = Vector2(1.6746478, 1.563889)
+texture = ExtResource("12_kttiu")
 
 [node name="shadow tree" type="Sprite2D" parent="Parallax2D - foreground" unique_id=481071420]
 position = Vector2(2343, -126)
