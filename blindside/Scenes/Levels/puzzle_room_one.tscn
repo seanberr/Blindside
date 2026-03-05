@@ -14904,6 +14904,7 @@ texture = ExtResource("8_a0dvd")
 23:118/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_0b02a"]
+tile_size = Vector2i(64, 64)
 sources/4 = SubResource("TileSetAtlasSource_26lps")
 sources/5 = SubResource("TileSetAtlasSource_b8ahs")
 sources/6 = SubResource("TileSetAtlasSource_ec3md")
