@@ -380,8 +380,8 @@ script = ExtResource("9_6uuda")
 invisible_walls = [NodePath("../Invisible Wall 1/CollisionShape2D"), NodePath("../Invisible Wall 2/CollisionShape2D")]
 bone = NodePath("../Bone")
 cutscene = NodePath("Jump Down Cutscene")
-sadie_icon = NodePath("Sadie Icon")
-alex_icon = NodePath("Alex Icon")
+sadie_icon = NodePath("../Icons/Sadie Icon")
+alex_icon = NodePath("../Icons/Alex Icon")
 sadie_area = NodePath("Sadie Area")
 alex_area = NodePath("Alex Area")
 
@@ -398,17 +398,6 @@ position = Vector2(592, -1221)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cutscene Manager/Alex Area" unique_id=674495039]
 position = Vector2(40, 56)
 shape = SubResource("RectangleShape2D_4dgjf")
-
-[node name="Alex Icon" parent="Cutscene Manager" unique_id=1951650079 instance=ExtResource("9_abv05")]
-position = Vector2(633.00006, -1374.0001)
-max_alpha = 0.3
-enabled = true
-
-[node name="Sadie Icon" parent="Cutscene Manager" unique_id=1711467030 instance=ExtResource("9_abv05")]
-position = Vector2(-117.00001, -1374.0001)
-texture = ExtResource("4_8j0jc")
-max_alpha = 0.3
-enabled = true
 
 [node name="Jump Down Cutscene" type="AnimationPlayer" parent="Cutscene Manager" unique_id=156205055]
 libraries/ = SubResource("AnimationLibrary_7iset")
@@ -516,3 +505,18 @@ player_coords = Array[Vector2]([Vector2(0, 0), Vector2(0, 0)])
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Transition Area" unique_id=766414867]
 position = Vector2(241, 1045.5)
 shape = SubResource("RectangleShape2D_tg6hl")
+
+[node name="Icons" type="CanvasLayer" parent="." unique_id=1414121671]
+layer = 2
+follow_viewport_enabled = true
+
+[node name="Sadie Icon" parent="Icons" unique_id=1711467030 instance=ExtResource("9_abv05")]
+position = Vector2(-117.00001, -1374.0001)
+texture = ExtResource("4_8j0jc")
+max_alpha = 0.3
+enabled = true
+
+[node name="Alex Icon" parent="Icons" unique_id=1951650079 instance=ExtResource("9_abv05")]
+position = Vector2(633.00006, -1374.0001)
+max_alpha = 0.3
+enabled = true

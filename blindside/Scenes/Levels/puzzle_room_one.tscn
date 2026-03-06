@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://cdlqgiadt8tu8"]
 
 [ext_resource type="Script" uid="uid://b6dfhua1w4u1p" path="res://Scenes/Levels/level.gd" id="1_vb710"]
+[ext_resource type="PackedScene" uid="uid://duocm8jnqin7y" path="res://Scenes/Camera/blur_layer.tscn" id="2_s4l4l"]
 [ext_resource type="Texture2D" uid="uid://xmif22mdt8it" path="res://Assets/Tilesets/Grass Platforms/Grass_Platform_corner_1024x256.png" id="3_4m0pv"]
 [ext_resource type="PackedScene" uid="uid://b73bau5gdga1o" path="res://Scenes/Levels/overworld_one.tscn" id="4_6thti"]
 [ext_resource type="PackedScene" uid="uid://dyjicgdjdwsip" path="res://Scenes/Tileset/Test_Tileset.tscn" id="4_glmga"]
@@ -30,8 +31,6 @@
 [ext_resource type="Texture2D" uid="uid://bmpg5yy6k7c6o" path="res://Assets/Player Icon/Alex_Player_Icon.png" id="15_wo23v"]
 [ext_resource type="Script" uid="uid://iu1gogkp5rn7" path="res://Scenes/Levels/input_tooltip.gd" id="19_fisls"]
 [ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="20_1ciky"]
-[ext_resource type="Shader" uid="uid://cegrl1tds3xo" path="res://Shaders/blur_shader.gdshader" id="20_4brf4"]
-[ext_resource type="Script" uid="uid://lm8w04yihy5l" path="res://Scenes/Levels/blur_rect.gd" id="21_4brf4"]
 [ext_resource type="Texture2D" uid="uid://c3xs21w2cw2ml" path="res://Assets/Bushes/Bush_364x190_Shape_2_1.png" id="31_ec3md"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_665bh"]
@@ -2780,17 +2779,10 @@ shader_parameter/target_color = Color(0, 0, 0, 1)
 shader_parameter/replace_color = Color(0.33, 0.1419, 0.23595002, 1)
 shader_parameter/tolerance = 1.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_0b02a"]
-shader = ExtResource("20_4brf4")
-shader_parameter/max_lod = 3.0
-shader_parameter/player1_uv = Vector2(0, 0)
-shader_parameter/player2_uv = Vector2(0, 0)
-shader_parameter/clear_radius = 0.15
-shader_parameter/softness = 0.05
-
 [node name="Puzzle Room One" type="Node2D" unique_id=1429758268]
 script = ExtResource("1_vb710")
 spawn_positions = Array[Vector2]([Vector2(-193, 258), Vector2(-196, 258)])
+blur_layer = ExtResource("2_s4l4l")
 
 [node name="Bush364x190Shape21" type="Sprite2D" parent="." unique_id=65738101]
 position = Vector2(-545, 246.00002)
@@ -2913,14 +2905,3 @@ player_coords = Array[Vector2]([Vector2(-375, 0), Vector2(-375, 0)])
 
 [node name="Input Tooltip" type="Node" parent="." unique_id=1443934396]
 script = ExtResource("19_fisls")
-
-[node name="BlurLayer" type="CanvasLayer" parent="." unique_id=1961679403]
-
-[node name="BlurRect" type="ColorRect" parent="BlurLayer" unique_id=1893882841]
-material = SubResource("ShaderMaterial_0b02a")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("21_4brf4")
