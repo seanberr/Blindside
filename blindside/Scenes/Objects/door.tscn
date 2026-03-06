@@ -40,6 +40,9 @@ parent = NodePath("..")
 interaction_area = NodePath("Area2D")
 icon_position = Vector2(0, -250)
 
+[node name="CanvasLayer" parent="Interactable Component" index="0" unique_id=1890344508]
+layer = 1
+
 [node name="Area2D" type="Area2D" parent="Interactable Component" unique_id=1690511813]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable Component/Area2D" unique_id=1775537693]

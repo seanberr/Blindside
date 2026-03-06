@@ -11,19 +11,20 @@ var real_position : Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	real_position = position
+	real_position = global_position
 	visible = true
 	self_modulate.a = 0
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+
 	if enabled and self_modulate.a < max_alpha:
 		self_modulate.a += alpha_step * delta
 	elif self_modulate.a > 0:
 		self_modulate.a -= alpha_step * delta
 		
-	position.y = real_position.y + y_offset
+	global_position.y = real_position.y + y_offset
 
 func enable():
 	enabled = true
