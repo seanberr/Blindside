@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://t8m7skbs0j0n"]
 
-[ext_resource type="Texture2D" uid="uid://bmpg5yy6k7c6o" path="res://Assets/Player Icon/Alex_Player_Icon.png" id="1_6qqmf"]
+[ext_resource type="Texture2D" uid="uid://bmpg5yy6k7c6o" path="res://Assets/Player/Player Icon/Alex_Player_Icon.png" id="1_6qqmf"]
 [ext_resource type="Script" uid="uid://b4qtakuer4n38" path="res://Scenes/Components/player_icon.gd" id="2_efh16"]
 [ext_resource type="Script" uid="uid://c0ah4pclw1xx3" path="res://Scenes/Player/icon_light.gd" id="3_efh16"]
 

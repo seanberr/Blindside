@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dk6kso1q6jnw0"]
 
 [ext_resource type="Script" uid="uid://hyap1cnxm44g" path="res://Scenes/Test Rooms/Objects/testing_memory.gd" id="1_p57ou"]
-[ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Light/new_gradient_texture_2d.tres" id="2_eciof"]
+[ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Memories/Memory Assets/Light/new_gradient_texture_2d.tres" id="2_eciof"]
 [ext_resource type="PackedScene" uid="uid://c8pmtlhrk7nrd" path="res://Scenes/Components/interactable_component.tscn" id="2_p57ou"]
 
 [sub_resource type="Gradient" id="Gradient_p57ou"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cwpxtqk02ml5d"]
 
-[ext_resource type="Texture2D" uid="uid://c0wgbjhgfelgw" path="res://Assets/Memory Assets/memory_placeholder.png" id="1_i0v8e"]
+[ext_resource type="Texture2D" uid="uid://c0wgbjhgfelgw" path="res://Assets/Memories/Memory Assets/memory_placeholder.png" id="1_i0v8e"]
 [ext_resource type="Script" uid="uid://c802sfukpdhsa" path="res://Scenes/Objects/memory.gd" id="2_4u8hf"]
 
 [sub_resource type="Animation" id="Animation_blicl"]

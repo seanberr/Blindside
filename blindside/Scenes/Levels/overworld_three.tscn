@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://dyjicgdjdwsip" path="res://Scenes/Tileset/Test_Tileset.tscn" id="1_n62o8"]
 [ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="2_o3tq0"]
 [ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/sketch_4.png" id="3_hyhhq"]
-[ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player Icon/Sadie_Player_Icon.png" id="4_fm0dq"]
-[ext_resource type="Texture2D" uid="uid://bmpg5yy6k7c6o" path="res://Assets/Player Icon/Alex_Player_Icon.png" id="5_eve7n"]
+[ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player/Player Icon/Sadie_Player_Icon.png" id="4_fm0dq"]
+[ext_resource type="Texture2D" uid="uid://bmpg5yy6k7c6o" path="res://Assets/Player/Player Icon/Alex_Player_Icon.png" id="5_eve7n"]
 
 [node name="Overworld Three" type="Node2D" unique_id=1631005632]
 script = ExtResource("1_eve7n")

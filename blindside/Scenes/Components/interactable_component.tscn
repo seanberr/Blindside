@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://lckk5h1sgsyo" path="res://Scenes/Test Rooms/Objects/interactable_component.gd" id="1_m5r35"]
 [ext_resource type="PackedScene" uid="uid://t8m7skbs0j0n" path="res://Scenes/Player/player_icon.tscn" id="2_0o1oo"]
-[ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player Icon/Sadie_Player_Icon.png" id="4_t447q"]
+[ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player/Player Icon/Sadie_Player_Icon.png" id="4_t447q"]
 
 [node name="Interactable Component" type="Node2D" unique_id=1580344963 node_paths=PackedStringArray("alex_icon", "sadie_icon")]
 script = ExtResource("1_m5r35")
