@@ -186,6 +186,7 @@ scale = Vector2(3, 3)
 color = Color(0.6666667, 1, 1, 1)
 texture = SubResource("GradientTexture2D_a54k1")
 texture_scale = 2.0
+height = 45.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PointLight2D" unique_id=1213917638]
 libraries/ = SubResource("AnimationLibrary_ytjal")
