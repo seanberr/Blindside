@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://by78hs6xi4jco"
-path="res://.godot/imported/Grass_Corner_Platforms_1024.png-b0b4b7d642b17f558b077f4efe255599.ctex"
+uid="uid://dt3emyssraltu"
+path="res://.godot/imported/Grass_Platform_828x195_Shape_2.png-21d7e5f443fb636af34422b10f1c7d84.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilesets/Grass Platforms/Grass_Corner_Platforms_1024.png"
-dest_files=["res://.godot/imported/Grass_Corner_Platforms_1024.png-b0b4b7d642b17f558b077f4efe255599.ctex"]
+source_file="res://Assets/Grass Platforms/Grass_Platform_828x195_Shape_2.png"
+dest_files=["res://.godot/imported/Grass_Platform_828x195_Shape_2.png-21d7e5f443fb636af34422b10f1c7d84.ctex"]
 
 [params]
 

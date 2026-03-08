@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm7r0clq6hv87"
-path="res://.godot/imported/Tree_Blockade_1920x1080_Shape_1_1.png-a87d0460604a3e133a234a8225c3bffe.ctex"
+uid="uid://dwchxixuantxb"
+path="res://.godot/imported/Femur_Bone_Broken_1573x427_Shape_6.png-e2145ce5c073a5a1208c0492fccac48a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilesets/Tree Blockade/Tree_Blockade_1920x1080_Shape_1_1.png"
-dest_files=["res://.godot/imported/Tree_Blockade_1920x1080_Shape_1_1.png-a87d0460604a3e133a234a8225c3bffe.ctex"]
+source_file="res://Assets/Femur Bone/Femur_Bone_Broken_1573x427_Shape_6.png"
+dest_files=["res://.godot/imported/Femur_Bone_Broken_1573x427_Shape_6.png-e2145ce5c073a5a1208c0492fccac48a.ctex"]
 
 [params]
 

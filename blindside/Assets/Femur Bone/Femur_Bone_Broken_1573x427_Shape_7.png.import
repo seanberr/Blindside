@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxg251stwfh8m"
-path="res://.godot/imported/Grass_Platforms_1024x512.png-b8a15875b941ae3c862e3b56b01351fb.ctex"
+uid="uid://vj4d012vkodf"
+path="res://.godot/imported/Femur_Bone_Broken_1573x427_Shape_7.png-1da0e25529c89a3372866ec30ea679f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilesets/Grass Platforms/Grass_Platforms_1024x512.png"
-dest_files=["res://.godot/imported/Grass_Platforms_1024x512.png-b8a15875b941ae3c862e3b56b01351fb.ctex"]
+source_file="res://Assets/Femur Bone/Femur_Bone_Broken_1573x427_Shape_7.png"
+dest_files=["res://.godot/imported/Femur_Bone_Broken_1573x427_Shape_7.png-1da0e25529c89a3372866ec30ea679f1.ctex"]
 
 [params]
 

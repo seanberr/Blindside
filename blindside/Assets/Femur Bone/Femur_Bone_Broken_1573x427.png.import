@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1rd61ptlpirr"
-path="res://.godot/imported/Rock_Platforms_512x512.png-7d17b0936893740fdfa750c4b9117d3d.ctex"
+uid="uid://8j5fgt53ckno"
+path="res://.godot/imported/Femur_Bone_Broken_1573x427.png-8ee5ca35ce000cb510bd8ceec8fc9802.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilesets/Rock Platforms/Rock_Platforms_512x512.png"
-dest_files=["res://.godot/imported/Rock_Platforms_512x512.png-7d17b0936893740fdfa750c4b9117d3d.ctex"]
+source_file="res://Assets/Femur Bone/Femur_Bone_Broken_1573x427.png"
+dest_files=["res://.godot/imported/Femur_Bone_Broken_1573x427.png-8ee5ca35ce000cb510bd8ceec8fc9802.ctex"]
 
 [params]
 

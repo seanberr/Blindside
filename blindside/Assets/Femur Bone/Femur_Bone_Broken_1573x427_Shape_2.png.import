@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jl0biemj4hix"
-path="res://.godot/imported/Grass_Platform_gradient_1024x256.png-fc45b4396f79109a48173c5604db6906.ctex"
+uid="uid://dcv18ksi4r7qg"
+path="res://.godot/imported/Femur_Bone_Broken_1573x427_Shape_2.png-91c18414f472b9b790cf9dcd267c25ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilesets/Grass Platforms/Grass_Platform_gradient_1024x256.png"
-dest_files=["res://.godot/imported/Grass_Platform_gradient_1024x256.png-fc45b4396f79109a48173c5604db6906.ctex"]
+source_file="res://Assets/Femur Bone/Femur_Bone_Broken_1573x427_Shape_2.png"
+dest_files=["res://.godot/imported/Femur_Bone_Broken_1573x427_Shape_2.png-91c18414f472b9b790cf9dcd267c25ff.ctex"]
 
 [params]
 
