@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c8k3fovxw627" path="res://Assets/Test Tileset/Test_Tileset.png" id="1_714jh"]
 [ext_resource type="Texture2D" uid="uid://bmdbt4wg7nph5" path="res://Assets/Test Tileset/Test_Tileset2.png" id="2_80p6g"]
+[ext_resource type="Texture2D" uid="uid://y8wp8su38gbd" path="res://Assets/Tilesets/Grass Tilesets/Grass_tilesets.png" id="3_ul6m2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3760i"]
 texture = ExtResource("1_714jh")
@@ -218,6 +219,30 @@ texture_region_size = Vector2i(64, 64)
 6:3/0 = 0
 7:3/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wjjhl"]
+texture = ExtResource("3_ul6m2")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+
 [resource]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 2
@@ -230,3 +255,4 @@ terrain_set_0/terrain_1/color = Color(0, 0.5322106, 0.28290296, 1)
 sources/0 = SubResource("TileSetAtlasSource_3760i")
 sources/1 = SubResource("TileSetAtlasSource_ul6m2")
 sources/2 = SubResource("TileSetAtlasSource_3tnd8")
+sources/3 = SubResource("TileSetAtlasSource_wjjhl")

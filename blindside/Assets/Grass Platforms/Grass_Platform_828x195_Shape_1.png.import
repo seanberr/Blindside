@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1rd61ptlpirr"
-path="res://.godot/imported/Rock_Platforms_512x512.png-7d17b0936893740fdfa750c4b9117d3d.ctex"
+uid="uid://c08amj2ydke0n"
+path="res://.godot/imported/Grass_Platform_828x195_Shape_1.png-445d04cfa035dfb46a8875fbec9466f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilesets/Rock Platforms/Rock_Platforms_512x512.png"
-dest_files=["res://.godot/imported/Rock_Platforms_512x512.png-7d17b0936893740fdfa750c4b9117d3d.ctex"]
+source_file="res://Assets/Grass Platforms/Grass_Platform_828x195_Shape_1.png"
+dest_files=["res://.godot/imported/Grass_Platform_828x195_Shape_1.png-445d04cfa035dfb46a8875fbec9466f3.ctex"]
 
 [params]
 
