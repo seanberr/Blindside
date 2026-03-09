@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://dtvcye11saprq"]
 
 [ext_resource type="Texture2D" uid="uid://clbhbw5rvphyw" path="res://Assets/Puzzle Assets/Puzzle Rocks/Puzzle_Rock_728x380_Shape_1.png" id="1_gxnv5"]
+[ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Memories/Memory Assets/Light/new_gradient_texture_2d.tres" id="2_a7ph3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a7ph3"]
 radius = 66.007576
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x4fde"]
+radius = 65.06919
 
 [node name="Tiny" type="RigidBody2D" unique_id=372066649]
 collision_layer = 192
@@ -19,3 +23,18 @@ texture = ExtResource("1_gxnv5")
 position = Vector2(-54, -46)
 shape = SubResource("CircleShape2D_a7ph3")
 debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=891900054]
+position = Vector2(-51.5, -41)
+scale = Vector2(1.859375, 1.9375)
+enabled = false
+color = Color(0.2509804, 0.83137256, 0.93333334, 1)
+texture = ExtResource("2_a7ph3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1538229386]
+collision_layer = 255
+collision_mask = 255
+
+[node name="PlayerZone" type="CollisionShape2D" parent="Area2D" unique_id=81703043]
+position = Vector2(-55, -45)
+shape = SubResource("CircleShape2D_x4fde")

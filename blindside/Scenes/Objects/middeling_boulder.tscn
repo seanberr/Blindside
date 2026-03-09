@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://ck8uic3tgkep1"]
 
 [ext_resource type="Texture2D" uid="uid://bl2ygo0v5cqjr" path="res://Assets/Puzzle Assets/Puzzle Rocks/Puzzle_Rock_728x380_Shape_2.png" id="1_06g4f"]
+[ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Memories/Memory Assets/Light/new_gradient_texture_2d.tres" id="2_ahc4t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a7ph3"]
-radius = 122.00409
+radius = 114.99999
 
 [node name="Middeling" type="RigidBody2D" unique_id=372066649]
 collision_layer = 192
@@ -16,6 +17,17 @@ scale = Vector2(0.58457965, 0.5940388)
 texture = ExtResource("1_06g4f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1037806848]
-position = Vector2(-46.999992, -45.999996)
+visible = false
+position = Vector2(-54, -40)
 shape = SubResource("CircleShape2D_a7ph3")
 debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=613862783]
+position = Vector2(-52.750004, -34.5)
+scale = Vector2(3.0234373, 2.765625)
+enabled = false
+color = Color(0.5921569, 0.83137256, 0.93333334, 1)
+texture = ExtResource("2_ahc4t")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1179520115]
+polygon = PackedVector2Array(-153, -117, -124, -142, -92, -145, -62, -142, 26, -98, 53, -78, 63, -46, 69, -8, 68, 5, 67, 17, 53, 40, 40, 54, 12, 64, -14, 69, -40, 71, -68, 69, -99, 65, -118, 59, -141, 48, -166, 22, -176, 6, -181, -31, -175, -75, -171, -92)

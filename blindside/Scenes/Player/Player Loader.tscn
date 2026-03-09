@@ -16,7 +16,8 @@ func spawn_players():
 	var alex = player_scenes[1].instantiate()
 	parent_scene.add_child(alex)
 	sadie.position = spawn_positions[0]
-	alex.position = spawn_positions[1]"
+	alex.position = spawn_positions[1]
+"
 
 [node name="PlayerLoader" type="Node2D" unique_id=386559410]
 script = SubResource("GDScript_44lhs")

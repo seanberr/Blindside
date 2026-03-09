@@ -15,6 +15,7 @@ var in_control : bool = true
 
 ##
 var NEAR_OBJECT
+var able_to_push = false
 
 #variable jump values
 var is_jumping : bool
@@ -42,7 +43,9 @@ func _physics_process(delta: float) -> void:
 	
 	## Enter the pushing state when E is pressed
 	if Input.is_action_just_pressed("Player1_Interact"):
-		state_machine.change_state("Pushing State")
+		if able_to_push:
+			print(able_to_push)
+			state_machine.change_state("Pushing State")
 		
 	## Exit the pushing state when E is released
 	if Input.is_action_just_released("Player1_Interact"):

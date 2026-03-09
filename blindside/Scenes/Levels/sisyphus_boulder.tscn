@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dli670or6dk2e"]
 
 [ext_resource type="Texture2D" uid="uid://ulyjo4u3fj74" path="res://Assets/Puzzle Assets/Puzzle Rocks/Puzzle_Rock_728x530_Shape_4.png" id="1_nghup"]
+[ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Memories/Memory Assets/Light/new_gradient_texture_2d.tres" id="2_rqldy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jfrr2"]
 radius = 191.01047
@@ -18,3 +19,10 @@ texture = ExtResource("1_nghup")
 position = Vector2(-26, -9)
 shape = SubResource("CircleShape2D_jfrr2")
 debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=258244904]
+position = Vector2(-23.000017, -7.749998)
+scale = Vector2(5.4687495, 4.5390625)
+enabled = false
+color = Color(1, 0.3137255, 0.4392157, 1)
+texture = ExtResource("2_rqldy")
