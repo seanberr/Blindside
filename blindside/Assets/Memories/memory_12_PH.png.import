@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhavwsifmpvek"
-path="res://.godot/imported/memory_hospital.png-33eba2e0d28633177c2587a56ccd462e.ctex"
+uid="uid://ccera5gq5hlfj"
+path="res://.godot/imported/memory_12_PH.png-53cc5778b542e6f9e0ad76243c88e33a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Memories/Memory Assets/memory_hospital.png"
-dest_files=["res://.godot/imported/memory_hospital.png-33eba2e0d28633177c2587a56ccd462e.ctex"]
+source_file="res://Assets/Memories/memory_12_PH.png"
+dest_files=["res://.godot/imported/memory_12_PH.png-53cc5778b542e6f9e0ad76243c88e33a.ctex"]
 
 [params]
 

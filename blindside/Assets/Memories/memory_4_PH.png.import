@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cplbvvlphvp"
-path="res://.godot/imported/memory_13_w_border_Placeholder.png-13ffa80d2eb5c13dc2f42a5b0b355193.ctex"
+uid="uid://xj6weorafexr"
+path="res://.godot/imported/memory_4_PH.png-f01fb3d04da15e0354ec8c11cb8fff03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Memories/memory_13_w_border_Placeholder.png"
-dest_files=["res://.godot/imported/memory_13_w_border_Placeholder.png-13ffa80d2eb5c13dc2f42a5b0b355193.ctex"]
+source_file="res://Assets/Memories/memory_4_PH.png"
+dest_files=["res://.godot/imported/memory_4_PH.png-f01fb3d04da15e0354ec8c11cb8fff03.ctex"]
 
 [params]
 

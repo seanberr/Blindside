@@ -2,17 +2,17 @@ extends Sprite2D
 @export var animation_player : AnimationPlayer
 @export var timer : Timer
 @export var memory_length : int
-var memory_textures = ["res://Assets/Memory Assets/memory_placeholder.png", 
-"res://Assets/Memories/Memory Assets/Memory_half_res_with_bg_alex_example.png",
-"res://Assets/Memories/Memory_2_half_res.png",
-"res://Assets/Memories/Memory_4_w_border_Placeholder.png",
-"res://Assets/Memories/Memory_5_w_border_Placeholder.png",
-"res://Assets/Memories/Memory_6_w_border_Placeholder.png",
-"res://Assets/Memories/Memory_7_w_border_Placeholder.png",
-"res://Assets/Memories/Memory_11_w_border_Placeholder.png",
-"res://Assets/Memories/Memory_12_w_border_Placeholder.png",
-"res://Assets/Memories/memory_13_w_border_Placeholder.png",
-"res://Assets/Memories/Memory_14_w_border_Placeholder.png"]
+var memory_textures = ["res://Assets/Memories/Memory Assets/memory_placeholder.png", 
+"res://Assets/Memories/memory_1.png",
+"res://Assets/Memories/memory_2.png",
+"res://Assets/Memories/memory_4_PH.png",
+"res://Assets/Memories/memory_5_PH.png",
+"res://Assets/Memories/memory_6_PH.png",
+"res://Assets/Memories/memory_7_PH.png",
+"res://Assets/Memories/memory_11_PH.png",
+"res://Assets/Memories/memory_12_PH.png",
+"res://Assets/Memories/memory_13_PH.png",
+"res://Assets/Memories/memory_14_PH.png"]
 
 func start(id : int):
 	self_modulate.a = 0
