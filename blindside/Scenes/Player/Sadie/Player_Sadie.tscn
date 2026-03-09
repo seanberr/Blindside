@@ -180,6 +180,9 @@ sprite = NodePath("../AnimatedSprite2D")
 
 [node name="MainCamera" parent="." unique_id=1417079101 groups=["Player Camera"] instance=ExtResource("20_oly0s")]
 process_callback = 0
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=780761959]
 energy = 0.3

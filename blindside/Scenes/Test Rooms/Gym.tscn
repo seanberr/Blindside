@@ -9,10 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://hml5t3u0yw3a" path="res://Scenes/Test Rooms/Objects/testing_door_alex.tscn" id="10_8buo2"]
 [ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="11_wqwpf"]
 [ext_resource type="PackedScene" uid="uid://bui05tqig5ktw" path="res://Scenes/Test Rooms/Objects/testing_pressure_plate.tscn" id="12_4tlik"]
-[ext_resource type="Texture2D" uid="uid://d2jygat7yay0j" path="res://Assets/Trees/Tree Leaves 3840 x 2160 for Background Parallax/Tree_Leaves_3840x2160_Shape_5_4_Background.png" id="12_dsrrh"]
+[ext_resource type="Texture2D" uid="uid://d2jygat7yay0j" path="res://Assets/Environment Assets/Tree Assets/Tree Leaves 3840 x 2160 for Background Parallax/Tree_Leaves_3840x2160_Shape_5_4_Background.png" id="12_dsrrh"]
 [ext_resource type="PackedScene" uid="uid://drv558ohbtajd" path="res://Scenes/Test Rooms/Objects/puzzle_pressure_plate.tscn" id="13_dsrrh"]
-[ext_resource type="Texture2D" uid="uid://d4hu5yr0h65mc" path="res://Assets/Trees/Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_12_1.png" id="13_glyu1"]
-[ext_resource type="Texture2D" uid="uid://b1p44t7lbrots" path="res://Assets/Trees/Tree Leaves 3840 x 2160/Tree_Leaves_3840x2160_Shape_5_1.png" id="14_cbxol"]
+[ext_resource type="Texture2D" uid="uid://d4hu5yr0h65mc" path="res://Assets/Environment Assets/Tree Assets/Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_12_1.png" id="13_glyu1"]
+[ext_resource type="Texture2D" uid="uid://b1p44t7lbrots" path="res://Assets/Environment Assets/Tree Assets/Tree Leaves 3840 x 2160/Tree_Leaves_3840x2160_Shape_5_1.png" id="14_cbxol"]
 [ext_resource type="PackedScene" uid="uid://dl6lckb1ahnpm" path="res://Scenes/Test Rooms/Objects/testing_locked_door.tscn" id="15_glyu1"]
 
 [node name="Gym" type="Node2D" unique_id=227950371]

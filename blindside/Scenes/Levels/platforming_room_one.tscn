@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dddc45n5ss4es" path="res://Scenes/Objects/door.tscn" id="3_td5sf"]
 [ext_resource type="PackedScene" uid="uid://dyjicgdjdwsip" path="res://Scenes/Tileset/Test_Tileset.tscn" id="4_b1pyx"]
 [ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="5_0dxxh"]
-[ext_resource type="PackedScene" uid="uid://cdlqgiadt8tu8" path="res://Scenes/Levels/puzzle_room_one.tscn" id="5_oir0l"]
+[ext_resource type="PackedScene" uid="uid://cdlqgiadt8tu8" path="res://Scenes/Levels/puzzle_room.tscn" id="5_oir0l"]
 
 [node name="Platforming Room One" type="Node2D" unique_id=1576365052]
 script = ExtResource("1_sapwg")

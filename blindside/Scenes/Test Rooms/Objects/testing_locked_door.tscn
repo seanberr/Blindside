@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dl6lckb1ahnpm"]
 
 [ext_resource type="Script" uid="uid://b2200kxj8nfrr" path="res://Scenes/Test Rooms/Objects/testing_locked_door.gd" id="1_5h48l"]
-[ext_resource type="Texture2D" uid="uid://c66p3iiu7afnt" path="res://Assets/Objects/Locked_door.png" id="1_5yprk"]
-[ext_resource type="Texture2D" uid="uid://bc3e53q4f0hte" path="res://Assets/Objects/Unlocked_door.png" id="2_kg268"]
+[ext_resource type="Texture2D" uid="uid://c66p3iiu7afnt" path="res://Assets/Puzzle Assets/Objects/Locked_door.png" id="1_5yprk"]
+[ext_resource type="Texture2D" uid="uid://bc3e53q4f0hte" path="res://Assets/Puzzle Assets/Objects/Unlocked_door.png" id="2_kg268"]
 [ext_resource type="PackedScene" uid="uid://c8pmtlhrk7nrd" path="res://Scenes/Components/interactable_component.tscn" id="4_kg268"]
-[ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Light/new_gradient_texture_2d.tres" id="5_30wrn"]
+[ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Memories/Memory Assets/Light/new_gradient_texture_2d.tres" id="5_30wrn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5yprk"]
 animations = [{

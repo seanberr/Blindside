@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dli670or6dk2e"]
 
-[ext_resource type="Texture2D" uid="uid://ulyjo4u3fj74" path="res://Assets/Puzzle Rocks/Puzzle_Rock_728x530_Shape_4.png" id="1_nghup"]
+[ext_resource type="Texture2D" uid="uid://ulyjo4u3fj74" path="res://Assets/Puzzle Assets/Puzzle Rocks/Puzzle_Rock_728x530_Shape_4.png" id="1_nghup"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jfrr2"]
 radius = 191.01047
