@@ -20,6 +20,18 @@
 [ext_resource type="PackedScene" uid="uid://dddc45n5ss4es" path="res://Scenes/Objects/door.tscn" id="18_rn02p"]
 [ext_resource type="PackedScene" uid="uid://dvfktk3cubbiv" path="res://Scenes/Levels/puzzle_room_three.tscn" id="19_1qgvn"]
 [ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="20_1qgvn"]
+[ext_resource type="Texture2D" uid="uid://5dsqkma71nda" path="res://Assets/Rock Platforms/Rock_Platform_500x500_shape_1.png" id="21_uaovn"]
+[ext_resource type="Texture2D" uid="uid://dejyldi4doqrb" path="res://Assets/Rock Platforms/Rock_Platform_500x500_shape_4.png" id="22_4mdi2"]
+[ext_resource type="Texture2D" uid="uid://bmvvmnoqu56qw" path="res://Assets/Environment Assets/Rock Assets/Rocks 364x190/Rock_364x190_Shape_1_1_BaseShadow.png" id="23_q4q7l"]
+[ext_resource type="Texture2D" uid="uid://biqefscvrilyx" path="res://Assets/Environment Assets/Rock Assets/Rocks 364x190/Rock_364x190_Shape_2_1_BaseShadow.png" id="24_kcv1x"]
+[ext_resource type="Texture2D" uid="uid://c8ty5v8tudewv" path="res://Assets/Environment Assets/Rock Assets/Rocks 364x190/Rock_364x190_Shape_2_1_TopShadow.png" id="25_g2xxy"]
+[ext_resource type="Texture2D" uid="uid://ft80w3vswxjy" path="res://Assets/Environment Assets/Rock Assets/Foreground Rocks 1920 x 1080/Rock_1920x1080_Shape_1_1_Blockout.png" id="26_g845l"]
+[ext_resource type="Texture2D" uid="uid://cykcp547tw3xw" path="res://Assets/Environment Assets/Rock Assets/Foreground Rocks 1920 x 1080/Rock_1920x1080_Shape_3_1_Blockout.png" id="27_3v8nx"]
+[ext_resource type="Texture2D" uid="uid://cj8gbcthusjt8" path="res://Assets/Environment Assets/Rock Assets/Rocks 1920x1080/Rock_1920x1080_Shape_4_1_BaseShadow.png" id="28_g845l"]
+[ext_resource type="Texture2D" uid="uid://df0mqpqj6ffut" path="res://Assets/Environment Assets/Rock Assets/Rocks 1920x1080/Rock_1920x1080_Shape_2_1_BaseShadow.png" id="29_3v8nx"]
+[ext_resource type="Texture2D" uid="uid://kj5asuycuagd" path="res://Assets/Environment Assets/Rock Assets/Rocks 1920x1080/Rock_1920x1080_Shape_3_1_BaseShadow.png" id="30_74nrn"]
+[ext_resource type="Texture2D" uid="uid://dmfj78tkucpl4" path="res://Assets/Environment Assets/Vines/Vines_219x904_Shape_1_2.png" id="31_hnxc3"]
+[ext_resource type="Texture2D" uid="uid://bqsro1u77pcrf" path="res://Assets/Environment Assets/Vines/Vines_219x904_Shape_7_1_blockout.png" id="32_0sqeq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dlpbh"]
 radius = 64.03124
@@ -331,6 +343,71 @@ is_alex_interactable = false
 
 [node name="Memory Layer" type="CanvasLayer" parent="." unique_id=564273173]
 layer = 999
+
+[node name="Parallax2D - Foreground" type="Parallax2D" parent="." unique_id=126927176]
+scroll_scale = Vector2(1.1, 1)
+
+[node name="Rock1920x1080Shape11Blockout" type="Sprite2D" parent="Parallax2D - Foreground" unique_id=2045615748]
+position = Vector2(-2058, 448.50003)
+scale = Vector2(1.1010417, 1.0601852)
+texture = ExtResource("26_g845l")
+
+[node name="Rock1920x1080Shape31Blockout" type="Sprite2D" parent="Parallax2D - Foreground" unique_id=1859454275]
+position = Vector2(5207, -35.00002)
+scale = Vector2(1.3333334, 1.9555556)
+texture = ExtResource("27_3v8nx")
+
+[node name="Parallax2D - Background" type="Parallax2D" parent="." unique_id=932055846]
+z_index = -1
+scroll_scale = Vector2(0.8, 1)
+
+[node name="RockPlatform500x500Shape1" type="Sprite2D" parent="Parallax2D - Background" unique_id=1455244328]
+position = Vector2(-1686, -680)
+texture = ExtResource("21_uaovn")
+
+[node name="RockPlatform500x500Shape4" type="Sprite2D" parent="Parallax2D - Background" unique_id=735813867]
+position = Vector2(-1819, 124)
+texture = ExtResource("22_4mdi2")
+
+[node name="Rock364x190Shape11BaseShadow" type="Sprite2D" parent="Parallax2D - Background" unique_id=1938185755]
+position = Vector2(-138, 380)
+texture = ExtResource("23_q4q7l")
+
+[node name="Rock364x190Shape21BaseShadow" type="Sprite2D" parent="Parallax2D - Background" unique_id=801413706]
+position = Vector2(-129, 414)
+texture = ExtResource("24_kcv1x")
+
+[node name="Rock364x190Shape21TopShadow" type="Sprite2D" parent="Parallax2D - Background" unique_id=906187948]
+position = Vector2(2583, 301)
+texture = ExtResource("25_g2xxy")
+
+[node name="Parallax2D - BG2" type="Parallax2D" parent="." unique_id=1542176184]
+z_index = -2
+scale = Vector2(4.173077, 4.9526315)
+scroll_scale = Vector2(0.7, 1)
+
+[node name="Rock1920x1080Shape41BaseShadow" type="Sprite2D" parent="Parallax2D - BG2" unique_id=1864115901]
+position = Vector2(879.68665, -93.283745)
+scale = Vector2(0.3864055, 0.3258649)
+texture = ExtResource("28_g845l")
+
+[node name="Rock1920x1080Shape21BaseShadow" type="Sprite2D" parent="Parallax2D - BG2" unique_id=1378374910]
+position = Vector2(1461.5115, -39.37301)
+scale = Vector2(0.23963133, 0.20191287)
+texture = ExtResource("29_3v8nx")
+
+[node name="Rock1920x1080Shape31BaseShadow" type="Sprite2D" parent="Parallax2D - BG2" unique_id=1943856565]
+position = Vector2(-296.18433, 7.6726885)
+scale = Vector2(0.23963133, 0.20191287)
+texture = ExtResource("30_74nrn")
+
+[node name="Vines219x904Shape12" type="Sprite2D" parent="." unique_id=1702308319]
+position = Vector2(-1541, -520)
+texture = ExtResource("31_hnxc3")
+
+[node name="Vines219x904Shape71Blockout" type="Sprite2D" parent="." unique_id=1190583757]
+position = Vector2(-1541, -477)
+texture = ExtResource("32_0sqeq")
 
 [connection signal="body_entered" from="Tiny Boulder/PlayerZone" to="Tiny Boulder" method="_on_player_zone_body_entered"]
 [connection signal="body_exited" from="Tiny Boulder/PlayerZone" to="Tiny Boulder" method="_on_player_zone_body_exited"]
