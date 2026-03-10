@@ -50,13 +50,13 @@ radius = 190.06578
 size = Vector2(127, 45)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74nrn"]
-size = Vector2(258, 29)
+size = Vector2(258, 41)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hnxc3"]
-size = Vector2(324, 72)
+size = Vector2(324, 126)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0sqeq"]
-size = Vector2(316, 35.5)
+size = Vector2(315, 63.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eaf6r"]
 size = Vector2(286, 13)
@@ -180,7 +180,6 @@ shape = SubResource("CircleShape2D_xd6ku")
 
 [node name="Ample Boulder" parent="." unique_id=794698021 instance=ExtResource("7_tgk04")]
 position = Vector2(1615, -82)
-mass = 20.0
 script = ExtResource("11_7o6jt")
 
 [node name="PlayerZone" type="Area2D" parent="Ample Boulder" unique_id=1835729566]
@@ -214,7 +213,7 @@ collision_layer = 128
 collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Middeling Hole" unique_id=1454013473]
-position = Vector2(108, 68.5)
+position = Vector2(108, 62.5)
 shape = SubResource("RectangleShape2D_74nrn")
 debug_color = Color(0.84705883, 0, 0.9098039, 0.41960785)
 
@@ -224,7 +223,7 @@ collision_layer = 128
 collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ample Hole" unique_id=582522879]
-position = Vector2(-120, 115)
+position = Vector2(-120, 88)
 shape = SubResource("RectangleShape2D_hnxc3")
 debug_color = Color(0.84705883, 0, 0.9098039, 0.41960785)
 
@@ -234,7 +233,7 @@ collision_layer = 128
 collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sisyphus Hole" unique_id=968776736]
-position = Vector2(-498, 50.75)
+position = Vector2(-498.5, 36.75)
 shape = SubResource("RectangleShape2D_0sqeq")
 debug_color = Color(0.84705883, 0, 0.9098039, 0.41960785)
 

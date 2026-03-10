@@ -14,18 +14,18 @@ func getPlayer():
 			sadie = player
 
 func in_place():
-		
-	## Disabled the interaction with player
-	set_collision_layer_value(7, false)
-	set_collision_mask_value(7, false)
-	mass = 10000
-	$PointLight2D.enabled = true
-	
 	if pushable == false:
 		reset()
-	
-	## Enable typical static collision with player
-	set_collision_layer_value(2, true)
+	else:		
+		## Disabled the interaction with player
+		set_collision_layer_value(7, false)
+		set_collision_mask_value(7, false)
+		mass = 10000
+		$PointLight2D.enabled = true
+			
+
+		## Enable typical static collision with player
+		set_collision_layer_value(2, true)
 
 
 func make_unpushable():
