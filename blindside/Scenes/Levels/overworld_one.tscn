@@ -277,8 +277,7 @@ scale = Vector2(2.54375, 1.4805555)
 texture = ExtResource("30_gwp5j")
 
 [node name="BgGradientTwo" type="Sprite2D" parent="." unique_id=819120399]
-visible = false
 z_index = -999
-position = Vector2(1898.7501, -2082.5)
+position = Vector2(1821.0001, -260)
 scale = Vector2(2.5339844, 4.2597218)
 texture = ExtResource("31_a6epc")

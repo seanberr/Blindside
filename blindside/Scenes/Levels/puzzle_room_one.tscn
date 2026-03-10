@@ -211,6 +211,6 @@ script = ExtResource("19_fisls")
 
 [node name="BgGradientTwo" type="Sprite2D" parent="." unique_id=388415830]
 z_index = -999
-position = Vector2(464.49997, -331.74994)
+position = Vector2(499, -191)
 scale = Vector2(1.5242187, 1.1400462)
 texture = ExtResource("26_usyps")
