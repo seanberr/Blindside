@@ -7,16 +7,16 @@
 [ext_resource type="Texture2D" uid="uid://bvf8leunmq4pe" path="res://Assets/Environment Assets/Vines/Vines_219x904_Shape_4_1_blockout.png" id="3_g05i1"]
 [ext_resource type="Texture2D" uid="uid://c4illhfd2lgbo" path="res://Assets/Environment Assets/Vines/Vines_219x904_Shape_5_1_blockout.png" id="3_hcjec"]
 [ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/sketch_4.png" id="3_hyhhq"]
-[ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player/Player Icon/Sadie_Player_Icon.png" id="4_fm0dq"]
 [ext_resource type="Texture2D" uid="uid://kgdnky8veqfj" path="res://Assets/Environment Assets/Vines/Vines_219x904_Shape_6_1_blockout.png" id="4_q5dyw"]
-[ext_resource type="Texture2D" uid="uid://bmpg5yy6k7c6o" path="res://Assets/Player/Player Icon/Alex_Player_Icon.png" id="5_eve7n"]
 [ext_resource type="Texture2D" uid="uid://c6gvndi3ejplh" path="res://Assets/Background/BG Gradients/BG_Gradient_Four.png" id="5_wkvbi"]
+[ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="10_q5dyw"]
 
 [node name="Overworld Three" type="Node2D" unique_id=1631005632]
 script = ExtResource("1_eve7n")
 spawn_positions = Array[Vector2]([Vector2(0, 0), Vector2(0, 0)])
 
 [node name="BgGradientFour" type="Sprite2D" parent="." unique_id=527480912]
+visible = false
 position = Vector2(3018, 193.99992)
 scale = Vector2(1.7869792, 1.1203703)
 texture = ExtResource("5_wkvbi")
@@ -57,15 +57,20 @@ position = Vector2(927, 567)
 scale = Vector2(2.0878305, 2.1789265)
 texture = ExtResource("3_hyhhq")
 
-[node name="SadiePlayerIcon" type="Sprite2D" parent="." unique_id=728839111]
-position = Vector2(4250, 711.6)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("4_fm0dq")
-
-[node name="AlexPlayerIcon" type="Sprite2D" parent="." unique_id=228750787]
-position = Vector2(4305, 714.5999)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("5_eve7n")
-
 [node name="Parallax - foreground" type="Parallax2D" parent="." unique_id=693964693]
 scroll_scale = Vector2(1.1, 1)
+
+[node name="Memory5" parent="." unique_id=1928423465 node_paths=PackedStringArray("memory_layer") instance=ExtResource("10_q5dyw")]
+position = Vector2(4429, 763)
+image_id = 13
+memory_layer = NodePath("../Memory Layer")
+is_alex_interactable = false
+
+[node name="Memory4" parent="." unique_id=1756966620 node_paths=PackedStringArray("memory_layer") instance=ExtResource("10_q5dyw")]
+position = Vector2(4233, 762)
+image_id = 14
+memory_layer = NodePath("../Memory Layer")
+is_sadie_interactable = false
+
+[node name="Memory Layer" type="CanvasLayer" parent="." unique_id=1600111457]
+layer = 999

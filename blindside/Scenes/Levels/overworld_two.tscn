@@ -218,24 +218,15 @@ texture = ExtResource("9_alkur")
 
 [node name="Main Memory" parent="." unique_id=1928423465 node_paths=PackedStringArray("memory_layer") instance=ExtResource("11_c4d4o")]
 position = Vector2(-2237, 825)
-image_id = 5
-alex_only_id = 1
-memory_layer = NodePath("../Memory Layer")
-is_sadie_interactable = false
-
-[node name="Main Memory2" parent="." unique_id=215603363 node_paths=PackedStringArray("memory_layer") instance=ExtResource("11_c4d4o")]
-position = Vector2(1131, 1040)
-image_id = 5
-alex_only_id = 1
+image_id = 6
 memory_layer = NodePath("../Memory Layer")
 is_sadie_interactable = false
 
 [node name="Main Memory3" parent="." unique_id=1521126494 node_paths=PackedStringArray("memory_layer") instance=ExtResource("11_c4d4o")]
 position = Vector2(2490, 552)
 image_id = 5
-alex_only_id = 1
 memory_layer = NodePath("../Memory Layer")
-is_sadie_interactable = false
+is_alex_interactable = false
 
 [node name="Memory Layer" type="CanvasLayer" parent="." unique_id=2064466455]
 layer = 999

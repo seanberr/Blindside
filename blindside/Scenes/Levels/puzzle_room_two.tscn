@@ -393,10 +393,15 @@ scale = Vector2(0.9, 0.9)
 scene_to_load = ExtResource("19_1qgvn")
 player_coords = Array[Vector2]([Vector2(350, -2000), Vector2(350, -2000)])
 
-[node name="Main Memory" parent="." unique_id=1928423465 node_paths=PackedStringArray("memory_layer") instance=ExtResource("20_1qgvn")]
+[node name="Main Memory2" parent="." unique_id=1928423465 node_paths=PackedStringArray("memory_layer") instance=ExtResource("20_1qgvn")]
+position = Vector2(5503, -1210)
+image_id = 8
+memory_layer = NodePath("../Memory Layer")
+is_sadie_interactable = false
+
+[node name="Main Memory" parent="." unique_id=1155624086 node_paths=PackedStringArray("memory_layer") instance=ExtResource("20_1qgvn")]
 position = Vector2(4808, 333)
-image_id = 4
-sadie_only_id = 1
+image_id = 7
 memory_layer = NodePath("../Memory Layer")
 is_alex_interactable = false
 

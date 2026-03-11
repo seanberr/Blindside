@@ -205,19 +205,17 @@ position = Vector2(543, -837)
 scale = Vector2(1, 1.912037)
 texture = ExtResource("10_vykd2")
 
-[node name="Main Memory2" parent="." unique_id=1928423465 node_paths=PackedStringArray("memory_layer") instance=ExtResource("19_kjshs")]
-position = Vector2(-2241, -196)
+[node name="Main Memory" parent="." unique_id=1522776542 node_paths=PackedStringArray("memory_layer") instance=ExtResource("19_kjshs")]
+position = Vector2(2432, 80)
 image_id = 3
-sadie_only_id = 1
 memory_layer = NodePath("../Memory Layer")
 is_alex_interactable = false
 
-[node name="Main Memory" parent="." unique_id=1522776542 node_paths=PackedStringArray("memory_layer") instance=ExtResource("19_kjshs")]
-position = Vector2(2518, 125)
-image_id = 3
-sadie_only_id = 1
+[node name="Main Memory2" parent="." unique_id=1928423465 node_paths=PackedStringArray("memory_layer") instance=ExtResource("19_kjshs")]
+position = Vector2(-1, 135)
+image_id = 4
 memory_layer = NodePath("../Memory Layer")
-is_alex_interactable = false
+is_sadie_interactable = false
 
 [node name="Memory Layer" type="CanvasLayer" parent="." unique_id=451312409]
 layer = 999
@@ -271,7 +269,7 @@ texture = ExtResource("35_ei8l1")
 
 [node name="BgGradientTwo" type="Sprite2D" parent="." unique_id=819120399]
 z_index = -999
-position = Vector2(2080.0002, -294.00024)
+position = Vector2(2082.0002, -314)
 scale = Vector2(181.84375, 102.968735)
 texture = ExtResource("36_eac0b")
 

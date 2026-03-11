@@ -442,29 +442,25 @@ position = Vector2(-1494, -1113)
 
 [node name="Memory" parent="." unique_id=1928423465 node_paths=PackedStringArray("memory_layer") instance=ExtResource("12_bqv5r")]
 position = Vector2(-342, -468)
-image_id = 7
-sadie_only_id = 1
+image_id = 9
 memory_layer = NodePath("../Memory Layer")
 is_alex_interactable = false
 
 [node name="Memory2" parent="." unique_id=958369611 node_paths=PackedStringArray("memory_layer") instance=ExtResource("12_bqv5r")]
 position = Vector2(792, -468)
-image_id = 8
-alex_only_id = 1
+image_id = 10
 memory_layer = NodePath("../Memory Layer")
 is_sadie_interactable = false
 
 [node name="Memory3" parent="." unique_id=47255754 node_paths=PackedStringArray("memory_layer") instance=ExtResource("12_bqv5r")]
 position = Vector2(-320, -1217)
-image_id = 9
-sadie_only_id = 1
+image_id = 11
 memory_layer = NodePath("../Memory Layer")
 is_alex_interactable = false
 
 [node name="Memory4" parent="." unique_id=1984929154 node_paths=PackedStringArray("memory_layer") instance=ExtResource("12_bqv5r")]
 position = Vector2(796, -1211)
-image_id = 10
-alex_only_id = 1
+image_id = 12
 memory_layer = NodePath("../Memory Layer")
 is_sadie_interactable = false
 
