@@ -181,14 +181,13 @@ texture = ExtResource("15_wo23v")
 position = Vector2(1494, 383)
 image_id = 1
 sadie_only_id = 1
-alex_only_id = 1
 memory_layer = NodePath("../Memory Layer")
-is_sadie_interactable = false
+is_alex_interactable = false
 
 [node name="Secret Memory" parent="." unique_id=1862069730 node_paths=PackedStringArray("memory_layer") instance=ExtResource("20_1ciky")]
 position = Vector2(-1389, 327)
 image_id = 2
-alex_only_id = 1
+alex_only_id = 2
 memory_layer = NodePath("../Memory Layer")
 is_sadie_interactable = false
 
