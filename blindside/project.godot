@@ -134,3 +134,5 @@ Exit={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+textures/webp_compression/compression_method=0
+textures/default_filters/anisotropic_filtering_level=1

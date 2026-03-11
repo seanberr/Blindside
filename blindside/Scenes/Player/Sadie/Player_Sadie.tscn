@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bmukorbrv86x7" path="res://Assets/Player/Sadie Walk Cycle/8.png" id="18_lduab"]
 [ext_resource type="PackedScene" uid="uid://ree5a56w7ues" path="res://Scenes/Components/interaction_component.tscn" id="19_8t87h"]
 [ext_resource type="PackedScene" uid="uid://dqtxbiwsuci5u" path="res://Scenes/Camera/Main_Camera.tscn" id="20_oly0s"]
+[ext_resource type="Script" uid="uid://c2ictn21iwl6w" path="res://Scenes/Player/Sadie/debug_label.gd" id="22_pnvk2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rfr6o"]
 size = Vector2(60, 148)
@@ -84,12 +85,6 @@ animations = [{
 "name": &"Walk",
 "speed": 10.0
 }]
-
-[sub_resource type="Gradient" id="Gradient_oly0s"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_hkjr5"]
-gradient = SubResource("Gradient_oly0s")
 
 [node name="PlayerSadie" type="CharacterBody2D" unique_id=1795143295 groups=["Player"]]
 light_mask = 0
@@ -165,7 +160,6 @@ position = Vector2(10, 3)
 shape = SubResource("CapsuleShape2D_d5yuk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1975063042]
-light_mask = 4
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_i4gtq")
 animation = &"Walk"
@@ -183,12 +177,16 @@ process_callback = 0
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+drag_horizontal_offset = 0.2
+drag_vertical_offset = 0.2
 
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=780761959]
-energy = 0.3
-range_item_cull_mask = 4
-texture = SubResource("GradientTexture2D_hkjr5")
-texture_scale = 3.0
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=565877108]
+layer = 1000
+
+[node name="Debug Label" type="Label" parent="CanvasLayer" unique_id=40425055]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("22_pnvk2")
 
 [connection signal="area_entered" from="Interacting Area" to="." method="_on_interacting_area_area_entered"]
 [connection signal="area_exited" from="Interacting Area" to="." method="_on_interacting_area_area_exited"]

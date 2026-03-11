@@ -23,7 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="20_1ciky"]
 [ext_resource type="Texture2D" uid="uid://c87pgyrfdrbuv" path="res://Assets/Environment Assets/Tree Assets/Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_1_1.png" id="20_1w24a"]
 [ext_resource type="Texture2D" uid="uid://d0m2yuwvlp6mb" path="res://Assets/Environment Assets/Tree Assets/Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_3_2.png" id="21_kcwya"]
-[ext_resource type="Texture2D" uid="uid://bkcwxbfrrnnx1" path="res://Assets/Background/BG Gradients/BG_Gradient_Two.png" id="26_usyps"]
+[ext_resource type="Texture2D" uid="uid://gdxh30v12p58" path="res://Assets/Background/BG Gradients/Gradient_BG_1.tres" id="26_usyps"]
 [ext_resource type="Texture2D" uid="uid://bo23bk6d3onsr" path="res://Assets/Environment Assets/Tree Assets/Trees 1920 x 1080/Tree_1920x1080_Shape_4_1.png" id="29_5yr4r"]
 [ext_resource type="Texture2D" uid="uid://cko82315jdtki" path="res://Assets/Environment Assets/Vines/Vines_219x904_Shape_1_1_blockout.png" id="32_h273o"]
 
@@ -211,6 +211,6 @@ script = ExtResource("19_fisls")
 
 [node name="BgGradientTwo" type="Sprite2D" parent="." unique_id=388415830]
 z_index = -999
-position = Vector2(499, -191)
-scale = Vector2(1.5242187, 1.1400462)
+position = Vector2(434.5, -313)
+scale = Vector2(99.171875, 44.000004)
 texture = ExtResource("26_usyps")
