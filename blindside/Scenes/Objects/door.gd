@@ -16,7 +16,7 @@ func _ready() -> void:
 	else:
 		unlock()
 		
-	if !has_fog:
+	if !has_fog and fog_sprite:
 		fog_sprite.visible = false
 		
 
@@ -30,7 +30,8 @@ func lock():
 func unlock():
 	is_locked = false
 	sprite.play("Unlocked")
-	alpha_animator.play("Clear")
+	if fog_sprite:
+		alpha_animator.play("Clear")
 	
 func interact():
 	if !is_locked and !has_entered:
