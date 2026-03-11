@@ -39,10 +39,10 @@
 [ext_resource type="Texture2D" uid="uid://b1nvra4uqgge6" path="res://Assets/Environment Assets/Rock Assets/Rocks 364x190/Rock_364x190_Shape_1_3_BaseShadow.png" id="29_gkxjs"]
 [ext_resource type="Texture2D" uid="uid://ft80w3vswxjy" path="res://Assets/Environment Assets/Rock Assets/Foreground Rocks 1920 x 1080/Rock_1920x1080_Shape_1_1_Blockout.png" id="33_gcoj3"]
 [ext_resource type="Texture2D" uid="uid://da8dqll18w5le" path="res://Assets/Environment Assets/Tree Assets/Foreground Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_14_1_Blockout.png" id="36_gcoj3"]
+[ext_resource type="Texture2D" uid="uid://gdxh30v12p58" path="res://Assets/Background/BG Gradients/Gradient_BG_1.tres" id="37_gkxjs"]
 [ext_resource type="Texture2D" uid="uid://bhd27n64i6cx1" path="res://Assets/Environment Assets/Tree Assets/Foreground Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_16_1_Blockout.png" id="37_seim4"]
 [ext_resource type="Texture2D" uid="uid://cl0fkicsl3t6m" path="res://Assets/Environment Assets/Tree Assets/Foreground Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_4_1_Blockout.png" id="38_glh1i"]
 [ext_resource type="Texture2D" uid="uid://b8s70ibo7x0wd" path="res://Assets/Environment Assets/Rock Assets/Foreground Rocks 1920 x 1080/Rock_1920x1080_Shape_4_1_Blockout.png" id="40_gcoj3"]
-[ext_resource type="Texture2D" uid="uid://bkcwxbfrrnnx1" path="res://Assets/Background/BG Gradients/BG_Gradient_Two.png" id="43_gkxjs"]
 
 [sub_resource type="Gradient" id="Gradient_r2jiu"]
 colors = PackedColorArray(0.41229823, 0.19615534, 0.1502926, 1, 0.20800579, 0.3273846, 0.40225533, 1)
@@ -249,9 +249,9 @@ texture = SubResource("GradientTexture2D_ap3x4")
 
 [node name="BgGradientTwo" type="Sprite2D" parent="." unique_id=1465260647]
 z_index = -4096
-position = Vector2(234, -1455.9998)
-scale = Vector2(1.5, 3.0268521)
-texture = ExtResource("43_gkxjs")
+position = Vector2(31.499634, -1314.5004)
+scale = Vector2(114.734375, 108.015625)
+texture = ExtResource("37_gkxjs")
 
 [node name="Parallax - foreground" type="Parallax2D" parent="." unique_id=370820075]
 z_index = 1

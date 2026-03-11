@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c66p3iiu7afnt" path="res://Assets/Puzzle Assets/Objects/Locked_door.png" id="3_xpycd"]
 [ext_resource type="Texture2D" uid="uid://bc3e53q4f0hte" path="res://Assets/Puzzle Assets/Objects/Unlocked_door.png" id="4_1k8bm"]
 [ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Memories/Memory Assets/Light/new_gradient_texture_2d.tres" id="5_gc7pt"]
+[ext_resource type="Texture2D" uid="uid://bpudpqrre1wsh" path="res://Assets/Environment Assets/Fog/Fog_1920x1080_Shape_1_3.png" id="6_153u2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kg268"]
 animations = [{
@@ -28,8 +29,84 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ynea2"]
 size = Vector2(151, 346)
 
+[sub_resource type="Animation" id="Animation_007h2"]
+resource_name = "Float"
+length = 4.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fog:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 100)]
+}
+
+[sub_resource type="Animation" id="Animation_brumq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fog:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mnli5"]
+_data = {
+&"Float": SubResource("Animation_007h2"),
+&"RESET": SubResource("Animation_brumq")
+}
+
+[sub_resource type="Animation" id="Animation_8np13"]
+resource_name = "Clear"
+capture_included = true
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fog:self_modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(2, 1),
+"update": 2,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_gqr6g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fog:self_modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6qaid"]
+_data = {
+&"Clear": SubResource("Animation_8np13"),
+&"RESET": SubResource("Animation_gqr6g")
+}
+
 [node name="Door" type="Node2D" unique_id=1600814949]
 script = ExtResource("1_gc7pt")
+has_fog = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=698706707]
 sprite_frames = SubResource("SpriteFrames_kg268")
@@ -39,9 +116,6 @@ animation = &"Locked"
 parent = NodePath("..")
 interaction_area = NodePath("Area2D")
 icon_position = Vector2(0, -250)
-
-[node name="CanvasLayer" parent="Interactable Component" index="0" unique_id=1890344508]
-layer = 1
 
 [node name="Area2D" type="Area2D" parent="Interactable Component" unique_id=1690511813]
 
@@ -53,5 +127,17 @@ debug_color = Color(0.36558542, 0.6167273, 9.62615e-07, 0.41960785)
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=545533116]
 texture = ExtResource("5_gc7pt")
 texture_scale = 4.0
+
+[node name="Fog" type="Sprite2D" parent="." unique_id=38059329]
+position = Vector2(-4.000001, -19.000002)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_153u2")
+
+[node name="FloatAnimator" type="AnimationPlayer" parent="." unique_id=17637412]
+libraries/ = SubResource("AnimationLibrary_mnli5")
+autoplay = &"Float"
+
+[node name="AlphaAnimator" type="AnimationPlayer" parent="." unique_id=572748485]
+libraries/ = SubResource("AnimationLibrary_6qaid")
 
 [editable path="Interactable Component"]

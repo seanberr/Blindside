@@ -32,7 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://kj5asuycuagd" path="res://Assets/Environment Assets/Rock Assets/Rocks 1920x1080/Rock_1920x1080_Shape_3_1_BaseShadow.png" id="30_74nrn"]
 [ext_resource type="Texture2D" uid="uid://dmfj78tkucpl4" path="res://Assets/Environment Assets/Vines/Vines_219x904_Shape_1_2.png" id="31_hnxc3"]
 [ext_resource type="Texture2D" uid="uid://bqsro1u77pcrf" path="res://Assets/Environment Assets/Vines/Vines_219x904_Shape_7_1_blockout.png" id="32_0sqeq"]
-[ext_resource type="Texture2D" uid="uid://bkcwxbfrrnnx1" path="res://Assets/Background/BG Gradients/BG_Gradient_Two.png" id="33_3v8nx"]
+[ext_resource type="Texture2D" uid="uid://gdxh30v12p58" path="res://Assets/Background/BG Gradients/Gradient_BG_1.tres" id="33_3v8nx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dlpbh"]
 radius = 64.03124
@@ -92,12 +92,6 @@ tile_map_data = PackedByteArray("AAABAAcAAgABAAAAAAACAAcAAgABAAAAAAADAAgAAgAEAAI
 
 [node name="Blindness Modulate" parent="." unique_id=1509691114 instance=ExtResource("7_on4bf")]
 visible = false
-
-[node name="BgGradientTwo" type="Sprite2D" parent="." unique_id=951316634]
-z_index = -999
-position = Vector2(2050, -2950.0002)
-scale = Vector2(2.113802, 4.024537)
-texture = ExtResource("33_3v8nx")
 
 [node name="Parallax2D - Background" type="Parallax2D" parent="." unique_id=932055846]
 z_index = -1
@@ -432,6 +426,12 @@ texture = ExtResource("28_g845l")
 z_index = -2
 position = Vector2(7464, -916)
 texture = ExtResource("29_3v8nx")
+
+[node name="BgGradientTwo" type="Sprite2D" parent="." unique_id=951316634]
+z_index = -999
+position = Vector2(2038.0001, -5888.5)
+scale = Vector2(154.875, 234.29689)
+texture = ExtResource("33_3v8nx")
 
 [connection signal="body_entered" from="Tiny Boulder/PlayerZone" to="Tiny Boulder" method="_on_player_zone_body_entered"]
 [connection signal="body_exited" from="Tiny Boulder/PlayerZone" to="Tiny Boulder" method="_on_player_zone_body_exited"]
