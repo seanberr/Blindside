@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://ree5a56w7ues" path="res://Scenes/Components/interaction_component.tscn" id="19_8t87h"]
 [ext_resource type="PackedScene" uid="uid://dqtxbiwsuci5u" path="res://Scenes/Camera/Main_Camera.tscn" id="20_oly0s"]
 [ext_resource type="Script" uid="uid://c2ictn21iwl6w" path="res://Scenes/Player/Sadie/debug_label.gd" id="22_pnvk2"]
+[ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Memories/Memory Assets/Light/new_gradient_texture_2d.tres" id="23_ualsr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rfr6o"]
 size = Vector2(60, 148)
@@ -86,7 +87,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="PlayerSadie" type="CharacterBody2D" unique_id=1795143295 groups=["Player"]]
+[node name="PlayerSadie" type="CharacterBody2D" unique_id=1795143295 node_paths=PackedStringArray("char_light") groups=["Player"]]
 light_mask = 0
 z_index = 2
 collision_mask = 6
@@ -94,6 +95,7 @@ script = ExtResource("1_d5yuk")
 input_left = &"Player1_Left"
 input_right = &"Player1_Right"
 input_jump = &"Player1_Jump"
+char_light = NodePath("CharacterLight")
 jump_buffer_window = 0.15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1965245649]
@@ -160,6 +162,7 @@ position = Vector2(10, 3)
 shape = SubResource("CapsuleShape2D_d5yuk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1975063042]
+light_mask = 5
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_i4gtq")
 animation = &"Walk"
@@ -187,6 +190,13 @@ layer = 1000
 offset_right = 40.0
 offset_bottom = 23.0
 script = ExtResource("22_pnvk2")
+
+[node name="CharacterLight" type="PointLight2D" parent="." unique_id=1349586705]
+enabled = false
+energy = 0.3
+range_item_cull_mask = 4
+texture = ExtResource("23_ualsr")
+texture_scale = 50.0
 
 [connection signal="area_entered" from="Interacting Area" to="." method="_on_interacting_area_area_entered"]
 [connection signal="area_exited" from="Interacting Area" to="." method="_on_interacting_area_area_exited"]

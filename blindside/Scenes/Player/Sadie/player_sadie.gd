@@ -13,6 +13,8 @@ var in_control : bool = true
 
 @onready var state_machine : StateMachine = $"Movement FSM"
 
+@export var char_light : PointLight2D
+var lit : bool = false
 ##
 var NEAR_OBJECT
 var able_to_push = false
@@ -63,6 +65,18 @@ func begin_variable_jump():
 	is_jumping = true
 	variable_jump_timer = get_tree().create_timer(variable_jump_window)
 	variable_jump_timer.timeout.connect(end_variable_jump)
+	
+func enable_light():
+	if !char_light:
+		return
+	lit = true
+	char_light.enabled = true
+
+func disable_light():
+	if !char_light:
+		return
+	lit = false
+	char_light.enabled = false
 	
 func end_variable_jump():
 	if !is_on_floor():

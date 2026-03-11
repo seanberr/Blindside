@@ -125,6 +125,7 @@ shape = SubResource("RectangleShape2D_ynea2")
 debug_color = Color(0.36558542, 0.6167273, 9.62615e-07, 0.41960785)
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=545533116]
+visible = false
 texture = ExtResource("5_gc7pt")
 texture_scale = 4.0
 
