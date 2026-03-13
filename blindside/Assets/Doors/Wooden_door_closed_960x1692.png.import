@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ns1gkbhk5k68"
-path="res://.godot/imported/Wooden_door_closed_632x1496.png-b7aab607995bfa30f71d94b80336df96.ctex"
+uid="uid://55dfksuyr4d2"
+path="res://.godot/imported/Wooden_door_closed_960x1692.png-8bc80ca47dba0ea90d6dd7772145cd5a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Doors/Wooden_door_closed_632x1496.png"
-dest_files=["res://.godot/imported/Wooden_door_closed_632x1496.png-b7aab607995bfa30f71d94b80336df96.ctex"]
+source_file="res://Assets/Doors/Wooden_door_closed_960x1692.png"
+dest_files=["res://.godot/imported/Wooden_door_closed_960x1692.png-8bc80ca47dba0ea90d6dd7772145cd5a.ctex"]
 
 [params]
 
