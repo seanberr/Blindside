@@ -8,6 +8,7 @@ var has_entered : bool = false
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 @export var has_fog : bool
 @onready var fog_sprite : Sprite2D = $Fog
+@onready var light : PointLight2D = $PointLight2D
 @onready var alpha_animator = $AlphaAnimator
 
 func _ready() -> void:
@@ -30,6 +31,7 @@ func lock():
 func unlock():
 	is_locked = false
 	sprite.play("Unlocked")
+	light.visible = true
 	if fog_sprite:
 		alpha_animator.play("Clear")
 	

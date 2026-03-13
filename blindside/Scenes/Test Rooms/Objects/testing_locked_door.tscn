@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dl6lckb1ahnpm"]
 
 [ext_resource type="Script" uid="uid://b2200kxj8nfrr" path="res://Scenes/Test Rooms/Objects/testing_locked_door.gd" id="1_5h48l"]
-[ext_resource type="Texture2D" uid="uid://c66p3iiu7afnt" path="res://Assets/Puzzle Assets/Objects/Locked_door.png" id="1_5yprk"]
-[ext_resource type="Texture2D" uid="uid://bc3e53q4f0hte" path="res://Assets/Puzzle Assets/Objects/Unlocked_door.png" id="2_kg268"]
+[ext_resource type="Texture2D" uid="uid://ns1gkbhk5k68" path="res://Assets/Doors/Wooden_door_closed_632x1496.png" id="2_8np13"]
+[ext_resource type="Texture2D" uid="uid://c13b3prafafsc" path="res://Assets/Doors/Wooden_door_open_1930x1886.png" id="3_007h2"]
 [ext_resource type="PackedScene" uid="uid://c8pmtlhrk7nrd" path="res://Scenes/Components/interactable_component.tscn" id="4_kg268"]
 [ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Memories/Memory Assets/Light/new_gradient_texture_2d.tres" id="5_30wrn"]
 [ext_resource type="Texture2D" uid="uid://bpudpqrre1wsh" path="res://Assets/Environment Assets/Fog/Fog_1920x1080_Shape_1_3.png" id="6_8np13"]
@@ -11,7 +11,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_5yprk")
+"texture": ExtResource("2_8np13")
 }],
 "loop": true,
 "name": &"Locked",
@@ -19,7 +19,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_kg268")
+"texture": ExtResource("3_007h2")
 }],
 "loop": true,
 "name": &"Unlocked",
@@ -111,10 +111,13 @@ has_fog = true
 metadata/_custom_type_script = "uid://cd4018lgq0qom"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=61932517]
+position = Vector2(-1, 10)
+scale = Vector2(0.25514242, 0.25514242)
 sprite_frames = SubResource("SpriteFrames_5yprk")
-animation = &"Locked"
+animation = &"Unlocked"
 
 [node name="Interactable Component" parent="." unique_id=1580344963 node_paths=PackedStringArray("parent", "interaction_area") instance=ExtResource("4_kg268")]
+visible = false
 parent = NodePath("..")
 interaction_area = NodePath("Area2D")
 icon_position = Vector2(0, -250)
@@ -128,10 +131,14 @@ debug_color = Color(0.36558542, 0.6167273, 9.62615e-07, 0.41960785)
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1108172578]
 visible = false
+position = Vector2(14, 3.499979)
+scale = Vector2(1.109375, 1.7617188)
+color = Color(0.2509804, 0.83137256, 0.93333334, 1)
 texture = ExtResource("5_30wrn")
 texture_scale = 4.0
 
 [node name="Fog" type="Sprite2D" parent="." unique_id=1005516938]
+visible = false
 position = Vector2(-4.000001, -19.000002)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_8np13")
