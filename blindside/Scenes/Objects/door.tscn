@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dddc45n5ss4es"]
 
 [ext_resource type="Script" uid="uid://cd4018lgq0qom" path="res://Scenes/Objects/door.gd" id="1_gc7pt"]
-[ext_resource type="Texture2D" uid="uid://ns1gkbhk5k68" path="res://Assets/Doors/Wooden_door_closed_632x1496.png" id="2_153u2"]
+[ext_resource type="Texture2D" uid="uid://55dfksuyr4d2" path="res://Assets/Doors/Wooden_door_closed_960x1692.png" id="2_153u2"]
 [ext_resource type="PackedScene" uid="uid://c8pmtlhrk7nrd" path="res://Scenes/Components/interactable_component.tscn" id="2_gc7pt"]
-[ext_resource type="Texture2D" uid="uid://c13b3prafafsc" path="res://Assets/Doors/Wooden_door_open_1930x1886.png" id="3_mnli5"]
+[ext_resource type="Texture2D" uid="uid://h10pddpmxfxg" path="res://Assets/Doors/Wooden_door_open_960x1692.png" id="3_mnli5"]
 [ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Memories/Memory Assets/Light/new_gradient_texture_2d.tres" id="5_gc7pt"]
 [ext_resource type="Texture2D" uid="uid://bpudpqrre1wsh" path="res://Assets/Environment Assets/Fog/Fog_1920x1080_Shape_1_3.png" id="6_153u2"]
 
@@ -112,7 +112,7 @@ has_fog = true
 position = Vector2(-1, 10)
 scale = Vector2(0.25514242, 0.25514242)
 sprite_frames = SubResource("SpriteFrames_6qaid")
-animation = &"Locked"
+animation = &"Unlocked"
 
 [node name="Interactable Component" parent="." unique_id=1580344963 node_paths=PackedStringArray("parent", "interaction_area") instance=ExtResource("2_gc7pt")]
 parent = NodePath("..")
