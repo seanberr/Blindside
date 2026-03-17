@@ -15,8 +15,7 @@ func memory_row_invisible():
 	$"CenterContainer/Memories Menu/Row Two".visible = false
 
 func _on_play_pressed() -> void:
-	get_tree().change_scene_to_packed(start_scene)
-
+	TransitionHandler.transition_to_scene(start_scene, [Vector2(), Vector2()])
 
 func _on_extras_pressed() -> void:
 	$"CenterContainer/Extras Menu/Back".grab_focus()
