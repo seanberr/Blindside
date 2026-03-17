@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://bdwqpu7hq1iqu"]
 
 [ext_resource type="Script" uid="uid://rpuogaeuv3ho" path="res://Scenes/Menu/main_menu.gd" id="1_bkwd7"]
+[ext_resource type="Texture2D" uid="uid://dm0e5f68ulw7n" path="res://Assets/Menu/controls.png" id="2_tself"]
 
-[node name="MainMenu" type="Node2D" unique_id=1389966816]
+[node name="MainMenu" type="Node2D" unique_id=1389966816 node_paths=PackedStringArray("memory_layer")]
 script = ExtResource("1_bkwd7")
+memory_layer = NodePath("Memory Layer")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1039816023]
 offset_right = 1920.0
@@ -20,9 +22,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=526650923]
-offset_top = 500.0
+offset_top = 316.0
 offset_right = 1920.0
-offset_bottom = 1080.0
+offset_bottom = 1121.0
 
 [node name="Main Buttons" type="VBoxContainer" parent="CenterContainer" unique_id=1968898296]
 layout_mode = 2
@@ -43,6 +45,12 @@ text = "extras"
 layout_mode = 2
 theme_override_font_sizes/font_size = 75
 text = "options"
+
+[node name="Controls" type="Button" parent="CenterContainer/Main Buttons" unique_id=1574673653]
+layout_mode = 2
+theme_override_font_sizes/font_size = 76
+text = "controls
+"
 
 [node name="quit" type="Button" parent="CenterContainer/Main Buttons" unique_id=1861109663]
 layout_mode = 2
@@ -144,6 +152,99 @@ text = "back"
 visible = false
 layout_mode = 2
 
+[node name="Row One" type="HBoxContainer" parent="CenterContainer/Memories Menu" unique_id=162972201]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="1" type="Button" parent="CenterContainer/Memories Menu/Row One" unique_id=1149035351]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 76
+text = "1"
+
+[node name="2" type="Button" parent="CenterContainer/Memories Menu/Row One" unique_id=883335923]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 76
+text = "2"
+
+[node name="3" type="Button" parent="CenterContainer/Memories Menu/Row One" unique_id=1624728461]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 76
+text = "3"
+
+[node name="4" type="Button" parent="CenterContainer/Memories Menu/Row One" unique_id=1550043630]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 76
+text = "4"
+
+[node name="5" type="Button" parent="CenterContainer/Memories Menu/Row One" unique_id=1150168865]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 76
+text = "5"
+
+[node name="6" type="Button" parent="CenterContainer/Memories Menu/Row One" unique_id=1184451814]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 76
+text = "6"
+
+[node name="7" type="Button" parent="CenterContainer/Memories Menu/Row One" unique_id=43966420]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 76
+text = "7"
+
+[node name="Row Two" type="HBoxContainer" parent="CenterContainer/Memories Menu" unique_id=1329349593]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="8" type="Button" parent="CenterContainer/Memories Menu/Row Two" unique_id=1161536445]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 76
+text = "8"
+
+[node name="9" type="Button" parent="CenterContainer/Memories Menu/Row Two" unique_id=1304620290]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 76
+text = "9"
+
+[node name="10" type="Button" parent="CenterContainer/Memories Menu/Row Two" unique_id=212865791]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 76
+text = "10"
+
+[node name="11" type="Button" parent="CenterContainer/Memories Menu/Row Two" unique_id=889525915]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 76
+text = "11"
+
+[node name="12" type="Button" parent="CenterContainer/Memories Menu/Row Two" unique_id=1014190845]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 76
+text = "12"
+
+[node name="13" type="Button" parent="CenterContainer/Memories Menu/Row Two" unique_id=291333575]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 76
+text = "13"
+
+[node name="14" type="Button" parent="CenterContainer/Memories Menu/Row Two" unique_id=846111223]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 76
+text = "14"
+
 [node name="Back" type="Button" parent="CenterContainer/Memories Menu" unique_id=366158345]
 custom_minimum_size = Vector2(353, 0)
 layout_mode = 2
@@ -162,9 +263,33 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 75
 text = "back"
 
+[node name="Controls Menu" type="VBoxContainer" parent="." unique_id=1920692036]
+visible = false
+offset_left = 783.0
+offset_top = 919.0
+offset_right = 1136.0
+offset_bottom = 1050.0
+theme_override_constants/separation = 17
+
+[node name="Control Screen" type="Sprite2D" parent="Controls Menu" unique_id=1296893071]
+position = Vector2(177, -379)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_tself")
+
+[node name="Back" type="Button" parent="Controls Menu" unique_id=1912735019]
+custom_minimum_size = Vector2(275, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 65
+text = "back"
+
+[node name="Memory Layer" type="CanvasLayer" parent="." unique_id=1535597584]
+layer = 999
+
 [connection signal="pressed" from="CenterContainer/Main Buttons/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="CenterContainer/Main Buttons/Extras" to="." method="_on_extras_pressed"]
 [connection signal="pressed" from="CenterContainer/Main Buttons/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="CenterContainer/Main Buttons/Controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="CenterContainer/Main Buttons/quit" to="." method="_on_quit_pressed"]
 [connection signal="toggled" from="CenterContainer/Settings Menu/Fullscreen" to="." method="_on_fullscreen_toggled"]
 [connection signal="value_changed" from="CenterContainer/Settings Menu/Main Volume" to="." method="_on_main_volume_value_changed"]
@@ -174,5 +299,20 @@ text = "back"
 [connection signal="pressed" from="CenterContainer/Extras Menu/Memories" to="." method="_on_memories_pressed"]
 [connection signal="pressed" from="CenterContainer/Extras Menu/Concept Art" to="." method="_on_concept_art_pressed"]
 [connection signal="pressed" from="CenterContainer/Extras Menu/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CenterContainer/Memories Menu/Row One/1" to="." method="_on_memory__pressed" binds= [1]]
+[connection signal="pressed" from="CenterContainer/Memories Menu/Row One/2" to="." method="_on_memory__pressed" binds= [2]]
+[connection signal="pressed" from="CenterContainer/Memories Menu/Row One/3" to="." method="_on_memory__pressed" binds= [3]]
+[connection signal="pressed" from="CenterContainer/Memories Menu/Row One/4" to="." method="_on_memory__pressed" binds= [4]]
+[connection signal="pressed" from="CenterContainer/Memories Menu/Row One/5" to="." method="_on_memory__pressed" binds= [5]]
+[connection signal="pressed" from="CenterContainer/Memories Menu/Row One/6" to="." method="_on_memory__pressed" binds= [6]]
+[connection signal="pressed" from="CenterContainer/Memories Menu/Row One/7" to="." method="_on_memory__pressed" binds= [7]]
+[connection signal="pressed" from="CenterContainer/Memories Menu/Row Two/8" to="." method="_on_memory__pressed" binds= [8]]
+[connection signal="pressed" from="CenterContainer/Memories Menu/Row Two/9" to="." method="_on_memory__pressed" binds= [9]]
+[connection signal="pressed" from="CenterContainer/Memories Menu/Row Two/10" to="." method="_on_memory__pressed" binds= [10]]
+[connection signal="pressed" from="CenterContainer/Memories Menu/Row Two/11" to="." method="_on_memory__pressed" binds= [11]]
+[connection signal="pressed" from="CenterContainer/Memories Menu/Row Two/12" to="." method="_on_memory__pressed" binds= [12]]
+[connection signal="pressed" from="CenterContainer/Memories Menu/Row Two/13" to="." method="_on_memory__pressed" binds= [13]]
+[connection signal="pressed" from="CenterContainer/Memories Menu/Row Two/14" to="." method="_on_memory__pressed" binds= [14]]
 [connection signal="pressed" from="CenterContainer/Memories Menu/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="CenterContainer/Concept Art Menu/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Controls Menu/Back" to="." method="_on_back_pressed"]
