@@ -410,35 +410,45 @@ libraries/Cutscenes = SubResource("AnimationLibrary_tg6hl")
 [node name="Player Controller" type="Node" parent="Cutscene Manager/Jump Down Cutscene" unique_id=2058389192]
 script = ExtResource("11_r2jiu")
 
-[node name="Glowing Platform" parent="." unique_id=1269208228 instance=ExtResource("10_qo53q")]
+[node name="Platform1_1" parent="." unique_id=1269208228 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(-1096, 83)
+corresponding_platform = NodePath("../Platform1_2")
 
-[node name="Glowing Platform2" parent="." unique_id=732578877 instance=ExtResource("10_qo53q")]
+[node name="Platform2_1" parent="." unique_id=732578877 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(-1366, -78)
+corresponding_platform = NodePath("../Platform2_2")
 
-[node name="Glowing Platform3" parent="." unique_id=2087556072 instance=ExtResource("10_qo53q")]
+[node name="Platform3_1" parent="." unique_id=2087556072 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(-1100, -214)
+corresponding_platform = NodePath("../Platform3_2")
 
-[node name="Glowing Platform9" parent="." unique_id=769650096 instance=ExtResource("10_qo53q")]
+[node name="Platform4_1" parent="." unique_id=769650096 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(-991, -380)
+corresponding_platform = NodePath("../Platform4_2")
 
-[node name="Glowing Platform10" parent="." unique_id=891045649 instance=ExtResource("10_qo53q")]
+[node name="Platform5_1" parent="." unique_id=891045649 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(-1181, -380)
+corresponding_platform = NodePath("../Platform5_2")
 
-[node name="Glowing Platform11" parent="." unique_id=1802743187 instance=ExtResource("10_qo53q")]
+[node name="Platform6_1" parent="." unique_id=1802743187 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(-1371, -380)
+corresponding_platform = NodePath("../Platform6_2")
 
-[node name="Glowing Platform5" parent="." unique_id=14805381 instance=ExtResource("10_qo53q")]
+[node name="Platform7_1" parent="." unique_id=14805381 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(-1292, -568)
+corresponding_platform = NodePath("../Platform7_2")
 
-[node name="Glowing Platform6" parent="." unique_id=2037573185 instance=ExtResource("10_qo53q")]
+[node name="Platform8_1" parent="." unique_id=2037573185 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(-938, -853)
+corresponding_platform = NodePath("../Platform8_2")
 
-[node name="Glowing Platform7" parent="." unique_id=2048906928 instance=ExtResource("10_qo53q")]
+[node name="Platform9_1" parent="." unique_id=2048906928 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(-1257, -939)
+corresponding_platform = NodePath("../Platform9_2")
 
-[node name="Glowing Platform8" parent="." unique_id=1518129260 instance=ExtResource("10_qo53q")]
+[node name="Platform10_1" parent="." unique_id=1518129260 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(-1494, -1113)
+corresponding_platform = NodePath("../Platform10_2")
 
 [node name="Memory" parent="." unique_id=1928423465 node_paths=PackedStringArray("memory_layer") instance=ExtResource("12_bqv5r")]
 position = Vector2(-342, -468)
@@ -467,35 +477,45 @@ is_sadie_interactable = false
 [node name="Memory Layer" type="CanvasLayer" parent="." unique_id=1119221503]
 layer = 999
 
-[node name="Glowing Platform4" parent="." unique_id=2085448843 instance=ExtResource("10_qo53q")]
+[node name="Platform1_2" parent="." unique_id=2085448843 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(1574, 83)
+corresponding_platform = NodePath("../Platform1_1")
 
-[node name="Glowing Platform12" parent="." unique_id=913390388 instance=ExtResource("10_qo53q")]
+[node name="Platform2_2" parent="." unique_id=913390388 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(1870, -78)
+corresponding_platform = NodePath("../Platform2_1")
 
-[node name="Glowing Platform13" parent="." unique_id=920697796 instance=ExtResource("10_qo53q")]
+[node name="Platform3_2" parent="." unique_id=920697796 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(1586, -214)
+corresponding_platform = NodePath("../Platform3_1")
 
-[node name="Glowing Platform14" parent="." unique_id=501544888 instance=ExtResource("10_qo53q")]
+[node name="Platform4_2" parent="." unique_id=501544888 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(1883, -380)
+corresponding_platform = NodePath("../Platform4_1")
 
-[node name="Glowing Platform15" parent="." unique_id=401954410 instance=ExtResource("10_qo53q")]
+[node name="Platform5_2" parent="." unique_id=401954410 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(1693, -380)
+corresponding_platform = NodePath("../Platform5_1")
 
-[node name="Glowing Platform16" parent="." unique_id=846365666 instance=ExtResource("10_qo53q")]
+[node name="Platform6_2" parent="." unique_id=846365666 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(1503, -380)
+corresponding_platform = NodePath("../Platform6_1")
 
-[node name="Glowing Platform17" parent="." unique_id=502113800 instance=ExtResource("10_qo53q")]
+[node name="Platform7_2" parent="." unique_id=502113800 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(1807, -568)
+corresponding_platform = NodePath("../Platform7_1")
 
-[node name="Glowing Platform18" parent="." unique_id=306783736 instance=ExtResource("10_qo53q")]
+[node name="Platform8_2" parent="." unique_id=306783736 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(1442, -853)
+corresponding_platform = NodePath("../Platform8_1")
 
-[node name="Glowing Platform19" parent="." unique_id=1539583737 instance=ExtResource("10_qo53q")]
+[node name="Platform9_2" parent="." unique_id=1539583737 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(1764, -934)
+corresponding_platform = NodePath("../Platform9_1")
 
-[node name="Glowing Platform20" parent="." unique_id=1326705734 instance=ExtResource("10_qo53q")]
+[node name="Platform10_2" parent="." unique_id=1326705734 node_paths=PackedStringArray("corresponding_platform") instance=ExtResource("10_qo53q")]
 position = Vector2(2007, -1113)
+corresponding_platform = NodePath("../Platform10_1")
 
 [node name="Transition Area" type="Area2D" parent="." unique_id=478018699]
 script = ExtResource("14_2pqgm")

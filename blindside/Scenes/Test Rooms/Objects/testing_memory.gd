@@ -30,11 +30,13 @@ func interact():
 	if is_sadie_interactable and is_alex_interactable:
 		if interactable.last_id == 0:
 			new_memory.start(sadie_only_id)
+			Global.set_memory_collected(sadie_only_id)
 		else:
 			new_memory.start(alex_only_id)
+			Global.set_memory_collected(alex_only_id)
 	else:
 		new_memory.start(image_id)
-	
+		Global.set_memory_collected(image_id)
 	destruction_timer.start(1)
 	disabled = true
 
