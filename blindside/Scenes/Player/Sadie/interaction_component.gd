@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 		var interactable_component = search_for_interactable()
 		if interactable_component:
 			interact_with_object(interactable_component)
-
+		
 func search_for_interactable() -> Interactable:
 	var areas = area_of_interaction.get_overlapping_areas()
 	#note: will only return first interactable component found, this code isn't meant to handle multiple overlaps

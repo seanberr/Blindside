@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bmukorbrv86x7" path="res://Assets/Player/Sadie Walk Cycle/8.png" id="18_lduab"]
 [ext_resource type="PackedScene" uid="uid://ree5a56w7ues" path="res://Scenes/Components/interaction_component.tscn" id="19_8t87h"]
 [ext_resource type="PackedScene" uid="uid://dqtxbiwsuci5u" path="res://Scenes/Camera/Main_Camera.tscn" id="20_oly0s"]
+[ext_resource type="PackedScene" uid="uid://ccpr8qj4o416v" path="res://Scenes/Menu/pause_menu.tscn" id="22_2nd5c"]
 [ext_resource type="Script" uid="uid://c2ictn21iwl6w" path="res://Scenes/Player/Sadie/debug_label.gd" id="22_pnvk2"]
 [ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Memories/Memory Assets/Light/new_gradient_texture_2d.tres" id="23_ualsr"]
 
@@ -181,6 +182,9 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 drag_horizontal_offset = 0.2
 drag_vertical_offset = 0.2
+
+[node name="PauseMenu" parent="MainCamera" unique_id=557337590 instance=ExtResource("22_2nd5c")]
+visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=565877108]
 layer = 1000

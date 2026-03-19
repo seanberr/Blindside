@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://ccpr8qj4o416v"]
+
+[ext_resource type="Script" uid="uid://b66ihf8u48hee" path="res://Scenes/Menu/pause_menu.gd" id="1_i0al5"]
+
+[node name="PauseMenu" type="Control" unique_id=557337590]
+process_mode = 3
+z_index = 10
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i0al5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1662300631]
+layer = 4
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2115147863]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.4745098)
+
+[node name="Title" type="Label" parent="CanvasLayer" unique_id=585376117]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -528.0
+offset_top = 92.0
+offset_right = 529.0
+offset_bottom = 501.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 300
+text = "paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=962081344]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -160.5
+offset_top = 540.0
+offset_right = 160.5
+offset_bottom = 651.0
+grow_horizontal = 2
+
+[node name="Unpause" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1041053658]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "unpause"
+
+[node name="MainMenu" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=997847835]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "main menu"
+
+[node name="Quit" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1225790481]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "quit"
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Unpause" to="." method="_on_unpause_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

@@ -31,7 +31,6 @@ var jump_buffer_timer : SceneTreeTimer
 
 func _ready() -> void:
 	jump_comp.jump.connect(begin_variable_jump)
-	
 # This represents the player's inertia.
 var push_force = 80.0
 
