@@ -2,9 +2,10 @@ extends RigidBody2D
 
 var sadie	
 var pushable = true
+var resetScene = preload("res://Scenes/Levels/puzzle_room_two.tscn")
 
 func reset():
-	get_tree().change_scene_to_file(str("res://Scenes/Levels/puzzle_room_two.tscn"))
+	TransitionHandler.transition_to_scene(resetScene, [Vector2(-1500, 400), Vector2(-1500, 400)])
 
 func getPlayer():
 	var players = get_tree().get_nodes_in_group("Player")
@@ -16,6 +17,7 @@ func getPlayer():
 func in_place():
 	if pushable == false:
 		reset()
+		
 	else:		
 		## Disabled the interaction with player
 		set_collision_layer_value(7, false)
