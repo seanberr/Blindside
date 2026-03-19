@@ -3,6 +3,7 @@ extends Sprite2D
 @export var timer : Timer
 @export var memory_length : int
 var memory_ended : bool = false
+var memory_endable : bool = false
 var memory_textures = ["res://Assets/Memories/Memory Assets/memory_placeholder.png", 
 "res://Assets/Memories/memory_1.png",
 "res://Assets/Memories/memory_2.png",
@@ -30,16 +31,19 @@ func start(id : int):
 	animation_player.play("Memory/Play Memory")
 	
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("Player1_Interact") or Input.is_action_just_pressed("Player2_Interact") and memory_ended == false:
-		end_memory()
-		memory_ended = true
-
+	get_tree().create_timer(0.5).timeout.connect(set_memory_endable)
+	if Input.is_action_just_pressed("Player1_Interact") or Input.is_action_just_pressed("Player2_Interact"):
+		if memory_ended == false and memory_endable == true:
+			memory_ended = true
+			end_memory()
+			
+func set_memory_endable():
+	memory_endable = true
 func end_memory():
 	#timer.timeout.disconnect(end_memory)
 	animation_player.play("Memory/End Memory")
 	get_tree().paused = false
-	
 	timer.timeout.connect(queue_free)
-	timer.start(3)
+	timer.start(1)
 	
  
