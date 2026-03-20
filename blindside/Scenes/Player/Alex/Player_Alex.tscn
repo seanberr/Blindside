@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://ree5a56w7ues" path="res://Scenes/Components/interaction_component.tscn" id="14_rivyw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_car5t"]
-size = Vector2(149, 76)
+size = Vector2(127, 76)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a54k1"]
 animations = [{
@@ -98,7 +98,7 @@ min_light_scale = 3.0
 jump_buffer_window = 0.15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=554272374]
-position = Vector2(3.5, 17)
+position = Vector2(37.5, 17)
 shape = SubResource("RectangleShape2D_car5t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=884123085]

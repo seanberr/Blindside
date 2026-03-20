@@ -34,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://bqsro1u77pcrf" path="res://Assets/Environment Assets/Vines/Vines_219x904_Shape_7_1_blockout.png" id="32_0sqeq"]
 [ext_resource type="Texture2D" uid="uid://gdxh30v12p58" path="res://Assets/Background/BG Gradients/Gradient_BG_1.tres" id="33_3v8nx"]
 [ext_resource type="Texture2D" uid="uid://55dfksuyr4d2" path="res://Assets/Doors/Wooden_door_closed_960x1692.png" id="34_74nrn"]
+[ext_resource type="Script" uid="uid://bqtmctt4rulk2" path="res://Scenes/Objects/enter_door.gd" id="34_hnxc3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dlpbh"]
 radius = 64.03124
@@ -82,6 +83,9 @@ size = Vector2(117, 390.125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fl1qa"]
 size = Vector2(195.5, 235)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0sqeq"]
+radius = 266.80942
 
 [node name="Puzzle Room Two" type="Node2D" unique_id=1061331956]
 script = ExtResource("1_1epbv")
@@ -453,10 +457,16 @@ position = Vector2(1743, -5867.0005)
 scale = Vector2(154.875, 234.29689)
 texture = ExtResource("33_3v8nx")
 
-[node name="WoodenDoorClosed960x1692" type="Sprite2D" parent="." unique_id=1998669303]
+[node name="EnterDoor" type="Area2D" parent="." unique_id=1136566275]
 position = Vector2(-1411, 269)
 scale = Vector2(0.28046864, 0.27039006)
+script = ExtResource("34_hnxc3")
+
+[node name="WoodenDoorClosed960x1692" type="Sprite2D" parent="EnterDoor" unique_id=1998669303]
 texture = ExtResource("34_74nrn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnterDoor" unique_id=778843063]
+shape = SubResource("CircleShape2D_0sqeq")
 
 [connection signal="body_entered" from="Tiny Boulder/PlayerZone" to="Tiny Boulder" method="_on_player_zone_body_entered"]
 [connection signal="body_exited" from="Tiny Boulder/PlayerZone" to="Tiny Boulder" method="_on_player_zone_body_exited"]
@@ -472,3 +482,4 @@ texture = ExtResource("34_74nrn")
 [connection signal="body_entered" from="Sisyphus Hole" to="Sisyphus Boulder" method="_on_sisyphus_hole_body_entered"]
 [connection signal="body_entered" from="TreeKillZone" to="Tree" method="_on_tree_kill_zone_body_entered"]
 [connection signal="body_shape_entered" from="FailZone" to="Tiny Boulder" method="_on_fail_zone_body_shape_entered"]
+[connection signal="body_entered" from="EnterDoor" to="EnterDoor" method="_on_body_entered"]

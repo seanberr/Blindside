@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 var sadie	
-var pushable = true
+var player_in_hole = false
 var resetScene = preload("res://Scenes/Levels/puzzle_room_two.tscn")
 
 func reset():
@@ -13,9 +13,10 @@ func getPlayer():
 	for player in players:
 		if player.name == ("PlayerSadie"):
 			sadie = player
-
+			
 func in_place():
-	if pushable == false:
+	print("Pushable is ", player_in_hole)
+	if player_in_hole == true:
 		reset()
 		
 	else:		
@@ -32,12 +33,14 @@ func in_place():
 
 func make_unpushable():
 	getPlayer()
-	
-	pushable = false
+	player_in_hole = true
+	print("On Entered Pushable is ", player_in_hole)
 	sadie.able_to_push = false
 
 
 func make_pushable():
 	getPlayer()
 	sadie.able_to_push = true
-	pushable = true
+	player_in_hole = false
+	print("On Exit Pushable is ", player_in_hole)
+	
