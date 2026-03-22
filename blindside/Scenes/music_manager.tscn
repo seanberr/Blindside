@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://blwjhpbd6ehmi"]
 
 [ext_resource type="Script" uid="uid://clbslu6v26h2j" path="res://Scenes/sfx_manager.gd" id="1_hsxb6"]
-[ext_resource type="Script" uid="uid://bibjwxto8ca1p" path="res://Scenes/audio_manager.gd" id="1_sdmu8"]
-[ext_resource type="Script" uid="uid://cwnq1fop1muux" path="res://Scenes/music_manager.gd" id="2_sdmu8"]
+[ext_resource type="Script" path="res://Scenes/audio_manager.gd" id="1_sdmu8"]
+[ext_resource type="Script" path="res://Scenes/music_manager.gd" id="2_sdmu8"]
 
 [sub_resource type="Animation" id="Animation_b40f5"]
 length = 0.001
@@ -77,6 +77,7 @@ animator = NodePath("AnimationPlayer")
 
 [node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="MusicManager" unique_id=1480790342]
 pitch_scale = 0.86
+bus = &"Music"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MusicManager" unique_id=1753860888]
 libraries/ = SubResource("AnimationLibrary_a0g8o")

@@ -10,6 +10,7 @@ func _ready() -> void:
 	for i in range(audio_stream_count): #create an array of audio streams (cannot play more sfx at once than this num)
 		var new_stream = AudioStreamPlayer.new()
 		new_stream.process_mode = Node.PROCESS_MODE_ALWAYS
+		new_stream.bus = &"SFX"
 		audio_streams.append(new_stream)
 		add_child(new_stream)
 
