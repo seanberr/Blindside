@@ -9,6 +9,7 @@ class_name Interactable
 @export var interaction_area : Area2D
 @export var icon_position : Vector2
 
+var icons_enabled : bool = true
 @export var alex_icon : Sprite2D
 @export var sadie_icon : Sprite2D
 
@@ -29,9 +30,9 @@ func interact(id : int):
 
 func _physics_process(delta: float) -> void:
 	if scan_for_players() == true:
-		if is_sadie_interactable:
+		if is_sadie_interactable and icons_enabled:
 			sadie_icon.enable()
-		if is_alex_interactable:
+		if is_alex_interactable and icons_enabled:
 			alex_icon.enable()
 	else:
 		sadie_icon.disable()

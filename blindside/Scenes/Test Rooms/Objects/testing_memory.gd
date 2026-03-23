@@ -10,7 +10,7 @@ extends Node2D
 @export var animator_scale : AnimationPlayer
 var disabled : bool = false
 
-var memory_scene = preload("res://Scenes/Objects/memory.tscn")
+var memory_scene = preload("uid://cwpxtqk02ml5d")
 
 func _ready() -> void:
 	interactable.is_alex_interactable = is_alex_interactable
@@ -41,6 +41,9 @@ func interact():
 	disabled = true
 
 func on_destruction():
+	interactable.icons_enabled = false
+	interactable.alex_icon.disable()
+	interactable.sadie_icon.disable()
 	animator_scale.play("Shrink")
 	destruction_timer.timeout.connect(queue_free)
 	destruction_timer.start(1)

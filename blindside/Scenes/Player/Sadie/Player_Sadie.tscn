@@ -118,6 +118,7 @@
 [ext_resource type="Texture2D" uid="uid://d1rgaxw0ij2kd" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20091.png" id="102_sg6i4"]
 [ext_resource type="Texture2D" uid="uid://bos4mvfu0144m" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20092.png" id="103_ocgtk"]
 [ext_resource type="Texture2D" uid="uid://bmbxbxf2ropvb" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20093.png" id="104_6b7kn"]
+[ext_resource type="PackedScene" uid="uid://rqjisc3phlln" path="res://Scenes/Components/squish_manager.tscn" id="119_nasw4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rfr6o"]
 size = Vector2(60, 148)
@@ -573,6 +574,9 @@ energy = 0.3
 range_item_cull_mask = 4
 texture = ExtResource("23_ualsr")
 texture_scale = 50.0
+
+[node name="SquishManager" parent="." unique_id=986584385 node_paths=PackedStringArray("sprite") instance=ExtResource("119_nasw4")]
+sprite = NodePath("../AnimatedSprite2D")
 
 [connection signal="area_entered" from="Interacting Area" to="." method="_on_interacting_area_area_entered"]
 [connection signal="area_exited" from="Interacting Area" to="." method="_on_interacting_area_area_exited"]

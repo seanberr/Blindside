@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/sketch_4.png" id="6_csdph"]
 [ext_resource type="Texture2D" uid="uid://dbixrbx57jnxq" path="res://Assets/Environment Assets/Tree Assets/Foreground Trees 1920 x 1080/Tree_1920x1080_Shape_1_1_Blockout.png" id="7_1b8ni"]
 [ext_resource type="Texture2D" uid="uid://bmupi1lyosig0" path="res://Assets/Puzzle Assets/Tree Blockade/Tree_Blockade_1920x1080_Shape_1_7.png" id="7_q8ch1"]
-[ext_resource type="PackedScene" uid="uid://dddc45n5ss4es" path="res://Scenes/Objects/door.tscn" id="7_uy0g3"]
 [ext_resource type="PackedScene" uid="uid://chfo7m0gwps5d" path="res://Scenes/Levels/overworld_two.tscn" id="8_1tvsh"]
 [ext_resource type="Texture2D" uid="uid://b77yo5gjls264" path="res://Assets/Environment Assets/Tree Assets/Foreground Trees 1920 x 1080/Tree_1920x1080_Shape_3_1_Blockout.png" id="8_cn0fm"]
 [ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="9_1tvsh"]
@@ -282,13 +281,6 @@ player_coords = Array[Vector2]([Vector2(400, -3600), Vector2(400, -3600)])
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaRoomTrigger" unique_id=2014244829]
 position = Vector2(3313.75, 1605.5)
 shape = SubResource("RectangleShape2D_eac0b")
-
-[node name="EntranceDoor" parent="." unique_id=2096311542 instance=ExtResource("7_uy0g3")]
-visible = false
-position = Vector2(-1909, -40)
-is_locked = true
-scene_to_load = ExtResource("8_1tvsh")
-has_fog = false
 
 [node name="WoodenDoorClosed960x1692" type="Sprite2D" parent="." unique_id=1667399594]
 position = Vector2(-1909, -40)

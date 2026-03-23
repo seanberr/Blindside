@@ -6,6 +6,7 @@ var in_control : bool = true
 @onready var jump_comp : JumpComponent = $"Jump Component"
 @onready var gravity_comp : GravityComponent = $"Gravity Component"
 @onready var direction_comp : DirectionComponent = $"Direction Component"
+@onready var squish_manager : SquishManager = $SquishManager
 
 @export var input_left : StringName
 @export var input_right : StringName
@@ -39,6 +40,7 @@ func _physics_process(delta: float) -> void:
 		is_jumping = false
 		if is_jump_queued:
 			is_jump_queued = false
+			squish_manager.light_squish()
 			jump_comp.apply_jump_impulse()
 					
 	
