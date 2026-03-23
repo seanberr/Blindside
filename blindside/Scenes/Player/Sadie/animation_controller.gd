@@ -9,7 +9,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if player.is_on_floor() and Input.is_action_pressed("Player1_Left") or Input.is_action_pressed("Player1_Right"):
-		sprite.play("Walk")
-	else:
-		sprite.play("Idle")
+	
+	match player.state_machine.current_state.name:
+		"Ground Movement State":
+			sprite.play("Walk")
+			sprite.scale = Vector2(0.5, 0.5)
+		"Idle State":
+			sprite.play("Idle")
+			sprite.scale = Vector2(0.25, 0.25)
+		"Air Movement State":
+			sprite.play("Jump")

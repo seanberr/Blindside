@@ -11,19 +11,113 @@
 [ext_resource type="PackedScene" uid="uid://bnqloiaexy8u2" path="res://Scripts/Components/gravity_component.tscn" id="9_7v2ke"]
 [ext_resource type="PackedScene" uid="uid://dlobqil202c0r" path="res://Scripts/Components/facing_component.tscn" id="10_8t87h"]
 [ext_resource type="Texture2D" uid="uid://mk4goumgplxf" path="res://Assets/Player/Sadie Walk Cycle/1.png" id="11_7v2ke"]
+[ext_resource type="Texture2D" uid="uid://cmo5b701fr8pg" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20000.png" id="11_nf5hw"]
 [ext_resource type="Texture2D" uid="uid://v8q7vi8xu7co" path="res://Assets/Player/Sadie Walk Cycle/2.png" id="12_8t87h"]
+[ext_resource type="Texture2D" uid="uid://bxrlculn2mshl" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20001.png" id="12_nasw4"]
+[ext_resource type="Texture2D" uid="uid://bmvxmacrrn1rh" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20002.png" id="13_hsuic"]
 [ext_resource type="Texture2D" uid="uid://cqkaylofea6ui" path="res://Assets/Player/Sadie Walk Cycle/3.png" id="13_oly0s"]
 [ext_resource type="Texture2D" uid="uid://03id2qymji8m" path="res://Assets/Player/Sadie Walk Cycle/4.png" id="14_hkjr5"]
+[ext_resource type="Texture2D" uid="uid://dlisvaeex37ou" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20003.png" id="14_vps62"]
+[ext_resource type="Texture2D" uid="uid://ct7v5mjx08w8a" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20004.png" id="15_otgdp"]
 [ext_resource type="Texture2D" uid="uid://fgqujt6lc5a4" path="res://Assets/Player/Sadie Walk Cycle/5.png" id="15_pnvk2"]
+[ext_resource type="Texture2D" uid="uid://kuf36qqm1c16" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20005.png" id="16_nfg8s"]
 [ext_resource type="Texture2D" uid="uid://bhsdps760ibrd" path="res://Assets/Player/Sadie Walk Cycle/6.png" id="16_ualsr"]
 [ext_resource type="Texture2D" uid="uid://dykvt3b3u8aek" path="res://Assets/Player/Sadie Walk Cycle/7.png" id="17_2nd5c"]
+[ext_resource type="Texture2D" uid="uid://8vgk7eo7g7ys" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20006.png" id="17_8vcm2"]
 [ext_resource type="Script" uid="uid://dlcjtkd0041oj" path="res://Scenes/Player/Sadie/animation_controller.gd" id="18_7v2ke"]
+[ext_resource type="Texture2D" uid="uid://cqesu5myxs88b" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20007.png" id="18_062ld"]
 [ext_resource type="Texture2D" uid="uid://bmukorbrv86x7" path="res://Assets/Player/Sadie Walk Cycle/8.png" id="18_lduab"]
 [ext_resource type="PackedScene" uid="uid://ree5a56w7ues" path="res://Scenes/Components/interaction_component.tscn" id="19_8t87h"]
+[ext_resource type="Texture2D" uid="uid://bvxowduhwh5my" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20008.png" id="19_ntvyg"]
 [ext_resource type="PackedScene" uid="uid://dqtxbiwsuci5u" path="res://Scenes/Camera/Main_Camera.tscn" id="20_oly0s"]
+[ext_resource type="Texture2D" uid="uid://bsw18drfjxcj7" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20009.png" id="20_xpwq8"]
+[ext_resource type="Texture2D" uid="uid://cc2uu6qxaagci" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20010.png" id="21_dpmcx"]
 [ext_resource type="PackedScene" uid="uid://ccpr8qj4o416v" path="res://Scenes/Menu/pause_menu.tscn" id="22_2nd5c"]
 [ext_resource type="Script" uid="uid://c2ictn21iwl6w" path="res://Scenes/Player/Sadie/debug_label.gd" id="22_pnvk2"]
+[ext_resource type="Texture2D" uid="uid://dc5ay1maqav6g" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20011.png" id="22_ym4cj"]
+[ext_resource type="Texture2D" uid="uid://cantkm6onww4" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20012.png" id="23_fihl5"]
 [ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Memories/Memory Assets/Light/new_gradient_texture_2d.tres" id="23_ualsr"]
+[ext_resource type="Texture2D" uid="uid://mknbecp8i1vc" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20013.png" id="24_lk3qx"]
+[ext_resource type="Texture2D" uid="uid://bxcnps2q5tcwj" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20014.png" id="25_0hux5"]
+[ext_resource type="Texture2D" uid="uid://4bsq35o3g2p8" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20015.png" id="26_cxnki"]
+[ext_resource type="Texture2D" uid="uid://dnu3uyxr8r68m" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20016.png" id="27_el2re"]
+[ext_resource type="Texture2D" uid="uid://ceuw1jvwwxef7" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20017.png" id="28_jcb1y"]
+[ext_resource type="Texture2D" uid="uid://pjmi4qjog8f7" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20018.png" id="29_a2eod"]
+[ext_resource type="Texture2D" uid="uid://ccsw8vi8u4i07" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20019.png" id="30_t7tqf"]
+[ext_resource type="Texture2D" uid="uid://cve47irl8n40r" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20020.png" id="31_8um6f"]
+[ext_resource type="Texture2D" uid="uid://bnwacid5urmc8" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20021.png" id="32_i5ebw"]
+[ext_resource type="Texture2D" uid="uid://yes6q3pkp70n" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20022.png" id="33_cx1tu"]
+[ext_resource type="Texture2D" uid="uid://vq7g80654s7l" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20023.png" id="34_ptqat"]
+[ext_resource type="Texture2D" uid="uid://877ejpue1jx3" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20024.png" id="35_fjas5"]
+[ext_resource type="Texture2D" uid="uid://ckr7kihkv0sr8" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20025.png" id="36_2hqhb"]
+[ext_resource type="Texture2D" uid="uid://dlo68fgxgn884" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20026.png" id="37_7onms"]
+[ext_resource type="Texture2D" uid="uid://ba15vbrabnaic" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20027.png" id="38_dhtbj"]
+[ext_resource type="Texture2D" uid="uid://bh61yj50dkfng" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20028.png" id="39_x0cak"]
+[ext_resource type="Texture2D" uid="uid://0q1d6qs7k43u" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20029.png" id="40_b4wn5"]
+[ext_resource type="Texture2D" uid="uid://bet2tiqqfihdd" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20030.png" id="41_r2f7f"]
+[ext_resource type="Texture2D" uid="uid://bejrybnrjjgsb" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20031.png" id="42_rgq4q"]
+[ext_resource type="Texture2D" uid="uid://5gg3bbb2ofu0" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20032.png" id="43_ywsad"]
+[ext_resource type="Texture2D" uid="uid://uy00o8s6jh1e" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20033.png" id="44_2vmgk"]
+[ext_resource type="Texture2D" uid="uid://cahaa07rqmb8f" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20034.png" id="45_ugdqi"]
+[ext_resource type="Texture2D" uid="uid://ddujk5vg16ybf" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20035.png" id="46_21hnv"]
+[ext_resource type="Texture2D" uid="uid://cn5wabnuifgoi" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20036.png" id="47_64xb1"]
+[ext_resource type="Texture2D" uid="uid://cw04enl08p1w2" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20037.png" id="48_aejae"]
+[ext_resource type="Texture2D" uid="uid://dykltunl2mqn8" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20038.png" id="49_6sapd"]
+[ext_resource type="Texture2D" uid="uid://qswl47gjriim" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20039.png" id="50_eryfl"]
+[ext_resource type="Texture2D" uid="uid://w6dp6oylduv3" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20040.png" id="51_i6jky"]
+[ext_resource type="Texture2D" uid="uid://b43erfogj8hkp" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20041.png" id="52_5su2e"]
+[ext_resource type="Texture2D" uid="uid://cdl26dif1pc35" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20042.png" id="53_wi7pw"]
+[ext_resource type="Texture2D" uid="uid://f2vkov3lixee" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20043.png" id="54_h0qxv"]
+[ext_resource type="Texture2D" uid="uid://c7clasqfwbuyj" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20044.png" id="55_nxejc"]
+[ext_resource type="Texture2D" uid="uid://bx0expfxr27l2" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20045.png" id="56_iqf37"]
+[ext_resource type="Texture2D" uid="uid://deabocg4gxwp4" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20046.png" id="57_ddxj0"]
+[ext_resource type="Texture2D" uid="uid://bypqsj2pp7fqm" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20047.png" id="58_nuvbg"]
+[ext_resource type="Texture2D" uid="uid://cf6hg255inqax" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20048.png" id="59_inaw8"]
+[ext_resource type="Texture2D" uid="uid://bth7fnr1452f6" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20049.png" id="60_8c5ax"]
+[ext_resource type="Texture2D" uid="uid://c6ciinqwq565g" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20050.png" id="61_r3mxf"]
+[ext_resource type="Texture2D" uid="uid://3r8q46krgdfp" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20051.png" id="62_bheu7"]
+[ext_resource type="Texture2D" uid="uid://dngsnqqsyjdql" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20052.png" id="63_5ibx2"]
+[ext_resource type="Texture2D" uid="uid://dfvt8wacfbav8" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20053.png" id="64_eldxh"]
+[ext_resource type="Texture2D" uid="uid://iwyti054t8j3" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20054.png" id="65_etq5g"]
+[ext_resource type="Texture2D" uid="uid://b8r0yjtjexaqy" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20055.png" id="66_wm8om"]
+[ext_resource type="Texture2D" uid="uid://ccl0v1l3h8a6i" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20056.png" id="67_bfrwy"]
+[ext_resource type="Texture2D" uid="uid://pdr1xr6q0yy2" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20057.png" id="68_4r83i"]
+[ext_resource type="Texture2D" uid="uid://phdbspswg6ox" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20058.png" id="69_xq1kb"]
+[ext_resource type="Texture2D" uid="uid://r2kqswc0takp" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20059.png" id="70_s7bti"]
+[ext_resource type="Texture2D" uid="uid://c4r65rd7yvxi0" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20060.png" id="71_ucuy5"]
+[ext_resource type="Texture2D" uid="uid://c54o8hv5khfes" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20061.png" id="72_dy0gg"]
+[ext_resource type="Texture2D" uid="uid://dcbpo4fjtf27m" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20062.png" id="73_caipr"]
+[ext_resource type="Texture2D" uid="uid://b7hab0tslc7mu" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20063.png" id="74_k7j0e"]
+[ext_resource type="Texture2D" uid="uid://cwxubxg1diagg" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20064.png" id="75_3irhe"]
+[ext_resource type="Texture2D" uid="uid://cdlodiw5qjcgq" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20065.png" id="76_s7faf"]
+[ext_resource type="Texture2D" uid="uid://c7u2ds6co764d" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20066.png" id="77_whvv7"]
+[ext_resource type="Texture2D" uid="uid://cetoi7p4ho18f" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20067.png" id="78_wyiut"]
+[ext_resource type="Texture2D" uid="uid://5lxdsv4o7qhf" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20068.png" id="79_suo5m"]
+[ext_resource type="Texture2D" uid="uid://cr4jjg4pkpi76" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20069.png" id="80_uwnlp"]
+[ext_resource type="Texture2D" uid="uid://6py2latbx2f2" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20070.png" id="81_q0vtn"]
+[ext_resource type="Texture2D" uid="uid://dlcrwr44sspgh" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20071.png" id="82_yruib"]
+[ext_resource type="Texture2D" uid="uid://b6upf3fsppb02" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20072.png" id="83_lwxra"]
+[ext_resource type="Texture2D" uid="uid://bm84eltddvr5k" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20073.png" id="84_po7o5"]
+[ext_resource type="Texture2D" uid="uid://bpy5bdjciqe4x" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20074.png" id="85_cs6yb"]
+[ext_resource type="Texture2D" uid="uid://csub4aagm2gwt" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20075.png" id="86_gmytg"]
+[ext_resource type="Texture2D" uid="uid://2ha4tytjn2o" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20076.png" id="87_76c4f"]
+[ext_resource type="Texture2D" uid="uid://c82nfenrjf610" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20077.png" id="88_5bl0a"]
+[ext_resource type="Texture2D" uid="uid://dj7wxof3q0nd8" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20078.png" id="89_l683m"]
+[ext_resource type="Texture2D" uid="uid://diild2markl83" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20079.png" id="90_56n5y"]
+[ext_resource type="Texture2D" uid="uid://biqgwdsw4oiix" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20080.png" id="91_7q7y5"]
+[ext_resource type="Texture2D" uid="uid://cdid0b70yielk" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20081.png" id="92_ypckw"]
+[ext_resource type="Texture2D" uid="uid://cc8nhsl5l0k2f" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20082.png" id="93_xhoiy"]
+[ext_resource type="Texture2D" uid="uid://rod3mgsmywhf" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20083.png" id="94_jvpju"]
+[ext_resource type="Texture2D" uid="uid://cmkevjlfh0xu7" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20084.png" id="95_rhtk7"]
+[ext_resource type="Texture2D" uid="uid://ch5e5sj31vrwu" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20085.png" id="96_4mdgj"]
+[ext_resource type="Texture2D" uid="uid://bsqrt86nwyko8" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20086.png" id="97_ici2r"]
+[ext_resource type="Texture2D" uid="uid://ecue6fluna0q" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20087.png" id="98_5lhlc"]
+[ext_resource type="Texture2D" uid="uid://dl1pkaic37d5q" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20088.png" id="99_y1yem"]
+[ext_resource type="Texture2D" uid="uid://c8p8g2e6affme" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20089.png" id="100_aydip"]
+[ext_resource type="Texture2D" uid="uid://d0bxh703ghjxy" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20090.png" id="101_ui4s4"]
+[ext_resource type="Texture2D" uid="uid://d1rgaxw0ij2kd" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20091.png" id="102_sg6i4"]
+[ext_resource type="Texture2D" uid="uid://bos4mvfu0144m" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20092.png" id="103_ocgtk"]
+[ext_resource type="Texture2D" uid="uid://bmbxbxf2ropvb" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20093.png" id="104_6b7kn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rfr6o"]
 size = Vector2(60, 148)
@@ -44,11 +138,290 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("11_7v2ke")
+"texture": ExtResource("11_nf5hw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nasw4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hsuic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vps62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_otgdp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_nfg8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_8vcm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_062ld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ntvyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xpwq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_dpmcx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ym4cj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_fihl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_lk3qx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_0hux5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_cxnki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_el2re")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_jcb1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_a2eod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_t7tqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_8um6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_i5ebw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_cx1tu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_ptqat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_fjas5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_2hqhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_7onms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dhtbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_x0cak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_b4wn5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_r2f7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_rgq4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_ywsad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_2vmgk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_ugdqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_21hnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_64xb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_aejae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_6sapd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_eryfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_i6jky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_5su2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_wi7pw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_h0qxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_nxejc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_iqf37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_ddxj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_nuvbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_inaw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_8c5ax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_r3mxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_bheu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_5ibx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_eldxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_etq5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_wm8om")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_bfrwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_4r83i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_xq1kb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_s7bti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_ucuy5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_dy0gg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_caipr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_k7j0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_3irhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_s7faf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_whvv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_wyiut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_suo5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_uwnlp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_q0vtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_yruib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_lwxra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_po7o5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_cs6yb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_gmytg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_76c4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_5bl0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_l683m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_56n5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_7q7y5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_ypckw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_xhoiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_jvpju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_rhtk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_4mdgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_ici2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_5lhlc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_y1yem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_aydip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_ui4s4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_sg6i4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_ocgtk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_6b7kn")
 }],
 "loop": true,
 "name": &"Idle",
-"speed": 5.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -164,9 +537,9 @@ shape = SubResource("CapsuleShape2D_d5yuk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1975063042]
 light_mask = 5
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_i4gtq")
-animation = &"Walk"
+animation = &"Idle"
 autoplay = "Idle"
 
 [node name="Animation Controller" type="Node" parent="." unique_id=805799869 node_paths=PackedStringArray("player", "sprite")]

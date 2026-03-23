@@ -11,6 +11,9 @@ var is_activated : bool = false
 ## Sets a signal to control other objects
 signal is_pressed()
 
+func _ready() -> void:
+	$AnimatedSprite2D.play("new_animation_2")
+	
 ## If something moves onto the pressure plate
 func _on_area_entered(area: Area2D) -> void:
 	is_activated = true
