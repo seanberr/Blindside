@@ -274,10 +274,11 @@ rotation = -1.6179202
 texture = ExtResource("37_seim4")
 
 [node name="TreeTrunk1920x1080Shape41Blockout" type="Sprite2D" parent="Parallax - foreground" unique_id=1557938973]
+z_index = 2
 position = Vector2(2742, 995)
 texture = ExtResource("38_glh1i")
 
-[node name="TreeLeaves1920x1080Shape31Blockout" type="Sprite2D" parent="Parallax - foreground" unique_id=291733298]
-position = Vector2(2804.0002, 440.00003)
-scale = Vector2(0.33, 0.33)
+[node name="TreeLeaves1920x1080Shape31Blockout" type="Sprite2D" parent="Parallax - foreground/TreeTrunk1920x1080Shape41Blockout" unique_id=291733298]
+position = Vector2(58.400135, -559.39996)
+scale = Vector2(0.33375013, 0.33814815)
 texture = ExtResource("7_mvvfc")
