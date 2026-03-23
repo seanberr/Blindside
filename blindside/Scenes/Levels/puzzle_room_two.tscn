@@ -165,7 +165,7 @@ position = Vector2(-55, -46)
 shape = SubResource("CircleShape2D_dlpbh")
 
 [node name="Middeling Boulder" parent="." unique_id=1762666173 instance=ExtResource("6_2nygi")]
-position = Vector2(69, -78)
+position = Vector2(69, -90)
 mass = 5.0
 script = ExtResource("8_wbehg")
 
@@ -466,6 +466,7 @@ script = ExtResource("34_hnxc3")
 texture = ExtResource("34_74nrn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnterDoor" unique_id=778843063]
+position = Vector2(117.66021, 247.79016)
 shape = SubResource("CircleShape2D_0sqeq")
 
 [connection signal="body_entered" from="Tiny Boulder/PlayerZone" to="Tiny Boulder" method="_on_player_zone_body_entered"]

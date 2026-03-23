@@ -449,9 +449,10 @@ height = 45.0
 libraries/ = SubResource("AnimationLibrary_ytjal")
 autoplay = &"Light Flicker"
 
-[node name="Interaction Component" parent="." unique_id=2081682071 instance=ExtResource("14_rivyw")]
+[node name="Interaction Component" parent="." unique_id=2081682071 node_paths=PackedStringArray("player") instance=ExtResource("14_rivyw")]
 interaction_input = "Player2_Interact"
 player_id = 2
+player = NodePath("..")
 
 [node name="PointLight2D2" type="PointLight2D" parent="." unique_id=520923584]
 visible = false

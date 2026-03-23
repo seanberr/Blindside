@@ -4,10 +4,11 @@ class_name InteractionComponent
 @export var area_of_interaction : Area2D
 @export var interaction_input : String
 @export var player_id : int #sadie = 1, alex = 2
+@export var player : CharacterBody2D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed(interaction_input):
+	if Input.is_action_just_pressed(interaction_input) and player.in_control:
 		var interactable_component = search_for_interactable()
 		if interactable_component:
 			interact_with_object(interactable_component)

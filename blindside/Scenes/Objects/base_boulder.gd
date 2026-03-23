@@ -5,8 +5,13 @@ var player_in_hole = false
 var resetScene = preload("res://Scenes/Levels/puzzle_room_two.tscn")
 
 func reset():
-	TransitionHandler.transition_to_scene(resetScene, [Vector2(-1500, 400), Vector2(-1500, 400)])
+	var players = get_tree().get_nodes_in_group("Player")
+	if !players: return
+	for player in players:
+		player.in_control = false
 
+	TransitionHandler.transition_to_scene(resetScene, [Vector2(-1500, 400), Vector2(-1500, 400)])
+	
 func getPlayer():
 	var players = get_tree().get_nodes_in_group("Player")
 	
@@ -15,7 +20,6 @@ func getPlayer():
 			sadie = player
 			
 func in_place():
-	print("Pushable is ", player_in_hole)
 	if player_in_hole == true:
 		reset()
 		
@@ -34,7 +38,6 @@ func in_place():
 func make_unpushable():
 	getPlayer()
 	player_in_hole = true
-	print("On Entered Pushable is ", player_in_hole)
 	sadie.able_to_push = false
 
 
@@ -42,5 +45,4 @@ func make_pushable():
 	getPlayer()
 	sadie.able_to_push = true
 	player_in_hole = false
-	print("On Exit Pushable is ", player_in_hole)
 	

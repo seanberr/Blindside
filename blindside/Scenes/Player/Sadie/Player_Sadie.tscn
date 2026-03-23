@@ -540,7 +540,7 @@ shape = SubResource("CapsuleShape2D_d5yuk")
 light_mask = 5
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_i4gtq")
-animation = &"Idle"
+animation = &"Fall"
 autoplay = "Idle"
 
 [node name="Animation Controller" type="Node" parent="." unique_id=805799869 node_paths=PackedStringArray("player", "sprite")]
@@ -548,7 +548,8 @@ script = ExtResource("18_7v2ke")
 player = NodePath("..")
 sprite = NodePath("../AnimatedSprite2D")
 
-[node name="Interaction Component" parent="." unique_id=2081682071 instance=ExtResource("19_8t87h")]
+[node name="Interaction Component" parent="." unique_id=2081682071 node_paths=PackedStringArray("player") instance=ExtResource("19_8t87h")]
+player = NodePath("..")
 
 [node name="MainCamera" parent="." unique_id=1417079101 groups=["Player Camera"] instance=ExtResource("20_oly0s")]
 process_callback = 0

@@ -5,7 +5,8 @@ func _on_middeling_hole_body_entered(body: Node2D) -> void:
 
 
 func _on_player_zone_body_entered(body: Node2D) -> void:
-	make_unpushable()
+	if body.name != "Platform Two":
+		make_unpushable()
 
 
 func _on_player_zone_body_exited(body: Node2D) -> void:

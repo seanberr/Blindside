@@ -9,7 +9,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print(player.name)
+	
 	match player.state_machine.current_state.name:
 		"Ground Movement State":
 			sprite.play("Walk")
@@ -20,4 +20,7 @@ func _process(delta: float) -> void:
 			if player.name == "PlayerSadie":	
 				sprite.scale = Vector2(0.25, 0.25)
 		"Air Movement State":
+			if player.name == "PlayerSadie":	
+				sprite.scale = Vector2(0.5, 0.5)
 			sprite.play("Jump")
+			
