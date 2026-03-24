@@ -92,7 +92,7 @@ radius = 266.80942
 
 [node name="Puzzle Room Two" type="Node2D" unique_id=1061331956]
 script = ExtResource("1_1epbv")
-spawn_positions = Array[Vector2]([Vector2(4000, -600.065), Vector2(4000, -600.07)])
+spawn_positions = Array[Vector2]([Vector2(-1411, 300), Vector2(-1411, 300)])
 metadata/_edit_horizontal_guides_ = [218.0]
 
 [node name="Tilesets" parent="." unique_id=515895555 instance=ExtResource("4_on4bf")]
