@@ -2,12 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://clbhbw5rvphyw" path="res://Assets/Puzzle Assets/Puzzle Rocks/Puzzle_Rock_728x380_Shape_1.png" id="1_gxnv5"]
 [ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Memories/Memory Assets/Light/new_gradient_texture_2d.tres" id="2_a7ph3"]
+[ext_resource type="PackedScene" uid="uid://t8m7skbs0j0n" path="res://Scenes/Player/player_icon.tscn" id="4_3k5lt"]
+[ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player/Player Icon/Sadie_Player_Icon.png" id="5_dn4h4"]
+[ext_resource type="Script" uid="uid://lckk5h1sgsyo" path="res://Scenes/Test Rooms/Objects/interactable_component.gd" id="6_3k5lt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a7ph3"]
 radius = 66.007576
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x4fde"]
-radius = 65.06919
+radius = 15.033297
 
 [node name="Tiny" type="RigidBody2D" unique_id=372066649]
 collision_layer = 192
@@ -38,3 +41,29 @@ collision_mask = 255
 [node name="PlayerZone" type="CollisionShape2D" parent="Area2D" unique_id=81703043]
 position = Vector2(-55, -45)
 shape = SubResource("CircleShape2D_x4fde")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1282442267]
+layer = 2
+follow_viewport_enabled = true
+
+[node name="Player Icon2" parent="CanvasLayer" unique_id=1951650079 instance=ExtResource("4_3k5lt")]
+visible = false
+position = Vector2(-55, -155)
+texture = ExtResource("5_dn4h4")
+enabled = true
+
+[node name="Player Icon" parent="CanvasLayer" unique_id=1691396660 instance=ExtResource("4_3k5lt")]
+visible = false
+position = Vector2(-3.500002, -14.500004)
+
+[node name="Interactable" type="Node2D" parent="." unique_id=1312444493 node_paths=PackedStringArray("parent", "interaction_area", "alex_icon", "sadie_icon")]
+script = ExtResource("6_3k5lt")
+parent = NodePath("..")
+is_sadie_interactable = true
+interaction_area = NodePath("../Area2D")
+icon_position = Vector2(-50, -200)
+alex_icon = NodePath("../CanvasLayer/Player Icon")
+sadie_icon = NodePath("../CanvasLayer/Player Icon2")
+metadata/_custom_type_script = "uid://lckk5h1sgsyo"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -2,9 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://dd5cggbh7u2ut" path="res://Assets/Puzzle Assets/Puzzle Rocks/Puzzle_Rock_728x452_Shape_3.png" id="1_u3dxs"]
 [ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Memories/Memory Assets/Light/new_gradient_texture_2d.tres" id="2_tj70r"]
+[ext_resource type="PackedScene" uid="uid://t8m7skbs0j0n" path="res://Scenes/Player/player_icon.tscn" id="3_rj4yt"]
+[ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player/Player Icon/Sadie_Player_Icon.png" id="4_enbuy"]
+[ext_resource type="Script" uid="uid://lckk5h1sgsyo" path="res://Scenes/Test Rooms/Objects/interactable_component.gd" id="5_5mb1g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a7ph3"]
 radius = 137.0146
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_trcjn"]
+radius = 101.44183
 
 [node name="Middeling" type="RigidBody2D" unique_id=372066649]
 collision_layer = 192
@@ -27,3 +33,37 @@ scale = Vector2(4.3281255, 3.8906255)
 enabled = false
 color = Color(0.6745098, 0.6117647, 0.77254903, 1)
 texture = ExtResource("2_tj70r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1511082223]
+layer = 2
+follow_viewport_enabled = true
+
+[node name="Player Icon2" parent="CanvasLayer" unique_id=1951650079 instance=ExtResource("3_rj4yt")]
+visible = false
+position = Vector2(-55, -155)
+texture = ExtResource("4_enbuy")
+enabled = true
+
+[node name="Player Icon" parent="CanvasLayer" unique_id=1706263011 instance=ExtResource("3_rj4yt")]
+visible = false
+position = Vector2(-3.500002, -14.500004)
+
+[node name="Interactable" type="Node2D" parent="." unique_id=357701492 node_paths=PackedStringArray("parent", "interaction_area", "alex_icon", "sadie_icon")]
+script = ExtResource("5_5mb1g")
+parent = NodePath("..")
+is_sadie_interactable = true
+interaction_area = NodePath("../Area2D")
+icon_position = Vector2(-100, -200)
+alex_icon = NodePath("../CanvasLayer/Player Icon")
+sadie_icon = NodePath("../CanvasLayer/Player Icon2")
+metadata/_custom_type_script = "uid://lckk5h1sgsyo"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2053640040]
+position = Vector2(-63, -40.000004)
+scale = Vector2(0.58457965, 0.5940388)
+collision_layer = 255
+collision_mask = 255
+
+[node name="PlayerZone" type="CollisionShape2D" parent="Area2D" unique_id=1660965229]
+position = Vector2(-102.63786, 77.43602)
+shape = SubResource("CircleShape2D_trcjn")

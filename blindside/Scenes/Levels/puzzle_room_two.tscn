@@ -160,10 +160,10 @@ texture = ExtResource("29_g845l")
 position = Vector2(-1005, 438)
 script = ExtResource("5_tgk04")
 
-[node name="PlayerZone" type="Area2D" parent="Tiny Boulder" unique_id=1568627957]
+[node name="PlayerZone2" type="Area2D" parent="Tiny Boulder" unique_id=1568627957]
 position = Vector2(4, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Tiny Boulder/PlayerZone" unique_id=1167639926]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tiny Boulder/PlayerZone2" unique_id=1167639926]
 position = Vector2(-55, -46)
 shape = SubResource("CircleShape2D_dlpbh")
 
@@ -172,11 +172,11 @@ position = Vector2(69, -90)
 mass = 5.0
 script = ExtResource("8_wbehg")
 
-[node name="PlayerZone" type="Area2D" parent="Middeling Boulder" unique_id=1811333510]
+[node name="PlayerZone2" type="Area2D" parent="Middeling Boulder" unique_id=1811333510]
 visible = false
 position = Vector2(-25, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Middeling Boulder/PlayerZone" unique_id=929396992]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Middeling Boulder/PlayerZone2" unique_id=929396992]
 position = Vector2(-29, -38)
 shape = SubResource("CircleShape2D_xd6ku")
 
@@ -481,10 +481,10 @@ texture = ExtResource("34_74nrn")
 position = Vector2(117.66021, 247.79016)
 shape = SubResource("CircleShape2D_0sqeq")
 
-[connection signal="body_entered" from="Tiny Boulder/PlayerZone" to="Tiny Boulder" method="_on_player_zone_body_entered"]
-[connection signal="body_exited" from="Tiny Boulder/PlayerZone" to="Tiny Boulder" method="_on_player_zone_body_exited"]
-[connection signal="body_entered" from="Middeling Boulder/PlayerZone" to="Middeling Boulder" method="_on_player_zone_body_entered"]
-[connection signal="body_exited" from="Middeling Boulder/PlayerZone" to="Middeling Boulder" method="_on_player_zone_body_exited"]
+[connection signal="body_entered" from="Tiny Boulder/PlayerZone2" to="Tiny Boulder" method="_on_player_zone_body_entered"]
+[connection signal="body_exited" from="Tiny Boulder/PlayerZone2" to="Tiny Boulder" method="_on_player_zone_body_exited"]
+[connection signal="body_entered" from="Middeling Boulder/PlayerZone2" to="Middeling Boulder" method="_on_player_zone_body_entered"]
+[connection signal="body_exited" from="Middeling Boulder/PlayerZone2" to="Middeling Boulder" method="_on_player_zone_body_exited"]
 [connection signal="body_entered" from="Ample Boulder/PlayerZone" to="Ample Boulder" method="_on_player_zone_body_entered"]
 [connection signal="body_exited" from="Ample Boulder/PlayerZone" to="Ample Boulder" method="_on_player_zone_body_exited"]
 [connection signal="body_entered" from="Sisyphus Boulder/PlayerZone" to="Sisyphus Boulder" method="_on_player_zone_body_entered"]
