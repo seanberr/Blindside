@@ -1,12 +1,14 @@
 extends Node2D
 @export var area : Area2D
 @export var animator : AnimationPlayer
+@export var sprite : AnimatedSprite2D
 var is_cracked : bool = false
 var ready_to_break : bool = false
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	sprite.scale = Vector2(0.3,0.3)
 	if area:
 		area.body_entered.connect(on_area_entered)
 
