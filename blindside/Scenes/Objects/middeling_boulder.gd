@@ -1,4 +1,4 @@
-extends "res://Scenes/Objects/base_boulder.gd"
+extends BaseBoulder
 
 func _on_middeling_hole_body_entered(body: Node2D) -> void:
 	in_place()

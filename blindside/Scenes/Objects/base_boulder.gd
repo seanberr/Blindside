@@ -1,8 +1,10 @@
 extends RigidBody2D
 
+class_name BaseBoulder
+
 var sadie	
 var player_in_hole = false
-var resetScene = preload("res://Scenes/Levels/puzzle_room_two.tscn")
+var resetScene = preload("uid://rytqp8xg8cab")
 
 func reset():
 	var players = get_tree().get_nodes_in_group("Player")

@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var start_scene = preload("res://Scenes/Levels/puzzle_room_one.tscn")
-var memory_scene = preload("res://Scenes/Objects/memory.tscn")
+@onready var start_scene = preload("uid://cdlqgiadt8tu8")
+var memory_scene = preload("uid://cwpxtqk02ml5d")
 @export var memory_layer : CanvasLayer
 func _ready() -> void:
 	$"CenterContainer/Main Buttons/Play".grab_focus()

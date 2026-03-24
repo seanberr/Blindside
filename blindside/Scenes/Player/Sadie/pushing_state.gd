@@ -1,4 +1,4 @@
-extends "res://Scenes/Player/Alex/state.gd"
+extends State
 
 @export var player : CharacterBody2D
 

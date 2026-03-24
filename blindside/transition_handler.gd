@@ -1,5 +1,5 @@
 extends Node
-var transition_fade_scene : PackedScene = preload("res://Scenes/Objects/transition_fade.tscn")
+var transition_fade_scene : PackedScene = preload("uid://bnsevia3jomlo")
 var transitioning : bool = false
 var transition_fade : Node2D
 

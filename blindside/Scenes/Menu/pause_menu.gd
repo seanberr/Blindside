@@ -50,5 +50,5 @@ func make_pausable():
 
 func _on_main_menu_pressed() -> void:
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://Scenes/Menu/main_menu.tscn")
+	get_tree().change_scene_to_file("uid://bdwqpu7hq1iqu")
 	
