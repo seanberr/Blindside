@@ -1,5 +1,4 @@
 extends RigidBody2D
-
 class_name BaseBoulder
 
 var player_in_hole = false

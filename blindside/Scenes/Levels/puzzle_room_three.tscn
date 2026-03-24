@@ -4,16 +4,16 @@
 [ext_resource type="PackedScene" uid="uid://dyjicgdjdwsip" path="res://Scenes/Tileset/Test_Tileset.tscn" id="1_ampr3"]
 [ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player/Player Icon/Sadie_Player_Icon.png" id="4_8j0jc"]
 [ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="6_f55q5"]
-[ext_resource type="Texture2D" uid="uid://dnusec1d1qf30" path="res://Assets/Puzzle Assets/Objects/bone_cracked.png" id="8_abv05"]
+[ext_resource type="Texture2D" uid="uid://dregi08xc4uwi" path="res://Assets/Puzzle Assets/Femur Bone/Femur_Bone_Unbroken_1573x427.png" id="7_7iset"]
 [ext_resource type="Script" uid="uid://xd7xahbou1t5" path="res://Scenes/Levels/bone.gd" id="8_qo53q"]
 [ext_resource type="Script" uid="uid://u1km2xqalyds" path="res://Scenes/Levels/cutscene_trigger_area.gd" id="9_6uuda"]
 [ext_resource type="PackedScene" uid="uid://t8m7skbs0j0n" path="res://Scenes/Player/player_icon.tscn" id="9_abv05"]
-[ext_resource type="Texture2D" uid="uid://gcjf6xfxuuon" path="res://Assets/Puzzle Assets/Objects/bone_unbroken.png" id="9_qo53q"]
 [ext_resource type="PackedScene" uid="uid://c5wkmoo2jh5is" path="res://Scenes/Objects/glowing_platform.tscn" id="10_qo53q"]
 [ext_resource type="PackedScene" uid="uid://ccqeg5kw75naw" path="res://Scenes/Objects/player_detection_area.tscn" id="11_6uuda"]
 [ext_resource type="Script" uid="uid://d3ilcs6g8h07p" path="res://Scenes/Levels/sadie_position_puppet.gd" id="11_r2jiu"]
 [ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="12_bqv5r"]
 [ext_resource type="Script" uid="uid://chd3hhtgy0aey" path="res://Scenes/Levels/transition_area.gd" id="14_2pqgm"]
+[ext_resource type="Texture2D" uid="uid://b5m2nx3wemc6l" path="res://Assets/Environment Assets/Vertical Transition foregrounds/Vertical_Transition_1920x1080_Shape_1_2.png" id="15_4dgjf"]
 [ext_resource type="PackedScene" uid="uid://c3jwa7r1tb61w" path="res://Scenes/Levels/overworld_three.tscn" id="15_7iset"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bqv5r"]
@@ -22,12 +22,11 @@ size = Vector2(1516, 2017.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2pqgm"]
 size = Vector2(151, 452.5)
 
-[sub_resource type="Gradient" id="Gradient_7iset"]
-offsets = PackedFloat32Array(0, 0.43975905, 1)
-colors = PackedColorArray(0.06105663, 0.061316222, 0.23600408, 1, 0.12272113, 0.14994574, 0.21629006, 1, 0.20800579, 0.3273846, 0.40225533, 1)
+[sub_resource type="Gradient" id="Gradient_tg6hl"]
+colors = PackedColorArray(0.5275409, 0.16355437, 0.19555208, 1, 0.3372549, 0.039215688, 0.43529412, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_2pqgm"]
-gradient = SubResource("Gradient_7iset")
+gradient = SubResource("Gradient_tg6hl")
 fill_from = Vector2(0, 0.8418803)
 fill_to = Vector2(0, 0)
 
@@ -35,7 +34,7 @@ fill_to = Vector2(0, 0)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_abv05")
+"texture": ExtResource("7_7iset")
 }],
 "loop": true,
 "name": &"Cracked",
@@ -43,7 +42,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_qo53q")
+"texture": ExtResource("7_7iset")
 }],
 "loop": true,
 "name": &"Unbroken",
@@ -111,7 +110,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.16666667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(251, 230), Vector2(251, 252)]
+"values": [Vector2(251, 215), Vector2(251, 235)]
 }
 
 [sub_resource type="Animation" id="Animation_6uuda"]
@@ -184,7 +183,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2jiu"]
-size = Vector2(452, 90)
+size = Vector2(452, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6uuda"]
 size = Vector2(462, 52)
@@ -329,15 +328,16 @@ debug_color = Color(0.9312588, 2.9359759e-05, 0.6555094, 0.41960785)
 
 [node name="Main BG" type="Sprite2D" parent="." unique_id=1173026316]
 z_index = -99
-position = Vector2(395.99988, -264.00012)
-scale = Vector2(77.46875, 61.312496)
+position = Vector2(328.00003, 297.49988)
+scale = Vector2(75.34376, 78.859375)
 texture = SubResource("GradientTexture2D_2pqgm")
 
-[node name="Bone" type="Node2D" parent="." unique_id=86440863 node_paths=PackedStringArray("area", "animator")]
+[node name="Bone" type="Node2D" parent="." unique_id=86440863 node_paths=PackedStringArray("area", "animator", "sprite")]
 position = Vector2(-4, 34)
 script = ExtResource("8_qo53q")
 area = NodePath("Area2D")
 animator = NodePath("AnimatedSprite2D/AnimationPlayer")
+sprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bone" unique_id=1669156513]
 position = Vector2(251, 252)
@@ -353,7 +353,7 @@ libraries/ = SubResource("AnimationLibrary_bqv5r")
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bone/StaticBody2D" unique_id=1720741167]
-position = Vector2(258, 267)
+position = Vector2(258, 235)
 shape = SubResource("RectangleShape2D_r2jiu")
 
 [node name="Area2D" type="Area2D" parent="Bone" unique_id=630320647]
@@ -550,3 +550,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1146650030]
 shape = SubResource("SegmentShape2D_7iset")
+
+[node name="VerticalTransition1920x1080Shape12" type="Sprite2D" parent="." unique_id=24911019]
+z_index = -2
+position = Vector2(252.89853, 1053)
+scale = Vector2(2.4144776, 1.4130208)
+texture = ExtResource("15_4dgjf")

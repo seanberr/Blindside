@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 
 func transition_to_scene(scene : PackedScene, player_positions : Array[Vector2]):
 	if transition_fade_scene.can_instantiate():
+		get_tree().paused = true
 		transitioning = true
 		transition_fade = transition_fade_scene.instantiate()
 		var transition_layer = CanvasLayer.new()
@@ -30,6 +31,7 @@ func change_scene_with_transition(scene : PackedScene, player_positions : Array[
 	PlayerLoader.spawn_positions = player_positions
 		
 	if transition_fade:
+		get_tree().paused = false
 		transition_fade.transition_in()
 		var out_timer : SceneTreeTimer = get_tree().create_timer(1)
 		out_timer.timeout.connect(transition_fade.queue_free)
