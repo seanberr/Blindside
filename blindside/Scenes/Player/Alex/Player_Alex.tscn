@@ -77,10 +77,10 @@
 [ext_resource type="Texture2D" uid="uid://cm15pr1tnshge" path="res://Assets/Player/Alex Idle/Idle animation Alex0037.png" id="39_7bans"]
 [ext_resource type="Script" uid="uid://dlcjtkd0041oj" path="res://Scenes/Player/Sadie/animation_controller.gd" id="39_kthpo"]
 [ext_resource type="Texture2D" uid="uid://cp54etxows6dq" path="res://Assets/Player/Alex Idle/Idle animation Alex0038.png" id="40_wmrt2"]
-[ext_resource type="PackedScene" uid="uid://rqjisc3phlln" path="res://Scenes/Components/squish_manager.tscn" id="78_24tup"]
+[ext_resource type="PackedScene" path="res://Scenes/Components/squish_manager.tscn" id="78_24tup"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_car5t"]
-size = Vector2(127, 76)
+size = Vector2(110, 76)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a54k1"]
 animations = [{
@@ -285,7 +285,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_car5t"]
-radius = 116.10771
+radius = 122.016396
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a54k1"]
 size = Vector2(145, 73)
@@ -344,23 +344,21 @@ light_mask = 0
 z_index = 1
 collision_mask = 10
 script = ExtResource("1_p71sf")
-id = null
 light = NodePath("PointLight2D")
 input_left = &"Player2_Left"
 input_right = &"Player2_Right"
 input_jump = &"Player2_Jump"
 max_light_scale = 6.0
 min_light_scale = 3.0
-variable_jump_window = null
 jump_buffer_window = 0.15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=554272374]
-position = Vector2(37.5, 17)
+position = Vector2(29, 13)
 shape = SubResource("RectangleShape2D_car5t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=884123085]
 light_mask = 3
-position = Vector2(0, -21.000002)
+position = Vector2(0, -20)
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_a54k1")
 animation = &"Idle"
@@ -450,6 +448,7 @@ libraries/ = SubResource("AnimationLibrary_ytjal")
 autoplay = &"Light Flicker"
 
 [node name="Interaction Component" parent="." unique_id=2081682071 node_paths=PackedStringArray("player") instance=ExtResource("14_rivyw")]
+position = Vector2(0, -1)
 interaction_input = "Player2_Interact"
 player_id = 2
 player = NodePath("..")

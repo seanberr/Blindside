@@ -15,7 +15,7 @@ fill_to = Vector2(0.004347826, 0)
 size = Vector2(190, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bq8v2"]
-size = Vector2(190, 126)
+size = Vector2(189, 162)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ks2wq"]
 size = Vector2(190, 3)
@@ -42,7 +42,7 @@ debug_color = Color(0, 0.64868724, 0.18271685, 0.41960785)
 [node name="Underneath Area" type="Area2D" parent="." unique_id=44096077]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Underneath Area" unique_id=1745422050]
-position = Vector2(0, 62)
+position = Vector2(1, 78)
 scale = Vector2(2, 1)
 shape = SubResource("RectangleShape2D_bq8v2")
 debug_color = Color(0.8850255, 0, 0.40452638, 0.41960785)

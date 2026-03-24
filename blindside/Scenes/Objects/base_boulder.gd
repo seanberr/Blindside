@@ -1,8 +1,7 @@
 extends RigidBody2D
-
 class_name BaseBoulder
 
-var sadie	
+var sadie
 var player_in_hole = false
 var resetScene = preload("uid://rytqp8xg8cab")
 
