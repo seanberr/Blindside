@@ -496,6 +496,7 @@ script = ExtResource("6_316yk")
 [node name="Pushing State" type="Node" parent="Movement FSM" unique_id=950541112 node_paths=PackedStringArray("player")]
 script = ExtResource("6_hkjr5")
 player = NodePath("../..")
+layer_to_push = 7
 
 [node name="Velocity Component" parent="." unique_id=556735024 node_paths=PackedStringArray("character") instance=ExtResource("7_4u4v1")]
 character = NodePath("..")

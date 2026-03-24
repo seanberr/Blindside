@@ -1,15 +1,16 @@
 extends State
 
 @export var player : CharacterBody2D
+@export var layer_to_push : int
 
 func enter():
 	## Allows the player to push objects on the collision mask 7
-	player.set_collision_mask_value(7, true)
+	player.set_collision_mask_value(layer_to_push, true)
 	
 			
 func exit():
 	## Stops the player from pushing objects on the collision mask 7
-	player.set_collision_mask_value(7, false)
+	player.set_collision_mask_value(layer_to_push, false)
 
 func update(delta: float):
 	player.direction_comp.update_sprite_direction()

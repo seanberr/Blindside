@@ -19,7 +19,8 @@ var in_control : bool = true
 @onready var state_machine : StateMachine = $"Movement FSM"
 
 var sadie : CharacterBody2D
-
+var able_to_push = false
+var push_force = 80.0
 #variable jump values
 var is_jumping : bool
 var variable_jump_timer : SceneTreeTimer
@@ -52,6 +53,16 @@ func _physics_process(delta: float) -> void:
 		var light_scale = 8 - distance
 		light_scale = clamp(light_scale, min_light_scale, max_light_scale)
 		light.scale = Vector2(light_scale, light_scale)
+	
+	## Enter the pushing state when E is pressed
+	if Input.is_action_just_pressed("Player2_Interact"):
+		if able_to_push:
+			state_machine.change_state("Pushing State")
+	
+	## Exit the pushing state when E is released
+	if Input.is_action_just_released("Player2_Interact"):
+		state_machine.change_state("Idle State")
+		
 	
 func get_sadie():
 	var players = get_tree().get_nodes_in_group("Player")

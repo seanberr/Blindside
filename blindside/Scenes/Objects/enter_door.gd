@@ -12,9 +12,5 @@ func _process(delta: float) -> void:
 	
 func _on_body_entered(body: Node2D) -> void:
 	var players = get_tree().get_nodes_in_group("Player")
-	var sadie
 	for player in players:
-		if player.name == ("PlayerSadie"):
-			sadie = player
-			
-	sadie.able_to_push = true	
+		player.able_to_push = true	

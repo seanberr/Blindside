@@ -24,7 +24,7 @@ func change_state(new_state : String):
 		enter_state()
 	
 func enter_state():
-	print("Entering state: " + current_state.name.to_lower())
+	#print("Entering state: " + current_state.name.to_lower())
 	current_state.enter()
 	
 func update_state(delta):
@@ -34,7 +34,7 @@ func physics_update_state(delta):
 	current_state.physics_update(delta)
 	
 func exit_state():
-	print("Exiting state: " + current_state.name.to_lower())
+	#print("Exiting state: " + current_state.name.to_lower())
 	current_state.exit()
 	
 func get_state():
