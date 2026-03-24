@@ -23,4 +23,18 @@ func _process(delta: float) -> void:
 			if player.name == "PlayerSadie":	
 				sprite.scale = Vector2(0.5, 0.5)
 			sprite.play("Jump")
-			
+		"Pushing State":
+			if player.name == "PlayerSadie":
+				if Input.is_action_pressed("Player1_Left") or Input.is_action_pressed("Player1_Right"):
+					sprite.play("Walk")
+					sprite.scale = Vector2(0.5, 0.5)
+				else:
+					sprite.play("Idle")
+					sprite.scale = Vector2(0.25, 0.25)
+			else:
+				if Input.is_action_pressed("Player2_Left") or Input.is_action_pressed("Player2_Right"):
+					sprite.play("Walk")
+					
+				else:
+					sprite.play("Idle")
+					
