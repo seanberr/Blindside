@@ -64,6 +64,31 @@ position = Vector2(338.00003, -3267.875)
 scale = Vector2(2.890755, 2.7145832)
 texture = ExtResource("14_mie01")
 
+[node name="Rock1920x1080Shape21Blockout" type="Sprite2D" parent="VerticalTransition1920x1080Shape11" unique_id=1507265251]
+position = Vector2(84.06111, 550.3147)
+rotation = 1.5707964
+scale = Vector2(0.07693789, 0.14077073)
+texture = ExtResource("26_jdr1h")
+flip_v = true
+
+[node name="Rock1920x1080Shape21Blockout" type="Sprite2D" parent="VerticalTransition1920x1080Shape11/Rock1920x1080Shape21Blockout" unique_id=919641001]
+position = Vector2(541.04736, -248.19702)
+scale = Vector2(1.1499326, 1.2080388)
+texture = ExtResource("26_jdr1h")
+flip_h = true
+flip_v = true
+
+[node name="Rock1920x1080Shape21Blockout" type="Sprite2D" parent="VerticalTransition1920x1080Shape11/Rock1920x1080Shape21Blockout/Rock1920x1080Shape21Blockout" unique_id=1399972966]
+position = Vector2(1165.8485, 1289.688)
+rotation = 0.15735595
+scale = Vector2(1.3009613, 1.1477659)
+texture = ExtResource("26_jdr1h")
+
+[node name="Rock1920x1080Shape11Blockout" type="Sprite2D" parent="VerticalTransition1920x1080Shape11/Rock1920x1080Shape21Blockout/Rock1920x1080Shape21Blockout" unique_id=316777374]
+position = Vector2(-403.8838, 1004.8987)
+scale = Vector2(1.3046335, 0.78620654)
+texture = ExtResource("33_gcoj3")
+
 [node name="Bush" type="Sprite2D" parent="." unique_id=1135942318]
 position = Vector2(413, 1055)
 texture = ExtResource("2_djpvy")
@@ -143,8 +168,8 @@ texture = SubResource("GradientTexture2D_ap3x4")
 
 [node name="BgGradientTwo" type="Sprite2D" parent="." unique_id=1465260647]
 z_index = -4096
-position = Vector2(31.499634, -1314.5004)
-scale = Vector2(114.734375, 108.015625)
+position = Vector2(31.499853, -1304.0001)
+scale = Vector2(114.734375, 107.68749)
 texture = ExtResource("37_gkxjs")
 
 [node name="Parallax - bg 1" type="Parallax2D" parent="." unique_id=1958940918]

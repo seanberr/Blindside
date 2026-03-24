@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://d3ilcs6g8h07p" path="res://Scenes/Levels/sadie_position_puppet.gd" id="11_r2jiu"]
 [ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="12_bqv5r"]
 [ext_resource type="Script" uid="uid://chd3hhtgy0aey" path="res://Scenes/Levels/transition_area.gd" id="14_2pqgm"]
+[ext_resource type="Texture2D" uid="uid://b5m2nx3wemc6l" path="res://Assets/Environment Assets/Vertical Transition foregrounds/Vertical_Transition_1920x1080_Shape_1_2.png" id="15_4dgjf"]
 [ext_resource type="PackedScene" uid="uid://c3jwa7r1tb61w" path="res://Scenes/Levels/overworld_three.tscn" id="15_7iset"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bqv5r"]
@@ -21,12 +22,11 @@ size = Vector2(1516, 2017.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2pqgm"]
 size = Vector2(151, 452.5)
 
-[sub_resource type="Gradient" id="Gradient_7iset"]
-offsets = PackedFloat32Array(0, 0.43975905, 1)
-colors = PackedColorArray(0.06105663, 0.061316222, 0.23600408, 1, 0.12272113, 0.14994574, 0.21629006, 1, 0.20800579, 0.3273846, 0.40225533, 1)
+[sub_resource type="Gradient" id="Gradient_tg6hl"]
+colors = PackedColorArray(0.5275409, 0.16355437, 0.19555208, 1, 0.3372549, 0.039215688, 0.43529412, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_2pqgm"]
-gradient = SubResource("Gradient_7iset")
+gradient = SubResource("Gradient_tg6hl")
 fill_from = Vector2(0, 0.8418803)
 fill_to = Vector2(0, 0)
 
@@ -328,8 +328,8 @@ debug_color = Color(0.9312588, 2.9359759e-05, 0.6555094, 0.41960785)
 
 [node name="Main BG" type="Sprite2D" parent="." unique_id=1173026316]
 z_index = -99
-position = Vector2(395.99988, -264.00012)
-scale = Vector2(77.46875, 61.312496)
+position = Vector2(328.00003, 297.49988)
+scale = Vector2(75.34376, 78.859375)
 texture = SubResource("GradientTexture2D_2pqgm")
 
 [node name="Bone" type="Node2D" parent="." unique_id=86440863 node_paths=PackedStringArray("area", "animator", "sprite")]
@@ -550,3 +550,9 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1146650030]
 shape = SubResource("SegmentShape2D_7iset")
+
+[node name="VerticalTransition1920x1080Shape12" type="Sprite2D" parent="." unique_id=24911019]
+z_index = -2
+position = Vector2(252.89853, 1053)
+scale = Vector2(2.4144776, 1.4130208)
+texture = ExtResource("15_4dgjf")
