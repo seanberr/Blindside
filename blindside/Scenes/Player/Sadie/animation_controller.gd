@@ -19,9 +19,11 @@ func _process(delta: float) -> void:
 			sprite.play("Idle")
 			if player.name == "PlayerSadie":	
 				sprite.scale = Vector2(0.25, 0.25)
+		"Preparing to Jump State":
+			sprite.play("AlmostJump")
 		"Air Movement State":
 			if player.name == "PlayerSadie":	
-				sprite.scale = Vector2(0.5, 0.5)
+				sprite.scale = Vector2(0.25, 0.25)
 			sprite.play("Jump")
 		"Pushing State":
 			if player.name == "PlayerSadie":

@@ -77,15 +77,78 @@
 [ext_resource type="Texture2D" uid="uid://cm15pr1tnshge" path="res://Assets/Player/Alex Idle/Idle animation Alex0037.png" id="39_7bans"]
 [ext_resource type="Script" uid="uid://dlcjtkd0041oj" path="res://Scenes/Player/Sadie/animation_controller.gd" id="39_kthpo"]
 [ext_resource type="Texture2D" uid="uid://cp54etxows6dq" path="res://Assets/Player/Alex Idle/Idle animation Alex0038.png" id="40_wmrt2"]
+[ext_resource type="Texture2D" uid="uid://bcxh58f4hcyi6" path="res://Assets/Player/Alex Jump/Jump Alex no hop0000.png" id="41_mgbup"]
+[ext_resource type="Texture2D" uid="uid://1ah46awn0mrq" path="res://Assets/Player/Alex Jump/Jump Alex no hop0001.png" id="42_2yv8j"]
+[ext_resource type="Texture2D" uid="uid://dnd6rfhg6f7x3" path="res://Assets/Player/Alex Jump/Jump Alex no hop0002.png" id="43_qa2q0"]
+[ext_resource type="Texture2D" uid="uid://c6n56vr0a3myx" path="res://Assets/Player/Alex Jump/Jump Alex no hop0003.png" id="44_haujn"]
+[ext_resource type="Texture2D" uid="uid://c0ix8k1bl1c67" path="res://Assets/Player/Alex Jump/Jump Alex no hop0004.png" id="45_m4wwb"]
+[ext_resource type="Texture2D" uid="uid://coteihx08jgot" path="res://Assets/Player/Alex Jump/Jump Alex no hop0005.png" id="46_gq4h4"]
+[ext_resource type="Texture2D" uid="uid://cychl4ps1kbqo" path="res://Assets/Player/Alex Jump/Jump Alex no hop0006.png" id="47_3amos"]
+[ext_resource type="Texture2D" uid="uid://bf5c3eibwny53" path="res://Assets/Player/Alex Jump/Jump Alex no hop0007.png" id="48_8q5v6"]
+[ext_resource type="Texture2D" uid="uid://cdxe01ogva6sp" path="res://Assets/Player/Alex Jump/Jump Alex no hop0008.png" id="49_2a6fa"]
+[ext_resource type="Texture2D" uid="uid://cj213cfbkars8" path="res://Assets/Player/Alex Jump/Jump Alex no hop0009.png" id="50_o6s2e"]
+[ext_resource type="Texture2D" uid="uid://cpvcq4qu2x2c2" path="res://Assets/Player/Alex Jump/Jump Alex no hop0010.png" id="51_3ryig"]
+[ext_resource type="Texture2D" uid="uid://bthjdsk42uc7j" path="res://Assets/Player/Alex Jump/Jump Alex no hop0011.png" id="52_xrecd"]
+[ext_resource type="Texture2D" uid="uid://bovrktmcbqgrb" path="res://Assets/Player/Alex Jump/Jump Alex no hop0012.png" id="53_tiv2y"]
+[ext_resource type="Texture2D" uid="uid://bkk25qovijcnv" path="res://Assets/Player/Alex Jump/Jump Alex no hop0013.png" id="54_b6p3g"]
+[ext_resource type="Texture2D" uid="uid://ddjdcmwrym02j" path="res://Assets/Player/Alex Jump/Jump Alex no hop0014.png" id="55_6mcqw"]
+[ext_resource type="Texture2D" uid="uid://djsef6yds6pj4" path="res://Assets/Player/Alex Jump/Jump Alex no hop0015.png" id="56_qhj3m"]
+[ext_resource type="Texture2D" uid="uid://dtkvk4ssdxqbo" path="res://Assets/Player/Alex Jump/Jump Alex no hop0016.png" id="57_camrk"]
+[ext_resource type="Texture2D" uid="uid://fntqwturqpl1" path="res://Assets/Player/Alex Jump/Jump Alex no hop0017.png" id="58_he6oe"]
+[ext_resource type="Texture2D" uid="uid://do8qm416jnw5x" path="res://Assets/Player/Alex Jump/Jump Alex no hop0018.png" id="59_h1hej"]
+[ext_resource type="Texture2D" uid="uid://dk4yveytjinvq" path="res://Assets/Player/Alex Jump/Jump Alex no hop0019.png" id="60_2lhfn"]
+[ext_resource type="Texture2D" uid="uid://dku548xxfg7ay" path="res://Assets/Player/Alex Jump/Jump Alex no hop0020.png" id="61_3s8dl"]
+[ext_resource type="Texture2D" uid="uid://b2e71a81j4la6" path="res://Assets/Player/Alex Jump/Jump Alex no hop0021.png" id="62_uxuh5"]
+[ext_resource type="Texture2D" uid="uid://b1j352p12bjft" path="res://Assets/Player/Alex Jump/Jump Alex no hop0022.png" id="63_xunj5"]
+[ext_resource type="Texture2D" uid="uid://cl3l5yglcxrse" path="res://Assets/Player/Alex Jump/Jump Alex no hop0023.png" id="64_rvr5h"]
+[ext_resource type="Texture2D" uid="uid://ctyr1utdsl5p8" path="res://Assets/Player/Alex Jump/Jump Alex no hop0024.png" id="65_ic3ck"]
+[ext_resource type="Texture2D" uid="uid://b60sb0s0br3l3" path="res://Assets/Player/Alex Jump/Jump Alex no hop0025.png" id="66_ghqtl"]
+[ext_resource type="Texture2D" uid="uid://4qnm5wi8y5fv" path="res://Assets/Player/Alex Jump/Jump Alex no hop0026.png" id="67_snsqw"]
+[ext_resource type="Texture2D" uid="uid://bn6yrtsyua5c3" path="res://Assets/Player/Alex Jump/Jump Alex no hop0027.png" id="68_a0yue"]
+[ext_resource type="Texture2D" uid="uid://by0fqgl2tukk8" path="res://Assets/Player/Alex Jump/Jump Alex no hop0028.png" id="69_6tt3b"]
 [ext_resource type="Script" uid="uid://v2k3uctjftv1" path="res://Scenes/Player/Sadie/pushing_state.gd" id="69_32fpj"]
+[ext_resource type="Texture2D" uid="uid://vgc7c8uauigc" path="res://Assets/Player/Alex Jump/Jump Alex no hop0029.png" id="70_mv0ix"]
+[ext_resource type="Texture2D" uid="uid://df1akxaxoul12" path="res://Assets/Player/Alex Jump/Jump Alex no hop0030.png" id="71_tqscy"]
+[ext_resource type="Texture2D" uid="uid://bglxw0re2k4us" path="res://Assets/Player/Alex Jump/Jump Alex no hop0031.png" id="72_3rie3"]
+[ext_resource type="Texture2D" uid="uid://5ppmkupy0igm" path="res://Assets/Player/Alex Jump/Jump Alex no hop0032.png" id="73_k8kka"]
+[ext_resource type="Texture2D" uid="uid://cls3luymf3pqu" path="res://Assets/Player/Alex Jump/Jump Alex no hop0033.png" id="74_yxyvi"]
+[ext_resource type="Texture2D" uid="uid://ciyp3odxoi33h" path="res://Assets/Player/Alex Jump/Jump Alex no hop0034.png" id="75_c3gsy"]
+[ext_resource type="Texture2D" uid="uid://boatpyyqwm2yb" path="res://Assets/Player/Alex Jump/Jump Alex no hop0035.png" id="76_nj2v8"]
+[ext_resource type="Texture2D" uid="uid://phcqn6mdym6m" path="res://Assets/Player/Alex Jump/Jump Alex no hop0036.png" id="77_508ug"]
 [ext_resource type="PackedScene" uid="uid://rqjisc3phlln" path="res://Scenes/Components/squish_manager.tscn" id="78_24tup"]
-[ext_resource type="PackedScene" path="res://Scenes/Components/squish_manager.tscn" id="78_24tup"]
+[ext_resource type="Script" uid="uid://cs4etoru42oar" path="res://Scenes/Player/Sadie/prepare_to_jump_state.gd" id="107_2yv8j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_car5t"]
 size = Vector2(110, 76)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a54k1"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("41_mgbup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_2yv8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_qa2q0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_haujn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_m4wwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_gq4h4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_3amos")
+}],
+"loop": true,
+"name": &"AlmostJump",
+"speed": 30.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_doxcc")
@@ -206,6 +269,101 @@ animations = [{
 }],
 "loop": true,
 "name": &"Idle",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_8q5v6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_2a6fa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_o6s2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_3ryig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_xrecd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_tiv2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_b6p3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_6mcqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_qhj3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_camrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_he6oe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_h1hej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_2lhfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_3s8dl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_uxuh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_xunj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_rvr5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ic3ck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_ghqtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_snsqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_a0yue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_6tt3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_mv0ix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_tqscy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_3rie3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_k8kka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_yxyvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_c3gsy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_nj2v8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_508ug")
+}],
+"loop": true,
+"name": &"Jump",
 "speed": 30.0
 }, {
 "frames": [{
@@ -363,7 +521,7 @@ light_mask = 3
 position = Vector2(0, -20)
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_a54k1")
-animation = &"Idle"
+animation = &"AlmostJump"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1206903230]
 
@@ -387,7 +545,10 @@ player = NodePath("../..")
 [node name="Pushing State" type="Node" parent="Movement FSM" unique_id=1359663313 node_paths=PackedStringArray("player")]
 script = ExtResource("69_32fpj")
 player = NodePath("../..")
-layer_to_push = 9
+
+[node name="Prepare To Jump State" type="Node" parent="Movement FSM" unique_id=1120575337 node_paths=PackedStringArray("player")]
+script = ExtResource("107_2yv8j")
+player = NodePath("../..")
 
 [node name="Velocity Component" parent="." unique_id=556735024 node_paths=PackedStringArray("character") instance=ExtResource("3_w2xx2")]
 character = NodePath("..")

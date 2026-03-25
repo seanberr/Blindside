@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://bdwqpu7hq1iqu"]
 
 [ext_resource type="Script" uid="uid://rpuogaeuv3ho" path="res://Scenes/Menu/main_menu.gd" id="1_bkwd7"]
+[ext_resource type="Texture2D" uid="uid://dwul1bqhi7qx4" path="res://Assets/Menu/Asset 22x.png" id="2_7jtkx"]
 [ext_resource type="Texture2D" uid="uid://dm0e5f68ulw7n" path="res://Assets/Menu/controls.png" id="2_tself"]
+[ext_resource type="Texture2D" uid="uid://dltgdkcatp833" path="res://Assets/Menu/BG BW2.png" id="2_vmek6"]
 
 [node name="MainMenu" type="Node2D" unique_id=1389966816 node_paths=PackedStringArray("memory_layer")]
 script = ExtResource("1_bkwd7")
@@ -13,7 +15,21 @@ offset_bottom = 1080.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Title" type="Label" parent="." unique_id=1934471379]
+[node name="Background" type="Sprite2D" parent="." unique_id=103141618]
+position = Vector2(960, 540)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_vmek6")
+
+[node name="Title" type="CenterContainer" parent="." unique_id=1542688425]
+offset_right = 1920.0
+offset_bottom = 275.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Title" unique_id=617657226]
+position = Vector2(960, 230)
+texture = ExtResource("2_7jtkx")
+
+[node name="TitleText" type="Label" parent="." unique_id=1934471379]
+visible = false
 offset_right = 1920.0
 offset_bottom = 500.0
 theme_override_font_sizes/font_size = 300

@@ -70,7 +70,7 @@ size = Vector2(286, 13)
 size = Vector2(358, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ps0di"]
-size = Vector2(412.14938, 74.24)
+size = Vector2(412.14938, 61.439972)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t0vj2"]
 size = Vector2(416.9077, 16.75)
@@ -288,7 +288,7 @@ scale = Vector2(0.92831254, 1.0988718)
 texture = ExtResource("14_fl1qa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform Three" unique_id=407300635]
-position = Vector2(-335, 46)
+position = Vector2(-335, 55)
 scale = Vector2(0.94140625, 0.19531249)
 shape = SubResource("RectangleShape2D_ps0di")
 
