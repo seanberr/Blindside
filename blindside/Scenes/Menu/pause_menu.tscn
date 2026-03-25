@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ccpr8qj4o416v"]
 
 [ext_resource type="Script" uid="uid://b66ihf8u48hee" path="res://Scenes/Menu/pause_menu.gd" id="1_i0al5"]
+[ext_resource type="Texture2D" uid="uid://cecabi5ease76" path="res://Assets/Menu/PausedFiller.png" id="2_6pfc5"]
 
 [node name="PauseMenu" type="Control" unique_id=557337590]
 process_mode = 3
@@ -34,7 +35,12 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0.4745098)
 
-[node name="Title" type="Label" parent="CanvasLayer" unique_id=585376117]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=952242352]
+position = Vector2(960, 277)
+texture = ExtResource("2_6pfc5")
+
+[node name="TitleText" type="Label" parent="CanvasLayer" unique_id=585376117]
+visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
