@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://drngo457oambp" path="res://Scenes/Player/Alex/idle_state.gd" id="6_316yk"]
 [ext_resource type="Script" uid="uid://v2k3uctjftv1" path="res://Scenes/Player/Sadie/pushing_state.gd" id="6_hkjr5"]
 [ext_resource type="PackedScene" uid="uid://pgbmj66itpmd" path="res://Scripts/Components/velocity_component.tscn" id="7_4u4v1"]
+[ext_resource type="Script" uid="uid://cs4etoru42oar" path="res://Scenes/Player/Sadie/prepare_to_jump_state.gd" id="7_s7faf"]
 [ext_resource type="PackedScene" uid="uid://btlgcc88pdfbb" path="res://Scripts/Components/jump_component.tscn" id="8_bplxg"]
 [ext_resource type="PackedScene" uid="uid://bnqloiaexy8u2" path="res://Scripts/Components/gravity_component.tscn" id="9_7v2ke"]
 [ext_resource type="PackedScene" uid="uid://dlobqil202c0r" path="res://Scripts/Components/facing_component.tscn" id="10_8t87h"]
@@ -118,7 +119,70 @@
 [ext_resource type="Texture2D" uid="uid://d1rgaxw0ij2kd" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20091.png" id="102_sg6i4"]
 [ext_resource type="Texture2D" uid="uid://bos4mvfu0144m" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20092.png" id="103_ocgtk"]
 [ext_resource type="Texture2D" uid="uid://bmbxbxf2ropvb" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20093.png" id="104_6b7kn"]
+[ext_resource type="Texture2D" uid="uid://nyhg0tsy06k5" path="res://Assets/Player/Sadie Jump/jump0000.png" id="105_3irhe"]
+[ext_resource type="Texture2D" uid="uid://b2fmgwk0rdeks" path="res://Assets/Player/Sadie Jump/jump0001.png" id="106_s7faf"]
+[ext_resource type="Texture2D" uid="uid://cy8ac3iwrnhp8" path="res://Assets/Player/Sadie Jump/jump0002.png" id="107_whvv7"]
+[ext_resource type="Texture2D" uid="uid://tq0023dc5u33" path="res://Assets/Player/Sadie Jump/jump0003.png" id="108_wyiut"]
+[ext_resource type="Texture2D" uid="uid://li271ov0nivc" path="res://Assets/Player/Sadie Jump/jump0004.png" id="109_suo5m"]
+[ext_resource type="Texture2D" uid="uid://gyc4md8jl5i0" path="res://Assets/Player/Sadie Jump/jump0005.png" id="110_uwnlp"]
+[ext_resource type="Texture2D" uid="uid://k1haw0wv6122" path="res://Assets/Player/Sadie Jump/jump0006.png" id="111_q0vtn"]
+[ext_resource type="Texture2D" uid="uid://bt2pd1subuid" path="res://Assets/Player/Sadie Jump/jump0007.png" id="112_yruib"]
+[ext_resource type="Texture2D" uid="uid://bq3lrf1pltofn" path="res://Assets/Player/Sadie Jump/jump0008.png" id="113_lwxra"]
+[ext_resource type="Texture2D" uid="uid://c8qncb8y421q" path="res://Assets/Player/Sadie Jump/jump0009.png" id="114_po7o5"]
+[ext_resource type="Texture2D" uid="uid://frr5kff53m4x" path="res://Assets/Player/Sadie Jump/jump0010.png" id="115_cs6yb"]
+[ext_resource type="Texture2D" uid="uid://kemvmyqpijrf" path="res://Assets/Player/Sadie Jump/jump0011.png" id="116_gmytg"]
+[ext_resource type="Texture2D" uid="uid://bw3y3jiiqao56" path="res://Assets/Player/Sadie Jump/jump0012.png" id="117_76c4f"]
+[ext_resource type="Texture2D" uid="uid://donqew7wrer84" path="res://Assets/Player/Sadie Jump/jump0013.png" id="118_5bl0a"]
+[ext_resource type="Texture2D" uid="uid://nbnsjmtpbloo" path="res://Assets/Player/Sadie Jump/jump0014.png" id="119_l683m"]
 [ext_resource type="PackedScene" uid="uid://rqjisc3phlln" path="res://Scenes/Components/squish_manager.tscn" id="119_nasw4"]
+[ext_resource type="Texture2D" uid="uid://85paymbg508" path="res://Assets/Player/Sadie Jump/jump0015.png" id="120_56n5y"]
+[ext_resource type="Texture2D" uid="uid://4toeokr7lei6" path="res://Assets/Player/Sadie Jump/jump0016.png" id="121_7q7y5"]
+[ext_resource type="Texture2D" uid="uid://bpoqf2vipcikv" path="res://Assets/Player/Sadie Jump/jump0017.png" id="122_ypckw"]
+[ext_resource type="Texture2D" uid="uid://c57t034mj3ajv" path="res://Assets/Player/Sadie Jump/jump0018.png" id="123_xhoiy"]
+[ext_resource type="Texture2D" uid="uid://bm0u75tx70pno" path="res://Assets/Player/Sadie Jump/jump0019.png" id="124_jvpju"]
+[ext_resource type="Texture2D" uid="uid://do1vgbe41ivl7" path="res://Assets/Player/Sadie Jump/jump0020.png" id="125_rhtk7"]
+[ext_resource type="Texture2D" uid="uid://crrv3wyt4mfx8" path="res://Assets/Player/Sadie Jump/jump0021.png" id="126_4mdgj"]
+[ext_resource type="Texture2D" uid="uid://qna5oe1ehkc1" path="res://Assets/Player/Sadie Jump/jump0022.png" id="127_ici2r"]
+[ext_resource type="Texture2D" uid="uid://cdupip2ngeieh" path="res://Assets/Player/Sadie Jump/jump0023.png" id="128_5lhlc"]
+[ext_resource type="Texture2D" uid="uid://bl0nmhqpdxsun" path="res://Assets/Player/Sadie Jump/jump0024.png" id="129_y1yem"]
+[ext_resource type="Texture2D" uid="uid://csb6m3ilpom18" path="res://Assets/Player/Sadie Jump/jump0025.png" id="130_aydip"]
+[ext_resource type="Texture2D" uid="uid://bslfc5tpuds0" path="res://Assets/Player/Sadie Jump/jump0026.png" id="131_ui4s4"]
+[ext_resource type="Texture2D" uid="uid://cy5c5vi1pgucu" path="res://Assets/Player/Sadie Jump/jump0027.png" id="132_sg6i4"]
+[ext_resource type="Texture2D" uid="uid://wig2cfhn7jnc" path="res://Assets/Player/Sadie Jump/jump0028.png" id="133_ocgtk"]
+[ext_resource type="Texture2D" uid="uid://cpgds161tprfa" path="res://Assets/Player/Sadie Jump/jump0029.png" id="134_6b7kn"]
+[ext_resource type="Texture2D" uid="uid://dlx6x3ia53j0p" path="res://Assets/Player/Sadie Jump/jump0030.png" id="135_53yjv"]
+[ext_resource type="Texture2D" uid="uid://b06t0uohmkl0v" path="res://Assets/Player/Sadie Jump/jump0031.png" id="136_ld0va"]
+[ext_resource type="Texture2D" uid="uid://c2tpdwix2qfpk" path="res://Assets/Player/Sadie Jump/jump0032.png" id="137_m24m5"]
+[ext_resource type="Texture2D" uid="uid://d1d2s500mbgqc" path="res://Assets/Player/Sadie Jump/jump0033.png" id="138_0jodh"]
+[ext_resource type="Texture2D" uid="uid://b0gsf1gcvasbs" path="res://Assets/Player/Sadie Jump/jump0034.png" id="139_vepy2"]
+[ext_resource type="Texture2D" uid="uid://6vg7vlx5oovq" path="res://Assets/Player/Sadie Jump/jump0035.png" id="140_iot44"]
+[ext_resource type="Texture2D" uid="uid://820esiw33us6" path="res://Assets/Player/Sadie Jump/jump0036.png" id="141_haq6k"]
+[ext_resource type="Texture2D" uid="uid://bxn00kbiwtimy" path="res://Assets/Player/Sadie Jump/jump0037.png" id="142_el4bl"]
+[ext_resource type="Texture2D" uid="uid://wfmbh6gchkk2" path="res://Assets/Player/Sadie Jump/jump0038.png" id="143_63xn4"]
+[ext_resource type="Texture2D" uid="uid://bgrn7pf5tkbl3" path="res://Assets/Player/Sadie Jump/jump0039.png" id="144_wgn3g"]
+[ext_resource type="Texture2D" uid="uid://bgxhqe7oo2gq8" path="res://Assets/Player/Sadie Jump/jump0040.png" id="145_1jcid"]
+[ext_resource type="Texture2D" uid="uid://dke3paig3yw6u" path="res://Assets/Player/Sadie Jump/jump0041.png" id="146_lr0fe"]
+[ext_resource type="Texture2D" uid="uid://ca4tw1frbvwr7" path="res://Assets/Player/Sadie Jump/jump0042.png" id="147_74kst"]
+[ext_resource type="Texture2D" uid="uid://48ufevs2i1w6" path="res://Assets/Player/Sadie Jump/jump0043.png" id="148_8miuy"]
+[ext_resource type="Texture2D" uid="uid://iuhqp1byjeio" path="res://Assets/Player/Sadie Jump/jump0044.png" id="149_fwwfg"]
+[ext_resource type="Texture2D" uid="uid://bel3mk28jd5kk" path="res://Assets/Player/Sadie Jump/jump0045.png" id="150_itci4"]
+[ext_resource type="Texture2D" uid="uid://crxol0vgbu4r6" path="res://Assets/Player/Sadie Jump/jump0046.png" id="151_d2ox4"]
+[ext_resource type="Texture2D" uid="uid://d4ctfe8anxa4a" path="res://Assets/Player/Sadie Jump/jump0047.png" id="152_k8exu"]
+[ext_resource type="Texture2D" uid="uid://m4p5fy45nnfs" path="res://Assets/Player/Sadie Jump/jump0048.png" id="153_lp8gx"]
+[ext_resource type="Texture2D" uid="uid://cv2l7cj2j5gv6" path="res://Assets/Player/Sadie Jump/jump0049.png" id="154_gjgku"]
+[ext_resource type="Texture2D" uid="uid://dbfqs13q8f86h" path="res://Assets/Player/Sadie Jump/jump0050.png" id="155_6q4gd"]
+[ext_resource type="Texture2D" uid="uid://m2mvrho026us" path="res://Assets/Player/Sadie Jump/jump0051.png" id="156_8c0wy"]
+[ext_resource type="Texture2D" uid="uid://b1ro153i105a4" path="res://Assets/Player/Sadie Jump/jump0052.png" id="157_13u3o"]
+[ext_resource type="Texture2D" uid="uid://bq7e5rigvtfh1" path="res://Assets/Player/Sadie Jump/jump0053.png" id="158_lokbk"]
+[ext_resource type="Texture2D" uid="uid://cg678hbj6vo8f" path="res://Assets/Player/Sadie Jump/jump0054.png" id="159_km3vo"]
+[ext_resource type="Texture2D" uid="uid://d3hm5e5ap34em" path="res://Assets/Player/Sadie Jump/jump0055.png" id="160_k6pbr"]
+[ext_resource type="Texture2D" uid="uid://cjhdn3sgrb45h" path="res://Assets/Player/Sadie Jump/jump0056.png" id="161_cf1rg"]
+[ext_resource type="Texture2D" uid="uid://5ael8c6j2kfo" path="res://Assets/Player/Sadie Jump/jump0057.png" id="162_jb5gi"]
+[ext_resource type="Texture2D" uid="uid://buq61mk46bvu6" path="res://Assets/Player/Sadie Jump/jump0058.png" id="163_e6vel"]
+[ext_resource type="Texture2D" uid="uid://ce786umft1yco" path="res://Assets/Player/Sadie Jump/jump0059.png" id="164_7k8mg"]
+[ext_resource type="Texture2D" uid="uid://dtvpw8tkott6c" path="res://Assets/Player/Sadie Jump/jump0060.png" id="165_ah5dj"]
+[ext_resource type="Texture2D" uid="uid://b7rcpb77s1j75" path="res://Assets/Player/Sadie Jump/jump0061.png" id="166_q7lp2"]
+[ext_resource type="Texture2D" uid="uid://bum6w83dj5tf7" path="res://Assets/Player/Sadie Jump/jump0062.png" id="167_tynnh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rfr6o"]
 size = Vector2(60, 148)
@@ -132,6 +196,32 @@ height = 152.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i4gtq"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("105_3irhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_s7faf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_whvv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_wyiut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_suo5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_uwnlp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_q0vtn")
+}],
+"loop": true,
+"name": &"AlmostJump",
+"speed": 30.0
+}, {
 "frames": [],
 "loop": true,
 "name": &"Fall",
@@ -422,15 +512,180 @@ animations = [{
 }],
 "loop": true,
 "name": &"Idle",
-"speed": 30.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("11_7v2ke")
+"texture": ExtResource("112_yruib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_lwxra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_po7o5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_cs6yb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_gmytg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_76c4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_5bl0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_l683m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_56n5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_7q7y5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_ypckw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_xhoiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_jvpju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_rhtk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_4mdgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_ici2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_5lhlc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_y1yem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_aydip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_ui4s4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_sg6i4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_ocgtk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_6b7kn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_53yjv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_ld0va")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_m24m5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_0jodh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_vepy2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_iot44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_haq6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_el4bl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_63xn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_wgn3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_1jcid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_lr0fe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_74kst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_8miuy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_fwwfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_itci4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_d2ox4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_k8exu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_lp8gx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_gjgku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_6q4gd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_8c0wy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_13u3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_lokbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_km3vo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_k6pbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_cf1rg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_jb5gi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_e6vel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_7k8mg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_ah5dj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_q7lp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_tynnh")
 }],
 "loop": true,
 "name": &"Jump",
-"speed": 5.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -498,6 +753,10 @@ script = ExtResource("6_hkjr5")
 player = NodePath("../..")
 layer_to_push = 7
 
+[node name="Prepare To Jump State" type="Node" parent="Movement FSM" unique_id=2000823553 node_paths=PackedStringArray("player")]
+script = ExtResource("7_s7faf")
+player = NodePath("../..")
+
 [node name="Velocity Component" parent="." unique_id=556735024 node_paths=PackedStringArray("character") instance=ExtResource("7_4u4v1")]
 character = NodePath("..")
 max_speed = 500.0
@@ -541,7 +800,7 @@ shape = SubResource("CapsuleShape2D_d5yuk")
 light_mask = 5
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_i4gtq")
-animation = &"Fall"
+animation = &"Jump"
 autoplay = "Idle"
 
 [node name="Animation Controller" type="Node" parent="." unique_id=805799869 node_paths=PackedStringArray("player", "sprite")]
