@@ -52,7 +52,6 @@ theme_override_font_sizes/font_size = 75
 text = "play"
 
 [node name="Extras" type="Button" parent="CenterContainer/Main Buttons" unique_id=398996026]
-visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 75
 text = "extras"

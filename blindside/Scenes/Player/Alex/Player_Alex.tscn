@@ -546,6 +546,7 @@ player = NodePath("../..")
 [node name="Pushing State" type="Node" parent="Movement FSM" unique_id=1359663313 node_paths=PackedStringArray("player")]
 script = ExtResource("69_32fpj")
 player = NodePath("../..")
+layer_to_push = 9
 
 [node name="Prepare To Jump State" type="Node" parent="Movement FSM" unique_id=1120575337 node_paths=PackedStringArray("player")]
 script = ExtResource("107_2yv8j")
