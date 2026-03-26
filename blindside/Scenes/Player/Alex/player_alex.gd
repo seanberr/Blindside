@@ -1,16 +1,25 @@
 extends CharacterBody2D
 
+var in_control : bool = true
 @onready var velocity_comp : VelocityComponent = $"Velocity Component"
 @onready var jump_comp : JumpComponent = $"Jump Component"
 @onready var gravity_comp : GravityComponent = $"Gravity Component"
 @onready var direction_comp : DirectionComponent = $"Direction Component"
-
+@onready var squish_manager : SquishManager = $SquishManager
+@export var id = 1
+@export var light : PointLight2D
 @export var input_left : StringName
 @export var input_right : StringName
 @export var input_jump : StringName
 
+@export var max_light_scale : float = 10
+@export var min_light_scale : float = 2
+
 @onready var state_machine : StateMachine = $"Movement FSM"
 
+var sadie : CharacterBody2D
+var able_to_push = false
+var push_force = 80.0
 #variable jump values
 var is_jumping : bool
 var variable_jump_timer : SceneTreeTimer
@@ -22,6 +31,7 @@ var jump_buffer_timer : SceneTreeTimer
 @export var jump_buffer_window : float = 0.2
 
 func _ready() -> void:
+	get_sadie()
 	jump_comp.jump.connect(begin_variable_jump)
 	
 func _physics_process(delta: float) -> void:
@@ -29,7 +39,35 @@ func _physics_process(delta: float) -> void:
 		is_jumping = false
 		if is_jump_queued:
 			is_jump_queued = false
+			squish_manager.light_squish()
 			jump_comp.apply_jump_impulse()
+			
+	if !sadie:
+		get_sadie()
+		
+	if sadie:
+		var distance = position.distance_to(sadie.position)
+		distance = clamp(distance, 1, 1000)
+		distance /= 100
+		var light_scale = 8 - distance
+		light_scale = clamp(light_scale, min_light_scale, max_light_scale)
+		light.scale = Vector2(light_scale, light_scale)
+	
+	## Enter the pushing state when E is pressed
+	if Input.is_action_just_pressed("Player2_Interact"):
+		if able_to_push:
+			state_machine.change_state("Pushing State")
+	
+	## Exit the pushing state when E is released
+	if Input.is_action_just_released("Player2_Interact"):
+		state_machine.change_state("Idle State")
+		
+	
+func get_sadie():
+	var players = get_tree().get_nodes_in_group("Player")
+	for player in players:
+		if player.name == "PlayerSadie":
+			sadie = player
 	
 func buffer_jump():
 	is_jump_queued = true
@@ -53,14 +91,16 @@ func _on_alex_circle_area_entered(area: Area2D) -> void:
 	# When Alex and Sadie are close double the size of the light
 	# Uses collision layer 3
 	
-	$PointLight2D.scale = Vector2 ($PointLight2D.scale.x * 2, $PointLight2D.scale.y * 2)
+	pass
+	#$PointLight2D.scale = Vector2 ($PointLight2D.scale.x * 2, $PointLight2D.scale.y * 2)
 	
 
 func _on_alex_circle_area_exited(area: Area2D) -> void:
 	# When Alex and Sadie are far away half the size of the light
 	# Uses collision layer 3
 	
-	$PointLight2D.scale = Vector2 ($PointLight2D.scale.x / 2, $PointLight2D.scale.y / 2)
+	pass
+	#$PointLight2D.scale = Vector2 ($PointLight2D.scale.x / 2, $PointLight2D.scale.y / 2)
 	
 
 
@@ -72,7 +112,7 @@ func _on_interacting_circle_area_entered(area: Area2D) -> void:
 		area.get_node("Interactable").interactable  = true
 		
 	# Debug code to check functionality
-	$PointLight2D.color = Color(0.71, 0.224, 0.796, 1.0)
+	#$PointLight2D.color = Color(0.71, 0.224, 0.796, 1.0)
 	
 
 func _on_interacting_circle_area_exited(area: Area2D) -> void:
@@ -83,5 +123,5 @@ func _on_interacting_circle_area_exited(area: Area2D) -> void:
 		area.get_node("Interactable").interactable  = false
 			
 	# Debug code to check functionality
-	$PointLight2D.color = Color(1.0, 1.0, 1.0, 1.0)
+	#$PointLight2D.color = Color(1.0, 1.0, 1.0, 1.0)
 	

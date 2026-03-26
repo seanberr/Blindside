@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://b6303iltem4bp"]
+
+[ext_resource type="Script" uid="uid://cql8as07glsnb" path="res://Scenes/Objects/tooltip.gd" id="1_st7xw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_st7xw"]
+font_size = 32
+
+[sub_resource type="Animation" id="Animation_a3wf0"]
+resource_name = "Fade In"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:self_modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_7ihrk"]
+resource_name = "Fade Out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:self_modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_5pv2q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:self_modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t5oer"]
+_data = {
+&"Fade In": SubResource("Animation_a3wf0"),
+&"Fade Out": SubResource("Animation_7ihrk"),
+&"RESET": SubResource("Animation_5pv2q")
+}
+
+[node name="Tooltip" type="Node2D" unique_id=11282240 node_paths=PackedStringArray("label", "animator", "timer")]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 999
+script = ExtResource("1_st7xw")
+label = NodePath("Label")
+animator = NodePath("AnimationPlayer")
+timer = NodePath("Timer")
+
+[node name="Label" type="Label" parent="." unique_id=1309537900]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Test Tooltip"
+label_settings = SubResource("LabelSettings_st7xw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1479454633]
+libraries/ = SubResource("AnimationLibrary_t5oer")
+
+[node name="Timer" type="Timer" parent="." unique_id=1486862612]

@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dli670or6dk2e"]
+
+[ext_resource type="Texture2D" uid="uid://ulyjo4u3fj74" path="res://Assets/Puzzle Assets/Puzzle Rocks/Puzzle_Rock_728x530_Shape_4.png" id="1_nghup"]
+[ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Memories/Memory Assets/Light/new_gradient_texture_2d.tres" id="2_rqldy"]
+[ext_resource type="PackedScene" uid="uid://t8m7skbs0j0n" path="res://Scenes/Player/player_icon.tscn" id="3_uwpkj"]
+[ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player/Player Icon/Sadie_Player_Icon.png" id="4_wl82e"]
+[ext_resource type="Script" uid="uid://lckk5h1sgsyo" path="res://Scenes/Test Rooms/Objects/interactable_component.gd" id="5_x0ie8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jfrr2"]
+radius = 191.01047
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gs5ub"]
+radius = 133.47168
+
+[node name="Sisyphus Boulder" type="RigidBody2D" unique_id=720190903]
+collision_layer = 192
+collision_mask = 130
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1946303638]
+position = Vector2(-27, -10)
+scale = Vector2(0.7284937, 0.7284937)
+texture = ExtResource("1_nghup")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1562652529]
+position = Vector2(-26, -9)
+shape = SubResource("CircleShape2D_jfrr2")
+debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=258244904]
+position = Vector2(-23.000017, -7.749998)
+scale = Vector2(5.4687495, 4.5390625)
+enabled = false
+color = Color(1, 0.3137255, 0.4392157, 1)
+texture = ExtResource("2_rqldy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1562870222]
+layer = 2
+follow_viewport_enabled = true
+
+[node name="Player Icon2" parent="CanvasLayer" unique_id=1951650079 instance=ExtResource("3_uwpkj")]
+visible = false
+position = Vector2(-55, -155)
+texture = ExtResource("4_wl82e")
+enabled = true
+
+[node name="Player Icon" parent="CanvasLayer" unique_id=1601556847 instance=ExtResource("3_uwpkj")]
+visible = false
+position = Vector2(-3.500002, -14.500004)
+
+[node name="Interactable" type="Node2D" parent="." unique_id=1045511926 node_paths=PackedStringArray("parent", "interaction_area", "alex_icon", "sadie_icon")]
+script = ExtResource("5_x0ie8")
+parent = NodePath("..")
+is_sadie_interactable = true
+is_alex_interactable = true
+interaction_area = NodePath("../Area2D")
+icon_position = Vector2(-10, -250)
+alex_icon = NodePath("../CanvasLayer/Player Icon")
+sadie_icon = NodePath("../CanvasLayer/Player Icon2")
+metadata/_custom_type_script = "uid://lckk5h1sgsyo"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1905777323]
+position = Vector2(-63, -40.000004)
+scale = Vector2(0.58457965, 0.5940388)
+collision_layer = 255
+collision_mask = 255
+
+[node name="PlayerZone" type="CollisionShape2D" parent="Area2D" unique_id=156882151]
+position = Vector2(66.714615, 75.75263)
+shape = SubResource("CircleShape2D_gs5ub")

@@ -1,38 +1,49 @@
-extends Area2D
+extends Node2D
+@onready var interactable = $"Interactable Component"
 @export var image_id : int #id of image to be displayed on collection
+@export var sadie_only_id : int
+@export var alex_only_id : int
 @export var memory_layer : CanvasLayer
-var memory_scene = preload("res://Scenes/Objects/memory.tscn")
+@export var is_sadie_interactable : bool = false
+@export var is_alex_interactable : bool = false
+@export var destruction_timer : Timer
+@export var animator_scale : AnimationPlayer
+var disabled : bool = false
 
-## When the player goes near the memory
-func _on_area_entered(area: Area2D) -> void:
+var memory_scene = preload("uid://cwpxtqk02ml5d")
+
+func _ready() -> void:
+	interactable.is_alex_interactable = is_alex_interactable
+	interactable.is_sadie_interactable = is_sadie_interactable
+	interactable.set_icon_positions()
 	
-	## Checks if the object is interactable
-	if $Interactable.interactable == true:
-		
-		## Debug code to check functionality
-		var tempColour = $Sprite2D.get_modulate() 
-		tempColour.r = 1 - tempColour.r
-		tempColour.g = 1 - tempColour.g
-		tempColour.b = 1 - tempColour.b
-		$Sprite2D.modulate = tempColour
-		
-		show_memory()
+	destruction_timer.timeout.connect(on_destruction)
 
-func show_memory():
+func interact():
+	if disabled:
+		return
+	
 	var new_memory = memory_scene.instantiate()
 	memory_layer.add_child(new_memory)
 	new_memory.position = get_viewport_rect().size / 2
-	new_memory.start(image_id)
-	
+		
+	if is_sadie_interactable and is_alex_interactable:
+		if interactable.last_id == 0:
+			new_memory.start(sadie_only_id)
+			Global.set_memory_collected(sadie_only_id)
+		else:
+			new_memory.start(alex_only_id)
+			Global.set_memory_collected(alex_only_id)
+	else:
+		new_memory.start(image_id)
+		Global.set_memory_collected(image_id)
+	destruction_timer.start(1)
+	disabled = true
 
-func _on_area_exited(area: Area2D) -> void:
-	
-	## Checks if the object is interactable
-	if $Interactable.interactable == true:
-						
-		## Debug code to check functionality
-		var tempColour = $Sprite2D.get_modulate() 
-		tempColour.r = 1 - tempColour.r
-		tempColour.g = 1 - tempColour.g
-		tempColour.b = 1 - tempColour.b
-		$Sprite2D.modulate = tempColour
+func on_destruction():
+	interactable.icons_enabled = false
+	interactable.alex_icon.disable()
+	interactable.sadie_icon.disable()
+	animator_scale.play("Shrink")
+	destruction_timer.timeout.connect(queue_free)
+	destruction_timer.start(1)

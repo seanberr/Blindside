@@ -1,0 +1,350 @@
+[gd_scene format=4 uid="uid://rytqp8xg8cab"]
+
+[ext_resource type="Script" uid="uid://b6dfhua1w4u1p" path="res://Scenes/Levels/level.gd" id="1_1epbv"]
+[ext_resource type="PackedScene" uid="uid://dtvcye11saprq" path="res://Scenes/Objects/boulder.tscn" id="4_2nygi"]
+[ext_resource type="PackedScene" uid="uid://dyjicgdjdwsip" path="res://Scenes/Tileset/Test_Tileset.tscn" id="4_on4bf"]
+[ext_resource type="Script" uid="uid://yqxrxe65rk32" path="res://Scenes/Objects/tiny_boulder.gd" id="5_tgk04"]
+[ext_resource type="PackedScene" uid="uid://ck8uic3tgkep1" path="res://Scenes/Objects/middeling_boulder.tscn" id="6_2nygi"]
+[ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="7_on4bf"]
+[ext_resource type="PackedScene" uid="uid://xd0tqko77cut" path="res://Scenes/Objects/ample_boulder.tscn" id="7_tgk04"]
+[ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/sketch_4.png" id="8_tgk04"]
+[ext_resource type="Script" uid="uid://df8jehy8wf8dx" path="res://Scenes/Objects/middeling_boulder.gd" id="8_wbehg"]
+[ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player/Player Icon/Sadie_Player_Icon.png" id="9_o2lhj"]
+[ext_resource type="Texture2D" uid="uid://bmpg5yy6k7c6o" path="res://Assets/Player/Player Icon/Alex_Player_Icon.png" id="10_1jlcf"]
+[ext_resource type="Script" uid="uid://cjfx86lwheawb" path="res://Scenes/Objects/ample_boulder.gd" id="11_7o6jt"]
+[ext_resource type="Texture2D" uid="uid://bjiyw6a5gn38s" path="res://Assets/Environment Assets/Tree Assets/Trees 1920 x 1080/Tree_1920x1080_Shape_3_3.png" id="12_d2y5i"]
+[ext_resource type="PackedScene" uid="uid://dli670or6dk2e" path="res://Scenes/Levels/sisyphus_boulder.tscn" id="12_eaf6r"]
+[ext_resource type="Script" uid="uid://47uv13vmaeer" path="res://Scenes/Levels/sisyphus_boulder.gd" id="13_ps0di"]
+[ext_resource type="Texture2D" uid="uid://c8k3fovxw627" path="res://Assets/Tilesets/Test Tileset/Test_Tileset.png" id="15_ttvy8"]
+[ext_resource type="Script" uid="uid://dib3u6wfvt43w" path="res://Scenes/Levels/end_tree.gd" id="16_t0vj2"]
+[ext_resource type="Texture2D" uid="uid://csjtmrvhr45bo" path="res://Assets/Environment Assets/Tree Assets/Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_3_3.png" id="17_fl1qa"]
+[ext_resource type="Texture2D" uid="uid://qr1qoqgjc20i" path="res://Assets/Environment Assets/Tree Assets/Tree Leaves 1920 x 1080/Tree_Leaves_1920x1080_Shape_2_2.png" id="18_31m4j"]
+[ext_resource type="PackedScene" uid="uid://dddc45n5ss4es" path="res://Scenes/Objects/door.tscn" id="18_rn02p"]
+[ext_resource type="PackedScene" uid="uid://dvfktk3cubbiv" path="res://Scenes/Levels/puzzle_room_three.tscn" id="19_1qgvn"]
+[ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="20_1qgvn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dlpbh"]
+radius = 64.03124
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xd6ku"]
+radius = 116.15507
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wjeut"]
+radius = 131.01526
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_31m4j"]
+radius = 190.06578
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbehg"]
+size = Vector2(157, 453)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2upf6"]
+radius = 71.17584
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7o6jt"]
+radius = 126.1943
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ttvy8"]
+radius = 153.0294
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ps0di"]
+radius = 125.035995
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fl1qa"]
+radius = 83.15047
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eaf6r"]
+size = Vector2(355, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ttvy8"]
+size = Vector2(358, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ps0di"]
+size = Vector2(165.70955, 235.52002)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t0vj2"]
+size = Vector2(177, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rn02p"]
+size = Vector2(117, 316.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fl1qa"]
+size = Vector2(197, 235)
+
+[node name="Puzzle Room Two" type="Node2D" unique_id=1061331956]
+script = ExtResource("1_1epbv")
+spawn_positions = Array[Vector2]([Vector2(-1199, 0), Vector2(-1100, 0)])
+metadata/_edit_horizontal_guides_ = [218.0]
+
+[node name="Background_1" type="CanvasLayer" parent="." unique_id=212439775]
+layer = -1
+
+[node name="Main BG" type="Sprite2D" parent="Background_1" unique_id=833283190]
+self_modulate = Color(0.24313726, 0.2627451, 0.31764707, 1)
+position = Vector2(999, 564)
+scale = Vector2(2.0878305, 2.1789265)
+texture = ExtResource("8_tgk04")
+
+[node name="Blindness Modulate" parent="." unique_id=1509691114 instance=ExtResource("7_on4bf")]
+visible = false
+
+[node name="TestTileset" parent="." unique_id=515895555 instance=ExtResource("4_on4bf")]
+tile_map_data = PackedByteArray("AAABAAcAAAADAAEAAAACAAcAAAACAAEAAAAIAAgAAAACAAEAAAAHAAgAAAABAAEAAAAGAAgAAAABAAEAAAAFAAgAAAABAAIAAAAEAAgAAAABAAIAAAADAAgAAAACAAIAAAACAAgAAAACAAIAAAABAAgAAAACAAIAAAAAAAgAAAACAAIAAAD//wgAAAABAAEAAAD+/wkAAAABAAIAAAD//wkAAAACAAIAAAAAAAkAAAABAAIAAAABAAkAAAACAAIAAAAIAAkAAAACAAIAAAAHAAkAAAACAAIAAAAGAAkAAAABAAIAAAAFAAkAAAABAAIAAAAEAAkAAAACAAIAAAADAAkAAAACAAIAAAACAAkAAAABAAIAAAAFAAoAAAACAAIAAAAEAAoAAAACAAIAAAADAAoAAAACAAIAAAACAAoAAAACAAIAAAABAAoAAAABAAIAAAAAAAoAAAABAAIAAAD//woAAAACAAIAAAD+/woAAAABAAIAAAAGAAoAAAABAAIAAAAHAAoAAAABAAIAAAAIAAoAAAACAAIAAAD9/wkAAAABAAIAAAD8/wkAAAABAAIAAAD8/woAAAABAAIAAAD7/wkAAAACAAIAAAD7/wgAAAABAAIAAAD9/woAAAABAAIAAAD7/woAAAACAAIAAAD6/wgAAAACAAIAAAD6/wkAAAABAAIAAAD6/woAAAACAAIAAAD5/woAAAABAAIAAAD5/wkAAAABAAIAAAD4/wkAAAABAAIAAAD4/wgAAAACAAIAAAD5/wgAAAABAAIAAAD4/woAAAACAAIAAAD4/wcAAAACAAEAAAAJAAoAAAABAAIAAAAJAAkAAAACAAIAAAAJAAgAAAACAAIAAAAKAAgAAAACAAIAAAAKAAkAAAABAAIAAAAKAAoAAAABAAIAAAALAAkAAAABAAIAAAALAAgAAAABAAIAAAALAAoAAAABAAIAAAAMAAgAAAACAAIAAAAMAAkAAAABAAIAAAAMAAoAAAABAAIAAAANAAoAAAACAAIAAAANAAkAAAABAAIAAAANAAgAAAACAAEAAAD2/wcAAAAAAAEAAADx/wcAAAABAAEAAADw/wcAAAABAAEAAADw/wgAAAABAAIAAADw/wkAAAACAAIAAADw/woAAAACAAIAAADx/woAAAACAAIAAAD3/wcAAAABAAEAAAD3/wgAAAABAAIAAAD3/wkAAAABAAIAAAD3/woAAAACAAIAAAD2/woAAAABAAIAAAD1/woAAAABAAIAAAD0/woAAAABAAIAAADz/woAAAACAAIAAADy/woAAAABAAIAAADx/wkAAAABAAIAAADx/wgAAAABAAIAAADy/wgAAAACAAIAAADz/wgAAAACAAIAAAD0/wgAAAABAAIAAAD1/wgAAAACAAIAAAD1/wkAAAABAAIAAAD0/wkAAAABAAIAAADz/wkAAAABAAIAAADy/wkAAAACAAIAAAD2/wgAAAABAAIAAAD2/wkAAAABAAIAAADw/wsAAAABAAIAAADx/wsAAAACAAIAAADy/wsAAAABAAIAAADz/wsAAAABAAIAAAD0/wsAAAACAAIAAAD1/wsAAAACAAIAAAD2/wsAAAABAAIAAAD3/wsAAAACAAIAAAD4/wsAAAACAAIAAAD5/wsAAAABAAIAAAD6/wsAAAABAAIAAAD7/wsAAAACAAIAAAD8/wsAAAACAAIAAAD9/wsAAAACAAIAAAD+/wsAAAACAAIAAAD//wsAAAACAAIAAAAAAAsAAAACAAIAAAABAAsAAAACAAIAAAACAAsAAAABAAIAAAADAAsAAAABAAIAAAAEAAsAAAACAAIAAAAFAAsAAAACAAIAAAAGAAsAAAACAAIAAAAHAAsAAAABAAIAAAAIAAsAAAABAAIAAAAJAAsAAAABAAIAAAAKAAsAAAACAAIAAAALAAsAAAABAAIAAAAMAAsAAAACAAIAAAAMAAwAAAABAAMAAAANAAwAAAACAAMAAAANAAsAAAACAAIAAADx/wwAAAACAAMAAADw/wwAAAABAAMAAADy/wwAAAACAAMAAADz/wwAAAACAAMAAAD0/wwAAAABAAMAAAD1/wwAAAACAAMAAAD2/wwAAAABAAMAAAD4/wwAAAABAAMAAAD3/wwAAAABAAMAAAD5/wwAAAABAAMAAAD6/wwAAAACAAMAAAD8/wwAAAACAAMAAAD7/wwAAAACAAMAAAD9/wwAAAABAAMAAAD+/wwAAAABAAMAAAAAAAwAAAACAAMAAAD//wwAAAABAAMAAAABAAwAAAACAAMAAAACAAwAAAACAAMAAAADAAwAAAABAAMAAAAEAAwAAAACAAMAAAAFAAwAAAABAAMAAAAGAAwAAAABAAMAAAAHAAwAAAABAAMAAAAIAAwAAAACAAMAAAAJAAwAAAABAAMAAAAKAAwAAAABAAMAAAALAAwAAAABAAMAAAAOAAgAAAABAAEAAAAOAAkAAAACAAIAAAAOAAoAAAABAAIAAAAOAAsAAAABAAIAAAAOAAwAAAABAAMAAAAPAAgAAAACAAEAAAAPAAkAAAABAAIAAAAPAAoAAAABAAIAAAAPAAsAAAACAAIAAAAPAAwAAAACAAMAAAAQAAkAAAACAAIAAAAQAAoAAAACAAIAAAAQAAsAAAABAAIAAAARAAsAAAABAAIAAAARAAoAAAACAAIAAAARAAkAAAACAAIAAAAQAAwAAAACAAMAAAARAAwAAAACAAMAAAASAAwAAAABAAMAAAASAAsAAAABAAIAAAASAAoAAAACAAIAAAASAAkAAAABAAIAAAATAAkAAAABAAIAAAATAAoAAAACAAIAAAATAAsAAAACAAIAAAATAAwAAAABAAMAAAAUAAwAAAACAAMAAAAUAAsAAAACAAIAAAAUAAkAAAABAAIAAAAUAAoAAAACAAIAAAAVAAwAAAABAAMAAAAVAAsAAAACAAIAAAAVAAoAAAABAAIAAAAVAAkAAAACAAIAAAAVAAgAAAACAAIAAAAVAAcAAAABAAEAAAAXAAcAAAABAAEAAAAXAAgAAAACAAIAAAAXAAkAAAACAAIAAAAXAAoAAAACAAIAAAAXAAsAAAACAAIAAAAWAAwAAAABAAMAAAAWAAsAAAACAAIAAAAWAAoAAAABAAIAAAAWAAkAAAACAAIAAAAWAAgAAAABAAIAAAAWAAcAAAABAAEAAAAXAAwAAAABAAMAAAAYAAwAAAABAAMAAAAYAAsAAAACAAIAAAAYAAoAAAABAAIAAAAYAAkAAAABAAIAAAAYAAgAAAABAAIAAAAYAAcAAAABAAEAAAAZAAcAAAABAAEAAAAZAAgAAAACAAIAAAAZAAkAAAACAAIAAAAZAAoAAAACAAIAAAAZAAsAAAACAAIAAAAZAAwAAAABAAMAAAAaAAwAAAACAAMAAAAaAAsAAAACAAIAAAAaAAoAAAACAAIAAAAaAAkAAAACAAIAAAAaAAgAAAACAAIAAAAaAAcAAAABAAEAAAAbAAcAAAABAAEAAAAbAAgAAAACAAIAAAAbAAkAAAACAAIAAAAbAAoAAAABAAIAAAAbAAsAAAACAAIAAAAbAAwAAAABAAMAAAAcAAcAAAABAAEAAAAcAAgAAAABAAIAAAAcAAkAAAACAAIAAAAcAAoAAAACAAIAAAAcAAsAAAABAAIAAAAcAAwAAAACAAMAAAAdAAwAAAABAAMAAAAdAAsAAAACAAIAAAAdAAoAAAABAAIAAAAdAAkAAAACAAIAAAAdAAgAAAABAAIAAAAdAAcAAAABAAEAAAAeAAoAAAACAAIAAAAeAAsAAAACAAIAAAAfAAwAAAADAAMAAAAeAAwAAAABAAMAAAAeAAkAAAABAAIAAAAeAAgAAAABAAIAAAAfAAgAAAADAAIAAAAfAAkAAAADAAIAAAAfAAoAAAADAAIAAAAfAAcAAAADAAIAAAAfAAYAAAADAAIAAAAfAAUAAAADAAIAAAAfAAQAAAADAAIAAAAfAAMAAAADAAIAAAAfAAIAAAADAAIAAAAfAAsAAAADAAIAAAAfAAEAAAADAAIAAAAfAAAAAAADAAIAAAAfAP//AAADAAIAAAAfAP7/AAADAAIAAAAfAP3/AAADAAIAAAAfAPz/AAADAAIAAAAfAPv/AAADAAIAAAAfAPr/AAADAAIAAAAfAPn/AAADAAIAAAAfAPj/AAADAAIAAAAfAPf/AAADAAIAAAAfAPb/AAADAAIAAAAfAPX/AAADAAIAAAAfAPT/AAADAAIAAAAfAPP/AAADAAEAAAAeAPP/AAACAAEAAAAeAPT/AAACAAIAAAAeAPX/AAABAAIAAAAeAPb/AAABAAIAAAAeAPf/AAABAAIAAAAeAPj/AAABAAIAAAAeAPn/AAACAAIAAAAeAPr/AAACAAIAAAAeAPv/AAACAAIAAAAeAPz/AAABAAIAAAAeAP3/AAACAAIAAAAeAP7/AAABAAIAAAAeAP//AAACAAIAAAAeAAAAAAACAAIAAAAeAAEAAAABAAIAAAAeAAIAAAACAAIAAAAeAAMAAAACAAIAAAAeAAQAAAABAAIAAAAeAAcAAAABAAIAAADv/wwAAAABAAMAAADv/wsAAAACAAIAAADv/woAAAACAAIAAADv/wkAAAACAAIAAADv/wgAAAACAAIAAADv/wcAAAABAAEAAADu/wwAAAABAAMAAADu/wsAAAACAAIAAADu/woAAAABAAIAAADu/wkAAAACAAIAAADu/wgAAAABAAIAAADu/wcAAAABAAEAAADt/wwAAAABAAMAAADt/wsAAAACAAIAAADt/woAAAABAAIAAADt/wkAAAABAAIAAADt/wgAAAABAAIAAADt/wcAAAABAAEAAADs/wwAAAACAAMAAADs/wsAAAABAAIAAADs/woAAAABAAIAAADs/wkAAAACAAIAAADs/wgAAAACAAIAAADs/wcAAAABAAEAAADr/wwAAAABAAMAAADr/wsAAAABAAIAAADr/woAAAACAAIAAADr/wkAAAACAAIAAADr/wgAAAACAAIAAADr/wcAAAACAAIAAADr/wYAAAABAAIAAADr/wUAAAABAAIAAADr/wQAAAACAAIAAADr/wMAAAABAAIAAADr/wIAAAACAAIAAADr/wEAAAABAAIAAADr/wAAAAACAAIAAADr////AAABAAIAAADr//7/AAABAAIAAADr//3/AAACAAIAAADr//z/AAABAAIAAADr//v/AAABAAIAAADr//r/AAACAAIAAADr//n/AAABAAIAAADr//j/AAACAAIAAADr//f/AAABAAIAAADr//b/AAABAAIAAADr//X/AAACAAIAAADr//T/AAACAAIAAADr//P/AAABAAEAAADq/wwAAAAAAAMAAADq/wsAAAAAAAIAAADq/woAAAAAAAIAAADq/wkAAAAAAAIAAADq/wgAAAAAAAIAAADq/wcAAAAAAAIAAADq/wYAAAAAAAIAAADq/wUAAAAAAAIAAADq/wQAAAAAAAIAAADq/wMAAAAAAAIAAADq/wIAAAAAAAIAAADq/wEAAAAAAAIAAADq/wAAAAAAAAIAAADq////AAAAAAIAAADq//7/AAAAAAIAAADq//3/AAAAAAIAAADq//z/AAAAAAIAAADq//v/AAAAAAIAAADq//r/AAAAAAIAAADq//n/AAAAAAIAAADq//j/AAAAAAIAAADq//f/AAAAAAIAAADq//b/AAAAAAIAAADq//X/AAAAAAIAAADq//T/AAAAAAIAAADq//P/AAAAAAEAAADy/wcAAAABAAEAAADz/wcAAAABAAEAAAD0/wcAAAABAAEAAAD1/wcAAAADAAEAAAASAAcAAAAAAAEAAAATAAcAAAABAAEAAAAUAAcAAAABAAEAAAAQAAgAAAABAAEAAAARAAgAAAACAAEAAAASAAgAAAABAAIAAAATAAgAAAABAAIAAAAUAAgAAAABAAIAAAAeAAYAAAABAAIAAAAeAAUAAAABAAIAAAD+/wgAAAABAAEAAAD8/wcAAAACAAEAAAD9/wcAAAADAAEAAAD8/wgAAAABAAIAAAD9/wgAAAACAAIAAAD7/wcAAAABAAEAAAAWAAAAAAAAAAEAAAAXAAAAAAACAAEAAAAYAAAAAAABAAEAAAAZAAAAAAACAAEAAAAaAAAAAAABAAEAAAAbAAAAAAACAAEAAAAcAAAAAAABAAEAAAAdAAAAAAACAAEAAAADAAcAAAABAAEAAAAEAAcAAAABAAEAAAAFAAcAAAACAAEAAAAKAAcAAAAAAAEAAAALAAcAAAABAAEAAAAMAAcAAAADAAEAAAA=")
+
+[node name="Tiny Boulder" parent="." unique_id=372066649 instance=ExtResource("4_2nygi")]
+position = Vector2(-864, 390)
+script = ExtResource("5_tgk04")
+
+[node name="PlayerZone" type="Area2D" parent="Tiny Boulder" unique_id=1568627957]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tiny Boulder/PlayerZone" unique_id=1167639926]
+position = Vector2(-55, -48)
+shape = SubResource("CircleShape2D_dlpbh")
+
+[node name="Middeling Boulder" parent="." unique_id=1762666173 instance=ExtResource("6_2nygi")]
+position = Vector2(-630, 63)
+script = ExtResource("8_wbehg")
+
+[node name="PlayerZone" type="Area2D" parent="Middeling Boulder" unique_id=1811333510]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Middeling Boulder/PlayerZone" unique_id=929396992]
+position = Vector2(-56, -36)
+shape = SubResource("CircleShape2D_xd6ku")
+
+[node name="Ample Boulder" parent="." unique_id=794698021 instance=ExtResource("7_tgk04")]
+position = Vector2(-16, -273)
+collision_mask = 128
+script = ExtResource("11_7o6jt")
+
+[node name="PlayerZone" type="Area2D" parent="Ample Boulder" unique_id=1835729566]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ample Boulder/PlayerZone" unique_id=1651303357]
+position = Vector2(-117, 11)
+shape = SubResource("CircleShape2D_wjeut")
+
+[node name="Sisyphus Boulder" parent="." unique_id=720190903 instance=ExtResource("12_eaf6r")]
+position = Vector2(1634, -268)
+script = ExtResource("13_ps0di")
+
+[node name="PlayerZone" type="Area2D" parent="Sisyphus Boulder" unique_id=1027550583]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sisyphus Boulder/PlayerZone" unique_id=1210978681]
+position = Vector2(-23, -3)
+shape = SubResource("CircleShape2D_31m4j")
+
+[node name="Tree" type="StaticBody2D" parent="." unique_id=692195601]
+position = Vector2(1345, 324)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("16_t0vj2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree" unique_id=2016737863]
+position = Vector2(-11.5, -98.5)
+shape = SubResource("RectangleShape2D_wbehg")
+
+[node name="Sprite2D(old)" type="Sprite2D" parent="Tree" unique_id=905175058]
+visible = false
+position = Vector2(29.999939, -99.999985)
+scale = Vector2(0.425, 0.425)
+texture = ExtResource("12_d2y5i")
+
+[node name="Sprite2D" type="Sprite2D" parent="Tree" unique_id=81856696]
+
+[node name="TreeTrunk1920x1080Shape33" type="Sprite2D" parent="Tree/Sprite2D" unique_id=969982047]
+position = Vector2(46, -196)
+scale = Vector2(0.600926, 0.6009259)
+texture = ExtResource("17_fl1qa")
+
+[node name="TreeLeaves1920x1080Shape22" type="Sprite2D" parent="Tree/Sprite2D" unique_id=1649328679]
+position = Vector2(50.99994, -316)
+rotation = 0.049974635
+scale = Vector2(0.4961085, 0.4961085)
+texture = ExtResource("18_31m4j")
+
+[node name="Tiny Hole" type="Area2D" parent="." unique_id=10164234]
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tiny Hole" unique_id=2124514968]
+position = Vector2(-379, 537)
+shape = SubResource("CircleShape2D_2upf6")
+debug_color = Color(0.8465047, 0.0009866804, 0.9095459, 0.41960785)
+
+[node name="Middeling Hole" type="Area2D" parent="." unique_id=592770695]
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Middeling Hole" unique_id=1454013473]
+position = Vector2(-16, 571)
+shape = SubResource("CircleShape2D_7o6jt")
+debug_color = Color(0.84705883, 0, 0.9098039, 0.41960785)
+
+[node name="Ample Hole" type="Area2D" parent="." unique_id=1371612127]
+position = Vector2(342, 488)
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ample Hole" unique_id=582522879]
+position = Vector2(165, 103)
+shape = SubResource("CircleShape2D_ttvy8")
+debug_color = Color(0.84705883, 0, 0.9098039, 0.41960785)
+
+[node name="Sisyphus Hole" type="Area2D" parent="." unique_id=874366127]
+position = Vector2(872, 511)
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sisyphus Hole" unique_id=968776736]
+position = Vector2(122, 64)
+shape = SubResource("CircleShape2D_ps0di")
+debug_color = Color(0.84705883, 0, 0.9098039, 0.41960785)
+
+[node name="TreeKillZone" type="Area2D" parent="." unique_id=1650022114]
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeKillZone" unique_id=119732581]
+position = Vector2(1155, 24)
+shape = SubResource("CircleShape2D_fl1qa")
+debug_color = Color(0.84705883, 0, 0.9098039, 0.41960785)
+
+[node name="SadiePlayerIcon" type="Sprite2D" parent="." unique_id=1602265105]
+position = Vector2(1369, 311.6)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_o2lhj")
+
+[node name="AlexPlayerIcon" type="Sprite2D" parent="." unique_id=418225852]
+position = Vector2(1424.0002, 314.59995)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("10_1jlcf")
+
+[node name="Platform One" type="StaticBody2D" parent="." unique_id=60085154]
+position = Vector2(-680, 177)
+collision_layer = 195
+collision_mask = 195
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform One" unique_id=2118577605]
+position = Vector2(-58, 21.999998)
+scale = Vector2(0.6874999, 0.19531249)
+texture = ExtResource("15_ttvy8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform One" unique_id=812783669]
+position = Vector2(-58.5, 22)
+shape = SubResource("RectangleShape2D_eaf6r")
+
+[node name="Platform Two" type="StaticBody2D" parent="." unique_id=1020624692]
+position = Vector2(-144, -87)
+collision_layer = 195
+collision_mask = 195
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform Two" unique_id=938898340]
+position = Vector2(-14, 21.999998)
+scale = Vector2(0.6992188, 0.19531249)
+texture = ExtResource("15_ttvy8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform Two" unique_id=728860249]
+position = Vector2(-14, 22)
+shape = SubResource("RectangleShape2D_ttvy8")
+
+[node name="Platform Three" type="StaticBody2D" parent="." unique_id=1741691197]
+position = Vector2(328, 118)
+collision_layer = 195
+collision_mask = 195
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform Three" unique_id=1221291569]
+position = Vector2(-96.500015, 21.999998)
+scale = Vector2(0.30273438, 0.19531249)
+texture = ExtResource("15_ttvy8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform Three" unique_id=407300635]
+position = Vector2(-96, 22)
+scale = Vector2(0.94140625, 0.19531249)
+shape = SubResource("RectangleShape2D_ps0di")
+
+[node name="Platform Four" type="StaticBody2D" parent="." unique_id=1694512094]
+position = Vector2(857, 41)
+collision_layer = 66
+collision_mask = 66
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform Four" unique_id=289504729]
+position = Vector2(-87.49999, 21.999998)
+scale = Vector2(0.3496093, 0.19531249)
+texture = ExtResource("15_ttvy8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform Four" unique_id=1541588044]
+position = Vector2(-87.5, 22)
+shape = SubResource("RectangleShape2D_t0vj2")
+
+[node name="Testing Semi Circle" type="StaticBody2D" parent="." unique_id=700927640]
+visible = false
+position = Vector2(-388, 468)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Testing Semi Circle" unique_id=502548595]
+visible = false
+position = Vector2(-138, 256)
+scale = Vector2(10.822046, 7.203465)
+polygon = PackedVector2Array(7.421688, -0.5470123, 8.487061, -1.696991, 9.503502, -2.5299225, 10.427542, -3.5016747, 11.662653, -4.512821, 5.3975906, 3.8290558, -0.5180702, -4.5897446, 0.48192978, -3.5897446, 1.4819298, -2.5897446, 3.5896492, -0.8640518, 5.437729, 0.66298676)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Testing Semi Circle" unique_id=1697424829]
+visible = false
+position = Vector2(94.000015, -1.9999981)
+scale = Vector2(0.7276119, 0.75959)
+polygon = PackedVector2Array(-213.02567, 60.55896, -153.92819, 59.24243, -213.02567, 40.811462)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Testing Semi Circle" unique_id=1239008471]
+visible = false
+position = Vector2(149, 10)
+scale = Vector2(0.52941906, 0.576977)
+polygon = PackedVector2Array(-239.88556, 58.927795, -154.88672, 58.927795, -154.88672, -39.862976, -162.4422, -29.463928, -169.99762, -20.798096, -175.66425, -13.8654175, -188.88629, -1.7332153, -198.33057, 5.199463, -207.7749, 10.398987, -217.21924, 15.598511, -228.55237, 19.06488, -237.9967, 22.531189)
+
+[node name="InvisoWall" type="StaticBody2D" parent="." unique_id=1456450198]
+position = Vector2(312, -196)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InvisoWall" unique_id=1978346278]
+position = Vector2(169, -74)
+shape = SubResource("RectangleShape2D_rn02p")
+
+[node name="Door" parent="." unique_id=1600814949 instance=ExtResource("18_rn02p")]
+position = Vector2(1761, 268)
+scale = Vector2(0.9, 0.9)
+scene_to_load = ExtResource("19_1qgvn")
+player_coords = Array[Vector2]([Vector2(350, -2000), Vector2(350, -2000)])
+
+[node name="Main Memory" parent="." unique_id=1928423465 node_paths=PackedStringArray("memory_layer") instance=ExtResource("20_1qgvn")]
+position = Vector2(1574, 376)
+image_id = 4
+sadie_only_id = 1
+memory_layer = NodePath("../Memory Layer")
+is_alex_interactable = false
+
+[node name="Memory Layer" type="CanvasLayer" parent="." unique_id=564273173]
+layer = 999
+
+[node name="FailZone" type="Area2D" parent="." unique_id=906935200]
+position = Vector2(-1217, 421)
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FailZone" unique_id=1552353747]
+position = Vector2(34.5, -90.5)
+shape = SubResource("RectangleShape2D_fl1qa")
+debug_color = Color(0.95686275, 0, 0, 0.41960785)
+
+[connection signal="body_entered" from="Tiny Boulder/PlayerZone" to="Tiny Boulder" method="_on_player_zone_body_entered"]
+[connection signal="body_exited" from="Tiny Boulder/PlayerZone" to="Tiny Boulder" method="_on_player_zone_body_exited"]
+[connection signal="body_entered" from="Middeling Boulder/PlayerZone" to="Middeling Boulder" method="_on_player_zone_body_entered"]
+[connection signal="body_exited" from="Middeling Boulder/PlayerZone" to="Middeling Boulder" method="_on_player_zone_body_exited"]
+[connection signal="body_entered" from="Ample Boulder/PlayerZone" to="Ample Boulder" method="_on_player_zone_body_entered"]
+[connection signal="body_exited" from="Ample Boulder/PlayerZone" to="Ample Boulder" method="_on_player_zone_body_exited"]
+[connection signal="body_entered" from="Sisyphus Boulder/PlayerZone" to="Sisyphus Boulder" method="_on_player_zone_body_entered"]
+[connection signal="body_exited" from="Sisyphus Boulder/PlayerZone" to="Sisyphus Boulder" method="_on_player_zone_body_exited"]
+[connection signal="body_entered" from="Tiny Hole" to="Tiny Boulder" method="_on_tiny_hole_body_entered"]
+[connection signal="body_entered" from="Middeling Hole" to="Middeling Boulder" method="_on_middeling_hole_body_entered"]
+[connection signal="body_entered" from="Ample Hole" to="Ample Boulder" method="_on_ample_hole_body_entered"]
+[connection signal="body_entered" from="Sisyphus Hole" to="Sisyphus Boulder" method="_on_sisyphus_hole_body_entered"]
+[connection signal="body_entered" from="TreeKillZone" to="Tree" method="_on_tree_kill_zone_body_entered"]
+[connection signal="body_shape_entered" from="FailZone" to="Tiny Boulder" method="_on_fail_zone_body_shape_entered"]

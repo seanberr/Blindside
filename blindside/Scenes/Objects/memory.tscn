@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cwpxtqk02ml5d"]
 
-[ext_resource type="Texture2D" uid="uid://c0wgbjhgfelgw" path="res://Assets/Memory Assets/memory_placeholder.png" id="1_i0v8e"]
+[ext_resource type="Texture2D" uid="uid://c0wgbjhgfelgw" path="res://Assets/Memories/Memory Assets/memory_placeholder.png" id="1_i0v8e"]
 [ext_resource type="Script" uid="uid://c802sfukpdhsa" path="res://Scenes/Objects/memory.gd" id="2_4u8hf"]
 
 [sub_resource type="Animation" id="Animation_blicl"]
@@ -17,6 +17,30 @@ tracks/0/keys = {
 "update": 1,
 "values": [1.0]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.65, 0.65)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nng0m"]
 _data = {
@@ -24,6 +48,7 @@ _data = {
 }
 
 [sub_resource type="Animation" id="Animation_nng0m"]
+capture_included = true
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -33,7 +58,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
-"update": 0,
+"update": 2,
 "values": [1.0, 0.0]
 }
 
@@ -50,6 +75,30 @@ tracks/0/keys = {
 "update": 0,
 "values": [0.0, 1.0]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(3, 3), Vector2(0.65, 0.65)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.10471975511965978]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_blicl"]
 _data = {
@@ -59,11 +108,12 @@ _data = {
 
 [node name="Memory" type="Sprite2D" unique_id=1523460217 node_paths=PackedStringArray("animation_player", "timer")]
 process_mode = 3
+scale = Vector2(0.65, 0.65)
 texture = ExtResource("1_i0v8e")
 script = ExtResource("2_4u8hf")
 animation_player = NodePath("AnimationPlayer")
 timer = NodePath("Timer")
-memory_length = 4
+memory_length = 7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1504513781]
 libraries/ = SubResource("AnimationLibrary_nng0m")

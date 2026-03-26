@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cnbywaf1vqeef"]
+
+[ext_resource type="Script" uid="uid://b1m52c3ncgvje" path="res://Scenes/Player/Sadie/sfx_player.gd" id="1_v1ddc"]
+
+[node name="SFXPlayer" type="Node" unique_id=1514722886]
+script = ExtResource("1_v1ddc")
+grass_jump_string = "Sadie_Jump_Grass"

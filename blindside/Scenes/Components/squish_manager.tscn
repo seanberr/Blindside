@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://rqjisc3phlln"]
+
+[ext_resource type="Script" uid="uid://ccfh0jhnpnqvi" path="res://Scenes/Player/Alex/squish_manager.gd" id="1_41jn8"]
+
+[node name="SquishManager" type="Node" unique_id=986584385]
+script = ExtResource("1_41jn8")

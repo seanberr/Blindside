@@ -11,12 +11,22 @@ config_version=5
 [application]
 
 config/name="Blindside"
-run/main_scene="uid://brnhx6qq73jef"
+run/main_scene="uid://bdwqpu7hq1iqu"
 config/features=PackedStringArray("4.6", "Forward Plus")
+
+[audio]
+
+buses/default_bus_layout="uid://cnfqfc0e03lt"
 
 [autoload]
 
 Global="*uid://b2cwe6vh5elp0"
+TransitionHandler="*uid://b7k2ycj5qn74r"
+PlayerLoader="*uid://cjhmncsqmv8m6"
+CameraTransition="*uid://dbml3441q5d0o"
+TooltipManager="*uid://woveedsiqeak"
+ExitHandler="*uid://chuwypsyhr4vu"
+AudioManager="*uid://blwjhpbd6ehmi"
 
 [display]
 
@@ -40,6 +50,9 @@ folder_colors={
 [global_group]
 
 Player=""
+"Player Camera"=""
+"Unblurred Layer"=""
+Level=""
 
 [input]
 
@@ -98,6 +111,21 @@ Player2_Jump={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194320,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+Player2_Interact={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194326,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+Exit={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+"Toggle Blindness"={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":66,"key_label":0,"unicode":98,"location":0,"echo":false,"script":null)
+]
+}
 
 [physics]
 
@@ -107,3 +135,5 @@ Player2_Jump={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+textures/webp_compression/compression_method=0
+textures/default_filters/anisotropic_filtering_level=1

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://duocm8jnqin7y"]
+
+[ext_resource type="Shader" uid="uid://cegrl1tds3xo" path="res://Shaders/blur_shader.gdshader" id="1_kif2q"]
+[ext_resource type="Script" uid="uid://lm8w04yihy5l" path="res://Scenes/Levels/blur_rect.gd" id="2_5kqr5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0b02a"]
+shader = ExtResource("1_kif2q")
+shader_parameter/max_lod = 3.0
+shader_parameter/player1_uv = Vector2(0, 0)
+shader_parameter/player2_uv = Vector2(0, 0)
+shader_parameter/clear_radius = 0.15
+shader_parameter/softness = 0.05
+
+[node name="BlurLayer" type="CanvasLayer" unique_id=375919878]
+
+[node name="BlurRect" type="ColorRect" parent="." unique_id=1475783568]
+material = SubResource("ShaderMaterial_0b02a")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_5kqr5")

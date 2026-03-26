@@ -1,58 +1,533 @@
 [gd_scene format=3 uid="uid://bgl5ikhsftsmm"]
 
 [ext_resource type="Script" uid="uid://dve15csjs6wg8" path="res://Scenes/Player/Alex/player_alex.gd" id="1_p71sf"]
-[ext_resource type="Texture2D" uid="uid://6p88wnccpii8" path="res://Assets/Player/Alex/alex_placeholder.png" id="2_m0ade"]
+[ext_resource type="Texture2D" uid="uid://bqtyih71pkcyc" path="res://Assets/Player/Alex Idle/Idle animation Alex0000.png" id="2_doxcc"]
+[ext_resource type="Texture2D" uid="uid://c0jgrfw16r5mu" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0000.png" id="3_5fdmg"]
 [ext_resource type="PackedScene" uid="uid://bqqxoufgwdn60" path="res://Scripts/State/state_machine.tscn" id="3_5w000"]
+[ext_resource type="Texture2D" uid="uid://ewf8blbm5ubb" path="res://Assets/Player/Alex Idle/Idle animation Alex0001.png" id="3_24tup"]
 [ext_resource type="PackedScene" uid="uid://pgbmj66itpmd" path="res://Scripts/Components/velocity_component.tscn" id="3_w2xx2"]
+[ext_resource type="Texture2D" uid="uid://dbkmgyvrddnw8" path="res://Assets/Player/Alex Idle/Idle animation Alex0002.png" id="4_32fpj"]
 [ext_resource type="Script" uid="uid://mdwy3jc22rjs" path="res://Scenes/Player/Alex/ground_movement_state.gd" id="4_70705"]
 [ext_resource type="PackedScene" uid="uid://btlgcc88pdfbb" path="res://Scripts/Components/jump_component.tscn" id="4_f624q"]
+[ext_resource type="Texture2D" uid="uid://c5nghiqlgagpe" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0001.png" id="4_kthpo"]
 [ext_resource type="PackedScene" uid="uid://bnqloiaexy8u2" path="res://Scripts/Components/gravity_component.tscn" id="5_5w000"]
+[ext_resource type="Texture2D" uid="uid://d4m2miaoyrtbd" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0002.png" id="5_ax8hv"]
+[ext_resource type="Texture2D" uid="uid://131jasctphnf" path="res://Assets/Player/Alex Idle/Idle animation Alex0003.png" id="5_bpjxw"]
 [ext_resource type="Script" uid="uid://cbalphwxfjy8p" path="res://Scenes/Player/Alex/air_movement_state.gd" id="5_dlrfw"]
 [ext_resource type="Script" uid="uid://drngo457oambp" path="res://Scenes/Player/Alex/idle_state.gd" id="6_car5t"]
+[ext_resource type="Texture2D" uid="uid://cytwwidn3emqj" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0003.png" id="6_lreqx"]
 [ext_resource type="PackedScene" uid="uid://dlobqil202c0r" path="res://Scripts/Components/facing_component.tscn" id="6_otsd1"]
+[ext_resource type="Texture2D" uid="uid://b3bv6htikkmrj" path="res://Assets/Player/Alex Idle/Idle animation Alex0004.png" id="6_v4we6"]
+[ext_resource type="Texture2D" uid="uid://mn046glu2vcp" path="res://Assets/Player/Alex Idle/Idle animation Alex0005.png" id="7_1o3ii"]
+[ext_resource type="Texture2D" uid="uid://d28lckwq37xo" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0004.png" id="7_as6pq"]
+[ext_resource type="Texture2D" uid="uid://b3xgethrswx2s" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0005.png" id="8_874la"]
+[ext_resource type="Texture2D" uid="uid://d0on60cbltncr" path="res://Assets/Player/Alex Idle/Idle animation Alex0006.png" id="8_qne73"]
+[ext_resource type="Texture2D" uid="uid://efn1pqmu31h2" path="res://Assets/Player/Alex Idle/Idle animation Alex0007.png" id="9_141yn"]
+[ext_resource type="Texture2D" uid="uid://2cltt0ejog3e" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0006.png" id="9_fgx8e"]
+[ext_resource type="Texture2D" uid="uid://lah8d16ktooa" path="res://Assets/Player/Alex Idle/Idle animation Alex0008.png" id="10_myp1w"]
+[ext_resource type="Texture2D" uid="uid://dqri4xiaydjl3" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0007.png" id="10_tl728"]
+[ext_resource type="Texture2D" uid="uid://c3vqci5e5ue61" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0008.png" id="11_4tw6l"]
 [ext_resource type="Script" uid="uid://dm0xv64upqwgc" path="res://Scenes/Player/Alex/velocity_debug.gd" id="11_dlrfw"]
+[ext_resource type="Texture2D" uid="uid://bi15u1tmdbkdi" path="res://Assets/Player/Alex Idle/Idle animation Alex0009.png" id="11_kladn"]
+[ext_resource type="Texture2D" uid="uid://csjnkgv0t8fn4" path="res://Assets/Player/Alex Idle/Idle animation Alex0010.png" id="12_1tcs5"]
 [ext_resource type="Script" uid="uid://dboisr8xh4yab" path="res://Scenes/Player/Alex/state_debug.gd" id="12_car5t"]
+[ext_resource type="Texture2D" uid="uid://glslpuhakjby" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0009.png" id="12_ju2ib"]
+[ext_resource type="Gradient" uid="uid://fv23spyv3syk" path="res://Scenes/Levels/circle_gradient.tres" id="13_a54k1"]
+[ext_resource type="Texture2D" uid="uid://bwbkeerhyrgho" path="res://Assets/Player/Alex Idle/Idle animation Alex0011.png" id="13_fiuys"]
+[ext_resource type="Texture2D" uid="uid://bn03tmfodqt01" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0010.png" id="13_yosgt"]
+[ext_resource type="Texture2D" uid="uid://b3iao6cl4tme0" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0011.png" id="14_71dcc"]
+[ext_resource type="PackedScene" uid="uid://ree5a56w7ues" path="res://Scenes/Components/interaction_component.tscn" id="14_rivyw"]
+[ext_resource type="Texture2D" uid="uid://bmdpbi1182u4g" path="res://Assets/Player/Alex Idle/Idle animation Alex0012.png" id="14_xlope"]
+[ext_resource type="Texture2D" uid="uid://dq0c8eepsdch7" path="res://Assets/Player/Alex Idle/Idle animation Alex0013.png" id="15_72rw7"]
+[ext_resource type="Texture2D" uid="uid://csrie4nmsujjh" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0012.png" id="15_d0vrr"]
+[ext_resource type="Texture2D" uid="uid://dhav40y8saiop" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0013.png" id="16_g0smu"]
+[ext_resource type="Texture2D" uid="uid://38f88xgftr40" path="res://Assets/Player/Alex Idle/Idle animation Alex0014.png" id="16_tbq0e"]
+[ext_resource type="Texture2D" uid="uid://tp1qb6g5gb1d" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0014.png" id="17_2fn3a"]
+[ext_resource type="Texture2D" uid="uid://d1s3ayl73wln1" path="res://Assets/Player/Alex Idle/Idle animation Alex0015.png" id="17_a0acu"]
+[ext_resource type="Texture2D" uid="uid://6ahg4yo776o7" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0015.png" id="18_84vid"]
+[ext_resource type="Texture2D" uid="uid://duskfiumaa8i4" path="res://Assets/Player/Alex Idle/Idle animation Alex0016.png" id="18_exee3"]
+[ext_resource type="Texture2D" uid="uid://ra16jn4vo0rk" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0016.png" id="19_qwett"]
+[ext_resource type="Texture2D" uid="uid://kao8rlpnslwl" path="res://Assets/Player/Alex Idle/Idle animation Alex0017.png" id="19_uno18"]
+[ext_resource type="Texture2D" uid="uid://dntal0jdv6inl" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0017.png" id="20_jrqpr"]
+[ext_resource type="Texture2D" uid="uid://btx78vwvmvi2r" path="res://Assets/Player/Alex Idle/Idle animation Alex0018.png" id="20_wcxyt"]
+[ext_resource type="Texture2D" uid="uid://k55bovg6e3gt" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0018.png" id="21_cwagl"]
+[ext_resource type="Texture2D" uid="uid://bxkn3fdt0ss4l" path="res://Assets/Player/Alex Idle/Idle animation Alex0019.png" id="21_ltgwv"]
+[ext_resource type="Texture2D" uid="uid://cwrgu0jowyomk" path="res://Assets/Player/Alex Idle/Idle animation Alex0020.png" id="22_2a8ml"]
+[ext_resource type="Texture2D" uid="uid://dseuoyvug8enn" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0019.png" id="22_eyapt"]
+[ext_resource type="Texture2D" uid="uid://bi1fjxsyvgdam" path="res://Assets/Player/Alex Idle/Idle animation Alex0021.png" id="23_1y0uj"]
+[ext_resource type="Texture2D" uid="uid://by8b85lycdrxv" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0020.png" id="23_tpt1w"]
+[ext_resource type="Texture2D" uid="uid://3hnli6q5tlrs" path="res://Assets/Player/Alex Idle/Idle animation Alex0022.png" id="24_5vs4b"]
+[ext_resource type="Texture2D" uid="uid://crouc6hyy8mw4" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0021.png" id="24_nf2hc"]
+[ext_resource type="Texture2D" uid="uid://ctih5k5ar1iln" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0022.png" id="25_5lvy6"]
+[ext_resource type="Texture2D" uid="uid://lnc5nneqt42s" path="res://Assets/Player/Alex Idle/Idle animation Alex0023.png" id="25_aqijp"]
+[ext_resource type="Texture2D" uid="uid://vr2axegp7eef" path="res://Assets/Player/Alex Idle/Idle animation Alex0024.png" id="26_gi4dp"]
+[ext_resource type="Texture2D" uid="uid://x6pp668ksa6s" path="res://Assets/Player/Alex Walk/Walk Cycle Alex0023.png" id="26_k3jhy"]
+[ext_resource type="Texture2D" uid="uid://do5ssvg5mtsy4" path="res://Assets/Player/Alex Idle/Idle animation Alex0025.png" id="27_e2tfv"]
+[ext_resource type="Texture2D" uid="uid://belt13guwayo7" path="res://Assets/Player/Alex Idle/Idle animation Alex0026.png" id="28_8xjgh"]
+[ext_resource type="Texture2D" uid="uid://bqkpo80gllbtv" path="res://Assets/Player/Alex Idle/Idle animation Alex0027.png" id="29_gin3o"]
+[ext_resource type="Texture2D" uid="uid://b3gk6kewftxu3" path="res://Assets/Player/Alex Idle/Idle animation Alex0028.png" id="30_d6jkv"]
+[ext_resource type="Texture2D" uid="uid://bmt5npbay8jwg" path="res://Assets/Player/Alex Idle/Idle animation Alex0029.png" id="31_285ik"]
+[ext_resource type="Texture2D" uid="uid://5bd5hsrtitht" path="res://Assets/Player/Alex Idle/Idle animation Alex0030.png" id="32_482f5"]
+[ext_resource type="Texture2D" uid="uid://wif7kfvxdegb" path="res://Assets/Player/Alex Idle/Idle animation Alex0031.png" id="33_np8o2"]
+[ext_resource type="Texture2D" uid="uid://k0ig8okicon7" path="res://Assets/Player/Alex Idle/Idle animation Alex0032.png" id="34_6wgj4"]
+[ext_resource type="Texture2D" uid="uid://dsljjxeremsql" path="res://Assets/Player/Alex Idle/Idle animation Alex0033.png" id="35_murf2"]
+[ext_resource type="Texture2D" uid="uid://cnbmsr1813xo1" path="res://Assets/Player/Alex Idle/Idle animation Alex0034.png" id="36_hu5yn"]
+[ext_resource type="Texture2D" uid="uid://w3nrpbdji64w" path="res://Assets/Player/Alex Idle/Idle animation Alex0035.png" id="37_f4o2w"]
+[ext_resource type="Texture2D" uid="uid://c8oexuq3xlbou" path="res://Assets/Player/Alex Idle/Idle animation Alex0036.png" id="38_1xkvv"]
+[ext_resource type="Texture2D" uid="uid://cm15pr1tnshge" path="res://Assets/Player/Alex Idle/Idle animation Alex0037.png" id="39_7bans"]
+[ext_resource type="Script" uid="uid://dlcjtkd0041oj" path="res://Scenes/Player/Sadie/animation_controller.gd" id="39_kthpo"]
+[ext_resource type="Texture2D" uid="uid://cp54etxows6dq" path="res://Assets/Player/Alex Idle/Idle animation Alex0038.png" id="40_wmrt2"]
+[ext_resource type="Texture2D" uid="uid://bcxh58f4hcyi6" path="res://Assets/Player/Alex Jump/Jump Alex no hop0000.png" id="41_mgbup"]
+[ext_resource type="Texture2D" uid="uid://1ah46awn0mrq" path="res://Assets/Player/Alex Jump/Jump Alex no hop0001.png" id="42_2yv8j"]
+[ext_resource type="Texture2D" uid="uid://dnd6rfhg6f7x3" path="res://Assets/Player/Alex Jump/Jump Alex no hop0002.png" id="43_qa2q0"]
+[ext_resource type="Texture2D" uid="uid://c6n56vr0a3myx" path="res://Assets/Player/Alex Jump/Jump Alex no hop0003.png" id="44_haujn"]
+[ext_resource type="Texture2D" uid="uid://c0ix8k1bl1c67" path="res://Assets/Player/Alex Jump/Jump Alex no hop0004.png" id="45_m4wwb"]
+[ext_resource type="Texture2D" uid="uid://coteihx08jgot" path="res://Assets/Player/Alex Jump/Jump Alex no hop0005.png" id="46_gq4h4"]
+[ext_resource type="Texture2D" uid="uid://cychl4ps1kbqo" path="res://Assets/Player/Alex Jump/Jump Alex no hop0006.png" id="47_3amos"]
+[ext_resource type="Texture2D" uid="uid://bf5c3eibwny53" path="res://Assets/Player/Alex Jump/Jump Alex no hop0007.png" id="48_8q5v6"]
+[ext_resource type="Texture2D" uid="uid://cdxe01ogva6sp" path="res://Assets/Player/Alex Jump/Jump Alex no hop0008.png" id="49_2a6fa"]
+[ext_resource type="Texture2D" uid="uid://cj213cfbkars8" path="res://Assets/Player/Alex Jump/Jump Alex no hop0009.png" id="50_o6s2e"]
+[ext_resource type="Texture2D" uid="uid://cpvcq4qu2x2c2" path="res://Assets/Player/Alex Jump/Jump Alex no hop0010.png" id="51_3ryig"]
+[ext_resource type="Texture2D" uid="uid://bthjdsk42uc7j" path="res://Assets/Player/Alex Jump/Jump Alex no hop0011.png" id="52_xrecd"]
+[ext_resource type="Texture2D" uid="uid://bovrktmcbqgrb" path="res://Assets/Player/Alex Jump/Jump Alex no hop0012.png" id="53_tiv2y"]
+[ext_resource type="Texture2D" uid="uid://bkk25qovijcnv" path="res://Assets/Player/Alex Jump/Jump Alex no hop0013.png" id="54_b6p3g"]
+[ext_resource type="Texture2D" uid="uid://ddjdcmwrym02j" path="res://Assets/Player/Alex Jump/Jump Alex no hop0014.png" id="55_6mcqw"]
+[ext_resource type="Texture2D" uid="uid://djsef6yds6pj4" path="res://Assets/Player/Alex Jump/Jump Alex no hop0015.png" id="56_qhj3m"]
+[ext_resource type="Texture2D" uid="uid://dtkvk4ssdxqbo" path="res://Assets/Player/Alex Jump/Jump Alex no hop0016.png" id="57_camrk"]
+[ext_resource type="Texture2D" uid="uid://fntqwturqpl1" path="res://Assets/Player/Alex Jump/Jump Alex no hop0017.png" id="58_he6oe"]
+[ext_resource type="Texture2D" uid="uid://do8qm416jnw5x" path="res://Assets/Player/Alex Jump/Jump Alex no hop0018.png" id="59_h1hej"]
+[ext_resource type="Texture2D" uid="uid://dk4yveytjinvq" path="res://Assets/Player/Alex Jump/Jump Alex no hop0019.png" id="60_2lhfn"]
+[ext_resource type="Texture2D" uid="uid://dku548xxfg7ay" path="res://Assets/Player/Alex Jump/Jump Alex no hop0020.png" id="61_3s8dl"]
+[ext_resource type="Texture2D" uid="uid://b2e71a81j4la6" path="res://Assets/Player/Alex Jump/Jump Alex no hop0021.png" id="62_uxuh5"]
+[ext_resource type="Texture2D" uid="uid://b1j352p12bjft" path="res://Assets/Player/Alex Jump/Jump Alex no hop0022.png" id="63_xunj5"]
+[ext_resource type="Texture2D" uid="uid://cl3l5yglcxrse" path="res://Assets/Player/Alex Jump/Jump Alex no hop0023.png" id="64_rvr5h"]
+[ext_resource type="Texture2D" uid="uid://ctyr1utdsl5p8" path="res://Assets/Player/Alex Jump/Jump Alex no hop0024.png" id="65_ic3ck"]
+[ext_resource type="Texture2D" uid="uid://b60sb0s0br3l3" path="res://Assets/Player/Alex Jump/Jump Alex no hop0025.png" id="66_ghqtl"]
+[ext_resource type="Texture2D" uid="uid://4qnm5wi8y5fv" path="res://Assets/Player/Alex Jump/Jump Alex no hop0026.png" id="67_snsqw"]
+[ext_resource type="Texture2D" uid="uid://bn6yrtsyua5c3" path="res://Assets/Player/Alex Jump/Jump Alex no hop0027.png" id="68_a0yue"]
+[ext_resource type="Texture2D" uid="uid://by0fqgl2tukk8" path="res://Assets/Player/Alex Jump/Jump Alex no hop0028.png" id="69_6tt3b"]
+[ext_resource type="Script" uid="uid://v2k3uctjftv1" path="res://Scenes/Player/Sadie/pushing_state.gd" id="69_32fpj"]
+[ext_resource type="Texture2D" uid="uid://vgc7c8uauigc" path="res://Assets/Player/Alex Jump/Jump Alex no hop0029.png" id="70_mv0ix"]
+[ext_resource type="Texture2D" uid="uid://df1akxaxoul12" path="res://Assets/Player/Alex Jump/Jump Alex no hop0030.png" id="71_tqscy"]
+[ext_resource type="Texture2D" uid="uid://bglxw0re2k4us" path="res://Assets/Player/Alex Jump/Jump Alex no hop0031.png" id="72_3rie3"]
+[ext_resource type="Texture2D" uid="uid://5ppmkupy0igm" path="res://Assets/Player/Alex Jump/Jump Alex no hop0032.png" id="73_k8kka"]
+[ext_resource type="Texture2D" uid="uid://cls3luymf3pqu" path="res://Assets/Player/Alex Jump/Jump Alex no hop0033.png" id="74_yxyvi"]
+[ext_resource type="Texture2D" uid="uid://ciyp3odxoi33h" path="res://Assets/Player/Alex Jump/Jump Alex no hop0034.png" id="75_c3gsy"]
+[ext_resource type="Texture2D" uid="uid://boatpyyqwm2yb" path="res://Assets/Player/Alex Jump/Jump Alex no hop0035.png" id="76_nj2v8"]
+[ext_resource type="Texture2D" uid="uid://phcqn6mdym6m" path="res://Assets/Player/Alex Jump/Jump Alex no hop0036.png" id="77_508ug"]
+[ext_resource type="PackedScene" uid="uid://rqjisc3phlln" path="res://Scenes/Components/squish_manager.tscn" id="78_24tup"]
+[ext_resource type="Script" uid="uid://cs4etoru42oar" path="res://Scenes/Player/Sadie/prepare_to_jump_state.gd" id="107_2yv8j"]
+[ext_resource type="PackedScene" uid="uid://cnbywaf1vqeef" path="res://Scenes/Components/sfx_player.tscn" id="118_qa2q0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_car5t"]
-size = Vector2(149, 76)
+size = Vector2(110, 76)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a54k1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("41_mgbup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_2yv8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_qa2q0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_haujn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_m4wwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_gq4h4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_3amos")
+}],
+"loop": true,
+"name": &"AlmostJump",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_doxcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_24tup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_32fpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bpjxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_v4we6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1o3ii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qne73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_141yn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_myp1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kladn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1tcs5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_fiuys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_xlope")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_72rw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_tbq0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_a0acu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_exee3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_uno18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_wcxyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ltgwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_2a8ml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_1y0uj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_5vs4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_aqijp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_gi4dp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_e2tfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_8xjgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_gin3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_d6jkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_285ik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_482f5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_np8o2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_6wgj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_murf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_hu5yn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_f4o2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_1xkvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_7bans")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_wmrt2")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_8q5v6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_2a6fa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_o6s2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_3ryig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_xrecd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_tiv2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_b6p3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_6mcqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_qhj3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_camrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_he6oe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_h1hej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_2lhfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_3s8dl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_uxuh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_xunj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_rvr5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ic3ck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_ghqtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_snsqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_a0yue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_6tt3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_mv0ix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_tqscy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_3rie3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_k8kka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_yxyvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_c3gsy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_nj2v8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_508ug")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5fdmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kthpo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ax8hv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lreqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_as6pq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_874la")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fgx8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tl728")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4tw6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ju2ib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yosgt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_71dcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_d0vrr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_g0smu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_2fn3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_84vid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qwett")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_jrqpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_cwagl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_eyapt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_tpt1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_nf2hc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_5lvy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_k3jhy")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 30.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_car5t"]
-radius = 116.10771
+radius = 122.016396
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a54k1"]
 size = Vector2(145, 73)
 
-[sub_resource type="Gradient" id="Gradient_rivyw"]
-offsets = PackedFloat32Array(0, 0.9736842)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_fx4nq"]
-gradient = SubResource("Gradient_rivyw")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_a54k1"]
+gradient = ExtResource("13_a54k1")
 fill = 1
-fill_from = Vector2(0.49061033, 0.52816904)
-fill_to = Vector2(1, 1)
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8173913, 0.20869565)
 
-[node name="PlayerAlex" type="CharacterBody2D" unique_id=1511516036]
+[sub_resource type="Animation" id="Animation_rivyw"]
+resource_name = "Light Flicker"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [2.3, 2.5999999999999996]
+}
+
+[sub_resource type="Animation" id="Animation_fx4nq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ytjal"]
+_data = {
+&"Light Flicker": SubResource("Animation_rivyw"),
+&"RESET": SubResource("Animation_fx4nq")
+}
+
+[sub_resource type="Gradient" id="Gradient_oly0s"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rivyw"]
+gradient = SubResource("Gradient_oly0s")
+
+[node name="PlayerAlex" type="CharacterBody2D" unique_id=1511516036 node_paths=PackedStringArray("light") groups=["Player"]]
+light_mask = 0
 z_index = 1
-collision_mask = 2
+collision_mask = 10
 script = ExtResource("1_p71sf")
+light = NodePath("PointLight2D")
 input_left = &"Player2_Left"
 input_right = &"Player2_Right"
 input_jump = &"Player2_Jump"
+max_light_scale = 6.0
+min_light_scale = 3.0
 jump_buffer_window = 0.15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=554272374]
-position = Vector2(3.5, 17)
+position = Vector2(29, 13)
 shape = SubResource("RectangleShape2D_car5t")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=93531145]
-scale = Vector2(-1, 1)
-texture = ExtResource("2_m0ade")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=884123085]
+light_mask = 3
+position = Vector2(0, -20)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_a54k1")
+animation = &"AlmostJump"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1206903230]
 
 [node name="Movement FSM" parent="." unique_id=459573243 node_paths=PackedStringArray("initial_state") instance=ExtResource("3_5w000")]
-initial_state = NodePath("Idle State")
+initial_state = NodePath("Ground Movement State")
 
 [node name="Ground Movement State" type="Node" parent="Movement FSM" unique_id=1330053322 node_paths=PackedStringArray("player")]
 script = ExtResource("4_70705")
@@ -66,6 +541,14 @@ gravity_strong = 1.5
 
 [node name="Idle State" type="Node" parent="Movement FSM" unique_id=1322097585 node_paths=PackedStringArray("player")]
 script = ExtResource("6_car5t")
+player = NodePath("../..")
+
+[node name="Pushing State" type="Node" parent="Movement FSM" unique_id=1359663313 node_paths=PackedStringArray("player")]
+script = ExtResource("69_32fpj")
+player = NodePath("../..")
+
+[node name="Prepare To Jump State" type="Node" parent="Movement FSM" unique_id=1120575337 node_paths=PackedStringArray("player")]
+script = ExtResource("107_2yv8j")
 player = NodePath("../..")
 
 [node name="Velocity Component" parent="." unique_id=556735024 node_paths=PackedStringArray("character") instance=ExtResource("3_w2xx2")]
@@ -82,9 +565,10 @@ character = NodePath("..")
 
 [node name="Gravity Component" parent="." unique_id=711362967 node_paths=PackedStringArray("character") instance=ExtResource("5_5w000")]
 character = NodePath("..")
+max_fall_speed = 1300
 
 [node name="Direction Component" parent="." unique_id=1869476832 node_paths=PackedStringArray("sprite") instance=ExtResource("6_otsd1")]
-sprite = NodePath("../Sprite2D")
+sprite = NodePath("../AnimatedSprite2D")
 direction_left = &"Player2_Left"
 direction_right = &"Player2_Right"
 
@@ -114,8 +598,6 @@ shape = SubResource("CircleShape2D_car5t")
 debug_color = Color(0.9254902, 0, 0.67058825, 0.16862746)
 
 [node name="InteractingCircle" type="Area2D" parent="." unique_id=484704781]
-collision_layer = 8
-collision_mask = 8
 collision_layer = 24
 collision_mask = 24
 
@@ -124,10 +606,42 @@ position = Vector2(4.5, 17.5)
 shape = SubResource("RectangleShape2D_a54k1")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1130853262]
-position = Vector2(13, 3.9999962)
-scale = Vector2(3.5507376, 3.4711244)
-texture = SubResource("GradientTexture2D_fx4nq")
-texture_scale = 1.78
+scale = Vector2(3, 3)
+color = Color(0.6666667, 1, 1, 1)
+texture = SubResource("GradientTexture2D_a54k1")
+texture_scale = 2.0
+height = 45.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PointLight2D" unique_id=1213917638]
+libraries/ = SubResource("AnimationLibrary_ytjal")
+autoplay = &"Light Flicker"
+
+[node name="Interaction Component" parent="." unique_id=2081682071 node_paths=PackedStringArray("player") instance=ExtResource("14_rivyw")]
+position = Vector2(0, -1)
+interaction_input = "Player2_Interact"
+player_id = 2
+player = NodePath("..")
+
+[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=520923584]
+visible = false
+energy = 0.3
+range_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_rivyw")
+texture_scale = 4.0
+
+[node name="Animation Controller" type="Node" parent="." unique_id=1759594634 node_paths=PackedStringArray("player", "sprite")]
+script = ExtResource("39_kthpo")
+player = NodePath("..")
+sprite = NodePath("../AnimatedSprite2D")
+
+[node name="SquishManager" parent="." unique_id=986584385 node_paths=PackedStringArray("sprite") instance=ExtResource("78_24tup")]
+sprite = NodePath("../AnimatedSprite2D")
+x_scale_original = 0.3
+y_scale_original = 0.3
+
+[node name="SFXPlayer" parent="." unique_id=1514722886 node_paths=PackedStringArray("player") instance=ExtResource("118_qa2q0")]
+grass_jump_string = "Alex_Grass_Jump"
+player = NodePath("..")
 
 [connection signal="area_entered" from="AlexCircle" to="." method="_on_alex_circle_area_entered"]
 [connection signal="area_exited" from="AlexCircle" to="." method="_on_alex_circle_area_exited"]

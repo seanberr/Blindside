@@ -1,9 +1,12 @@
 extends CharacterBody2D
 
+var in_control : bool = true
+@export var id = 0
 @onready var velocity_comp : VelocityComponent = $"Velocity Component"
 @onready var jump_comp : JumpComponent = $"Jump Component"
 @onready var gravity_comp : GravityComponent = $"Gravity Component"
 @onready var direction_comp : DirectionComponent = $"Direction Component"
+@onready var squish_manager : SquishManager = $SquishManager
 
 @export var input_left : StringName
 @export var input_right : StringName
@@ -11,8 +14,11 @@ extends CharacterBody2D
 
 @onready var state_machine : StateMachine = $"Movement FSM"
 
+@export var char_light : PointLight2D
+var lit : bool = false
 ##
 var NEAR_OBJECT
+var able_to_push = false
 
 #variable jump values
 var is_jumping : bool
@@ -26,56 +32,27 @@ var jump_buffer_timer : SceneTreeTimer
 
 func _ready() -> void:
 	jump_comp.jump.connect(begin_variable_jump)
-	
+# This represents the player's inertia.
+var push_force = 80.0
+
 func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		is_jumping = false
 		if is_jump_queued:
 			is_jump_queued = false
+			squish_manager.light_squish()
 			jump_comp.apply_jump_impulse()
-
-	# Handles interacting with objects
-	if Input.is_action_just_pressed("ui_accept"):
-						
-			## Checks if there is an object nearby
-			if NEAR_OBJECT != null:
-			
-			## Checks if the nearest object is interactable
-				# Checks for the Interactable group
-				if NEAR_OBJECT.is_in_group("Interactable"):
-						
-					if NEAR_OBJECT.get_node("Interactable").interactable == true:
-							
-							## Debug code to check functionality
-							position = Vector2(0,0)
-				
-				## Checks for the Memory group
-				elif NEAR_OBJECT.is_in_group("Memory"):
 					
-					## Checks if the object is interactable
-					if NEAR_OBJECT.get_node("Interactable").interactable == true:
-						
-						## Debug code to check functionality
-						var tempColour = $Sprite2D.get_modulate() 
-						tempColour.r = 1 - tempColour.r
-						tempColour.g = 1 - tempColour.g
-						tempColour.b = 1 - tempColour.b
-						$Sprite2D.modulate = tempColour
+	
+	## Enter the pushing state when E is pressed
+	if Input.is_action_just_pressed("Player1_Interact"):
+		if able_to_push:
+			state_machine.change_state("Pushing State")
 
-func _on_interacting_area_area_entered(area: Area2D) -> void:
-	
-	# When overlapping an area with collision layer 5
-	
-	# Sets a reference for that object to the nearest object
-	NEAR_OBJECT = area
-	
-
-func _on_interacting_area_area_exited(area: Area2D) -> void:
-			
-	# Removes the reference to the closest object
-	NEAR_OBJECT = null
-
-	
+	## Exit the pushing state when E is released
+	if Input.is_action_just_released("Player1_Interact"):
+		state_machine.change_state("Idle State")
+		
 func buffer_jump():
 	is_jump_queued = true
 	jump_buffer_timer = get_tree().create_timer(jump_buffer_window)
@@ -88,6 +65,18 @@ func begin_variable_jump():
 	is_jumping = true
 	variable_jump_timer = get_tree().create_timer(variable_jump_window)
 	variable_jump_timer.timeout.connect(end_variable_jump)
+	
+func enable_light():
+	if !char_light:
+		return
+	lit = true
+	char_light.enabled = true
+
+func disable_light():
+	if !char_light:
+		return
+	lit = false
+	char_light.enabled = false
 	
 func end_variable_jump():
 	if !is_on_floor():

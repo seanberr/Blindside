@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://7e6i77dx1mbj"]
+
+[ext_resource type="FontFile" uid="uid://kxh4xiv4r82w" path="res://Assets/Fonts/CormorantInfant-Medium.ttf" id="1_1bnu5"]
+[ext_resource type="Script" uid="uid://cljjlf7epio02" path="res://Scenes/Menu/opening_cutscene.gd" id="1_toxby"]
+[ext_resource type="PackedScene" uid="uid://cdlqgiadt8tu8" path="res://Scenes/Levels/puzzle_room_one.tscn" id="2_akkj4"]
+[ext_resource type="Script" uid="uid://bwsam4aftr22a" path="res://Scenes/Menu/intro_text.gd" id="3_akkj4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i0gme"]
+font = ExtResource("1_1bnu5")
+font_size = 64
+shadow_size = 15
+shadow_color = Color(0.09983812, 0.1318598, 0.3480061, 1)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="Animation" id="Animation_4hov2"]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_gaiet"]
+resource_name = "FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_8mr4n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rmmha"]
+_data = {
+&"FadeIn": SubResource("Animation_4hov2"),
+&"FadeOut": SubResource("Animation_gaiet"),
+&"RESET": SubResource("Animation_8mr4n")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_1bnu5"]
+font = ExtResource("1_1bnu5")
+font_size = 32
+
+[node name="opening_cutscene" type="Control" unique_id=848330928 node_paths=PackedStringArray("intro_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_toxby")
+intro_label = NodePath("IntroLabel")
+game_scene = ExtResource("2_akkj4")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1108440014]
+layout_mode = 0
+offset_right = 1936.0
+offset_bottom = 1085.0
+color = Color(0, 0, 0, 1)
+
+[node name="IntroLabel" type="Label" parent="." unique_id=2111356673]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 286.0
+offset_right = 1757.0
+offset_bottom = 775.00244
+text = "Sadie approaches death’s door. After a grave car crash, 
+her soul was dragged into The Interstice – a malleable realm
+between life and death. Her ever-faithful guide dog, Alex, 
+has followed her even here. Obscured memories from long ago 
+rendered her helpless against dogs until Alex appeared. 
+Together, they journey into oblivion."
+label_settings = SubResource("LabelSettings_i0gme")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_akkj4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="IntroLabel" unique_id=70985944]
+libraries/ = SubResource("AnimationLibrary_rmmha")
+
+[node name="Prompt" type="Label" parent="." unique_id=1804998325]
+layout_mode = 0
+offset_left = 1437.0
+offset_top = 815.0
+offset_right = 1671.0
+offset_bottom = 855.0
+text = "Press E to advance"
+label_settings = SubResource("LabelSettings_1bnu5")
