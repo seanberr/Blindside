@@ -4,21 +4,21 @@ extends Sprite2D
 @export var memory_length : int
 var memory_ended : bool = false
 var memory_endable : bool = false
-var memory_textures = ["res://Assets/Memories/Memory Assets/memory_placeholder.png", 
-"res://Assets/Memories/memory_1.png",
-"res://Assets/Memories/memory_2.png",
-"res://Assets/Memories/memory_3_PH.png",
-"res://Assets/Memories/memory_4_PH.png",
-"res://Assets/Memories/memory_5_PH.png",
-"res://Assets/Memories/memory_6_PH.png",
-"res://Assets/Memories/memory_7_PH.png",
-"res://Assets/Memories/memory_8_PH.png",
-"res://Assets/Memories/memory_9_PH.png",
-"res://Assets/Memories/memory_10_PH.png",
-"res://Assets/Memories/memory_11_PH.png",
-"res://Assets/Memories/memory_12_PH.png",
-"res://Assets/Memories/memory_13_PH.png",
-"res://Assets/Memories/memory_14_PH.png"]
+var memory_textures = ["uid://c0wgbjhgfelgw", 
+"uid://b0w2nj7tlapbk",
+"uid://cclfbeatgyc7v",
+"uid://bgu8kddr2xont",
+"uid://xj6weorafexr",
+"uid://dlxailk3mgf5",
+"uid://dl5qmrswwexri",
+"uid://b8giyahoseggc",
+"uid://dx8n0yjqkb771",
+"uid://c61tp7g8crcb4",
+"uid://b6bjf7xa7r4y6",
+"uid://chronnsem5dds",
+"uid://ccera5gq5hlfj",
+"uid://cplbvvlphvp",
+"uid://bnmlppuerqs7m"]
 
 func start(id : int):
 	self_modulate.a = 0
@@ -26,7 +26,7 @@ func start(id : int):
 	#timer.start(memory_length)
 	texture = load(memory_textures[id])
 	if !texture:
-		texture = load("res://Assets/Debug/error.png")
+		texture = load("uid://cuc8su8n6dxth")
 	get_tree().paused = true
 	animation_player.play("Memory/Play Memory")
 	
