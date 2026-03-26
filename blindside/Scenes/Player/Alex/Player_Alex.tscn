@@ -117,6 +117,7 @@
 [ext_resource type="Texture2D" uid="uid://phcqn6mdym6m" path="res://Assets/Player/Alex Jump/Jump Alex no hop0036.png" id="77_508ug"]
 [ext_resource type="PackedScene" uid="uid://rqjisc3phlln" path="res://Scenes/Components/squish_manager.tscn" id="78_24tup"]
 [ext_resource type="Script" uid="uid://cs4etoru42oar" path="res://Scenes/Player/Sadie/prepare_to_jump_state.gd" id="107_2yv8j"]
+[ext_resource type="PackedScene" uid="uid://cnbywaf1vqeef" path="res://Scenes/Components/sfx_player.tscn" id="118_qa2q0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_car5t"]
 size = Vector2(110, 76)
@@ -637,6 +638,10 @@ sprite = NodePath("../AnimatedSprite2D")
 sprite = NodePath("../AnimatedSprite2D")
 x_scale_original = 0.3
 y_scale_original = 0.3
+
+[node name="SFXPlayer" parent="." unique_id=1514722886 node_paths=PackedStringArray("player") instance=ExtResource("118_qa2q0")]
+grass_jump_string = "Alex_Grass_Jump"
+player = NodePath("..")
 
 [connection signal="area_entered" from="AlexCircle" to="." method="_on_alex_circle_area_entered"]
 [connection signal="area_exited" from="AlexCircle" to="." method="_on_alex_circle_area_exited"]

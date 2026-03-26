@@ -3,6 +3,12 @@ extends Node
 var audio_streams : Array[AudioStreamPlayer] = []
 
 var sfx_dict : Dictionary = {
+	"Menu_Change" : preload("uid://bbffuofq1w08c"),
+	"Menu_Select" : preload("uid://bteultbhdn5f8"),
+	"Alex_Grass_Jump" : preload("uid://bfu7y7rprrmi1"),
+	"Sadie_Grass_Jump" : preload("uid://bbdmnowl7jsfy"),
+	"Alex_Grass_Walk" : preload("uid://13kdss06wojt"),
+	"Sadie_Grass_Walk" : preload("uid://ty6tv7thm0a"),
 }
 
 # Called when the node enters the scene tree for the first time.

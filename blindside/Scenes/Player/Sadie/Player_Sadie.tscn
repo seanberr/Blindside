@@ -183,6 +183,7 @@
 [ext_resource type="Texture2D" uid="uid://dtvpw8tkott6c" path="res://Assets/Player/Sadie Jump/jump0060.png" id="165_ah5dj"]
 [ext_resource type="Texture2D" uid="uid://b7rcpb77s1j75" path="res://Assets/Player/Sadie Jump/jump0061.png" id="166_q7lp2"]
 [ext_resource type="Texture2D" uid="uid://bum6w83dj5tf7" path="res://Assets/Player/Sadie Jump/jump0062.png" id="167_tynnh"]
+[ext_resource type="PackedScene" uid="uid://cnbywaf1vqeef" path="res://Scenes/Components/sfx_player.tscn" id="184_whvv7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rfr6o"]
 size = Vector2(60, 148)
@@ -838,6 +839,10 @@ texture_scale = 50.0
 
 [node name="SquishManager" parent="." unique_id=986584385 node_paths=PackedStringArray("sprite") instance=ExtResource("119_nasw4")]
 sprite = NodePath("../AnimatedSprite2D")
+
+[node name="SFXPlayer" parent="." unique_id=1514722886 node_paths=PackedStringArray("player") instance=ExtResource("184_whvv7")]
+grass_jump_string = "Sadie_Grass_Jump"
+player = NodePath("..")
 
 [connection signal="area_entered" from="Interacting Area" to="." method="_on_interacting_area_area_entered"]
 [connection signal="area_exited" from="Interacting Area" to="." method="_on_interacting_area_area_exited"]

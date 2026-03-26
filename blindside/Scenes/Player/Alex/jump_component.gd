@@ -7,6 +7,5 @@ signal jump
 
 func apply_jump_impulse() -> Vector2:
 	jump.emit()
-	
 	character.velocity.y = -jump_strength
 	return character.velocity

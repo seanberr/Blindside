@@ -15,20 +15,24 @@ func memory_row_invisible():
 	$"CenterContainer/Memories Menu/Row Two".visible = false
 
 func _on_play_pressed() -> void:
+	AudioManager.sfx_manager.play_sound_randomizer(["Menu_Select"] as Array[String], 0.1, 0.1, 0.0, 1.0)
 	TransitionHandler.transition_to_scene(start_scene, [Vector2(-540.0,258.0), Vector2(-455.0,258.0)])
 
 func _on_extras_pressed() -> void:
+	AudioManager.sfx_manager.play_sound_randomizer(["Menu_Select"] as Array[String], 0.1, 0.1, 0.0, 1.0)
 	$"CenterContainer/Extras Menu/Back".grab_focus()
 	$"CenterContainer/Main Buttons".visible = false
 	$"CenterContainer/Extras Menu".visible = true
 
 
 func _on_options_pressed() -> void:
+	AudioManager.sfx_manager.play_sound_randomizer(["Menu_Select"] as Array[String], 0.1, 0.1, 0.0, 1.0)
 	$"CenterContainer/Settings Menu/Back".grab_focus()
 	$"CenterContainer/Main Buttons".visible = false
 	$"CenterContainer/Settings Menu".visible = true
 
 func _on_controls_pressed() -> void:
+	AudioManager.sfx_manager.play_sound_randomizer(["Menu_Select"] as Array[String], 0.1, 0.1, 0.0, 1.0)
 	$"Controls Menu/Back".grab_focus()
 	$"CenterContainer/Main Buttons".visible = false
 	$"Controls Menu".visible = true
@@ -39,7 +43,7 @@ func _on_quit_pressed() -> void:
 
 
 func _on_back_pressed() -> void:
-		
+	AudioManager.sfx_manager.play_sound_randomizer(["Menu_Select"] as Array[String], 0.1, 0.1, 0.0, 1.0)
 	if $"CenterContainer/Memories Menu".visible == true:
 		$"CenterContainer/Memories Menu".visible = false
 		$"CenterContainer/Extras Menu".visible = true
@@ -85,6 +89,7 @@ func _on_sfx_volume_value_changed(value: float) -> void:
 
 
 func _on_memories_pressed() -> void:
+	AudioManager.sfx_manager.play_sound_randomizer(["Menu_Select"] as Array[String], 0.1, 0.1, 0.0, 1.0)
 	$"CenterContainer/Memories Menu/Back".grab_focus()
 	$"CenterContainer/Memories Menu".visible = true
 	$"CenterContainer/Extras Menu".visible = false
@@ -98,11 +103,13 @@ func _on_memories_pressed() -> void:
 				$"CenterContainer/Memories Menu/Row Two/".get_child(memory-8).visible = true
 
 func _on_concept_art_pressed() -> void:
+	AudioManager.sfx_manager.play_sound_randomizer(["Menu_Select"] as Array[String], 0.1, 0.1, 0.0, 1.0)
 	$"CenterContainer/Concept Art Menu/Back".grab_focus()
 	$"CenterContainer/Concept Art Menu".visible = true
 	$"CenterContainer/Extras Menu".visible = false
 
 func _on_memory__pressed(ID: int) -> void:
+	AudioManager.sfx_manager.play_sound_randomizer(["Menu_Select"] as Array[String], 0.1, 0.1, 0.0, 1.0)
 	var new_memory = memory_scene.instantiate()
 	new_memory.memory_length=2
 	memory_layer.add_child(new_memory)
