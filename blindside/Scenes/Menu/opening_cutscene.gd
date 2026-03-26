@@ -13,9 +13,6 @@ Together, they journey into oblivion.",
 personalised limbo. Mementos of a hazy past and sublime present.
 The ghost of Sadie’s fear – a scar left by her childhood dog named 
 Gretel – threatens to ensnare her in its insidious embrace.",
-"Obscured memories from long ago rendered her 
-helpless against dogs until Alex appeared. 
-Together, they journey into oblivion.",
 ]
 
 
