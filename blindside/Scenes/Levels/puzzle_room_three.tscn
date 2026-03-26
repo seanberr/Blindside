@@ -15,6 +15,9 @@
 [ext_resource type="Script" uid="uid://chd3hhtgy0aey" path="res://Scenes/Levels/transition_area.gd" id="14_2pqgm"]
 [ext_resource type="Texture2D" uid="uid://b5m2nx3wemc6l" path="res://Assets/Environment Assets/Vertical Transition foregrounds/Vertical_Transition_1920x1080_Shape_1_2.png" id="15_4dgjf"]
 [ext_resource type="PackedScene" uid="uid://c3jwa7r1tb61w" path="res://Scenes/Levels/overworld_three.tscn" id="15_7iset"]
+[ext_resource type="Script" uid="uid://dj1b1r6btnmv7" path="res://Scenes/Levels/cerberus.gd" id="16_fgoe1"]
+[ext_resource type="Script" uid="uid://d4k7mnpr1ydkk" path="res://Scenes/Levels/trigger_area.gd" id="17_eg6a0"]
+[ext_resource type="Texture2D" uid="uid://cxv7j3rqavng0" path="res://Assets/Cerberus/Cerberus_no_extra_silhouette_1930x1886.png" id="18_0fosp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bqv5r"]
 size = Vector2(1516, 2017.5)
@@ -281,6 +284,69 @@ size = Vector2(502, 1179)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_7iset"]
 a = Vector2(16, 63)
 b = Vector2(16, 258)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p73ln"]
+radius = 208.38666
+
+[sub_resource type="Animation" id="Animation_4lqrg"]
+resource_name = "Disappear"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 10)]
+}
+
+[sub_resource type="Animation" id="Animation_0nlqw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ohy35"]
+_data = {
+&"Disappear": SubResource("Animation_4lqrg"),
+&"RESET": SubResource("Animation_0nlqw")
+}
 
 [node name="Puzzle Room Three" type="Node2D" unique_id=1382614291]
 script = ExtResource("1_7iset")
@@ -556,3 +622,28 @@ z_index = -2
 position = Vector2(252.89853, 1053)
 scale = Vector2(2.4144776, 1.4130208)
 texture = ExtResource("15_4dgjf")
+
+[node name="Cerberus" type="Node2D" parent="." unique_id=194056102 node_paths=PackedStringArray("trigger_area", "animator")]
+script = ExtResource("16_fgoe1")
+trigger_area = NodePath("TriggerArea")
+animator = NodePath("AnimationPlayer")
+
+[node name="TriggerArea" type="Area2D" parent="Cerberus" unique_id=1687223080]
+collision_layer = 0
+collision_mask = 7
+script = ExtResource("17_eg6a0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cerberus/TriggerArea" unique_id=1249070218]
+position = Vector2(1322, -1374)
+shape = SubResource("CircleShape2D_p73ln")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cerberus" unique_id=506929854]
+position = Vector2(1328, -1381)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("18_0fosp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cerberus" unique_id=573685497]
+libraries/ = SubResource("AnimationLibrary_ohy35")
+
+[connection signal="body_entered" from="Cerberus/TriggerArea" to="Cerberus/TriggerArea" method="_on_body_entered"]
+[connection signal="body_exited" from="Cerberus/TriggerArea" to="Cerberus/TriggerArea" method="_on_body_exited"]

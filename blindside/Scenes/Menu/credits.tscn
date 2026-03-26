@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dgypptyt0vwr2"]
+
+[ext_resource type="Script" uid="uid://bfqgf8x6iuty2" path="res://credits.gd" id="1_sml11"]
+[ext_resource type="PackedScene" uid="uid://bdwqpu7hq1iqu" path="res://Scenes/Menu/main_menu.tscn" id="2_faj7g"]
+[ext_resource type="Texture2D" uid="uid://bmpg5yy6k7c6o" path="res://Assets/Player/Player Icon/Alex_Player_Icon.png" id="3_imgfu"]
+[ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player/Player Icon/Sadie_Player_Icon.png" id="4_vwtc6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bxgch"]
+font_size = 64
+
+[node name="Credits" type="Node2D" unique_id=1779873243]
+script = ExtResource("1_sml11")
+title_scene = ExtResource("2_faj7g")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1558322506]
+offset_right = 1959.0
+offset_bottom = 1129.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=87193440]
+offset_left = 3.0
+offset_top = 442.0
+offset_right = 2005.0
+offset_bottom = 530.0
+text = "CREDITS CREDITS CREDITS CREDITS CREDITS CREDITS CREDITS CR "
+label_settings = SubResource("LabelSettings_bxgch")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1422489772]
+position = Vector2(970, 748)
+scale = Vector2(5.1449275, 1)
+texture = ExtResource("3_imgfu")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=563688450]
+position = Vector2(1000.75, 261.25)
+scale = Vector2(3.719753, 0.39819375)
+texture = ExtResource("4_vwtc6")
