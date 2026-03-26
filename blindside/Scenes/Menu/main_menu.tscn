@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://rpuogaeuv3ho" path="res://Scenes/Menu/main_menu.gd" id="1_bkwd7"]
 [ext_resource type="Texture2D" uid="uid://dwul1bqhi7qx4" path="res://Assets/Menu/Asset 22x.png" id="2_7jtkx"]
 [ext_resource type="Texture2D" uid="uid://dm0e5f68ulw7n" path="res://Assets/Menu/controls.png" id="2_tself"]
-[ext_resource type="Texture2D" uid="uid://dltgdkcatp833" path="res://Assets/Menu/BG BW2.png" id="2_vmek6"]
+[ext_resource type="Texture2D" uid="uid://thyoalyabs14" path="res://Assets/Main Menu Placeholder/Main_menu_1920x1080.png" id="2_vmek6"]
 
 [node name="MainMenu" type="Node2D" unique_id=1389966816 node_paths=PackedStringArray("memory_layer")]
 script = ExtResource("1_bkwd7")
@@ -17,7 +17,6 @@ color = Color(0, 0, 0, 1)
 
 [node name="Background" type="Sprite2D" parent="." unique_id=103141618]
 position = Vector2(960, 540)
-scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_vmek6")
 
 [node name="Title" type="CenterContainer" parent="." unique_id=1542688425]
@@ -53,6 +52,7 @@ theme_override_font_sizes/font_size = 75
 text = "play"
 
 [node name="Extras" type="Button" parent="CenterContainer/Main Buttons" unique_id=398996026]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 75
 text = "extras"
