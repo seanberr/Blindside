@@ -4,7 +4,7 @@ extends Node2D
 var memory_scene = preload("uid://cwpxtqk02ml5d")
 @export var memory_layer : CanvasLayer
 func _ready() -> void:
-	$"CenterContainer/Main Buttons/Play".grab_focus()
+	$"Control/Play".grab_focus()
 	$"CenterContainer/Settings Menu/Fullscreen".button_pressed = true if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN else false
 	$"CenterContainer/Settings Menu/Main Volume".value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master")))
 	$"CenterContainer/Settings Menu/SFX Volume".value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX")))
@@ -15,6 +15,7 @@ func memory_row_invisible():
 	$"CenterContainer/Memories Menu/Row Two".visible = false
 
 func _on_play_pressed() -> void:
+	
 	AudioManager.sfx_manager.play_sound_randomizer(["Menu_Select"] as Array[String], 0.1, 0.1, 0.0, 1.0)
 	TransitionHandler.transition_to_scene(start_scene, [Vector2(-540.0,258.0), Vector2(-455.0,258.0)])
 
@@ -27,17 +28,20 @@ func _on_extras_pressed() -> void:
 
 func _on_options_pressed() -> void:
 	AudioManager.sfx_manager.play_sound_randomizer(["Menu_Select"] as Array[String], 0.1, 0.1, 0.0, 1.0)
+	
 	$"CenterContainer/Settings Menu/Back".grab_focus()
-	$"CenterContainer/Main Buttons".visible = false
+	$"Control".visible = false
 	$"CenterContainer/Settings Menu".visible = true
-
+	$SettingsBG.visible = true
 func _on_controls_pressed() -> void:
 	AudioManager.sfx_manager.play_sound_randomizer(["Menu_Select"] as Array[String], 0.1, 0.1, 0.0, 1.0)
-	$"Controls Menu/Back".grab_focus()
+	$"Controls Menu/Control Screen/HBoxContainer/Back".grab_focus()
 	$"CenterContainer/Main Buttons".visible = false
 	$"Controls Menu".visible = true
 
 func _on_quit_pressed() -> void:
+	
+	await get_tree().create_timer(0.25).timeout
 	get_tree().quit()
 
 
@@ -55,16 +59,16 @@ func _on_back_pressed() -> void:
 		$"CenterContainer/Extras Menu/Back".grab_focus()
 	
 	else:
-		$"CenterContainer/Main Buttons/Play".grab_focus()
-		$"CenterContainer/Main Buttons".visible = true
+		$"Control/Play".grab_focus()
+		$"Control".visible = true
 		
 		if $"CenterContainer/Settings Menu".visible == true:
 			$"CenterContainer/Settings Menu".visible = false
-			$"CenterContainer/Main Buttons/Options".grab_focus()
-		
+			$"Control/Options".grab_focus()
+			$SettingsBG.visible = false
 		elif $"Controls Menu".visible == true:
 			$"Controls Menu".visible = false
-			$"CenterContainer/Main Buttons/Controls".grab_focus()
+			$"Control/Controls".grab_focus()
 		
 		else:
 			$"CenterContainer/Extras Menu".visible = false
@@ -115,3 +119,34 @@ func _on_memory__pressed(ID: int) -> void:
 	memory_layer.add_child(new_memory)
 	new_memory.position = get_viewport_rect().size / 2
 	new_memory.start(ID)
+
+
+func _on_play_mouse_entered() -> void:
+	$PlayBG.visible = true
+
+
+func _on_play_mouse_exited() -> void:
+	$PlayBG.visible = false
+
+
+func _on_options_mouse_entered() -> void:
+	$SettingsBG.visible = true
+
+func _on_options_mouse_exited() -> void:
+	$SettingsBG.visible = false
+
+
+func _on_quit_mouse_entered() -> void:
+	$ExitBG.visible = true
+
+
+func _on_quit_mouse_exited() -> void:
+	$ExitBG.visible = false
+
+
+func _on_controls_mouse_entered() -> void:
+	$ControlsBG.visible = true
+
+
+func _on_controls_mouse_exited() -> void:
+	$ControlsBG.visible = false

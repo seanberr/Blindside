@@ -2,8 +2,24 @@
 
 [ext_resource type="Script" uid="uid://rpuogaeuv3ho" path="res://Scenes/Menu/main_menu.gd" id="1_bkwd7"]
 [ext_resource type="Texture2D" uid="uid://dwul1bqhi7qx4" path="res://Assets/Menu/Asset 22x.png" id="2_7jtkx"]
+[ext_resource type="Texture2D" uid="uid://dk0ntmqumsc5v" path="res://Assets/Main Menu/Background_Menu_Eye.png" id="2_pn3xf"]
 [ext_resource type="Texture2D" uid="uid://dm0e5f68ulw7n" path="res://Assets/Menu/controls.png" id="2_tself"]
-[ext_resource type="Texture2D" uid="uid://thyoalyabs14" path="res://Assets/Main Menu Placeholder/Main_menu_1920x1080.png" id="2_vmek6"]
+[ext_resource type="Texture2D" uid="uid://cxcybtv051qt0" path="res://Assets/Main Menu/Foreground_Menu.png" id="2_vmek6"]
+[ext_resource type="Texture2D" uid="uid://bh76psxi2itfh" path="res://Assets/Main Menu/Iris.png" id="3_17gaq"]
+[ext_resource type="Texture2D" uid="uid://gy6ppys44oqd" path="res://Assets/Main Menu/Tendrils.png" id="5_1di0l"]
+[ext_resource type="Theme" uid="uid://byka4n8bsg171" path="res://Assets/Themes/theme.tres" id="7_1di0l"]
+[ext_resource type="Texture2D" uid="uid://pt6j8y3g0p0t" path="res://Assets/Main Menu/Foreground_Menu_Gradient_1.png" id="7_3ko7u"]
+[ext_resource type="FontFile" uid="uid://kxh4xiv4r82w" path="res://Assets/Fonts/CormorantInfant-Medium.ttf" id="7_17gaq"]
+[ext_resource type="Texture2D" uid="uid://b2oqm1uhtlryl" path="res://Assets/Main Menu/Foreground_Menu_Gradient_4.png" id="7_w1xia"]
+[ext_resource type="Texture2D" uid="uid://dmsfoy3tlhdat" path="res://Assets/Main Menu/Foreground_Menu_Gradient_3.png" id="9_4qbh4"]
+[ext_resource type="Texture2D" uid="uid://drvoda7k055lg" path="res://Assets/Main Menu/Foreground_Menu_Gradient_2.png" id="9_nbh3q"]
+
+[sub_resource type="Gradient" id="Gradient_w1xia"]
+offsets = PackedFloat32Array(0, 0.05639098, 0.65037596)
+colors = PackedColorArray(0, 0, 0, 0.6156863, 0, 0, 0, 0.6156863, 0, 0, 0, 0.6156863)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_nbh3q"]
+gradient = SubResource("Gradient_w1xia")
 
 [node name="MainMenu" type="Node2D" unique_id=1389966816 node_paths=PackedStringArray("memory_layer")]
 script = ExtResource("1_bkwd7")
@@ -15,11 +31,21 @@ offset_bottom = 1080.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Background" type="Sprite2D" parent="." unique_id=103141618]
+[node name="BackgroundEye" type="Sprite2D" parent="." unique_id=566636203]
 position = Vector2(960, 540)
+texture = ExtResource("2_pn3xf")
+
+[node name="Iris" type="Sprite2D" parent="BackgroundEye" unique_id=592432211]
+texture = ExtResource("3_17gaq")
+
+[node name="Background" type="Sprite2D" parent="BackgroundEye" unique_id=103141618]
 texture = ExtResource("2_vmek6")
 
+[node name="Tendrils" type="Sprite2D" parent="BackgroundEye" unique_id=1686900597]
+texture = ExtResource("5_1di0l")
+
 [node name="Title" type="CenterContainer" parent="." unique_id=1542688425]
+visible = false
 offset_right = 1920.0
 offset_bottom = 275.0
 
@@ -36,46 +62,61 @@ text = "blindside"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="ControlsBG" type="Control" parent="." unique_id=1557040815]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="ControlsBG" unique_id=1639723635]
+texture = ExtResource("7_3ko7u")
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="ControlsBG/Sprite2D" unique_id=763294041]
+texture = ExtResource("5_1di0l")
+centered = false
+
+[node name="SettingsBG" type="Control" parent="." unique_id=287048646]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="SettingsBG" unique_id=460482273]
+texture = ExtResource("7_w1xia")
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="SettingsBG/Sprite2D" unique_id=24844442]
+texture = ExtResource("5_1di0l")
+centered = false
+
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=526650923]
-offset_top = 316.0
 offset_right = 1920.0
-offset_bottom = 1121.0
+offset_bottom = 1080.0
 
 [node name="Main Buttons" type="VBoxContainer" parent="CenterContainer" unique_id=1968898296]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="Play" type="Button" parent="CenterContainer/Main Buttons" unique_id=1527058419]
-custom_minimum_size = Vector2(353, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 75
-text = "play"
-
-[node name="Extras" type="Button" parent="CenterContainer/Main Buttons" unique_id=398996026]
-layout_mode = 2
-theme_override_font_sizes/font_size = 75
-text = "extras"
-
-[node name="Options" type="Button" parent="CenterContainer/Main Buttons" unique_id=1574362270]
-layout_mode = 2
-theme_override_font_sizes/font_size = 75
-text = "options"
-
-[node name="Controls" type="Button" parent="CenterContainer/Main Buttons" unique_id=1574673653]
-layout_mode = 2
-theme_override_font_sizes/font_size = 76
-text = "controls
-"
-
-[node name="quit" type="Button" parent="CenterContainer/Main Buttons" unique_id=1861109663]
-layout_mode = 2
-theme_override_font_sizes/font_size = 75
-text = "quit"
-
 [node name="Settings Menu" type="VBoxContainer" parent="CenterContainer" unique_id=890408107]
 visible = false
 layout_mode = 2
-theme_override_constants/separation = 16
+theme_override_constants/separation = 30
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Settings Menu" unique_id=1169198336]
+visible = false
+position = Vector2(197, 327)
+texture = ExtResource("7_w1xia")
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Settings Menu/Sprite2D" unique_id=230198013]
+texture = ExtResource("5_1di0l")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CenterContainer/Settings Menu" unique_id=1856261235]
+position = Vector2(196.99998, 338.50003)
+scale = Vector2(1.9687499, 745.00006)
+texture = SubResource("GradientTexture1D_nbh3q")
 
 [node name="Fullscreen" type="CheckBox" parent="CenterContainer/Settings Menu" unique_id=1597696964]
 layout_mode = 2
@@ -135,7 +176,7 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(353, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 75
+theme = ExtResource("7_1di0l")
 text = "back"
 
 [node name="Extras Menu" type="VBoxContainer" parent="CenterContainer" unique_id=1722465516]
@@ -160,7 +201,7 @@ text = "concept art"
 custom_minimum_size = Vector2(353, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 75
+theme = ExtResource("7_1di0l")
 text = "back"
 
 [node name="Memories Menu" type="VBoxContainer" parent="CenterContainer" unique_id=2143046397]
@@ -278,6 +319,91 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 75
 text = "back"
 
+[node name="ExitBG" type="Control" parent="." unique_id=1702864540]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="ExitBG" unique_id=1046249480]
+texture = ExtResource("9_4qbh4")
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="ExitBG/Sprite2D" unique_id=889485492]
+texture = ExtResource("5_1di0l")
+centered = false
+
+[node name="PlayBG" type="Control" parent="." unique_id=825752666]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayBG" unique_id=1364849626]
+texture = ExtResource("9_nbh3q")
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayBG/Sprite2D" unique_id=728420905]
+texture = ExtResource("5_1di0l")
+centered = false
+
+[node name="Control" type="Control" parent="." unique_id=1651051113]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Play" type="Button" parent="Control" unique_id=1527058419]
+custom_minimum_size = Vector2(353, 0)
+layout_mode = 0
+offset_left = 63.0
+offset_top = 103.0
+offset_right = 469.0
+offset_bottom = 285.0
+theme = ExtResource("7_1di0l")
+theme_override_fonts/font = ExtResource("7_17gaq")
+text = "START"
+
+[node name="Extras" type="Button" parent="Control" unique_id=398996026]
+visible = false
+layout_mode = 0
+offset_left = 823.0
+offset_top = 944.0
+offset_right = 1131.0
+offset_bottom = 1055.0
+theme_override_font_sizes/font_size = 75
+text = "extras"
+
+[node name="Options" type="Button" parent="Control" unique_id=1574362270]
+layout_mode = 0
+offset_left = 1340.0
+offset_top = 102.0
+offset_right = 1905.0
+offset_bottom = 284.0
+theme = ExtResource("7_1di0l")
+text = "OPTIONS"
+
+[node name="Controls" type="Button" parent="Control" unique_id=1574673653]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 847.0
+offset_right = 739.0
+offset_bottom = 1029.0
+theme = ExtResource("7_1di0l")
+text = "CONTROLS
+"
+
+[node name="quit" type="Button" parent="Control" unique_id=1861109663]
+layout_mode = 0
+offset_left = 1429.0
+offset_top = 771.0
+offset_right = 1771.0
+offset_bottom = 953.0
+theme = ExtResource("7_1di0l")
+text = "QUIT"
+
 [node name="Controls Menu" type="VBoxContainer" parent="." unique_id=1920692036]
 visible = false
 offset_left = 783.0
@@ -291,21 +417,23 @@ position = Vector2(177, -379)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_tself")
 
-[node name="Back" type="Button" parent="Controls Menu" unique_id=1912735019]
+[node name="HBoxContainer" type="VBoxContainer" parent="Controls Menu/Control Screen" unique_id=44336100]
+offset_left = -1920.0
+offset_top = 753.3
+offset_right = 1826.0
+offset_bottom = 996.3
+
+[node name="Back" type="Button" parent="Controls Menu/Control Screen/HBoxContainer" unique_id=1912735019]
 custom_minimum_size = Vector2(275, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 65
+theme = ExtResource("7_1di0l")
+theme_override_font_sizes/font_size = 175
 text = "back"
 
 [node name="Memory Layer" type="CanvasLayer" parent="." unique_id=1535597584]
 layer = 999
 
-[connection signal="pressed" from="CenterContainer/Main Buttons/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="CenterContainer/Main Buttons/Extras" to="." method="_on_extras_pressed"]
-[connection signal="pressed" from="CenterContainer/Main Buttons/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="CenterContainer/Main Buttons/Controls" to="." method="_on_controls_pressed"]
-[connection signal="pressed" from="CenterContainer/Main Buttons/quit" to="." method="_on_quit_pressed"]
 [connection signal="toggled" from="CenterContainer/Settings Menu/Fullscreen" to="." method="_on_fullscreen_toggled"]
 [connection signal="value_changed" from="CenterContainer/Settings Menu/Main Volume" to="." method="_on_main_volume_value_changed"]
 [connection signal="value_changed" from="CenterContainer/Settings Menu/SFX Volume" to="." method="_on_sfx_volume_value_changed"]
@@ -330,4 +458,17 @@ layer = 999
 [connection signal="pressed" from="CenterContainer/Memories Menu/Row Two/14" to="." method="_on_memory__pressed" binds= [14]]
 [connection signal="pressed" from="CenterContainer/Memories Menu/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="CenterContainer/Concept Art Menu/Back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="Controls Menu/Back" to="." method="_on_back_pressed"]
+[connection signal="mouse_entered" from="Control/Play" to="." method="_on_play_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Play" to="." method="_on_play_mouse_exited"]
+[connection signal="pressed" from="Control/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/Extras" to="." method="_on_extras_pressed"]
+[connection signal="mouse_entered" from="Control/Options" to="." method="_on_options_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Options" to="." method="_on_options_mouse_exited"]
+[connection signal="pressed" from="Control/Options" to="." method="_on_options_pressed"]
+[connection signal="mouse_entered" from="Control/Controls" to="." method="_on_controls_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Controls" to="." method="_on_controls_mouse_exited"]
+[connection signal="pressed" from="Control/Controls" to="." method="_on_controls_pressed"]
+[connection signal="mouse_entered" from="Control/quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="mouse_exited" from="Control/quit" to="." method="_on_quit_mouse_exited"]
+[connection signal="pressed" from="Control/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Controls Menu/Control Screen/HBoxContainer/Back" to="." method="_on_back_pressed"]

@@ -1,0 +1,36 @@
+[gd_resource type="Theme" format=3 uid="uid://byka4n8bsg171"]
+
+[ext_resource type="FontFile" uid="uid://kxh4xiv4r82w" path="res://Assets/Fonts/CormorantInfant-Medium.ttf" id="1_5xvpe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5xvpe"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yb3kb"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5r367"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(1, 1, 1, 1)
+
+[resource]
+default_font = ExtResource("1_5xvpe")
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/font_sizes/font_size = 125
+Button/styles/focus = SubResource("StyleBoxFlat_5xvpe")
+Button/styles/hover = SubResource("StyleBoxFlat_yb3kb")
+Button/styles/normal = SubResource("StyleBoxFlat_5r367")
+Label/font_sizes/font_size = 16
