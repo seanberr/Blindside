@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b16adlkaahg0h"
-path="res://.godot/imported/Cerberus_side_profile_1920x1080.png-ca5b8bf8ea6b6c17ccf7aafe150a5714.ctex"
+uid="uid://v54w06ds4wcb"
+path="res://.godot/imported/Cerberus_0029.png-2e8266f58f56e6bc869ae6cb0c05abf5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cerberus Side Profile Placeholder/Cerberus_side_profile_1920x1080.png"
-dest_files=["res://.godot/imported/Cerberus_side_profile_1920x1080.png-ca5b8bf8ea6b6c17ccf7aafe150a5714.ctex"]
+source_file="res://Assets/Cerberus Side Profile Animation/Cerberus_0029.png"
+dest_files=["res://.godot/imported/Cerberus_0029.png-2e8266f58f56e6bc869ae6cb0c05abf5.ctex"]
 
 [params]
 
