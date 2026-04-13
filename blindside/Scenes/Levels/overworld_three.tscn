@@ -326,8 +326,8 @@ layer = 999
 
 [node name="Main BG" type="Sprite2D" parent="." unique_id=1957369466]
 z_index = -99
-position = Vector2(3994.4998, 443.49997)
-scale = Vector2(158.48438, 66.015625)
+position = Vector2(4937.25, 493)
+scale = Vector2(178.96094, 66.015625)
 texture = SubResource("GradientTexture2D_q5dyw")
 
 [node name="StoneDoorOpen1930x1886" type="Sprite2D" parent="." unique_id=80682306]

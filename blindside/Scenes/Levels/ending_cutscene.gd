@@ -6,7 +6,6 @@ extends Node2D
 @export var credits_scene : PackedScene
 @export var alex_area : Area2D
 @export var cerberus : Node2D
-
 var sadie_at_top : bool = false
 var alex_at_top : bool = false
 var has_played : bool = false
@@ -25,7 +24,6 @@ func _ready() -> void:
 	sadie_area.body_exited.connect(on_sadie_exited)
 	alex_area.body_exited.connect(on_alex_exited)
 	
-@warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
 	if sadie_at_top and alex_at_top and !has_played:
 		has_played = true
