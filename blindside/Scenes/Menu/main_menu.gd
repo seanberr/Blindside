@@ -5,12 +5,29 @@ var memory_scene = preload("uid://cwpxtqk02ml5d")
 @export var memory_layer : CanvasLayer
 
 func _ready() -> void:
+	
+	if !Global.splashscreen:
+		$Splashscreen.visible = true
+		await get_tree().create_timer(2).timeout
+		for x in range(10,0,-1):
+			var temp : float = x
+			temp = (temp / 10) - 0.015
+			print(temp)	
+			await get_tree().create_timer(0.05).timeout
+			$Splashscreen.modulate.a = temp
+		
+		$Splashscreen.visible = false
+		Global.splashscreen = true
 	$"Control/Play".grab_focus()
 	$"CenterContainer/Settings Menu/Fullscreen".button_pressed = true if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN else false
 	$"CenterContainer/Settings Menu/Main Volume".value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master")))
 	$"CenterContainer/Settings Menu/SFX Volume".value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX")))
 	$"CenterContainer/Settings Menu/Music Volume".value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music")))
-
+	
+	#$Splashscreen.visible = false
+	
+	
+	
 func _enter_tree() -> void:
 	if Global.extrasUnlocked:
 		$Control/Extras.visible = true

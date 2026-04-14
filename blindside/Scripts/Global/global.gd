@@ -17,6 +17,7 @@ var memories_collected = {
 }
 
 var extrasUnlocked = false
+var splashscreen = false
 
 func set_memory_collected(id : int):
 	if id < 1 or id > 14:

@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b2oqm1uhtlryl" path="res://Assets/Main Menu/Foreground_Menu_Gradient_4.png" id="7_w1xia"]
 [ext_resource type="Texture2D" uid="uid://dmsfoy3tlhdat" path="res://Assets/Main Menu/Foreground_Menu_Gradient_3.png" id="9_4qbh4"]
 [ext_resource type="Texture2D" uid="uid://drvoda7k055lg" path="res://Assets/Main Menu/Foreground_Menu_Gradient_2.png" id="9_nbh3q"]
+[ext_resource type="Texture2D" uid="uid://cxiwny7q6fnyj" path="res://Assets/Menu/Midnight_Studios_Logo.png" id="14_jqrnd"]
 
 [sub_resource type="Gradient" id="Gradient_w1xia"]
 offsets = PackedFloat32Array(0, 0.05639098, 0.65037596)
@@ -20,6 +21,12 @@ colors = PackedColorArray(0, 0, 0, 0.6156863, 0, 0, 0, 0.6156863, 0, 0, 0, 0.615
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_nbh3q"]
 gradient = SubResource("Gradient_w1xia")
+
+[sub_resource type="Gradient" id="Gradient_2sy2r"]
+colors = PackedColorArray(0, 0, 0, 1, 0.012617188, 0.012617188, 0.012617188, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ygblk"]
+gradient = SubResource("Gradient_2sy2r")
 
 [node name="MainMenu" type="Node2D" unique_id=1389966816 node_paths=PackedStringArray("memory_layer")]
 script = ExtResource("1_bkwd7")
@@ -416,6 +423,17 @@ size_flags_horizontal = 4
 theme = ExtResource("7_1di0l")
 theme_override_font_sizes/font_size = 175
 text = "back"
+
+[node name="Splashscreen" type="Sprite2D" parent="." unique_id=470735503]
+visible = false
+position = Vector2(973.9999, 545.50006)
+scale = Vector2(8.289062, 1181)
+texture = SubResource("GradientTexture1D_ygblk")
+
+[node name="Midnight" type="Sprite2D" parent="Splashscreen" unique_id=2096821872]
+position = Vector2(-1.6889572, -0.0046571195)
+scale = Vector2(0.12064092, 0.00084674003)
+texture = ExtResource("14_jqrnd")
 
 [node name="Memory Layer" type="CanvasLayer" parent="." unique_id=1535597584]
 layer = 999

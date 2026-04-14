@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bfqgf8x6iuty2" path="res://credits.gd" id="1_sml11"]
 [ext_resource type="Script" uid="uid://djmyrlxciexws" path="res://Scenes/Menu/label.gd" id="3_2ey4j"]
 [ext_resource type="FontFile" uid="uid://kxh4xiv4r82w" path="res://Assets/Fonts/CormorantInfant-Medium.ttf" id="3_sml11"]
+[ext_resource type="Texture2D" uid="uid://cxiwny7q6fnyj" path="res://Assets/Menu/Midnight_Studios_Logo.png" id="4_sml11"]
+[ext_resource type="Script" uid="uid://ck35sthtrwtt5" path="res://Scenes/Menu/creditsLogo.gd" id="5_faj7g"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bxgch"]
 font = ExtResource("3_sml11")
@@ -49,3 +51,9 @@ Memory Illustrations: Alev Ozdamar"
 label_settings = SubResource("LabelSettings_bxgch")
 horizontal_alignment = 1
 script = ExtResource("3_2ey4j")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1916822588]
+position = Vector2(1041, 3270)
+scale = Vector2(0.9686666, 0.9686667)
+texture = ExtResource("4_sml11")
+script = ExtResource("5_faj7g")
