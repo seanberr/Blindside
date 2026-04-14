@@ -16,6 +16,8 @@ var memories_collected = {
 		14 : false
 }
 
+var extrasUnlocked = false
+
 func set_memory_collected(id : int):
 	if id < 1 or id > 14:
 		return

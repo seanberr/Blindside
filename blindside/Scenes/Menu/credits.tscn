@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dgypptyt0vwr2"]
 
 [ext_resource type="Script" uid="uid://bfqgf8x6iuty2" path="res://credits.gd" id="1_sml11"]
-[ext_resource type="PackedScene" uid="uid://bdwqpu7hq1iqu" path="res://Scenes/Menu/main_menu.tscn" id="2_faj7g"]
 [ext_resource type="Script" uid="uid://djmyrlxciexws" path="res://Scenes/Menu/label.gd" id="3_2ey4j"]
 [ext_resource type="FontFile" uid="uid://kxh4xiv4r82w" path="res://Assets/Fonts/CormorantInfant-Medium.ttf" id="3_sml11"]
 
@@ -11,7 +10,6 @@ font_size = 50
 
 [node name="Credits" type="Node2D" unique_id=1779873243]
 script = ExtResource("1_sml11")
-title_scene = ExtResource("2_faj7g")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1558322506]
 offset_right = 1959.0

@@ -187,14 +187,14 @@ layout_mode = 2
 custom_minimum_size = Vector2(353, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 75
+theme = ExtResource("7_1di0l")
 text = "memories"
 
 [node name="Concept Art" type="Button" parent="CenterContainer/Extras Menu" unique_id=2048115788]
 custom_minimum_size = Vector2(353, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 75
+theme = ExtResource("7_1di0l")
 text = "concept art"
 
 [node name="Back" type="Button" parent="CenterContainer/Extras Menu" unique_id=1027836151]
@@ -207,6 +207,7 @@ text = "back"
 [node name="Memories Menu" type="VBoxContainer" parent="CenterContainer" unique_id=2143046397]
 visible = false
 layout_mode = 2
+theme = ExtResource("7_1di0l")
 
 [node name="Row One" type="HBoxContainer" parent="CenterContainer/Memories Menu" unique_id=162972201]
 layout_mode = 2
@@ -216,43 +217,36 @@ alignment = 1
 [node name="1" type="Button" parent="CenterContainer/Memories Menu/Row One" unique_id=1149035351]
 visible = false
 layout_mode = 2
-theme_override_font_sizes/font_size = 76
 text = "1"
 
 [node name="2" type="Button" parent="CenterContainer/Memories Menu/Row One" unique_id=883335923]
 visible = false
 layout_mode = 2
-theme_override_font_sizes/font_size = 76
 text = "2"
 
 [node name="3" type="Button" parent="CenterContainer/Memories Menu/Row One" unique_id=1624728461]
 visible = false
 layout_mode = 2
-theme_override_font_sizes/font_size = 76
 text = "3"
 
 [node name="4" type="Button" parent="CenterContainer/Memories Menu/Row One" unique_id=1550043630]
 visible = false
 layout_mode = 2
-theme_override_font_sizes/font_size = 76
 text = "4"
 
 [node name="5" type="Button" parent="CenterContainer/Memories Menu/Row One" unique_id=1150168865]
 visible = false
 layout_mode = 2
-theme_override_font_sizes/font_size = 76
 text = "5"
 
 [node name="6" type="Button" parent="CenterContainer/Memories Menu/Row One" unique_id=1184451814]
 visible = false
 layout_mode = 2
-theme_override_font_sizes/font_size = 76
 text = "6"
 
 [node name="7" type="Button" parent="CenterContainer/Memories Menu/Row One" unique_id=43966420]
 visible = false
 layout_mode = 2
-theme_override_font_sizes/font_size = 76
 text = "7"
 
 [node name="Row Two" type="HBoxContainer" parent="CenterContainer/Memories Menu" unique_id=1329349593]
@@ -262,50 +256,42 @@ theme_override_constants/separation = 32
 [node name="8" type="Button" parent="CenterContainer/Memories Menu/Row Two" unique_id=1161536445]
 visible = false
 layout_mode = 2
-theme_override_font_sizes/font_size = 76
 text = "8"
 
 [node name="9" type="Button" parent="CenterContainer/Memories Menu/Row Two" unique_id=1304620290]
 visible = false
 layout_mode = 2
-theme_override_font_sizes/font_size = 76
 text = "9"
 
 [node name="10" type="Button" parent="CenterContainer/Memories Menu/Row Two" unique_id=212865791]
 visible = false
 layout_mode = 2
-theme_override_font_sizes/font_size = 76
 text = "10"
 
 [node name="11" type="Button" parent="CenterContainer/Memories Menu/Row Two" unique_id=889525915]
 visible = false
 layout_mode = 2
-theme_override_font_sizes/font_size = 76
 text = "11"
 
 [node name="12" type="Button" parent="CenterContainer/Memories Menu/Row Two" unique_id=1014190845]
 visible = false
 layout_mode = 2
-theme_override_font_sizes/font_size = 76
 text = "12"
 
 [node name="13" type="Button" parent="CenterContainer/Memories Menu/Row Two" unique_id=291333575]
 visible = false
 layout_mode = 2
-theme_override_font_sizes/font_size = 76
 text = "13"
 
 [node name="14" type="Button" parent="CenterContainer/Memories Menu/Row Two" unique_id=846111223]
 visible = false
 layout_mode = 2
-theme_override_font_sizes/font_size = 76
 text = "14"
 
 [node name="Back" type="Button" parent="CenterContainer/Memories Menu" unique_id=366158345]
 custom_minimum_size = Vector2(353, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 75
 text = "back"
 
 [node name="Concept Art Menu" type="VBoxContainer" parent="CenterContainer" unique_id=1192138553]
@@ -369,12 +355,12 @@ text = "START"
 [node name="Extras" type="Button" parent="Control" unique_id=398996026]
 visible = false
 layout_mode = 0
-offset_left = 823.0
-offset_top = 944.0
-offset_right = 1131.0
-offset_bottom = 1055.0
-theme_override_font_sizes/font_size = 75
-text = "extras"
+offset_left = 669.0
+offset_top = 39.0
+offset_right = 1163.0
+offset_bottom = 221.0
+theme = ExtResource("7_1di0l")
+text = "EXTRAS"
 
 [node name="Options" type="Button" parent="Control" unique_id=1574362270]
 layout_mode = 0

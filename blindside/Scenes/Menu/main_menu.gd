@@ -3,12 +3,17 @@ extends Node2D
 @onready var start_scene = preload("uid://7e6i77dx1mbj")
 var memory_scene = preload("uid://cwpxtqk02ml5d")
 @export var memory_layer : CanvasLayer
+
 func _ready() -> void:
 	$"Control/Play".grab_focus()
 	$"CenterContainer/Settings Menu/Fullscreen".button_pressed = true if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN else false
 	$"CenterContainer/Settings Menu/Main Volume".value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master")))
 	$"CenterContainer/Settings Menu/SFX Volume".value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX")))
 	$"CenterContainer/Settings Menu/Music Volume".value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music")))
+
+func _enter_tree() -> void:
+	if Global.extrasUnlocked:
+		$Control/Extras.visible = true
 
 func memory_row_invisible():
 	$"CenterContainer/Memories Menu/Row One".visible = false
@@ -22,7 +27,7 @@ func _on_play_pressed() -> void:
 func _on_extras_pressed() -> void:
 	AudioManager.sfx_manager.play_sound_randomizer(["Menu_Select"] as Array[String], 0.1, 0.1, 0.0, 1.0)
 	$"CenterContainer/Extras Menu/Back".grab_focus()
-	$"CenterContainer/Main Buttons".visible = false
+	$"Control".visible = false
 	$"CenterContainer/Extras Menu".visible = true
 
 
@@ -72,7 +77,7 @@ func _on_back_pressed() -> void:
 		
 		else:
 			$"CenterContainer/Extras Menu".visible = false
-			$"CenterContainer/Main Buttons/Extras".grab_focus()
+			$"Control/Extras".grab_focus()
 		
 func _on_fullscreen_toggled(toggled_on: bool) -> void:
 	if toggled_on:

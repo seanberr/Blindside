@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://6jpvnvxadbj3" path="res://Assets/Doors/Stone_door_open_1930x1886.png" id="12_mcfoa"]
 [ext_resource type="Script" uid="uid://b5p0op1da1b75" path="res://Scenes/Levels/ending_cutscene.gd" id="13_rc17o"]
 [ext_resource type="PackedScene" uid="uid://t8m7skbs0j0n" path="res://Scenes/Player/player_icon.tscn" id="14_n8enb"]
-[ext_resource type="PackedScene" uid="uid://dgypptyt0vwr2" path="res://Scenes/Menu/credits.tscn" id="14_wcev3"]
 [ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player/Player Icon/Sadie_Player_Icon.png" id="15_wcev3"]
 [ext_resource type="Texture2D" uid="uid://b16adlkaahg0h" path="res://Assets/Cerberus Side Profile Placeholder/Cerberus_side_profile_1920x1080.png" id="16_n8enb"]
 [ext_resource type="FontFile" uid="uid://kxh4xiv4r82w" path="res://Assets/Fonts/CormorantInfant-Medium.ttf" id="18_vxi8b"]
@@ -368,7 +367,6 @@ cutscene = NodePath("CutsceneAnimator")
 sadie_icon = NodePath("../Icons/Sadie Icon")
 alex_icon = NodePath("../Icons/Alex Icon")
 sadie_area = NodePath("Sadie Area")
-credits_scene = ExtResource("14_wcev3")
 alex_area = NodePath("Alex Area")
 cerberus = NodePath("../CerberusBoat")
 

@@ -3,7 +3,7 @@ extends Node2D
 @export var sadie_icon : Sprite2D
 @export var alex_icon : Sprite2D
 @export var sadie_area : Area2D
-@export var credits_scene : PackedScene
+var credits_scene = preload("uid://dgypptyt0vwr2")
 @export var alex_area : Area2D
 @export var cerberus : Node2D
 var sadie_at_top : bool = false
@@ -85,4 +85,5 @@ func play_cutscene():
 	await get_tree().create_timer(3).timeout
 	cerberus.get_node("CerberusAnimator").play("Roar")
 	await get_tree().create_timer(6).timeout
+	Global.extrasUnlocked = true
 	TransitionHandler.transition_to_scene(credits_scene, [Vector2.ZERO, Vector2.ZERO])
