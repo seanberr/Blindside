@@ -33,4 +33,5 @@ Button/font_sizes/font_size = 125
 Button/styles/focus = SubResource("StyleBoxFlat_5xvpe")
 Button/styles/hover = SubResource("StyleBoxFlat_yb3kb")
 Button/styles/normal = SubResource("StyleBoxFlat_5r367")
-Label/font_sizes/font_size = 16
+Label/font_sizes/font_size = 175
+Label/fonts/font = ExtResource("1_5xvpe")

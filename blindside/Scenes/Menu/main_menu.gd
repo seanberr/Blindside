@@ -46,7 +46,7 @@ func _on_extras_pressed() -> void:
 	$"CenterContainer/Extras Menu/Back".grab_focus()
 	$"Control".visible = false
 	$"CenterContainer/Extras Menu".visible = true
-
+	$ColorRect2.visible = true
 
 func _on_options_pressed() -> void:
 	AudioManager.sfx_manager.play_sound_randomizer(["Menu_Select"] as Array[String], 0.1, 0.1, 0.0, 1.0)
@@ -95,7 +95,8 @@ func _on_back_pressed() -> void:
 		else:
 			$"CenterContainer/Extras Menu".visible = false
 			$"Control/Extras".grab_focus()
-		
+			$ColorRect2.visible = false
+			
 func _on_fullscreen_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
@@ -130,9 +131,11 @@ func _on_memories_pressed() -> void:
 
 func _on_concept_art_pressed() -> void:
 	AudioManager.sfx_manager.play_sound_randomizer(["Menu_Select"] as Array[String], 0.1, 0.1, 0.0, 1.0)
-	$"CenterContainer/Concept Art Menu/Back".grab_focus()
-	$"CenterContainer/Concept Art Menu".visible = true
-	$"CenterContainer/Extras Menu".visible = false
+	var conceptArt = preload("uid://clgpfnqee1vpq")
+	TransitionHandler.transition_to_scene(conceptArt, [Vector2.ZERO, Vector2.ZERO])
+	#$"CenterContainer/Concept Art Menu/Back".grab_focus()
+	#$"CenterContainer/Concept Art Menu".visible = true
+	#$"CenterContainer/Extras Menu".visible = false
 
 func _on_memory__pressed(ID: int) -> void:
 	AudioManager.sfx_manager.play_sound_randomizer(["Menu_Select"] as Array[String], 0.1, 0.1, 0.0, 1.0)

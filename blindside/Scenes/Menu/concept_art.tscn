@@ -1,0 +1,520 @@
+[gd_scene format=3 uid="uid://clgpfnqee1vpq"]
+
+[ext_resource type="Texture2D" uid="uid://dk0ntmqumsc5v" path="res://Assets/Main Menu/Background_Menu_Eye.png" id="1_leyom"]
+[ext_resource type="Script" uid="uid://b0p18gc8ew4uu" path="res://Scenes/Menu/concept_art.gd" id="1_unpr2"]
+[ext_resource type="Texture2D" uid="uid://bh76psxi2itfh" path="res://Assets/Main Menu/Iris.png" id="2_j804g"]
+[ext_resource type="Texture2D" uid="uid://cxcybtv051qt0" path="res://Assets/Main Menu/Foreground_Menu.png" id="3_ev0pn"]
+[ext_resource type="Texture2D" uid="uid://gy6ppys44oqd" path="res://Assets/Main Menu/Tendrils.png" id="4_d7s7u"]
+[ext_resource type="Theme" uid="uid://byka4n8bsg171" path="res://Assets/Themes/theme.tres" id="5_nncve"]
+[ext_resource type="Texture2D" uid="uid://b3y7kgyjfxci0" path="res://Assets/Concept Art/Characters/Sadie/Early_Character_Concept.png" id="6_3vsiy"]
+[ext_resource type="Texture2D" uid="uid://b3n1duvcmovnf" path="res://Assets/Concept Art/Enviroment/Boulders/envConcept17.png" id="6_ymcwd"]
+[ext_resource type="Texture2D" uid="uid://cuecifhq6kasu" path="res://Assets/Concept Art/Enviroment/Boulders/envConcept16.png" id="7_2r6xm"]
+[ext_resource type="Texture2D" uid="uid://bsqau0u4ofs6f" path="res://Assets/Concept Art/Characters/Sadie/Early_Character_Concept_CLOAK.png" id="7_25ofq"]
+[ext_resource type="Texture2D" uid="uid://5l5ca6h633g6" path="res://Assets/Concept Art/Characters/Sadie/sadieConcept1.png" id="8_6w1jb"]
+[ext_resource type="Texture2D" uid="uid://bdwkocbv78usi" path="res://Assets/Concept Art/Enviroment/Boulders/envConcept18.png" id="8_45hhe"]
+[ext_resource type="Texture2D" uid="uid://brw6l242nvm7s" path="res://Assets/Concept Art/Enviroment/Boulders/envConcept19.png" id="9_05ow0"]
+[ext_resource type="Texture2D" uid="uid://cnl3u1rdepght" path="res://Assets/Concept Art/Characters/Sadie/sadieConcept2.png" id="9_x7udh"]
+[ext_resource type="Texture2D" uid="uid://yfaqfjg1selr" path="res://Assets/Concept Art/Enviroment/Boulders/envConcept20.png" id="10_02yw3"]
+[ext_resource type="Texture2D" uid="uid://wvm5h5488gc4" path="res://Assets/Concept Art/Characters/Sadie/sadieConcept3.png" id="10_yr661"]
+[ext_resource type="Texture2D" uid="uid://l8ns3pulom1f" path="res://Assets/Concept Art/Characters/Sadie/sadieConcept4.png" id="11_m3npp"]
+[ext_resource type="Texture2D" uid="uid://bltv7ovih3m06" path="res://Assets/Concept Art/Characters/Sadie/sadieConcept9.png" id="12_rekyb"]
+[ext_resource type="Texture2D" uid="uid://dslryt8hatu8p" path="res://Assets/Concept Art/Characters/Sadie/sadieConcept5.png" id="13_fn3ss"]
+[ext_resource type="Texture2D" uid="uid://cd167grkjrjm1" path="res://Assets/Concept Art/Characters/Sadie/sadieConcept6.png" id="14_ddduy"]
+[ext_resource type="Texture2D" uid="uid://dutvdh3ch48bs" path="res://Assets/Concept Art/Characters/Sadie/sadieConcept7.png" id="15_w3ran"]
+[ext_resource type="Texture2D" uid="uid://c0dypvspx0v11" path="res://Assets/Concept Art/Characters/Sadie/sadieConcept8.png" id="16_a43nk"]
+[ext_resource type="Texture2D" uid="uid://bn36s5foy7upc" path="res://Assets/Concept Art/Characters/Alex/alexConcept1.png" id="17_m3npp"]
+[ext_resource type="Texture2D" uid="uid://duqp8ufs6tw50" path="res://Assets/Concept Art/Characters/Alex/alexConcept2.png" id="18_rekyb"]
+[ext_resource type="Texture2D" uid="uid://no445tk2wewf" path="res://Assets/Concept Art/Characters/Alex/alexConcept3.png" id="19_fn3ss"]
+[ext_resource type="Texture2D" uid="uid://bsbp5qap141tr" path="res://Assets/Concept Art/Characters/Alex/alexConcept4.png" id="20_ddduy"]
+[ext_resource type="Texture2D" uid="uid://4xkvwdob1r4i" path="res://Assets/Concept Art/Characters/Alex/Alex_turnaround.png" id="21_w3ran"]
+[ext_resource type="Texture2D" uid="uid://cdouji0njwluc" path="res://Assets/Concept Art/Enviroment/Dogs/envConcept26.png" id="27_wt4oo"]
+[ext_resource type="Texture2D" uid="uid://bsagq3h7hsf6m" path="res://Assets/Concept Art/Enviroment/Dogs/envConcept27.png" id="28_ir13h"]
+[ext_resource type="Texture2D" uid="uid://beioms76e34au" path="res://Assets/Concept Art/Enviroment/Dogs/envConcept28.png" id="29_a71h2"]
+[ext_resource type="Texture2D" uid="uid://bxibiegnwpqid" path="res://Assets/Concept Art/Enviroment/Dogs/envConcept31.png" id="30_gwrje"]
+[ext_resource type="Texture2D" uid="uid://xqfsnm625hm6" path="res://Assets/Concept Art/Enviroment/Dogs/envConcept36.png" id="31_0axxf"]
+[ext_resource type="Texture2D" uid="uid://7h8k603p6o7g" path="res://Assets/Concept Art/Enviroment/Dogs/envConcept32.png" id="32_2vsf0"]
+[ext_resource type="Texture2D" uid="uid://dpd5hosnnwu3m" path="res://Assets/Concept Art/Enviroment/Trees/envConcept8.png" id="33_vcbao"]
+[ext_resource type="Texture2D" uid="uid://d08j3xql4f6ie" path="res://Assets/Concept Art/Enviroment/Trees/envConcept9.png" id="34_32c00"]
+[ext_resource type="Texture2D" uid="uid://c06j410pt06do" path="res://Assets/Concept Art/Enviroment/Trees/envConcept10.png" id="35_qwebn"]
+[ext_resource type="Texture2D" uid="uid://dut8lr51puh0c" path="res://Assets/Concept Art/Enviroment/Trees/envConcept11.png" id="36_68nnd"]
+[ext_resource type="Texture2D" uid="uid://dt1l6rqo1ewo7" path="res://Assets/Concept Art/Enviroment/Trees/envConcept12.png" id="37_nnqqu"]
+[ext_resource type="Texture2D" uid="uid://bfibahtkn7kn2" path="res://Assets/Concept Art/Enviroment/Boat/envConcept25.png" id="38_gwrje"]
+[ext_resource type="Texture2D" uid="uid://8kcqto072q1w" path="res://assets/Concept Art/Enviroment/Boat/envConcept29.png" id="39_0axxf"]
+[ext_resource type="Texture2D" uid="uid://cmvxbvht3cfyj" path="res://assets/Concept Art/Enviroment/Boat/envConcept30.png" id="40_2vsf0"]
+[ext_resource type="Texture2D" uid="uid://c0rbyix58n8a5" path="res://assets/Concept Art/Enviroment/Door/envConcept33.png" id="41_gl1wr"]
+[ext_resource type="Texture2D" uid="uid://du88rm20001mv" path="res://assets/Concept Art/Enviroment/Door/envConcept34.png" id="42_unpr2"]
+[ext_resource type="Texture2D" uid="uid://cffcsem31xljx" path="res://assets/Concept Art/Enviroment/Door/envConcept35.png" id="43_shxbg"]
+[ext_resource type="Texture2D" uid="uid://jbww0l232rpn" path="res://Assets/Concept Art/Enviroment/Button/envConcept39.png" id="44_v65xe"]
+[ext_resource type="Texture2D" uid="uid://jvy2it2u3l8g" path="res://Assets/Concept Art/Enviroment/Button/envConcept40.png" id="45_nj78x"]
+[ext_resource type="Texture2D" uid="uid://26r56aomqik" path="res://Assets/Concept Art/Enviroment/Button/envConcept41.png" id="46_k1vih"]
+[ext_resource type="Texture2D" uid="uid://bhf1ann06egkv" path="res://Assets/Concept Art/Enviroment/Button/envConcept42.png" id="47_w6oop"]
+[ext_resource type="Texture2D" uid="uid://wko527rgp2qm" path="res://Assets/Concept Art/Enviroment/Fog/envConcept13.png" id="48_1mfbm"]
+[ext_resource type="Texture2D" uid="uid://pg3w3ij1pp0a" path="res://Assets/Concept Art/Enviroment/Fog/envConcept15.png" id="49_3jlcf"]
+[ext_resource type="Texture2D" uid="uid://d176p2kwmtnnm" path="res://Assets/Concept Art/Enviroment/Fog/envConcept.14png.png" id="50_ejmkl"]
+[ext_resource type="Texture2D" uid="uid://bl18wol2nj5ai" path="res://Assets/Concept Art/Enviroment/Titles/envConcept21.png" id="51_rv42m"]
+[ext_resource type="Texture2D" uid="uid://c3762gqfjn844" path="res://Assets/Concept Art/Enviroment/Titles/envConcept22.png" id="52_8sa2c"]
+[ext_resource type="Texture2D" uid="uid://bxn44kh7pc0rq" path="res://Assets/Concept Art/Enviroment/Titles/envConcept23.png" id="53_tuw7u"]
+[ext_resource type="Texture2D" uid="uid://u2ea70xsfnb4" path="res://Assets/Concept Art/Enviroment/Titles/envConcept24.png" id="54_0qceq"]
+[ext_resource type="Texture2D" uid="uid://ds1pp4rvrbsk" path="res://Assets/Concept Art/Enviroment/envConcept1.png" id="55_72tgu"]
+[ext_resource type="Texture2D" uid="uid://cv2ance1uoys2" path="res://Assets/Concept Art/Enviroment/envConcept2.png" id="56_ush5x"]
+[ext_resource type="Texture2D" uid="uid://dc6dhxiwcndg1" path="res://Assets/Concept Art/Enviroment/envConcept3.png" id="57_qjira"]
+[ext_resource type="Texture2D" uid="uid://cx2gi3nmofp0t" path="res://Assets/Concept Art/Enviroment/envConcept4.png" id="58_0f12s"]
+[ext_resource type="Texture2D" uid="uid://dtavwmy0r5lwb" path="res://Assets/Concept Art/Enviroment/envConcept5.png" id="59_1p7ey"]
+[ext_resource type="Texture2D" uid="uid://c7hws0p56qt5q" path="res://Assets/Concept Art/Enviroment/envConcept6.png" id="60_bybbl"]
+[ext_resource type="Texture2D" uid="uid://duoyla5mgibyl" path="res://Assets/Concept Art/Enviroment/envConcept7.png" id="61_0ngfl"]
+[ext_resource type="Texture2D" uid="uid://c2rrbrknhkvcy" path="res://Assets/Concept Art/Enviroment/envConcept37.png" id="62_ordcx"]
+
+[node name="Node2D" type="Node2D" unique_id=358560902]
+script = ExtResource("1_unpr2")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=325418260]
+texture = ExtResource("1_leyom")
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1447057386]
+texture = ExtResource("2_j804g")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background" unique_id=1258413918]
+texture = ExtResource("3_ev0pn")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="Background" unique_id=1993776895]
+texture = ExtResource("4_d7s7u")
+centered = false
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1907526032]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 0.73333335)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1194526456]
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("5_nncve")
+
+[node name="Sadie" type="VBoxContainer" parent="CenterContainer" unique_id=1275952544]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sadie" unique_id=1575572958]
+position = Vector2(-730, -78)
+scale = Vector2(0.13235295, 0.13235296)
+texture = ExtResource("6_3vsiy")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CenterContainer/Sadie" unique_id=70775696]
+position = Vector2(730, -78)
+scale = Vector2(0.132, 0.132)
+texture = ExtResource("7_25ofq")
+
+[node name="Sprite2D3" type="Sprite2D" parent="CenterContainer/Sadie" unique_id=1081128565]
+position = Vector2(396.00006, 123)
+scale = Vector2(0.433, 0.433)
+texture = ExtResource("8_6w1jb")
+
+[node name="Sprite2D4" type="Sprite2D" parent="CenterContainer/Sadie" unique_id=205519877]
+position = Vector2(390, -311)
+scale = Vector2(0.43279022, 0.43279025)
+texture = ExtResource("9_x7udh")
+
+[node name="Sprite2D5" type="Sprite2D" parent="CenterContainer/Sadie" unique_id=2117523844]
+position = Vector2(-379, -311)
+scale = Vector2(0.433, 0.433)
+texture = ExtResource("10_yr661")
+
+[node name="Sprite2D6" type="Sprite2D" parent="CenterContainer/Sadie" unique_id=1909590459]
+position = Vector2(-377, 123)
+scale = Vector2(0.433, 0.433)
+texture = ExtResource("11_m3npp")
+
+[node name="Sprite2D11" type="Sprite2D" parent="CenterContainer/Sadie" unique_id=305751755]
+position = Vector2(0, -50)
+scale = Vector2(0.7247191, 0.7247191)
+texture = ExtResource("12_rekyb")
+
+[node name="Sadie2" type="VBoxContainer" parent="CenterContainer" unique_id=1391667094]
+visible = false
+layout_mode = 2
+
+[node name="Sprite2D7" type="Sprite2D" parent="CenterContainer/Sadie2" unique_id=2133069538]
+position = Vector2(-552, -29)
+texture = ExtResource("13_fn3ss")
+
+[node name="Sprite2D8" type="Sprite2D" parent="CenterContainer/Sadie2" unique_id=881889559]
+position = Vector2(570.0558, -322)
+scale = Vector2(0.695279, 0.69527894)
+texture = ExtResource("14_ddduy")
+
+[node name="Sprite2D9" type="Sprite2D" parent="CenterContainer/Sadie2" unique_id=897253284]
+position = Vector2(10, -69)
+texture = ExtResource("15_w3ran")
+
+[node name="Sprite2D10" type="Sprite2D" parent="CenterContainer/Sadie2" unique_id=1656940165]
+position = Vector2(581.03613, 149)
+scale = Vector2(0.12868632, 0.12868632)
+texture = ExtResource("16_a43nk")
+
+[node name="Alex" type="VBoxContainer" parent="CenterContainer" unique_id=1696922815]
+visible = false
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Alex" unique_id=164934996]
+position = Vector2(-576, -296)
+scale = Vector2(0.3486683, 0.34866828)
+texture = ExtResource("17_m3npp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CenterContainer/Alex" unique_id=1479411915]
+position = Vector2(629.2341, 221.25)
+scale = Vector2(0.344, 0.344)
+texture = ExtResource("18_rekyb")
+
+[node name="Sprite2D3" type="Sprite2D" parent="CenterContainer/Alex" unique_id=1288577570]
+position = Vector2(-596, 98.00002)
+scale = Vector2(0.34375, 0.34375)
+texture = ExtResource("19_fn3ss")
+
+[node name="Sprite2D4" type="Sprite2D" parent="CenterContainer/Alex" unique_id=1327620493]
+position = Vector2(-11, 96)
+scale = Vector2(0.68421054, 0.68421054)
+texture = ExtResource("20_ddduy")
+
+[node name="Sprite2D5" type="Sprite2D" parent="CenterContainer/Alex" unique_id=1661419666]
+position = Vector2(336.0001, -215.99997)
+scale = Vector2(0.20519556, 0.20519556)
+texture = ExtResource("21_w3ran")
+
+[node name="Rock" type="VBoxContainer" parent="CenterContainer" unique_id=465815330]
+visible = false
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Rock" unique_id=663835990]
+position = Vector2(-13.999994, -55)
+scale = Vector2(0.35115764, 0.35115767)
+texture = ExtResource("6_ymcwd")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CenterContainer/Rock" unique_id=578014712]
+position = Vector2(587, -321.00003)
+scale = Vector2(0.46466976, 0.46466973)
+texture = ExtResource("7_2r6xm")
+
+[node name="Sprite2D3" type="Sprite2D" parent="CenterContainer/Rock" unique_id=2132111051]
+position = Vector2(-636.00006, -307)
+scale = Vector2(0.465, 0.465)
+texture = ExtResource("8_45hhe")
+
+[node name="Sprite2D4" type="Sprite2D" parent="CenterContainer/Rock" unique_id=548516333]
+position = Vector2(-635.00006, 131)
+scale = Vector2(0.465, 0.465)
+texture = ExtResource("9_05ow0")
+
+[node name="Sprite2D5" type="Sprite2D" parent="CenterContainer/Rock" unique_id=1148846276]
+position = Vector2(585, 129.99997)
+scale = Vector2(0.28963706, 0.28963706)
+texture = ExtResource("10_02yw3")
+
+[node name="Dogs" type="VBoxContainer" parent="CenterContainer" unique_id=1287383802]
+visible = false
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Dogs" unique_id=1313592080]
+position = Vector2(773, -15)
+scale = Vector2(0.30461165, 0.30461165)
+texture = ExtResource("27_wt4oo")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CenterContainer/Dogs" unique_id=244934446]
+position = Vector2(428, -15)
+scale = Vector2(0.305, 0.305)
+texture = ExtResource("28_ir13h")
+
+[node name="Sprite2D3" type="Sprite2D" parent="CenterContainer/Dogs" unique_id=1910924152]
+scale = Vector2(0.2668659, 0.26686594)
+texture = ExtResource("29_a71h2")
+
+[node name="Sprite2D4" type="Sprite2D" parent="CenterContainer/Dogs" unique_id=2106198387]
+position = Vector2(576.00006, 328)
+scale = Vector2(0.31505576, 0.31505576)
+texture = ExtResource("30_gwrje")
+
+[node name="Sprite2D5" type="Sprite2D" parent="CenterContainer/Dogs" unique_id=1261149327]
+position = Vector2(-613.00006, -84.00001)
+scale = Vector2(0.58814114, 0.58814114)
+texture = ExtResource("31_0axxf")
+
+[node name="Sprite2D6" type="Sprite2D" parent="CenterContainer/Dogs" unique_id=1738227460]
+position = Vector2(679.9999, -347)
+scale = Vector2(0.315, 0.315)
+texture = ExtResource("32_2vsf0")
+
+[node name="Trees" type="VBoxContainer" parent="CenterContainer" unique_id=825430302]
+visible = false
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Trees" unique_id=1578568053]
+position = Vector2(-510, 97.999985)
+scale = Vector2(0.44281414, 0.44281414)
+texture = ExtResource("33_vcbao")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CenterContainer/Trees" unique_id=291564876]
+position = Vector2(-700.93756, -318.69577)
+scale = Vector2(0.626291, 0.62629104)
+texture = ExtResource("34_32c00")
+
+[node name="Sprite2D3" type="Sprite2D" parent="CenterContainer/Trees" unique_id=430039011]
+position = Vector2(575.0001, 256.99997)
+scale = Vector2(0.33055562, 0.3305556)
+texture = ExtResource("35_qwebn")
+
+[node name="Sprite2D4" type="Sprite2D" parent="CenterContainer/Trees" unique_id=787302006]
+scale = Vector2(0.46689814, 0.46689817)
+texture = ExtResource("36_68nnd")
+
+[node name="Sprite2D5" type="Sprite2D" parent="CenterContainer/Trees" unique_id=444914118]
+position = Vector2(617.00006, -255)
+scale = Vector2(0.41792932, 0.4179293)
+texture = ExtResource("37_nnqqu")
+
+[node name="Boat" type="VBoxContainer" parent="CenterContainer" unique_id=961580895]
+visible = false
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Boat" unique_id=1297543109]
+position = Vector2(485, 117)
+scale = Vector2(0.53288203, 0.42356688)
+texture = ExtResource("38_gwrje")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CenterContainer/Boat" unique_id=1454093831]
+position = Vector2(-407, -45.000015)
+scale = Vector2(0.46374047, 0.46374047)
+texture = ExtResource("39_0axxf")
+
+[node name="Sprite2D3" type="Sprite2D" parent="CenterContainer/Boat" unique_id=718799027]
+position = Vector2(507, -252.99997)
+scale = Vector2(0.44847533, 0.4484753)
+texture = ExtResource("40_2vsf0")
+
+[node name="Door" type="VBoxContainer" parent="CenterContainer" unique_id=14782186]
+visible = false
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Door" unique_id=1146626541]
+position = Vector2(0, -50)
+scale = Vector2(0.545, 0.545)
+texture = ExtResource("41_gl1wr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CenterContainer/Door" unique_id=2029129013]
+position = Vector2(-627, -50)
+scale = Vector2(0.5450098, 0.5450098)
+texture = ExtResource("42_unpr2")
+
+[node name="Sprite2D3" type="Sprite2D" parent="CenterContainer/Door" unique_id=573422981]
+position = Vector2(627, -50)
+scale = Vector2(0.47898468, 0.47898468)
+texture = ExtResource("43_shxbg")
+
+[node name="Button" type="VBoxContainer" parent="CenterContainer" unique_id=31006208]
+visible = false
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Button" unique_id=459632623]
+position = Vector2(380, 98)
+texture = ExtResource("44_v65xe")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CenterContainer/Button" unique_id=1682882572]
+position = Vector2(-380, 98)
+texture = ExtResource("45_nj78x")
+
+[node name="Sprite2D3" type="Sprite2D" parent="CenterContainer/Button" unique_id=246116003]
+position = Vector2(-380, -204)
+texture = ExtResource("46_k1vih")
+
+[node name="Sprite2D4" type="Sprite2D" parent="CenterContainer/Button" unique_id=1067242842]
+position = Vector2(380, -204)
+texture = ExtResource("47_w6oop")
+
+[node name="Fog" type="VBoxContainer" parent="CenterContainer" unique_id=1802284462]
+visible = false
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Fog" unique_id=217972928]
+position = Vector2(-628, -2)
+scale = Vector2(0.532, 0.532)
+texture = ExtResource("48_1mfbm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CenterContainer/Fog" unique_id=1400830829]
+scale = Vector2(0.53163046, 0.53163046)
+texture = ExtResource("49_3jlcf")
+
+[node name="Sprite2D3" type="Sprite2D" parent="CenterContainer/Fog" unique_id=1097102573]
+position = Vector2(628, 0)
+scale = Vector2(0.532, 0.532)
+texture = ExtResource("50_ejmkl")
+
+[node name="Tiles" type="VBoxContainer" parent="CenterContainer" unique_id=1822367381]
+visible = false
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Tiles" unique_id=735223822]
+position = Vector2(564, -400)
+scale = Vector2(0.407, 0.407)
+texture = ExtResource("51_rv42m")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CenterContainer/Tiles" unique_id=285969077]
+position = Vector2(-564, -400.00003)
+scale = Vector2(0.4070568, 0.4070568)
+texture = ExtResource("52_8sa2c")
+
+[node name="Sprite2D3" type="Sprite2D" parent="CenterContainer/Tiles" unique_id=80628521]
+position = Vector2(616, 99)
+scale = Vector2(0.45817256, 0.45817256)
+texture = ExtResource("53_tuw7u")
+
+[node name="Sprite2D4" type="Sprite2D" parent="CenterContainer/Tiles" unique_id=1980598661]
+position = Vector2(-324, -27)
+scale = Vector2(0.5951868, 0.59518677)
+texture = ExtResource("54_0qceq")
+
+[node name="Env" type="VBoxContainer" parent="CenterContainer" unique_id=866457042]
+visible = false
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Env" unique_id=1435789975]
+position = Vector2(697, -235)
+scale = Vector2(0.502, 0.502)
+texture = ExtResource("55_72tgu")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CenterContainer/Env" unique_id=202137849]
+position = Vector2(-673.00006, -190.99997)
+scale = Vector2(0.5015306, 0.50153065)
+texture = ExtResource("56_ush5x")
+
+[node name="Sprite2D3" type="Sprite2D" parent="CenterContainer/Env" unique_id=1075243011]
+position = Vector2(0, 91)
+scale = Vector2(0.5467625, 0.5467625)
+texture = ExtResource("57_qjira")
+
+[node name="Sprite2D4" type="Sprite2D" parent="CenterContainer/Env" unique_id=1209164840]
+position = Vector2(634, 262)
+scale = Vector2(0.547, 0.547)
+texture = ExtResource("58_0f12s")
+
+[node name="Sprite2D5" type="Sprite2D" parent="CenterContainer/Env" unique_id=2056944996]
+position = Vector2(0, -217)
+scale = Vector2(0.547, 0.547)
+texture = ExtResource("59_1p7ey")
+
+[node name="Env2" type="VBoxContainer" parent="CenterContainer" unique_id=49686808]
+visible = false
+layout_mode = 2
+
+[node name="Sprite2D6" type="Sprite2D" parent="CenterContainer/Env2" unique_id=1908180527]
+position = Vector2(-563, -198)
+scale = Vector2(0.5549497, 0.55494976)
+texture = ExtResource("60_bybbl")
+
+[node name="Sprite2D7" type="Sprite2D" parent="CenterContainer/Env2" unique_id=1282828473]
+position = Vector2(682, -12.000008)
+scale = Vector2(0.8020231, 0.8020231)
+texture = ExtResource("61_0ngfl")
+
+[node name="Sprite2D8" type="Sprite2D" parent="CenterContainer/Env2" unique_id=756767557]
+position = Vector2(-242, -160.99997)
+scale = Vector2(0.3641204, 0.36412036)
+texture = ExtResource("62_ordcx")
+
+[node name="Arrows" type="CenterContainer" parent="." unique_id=244308217]
+offset_top = 798.0
+offset_right = 1920.0
+offset_bottom = 980.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Arrows" unique_id=787547928]
+layout_mode = 2
+theme = ExtResource("5_nncve")
+theme_override_constants/separation = 100
+
+[node name="Left" type="Button" parent="Arrows/HBoxContainer" unique_id=425446579]
+layout_mode = 2
+text = " < "
+
+[node name="Right" type="Button" parent="Arrows/HBoxContainer" unique_id=582938618]
+layout_mode = 2
+text = " > "
+
+[node name="Titles" type="CenterContainer" parent="." unique_id=1829774078]
+offset_right = 1920.0
+offset_bottom = 170.0
+theme = ExtResource("5_nncve")
+
+[node name="Sadie" type="Label" parent="Titles" unique_id=1595582230]
+layout_mode = 2
+text = "Sadie"
+
+[node name="Sadie2" type="Label" parent="Titles" unique_id=6917322]
+visible = false
+layout_mode = 2
+text = "Sadie"
+
+[node name="Alex" type="Label" parent="Titles" unique_id=1418767032]
+visible = false
+layout_mode = 2
+text = "Alex"
+
+[node name="Rock" type="Label" parent="Titles" unique_id=1835439650]
+visible = false
+layout_mode = 2
+text = "Rock"
+
+[node name="Dogs" type="Label" parent="Titles" unique_id=872869725]
+visible = false
+layout_mode = 2
+text = "Cerberus"
+
+[node name="Trees" type="Label" parent="Titles" unique_id=382174051]
+visible = false
+layout_mode = 2
+text = "Trees"
+
+[node name="Boat" type="Label" parent="Titles" unique_id=168618271]
+visible = false
+layout_mode = 2
+text = "Boat"
+
+[node name="Door" type="Label" parent="Titles" unique_id=1581343410]
+visible = false
+layout_mode = 2
+text = "Door"
+
+[node name="Button" type="Label" parent="Titles" unique_id=497802243]
+visible = false
+layout_mode = 2
+text = "Button"
+
+[node name="Fog" type="Label" parent="Titles" unique_id=1747651311]
+visible = false
+layout_mode = 2
+text = "Fog"
+
+[node name="Tiles" type="Label" parent="Titles" unique_id=709494575]
+visible = false
+layout_mode = 2
+text = "Tiles"
+
+[node name="Extra" type="Label" parent="Titles" unique_id=1776575268]
+visible = false
+layout_mode = 2
+text = "Enviroment"
+
+[node name="Extra2" type="Label" parent="Titles" unique_id=46828454]
+visible = false
+layout_mode = 2
+text = "Enviroment"
+
+[node name="Back" type="Button" parent="." unique_id=1360267169]
+offset_left = 56.0
+offset_top = 861.0
+offset_right = 411.0
+offset_bottom = 1043.0
+theme = ExtResource("5_nncve")
+text = "BACK"
+
+[connection signal="pressed" from="Arrows/HBoxContainer/Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Arrows/HBoxContainer/Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

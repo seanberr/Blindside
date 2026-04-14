@@ -99,6 +99,16 @@ centered = false
 texture = ExtResource("5_1di0l")
 centered = false
 
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1977427359]
+visible = false
+clip_contents = true
+custom_minimum_size = Vector2(299, 200)
+offset_left = 616.0
+offset_top = 223.0
+offset_right = 1285.0
+offset_bottom = 861.0
+color = Color(0, 0, 0, 0.6156863)
+
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=526650923]
 offset_right = 1920.0
 offset_bottom = 1080.0
@@ -189,6 +199,7 @@ text = "back"
 [node name="Extras Menu" type="VBoxContainer" parent="CenterContainer" unique_id=1722465516]
 visible = false
 layout_mode = 2
+theme_override_constants/separation = 25
 
 [node name="Memories" type="Button" parent="CenterContainer/Extras Menu" unique_id=859845668]
 custom_minimum_size = Vector2(353, 0)
