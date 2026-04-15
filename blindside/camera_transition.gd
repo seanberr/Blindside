@@ -29,6 +29,8 @@ func transition_update(delta: float):
 		current_lerp += current_lerp / 10
 		current_lerp = min(current_lerp, 1)
 	time_passed += delta
+	if not is_instance_valid((to_camera)):
+		return
 	transition_camera.offset = lerp(transition_camera.offset, to_camera.offset, current_lerp)
 	transition_camera.global_position = lerp(transition_camera.global_position, to_camera.global_position, current_lerp)
 	transition_camera.zoom = lerp (transition_camera.zoom, to_camera.zoom, current_lerp)
