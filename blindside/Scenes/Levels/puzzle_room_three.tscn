@@ -192,7 +192,7 @@ size = Vector2(452, 22)
 size = Vector2(462, 52)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qo53q"]
-size = Vector2(0, 748)
+size = Vector2(18, 748)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7iset"]
 size = Vector2(230, 34)
@@ -435,7 +435,7 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Invisible Wall 1" unique_id=1602660898]
-position = Vector2(0, -1462)
+position = Vector2(57, -1462)
 shape = SubResource("RectangleShape2D_qo53q")
 
 [node name="Invisible Wall 2" type="StaticBody2D" parent="." unique_id=519818184]
@@ -445,7 +445,7 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Invisible Wall 2" unique_id=1117964002]
-position = Vector2(0, -1462)
+position = Vector2(-58.5, -1462)
 shape = SubResource("RectangleShape2D_qo53q")
 
 [node name="Cutscene Manager" type="Node2D" parent="." unique_id=1653307289 node_paths=PackedStringArray("invisible_walls", "bone", "cutscene", "sadie_icon", "alex_icon", "sadie_area", "alex_area")]
