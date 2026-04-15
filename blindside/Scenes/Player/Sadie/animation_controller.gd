@@ -41,6 +41,4 @@ func _process(delta: float) -> void:
 					else:
 						sprite.play("Idle")
 	else:				
-		sprite.play("Idle")
-		if player.name == "PlayerSadie":	
-			sprite.scale = Vector2(0.25, 0.25)
+		return

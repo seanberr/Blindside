@@ -20,6 +20,8 @@ func physics_update(delta: float):
 	
 	#handle velocity
 	var direction : int = player.direction_comp.update_direction()
+	if !player.in_control:
+		direction = 0
 	if direction:
 		player.velocity_comp.apply_ground_acceleration(delta, direction)
 	else:

@@ -11,7 +11,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	sadie = get_sadie()
+	alex = get_alex()
 	
 func get_sadie() -> CharacterBody2D:
 	var players = get_tree().get_nodes_in_group("Player")
@@ -31,11 +32,15 @@ func sadie_move_to_edge():
 	sadie = get_sadie()
 	if sadie.position.x <= 10:
 		sadie.position.x += 2
+	elif sadie.sprite.animation != "Idle":
+		sadie.sprite.scale = Vector2(0.25,0.25)
+		sadie.sprite.play("Idle")
 		
 func alex_move_to_edge():
 	alex = get_alex()
 	if alex.position.x >= 530:
 		alex.position.x -= 2
+	
 
 func sadie_jump():
 	apply_impulse(sadie, Vector2(175, -690))

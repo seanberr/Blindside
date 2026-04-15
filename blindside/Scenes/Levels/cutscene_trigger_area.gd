@@ -5,6 +5,7 @@ extends Node2D
 @export var sadie_icon : Sprite2D
 @export var alex_icon : Sprite2D
 @export var sadie_area : Area2D
+@export var controller : Node
 @export var alex_area : Area2D
 var sadie_at_top : bool = false
 var alex_at_top : bool = false
@@ -49,6 +50,7 @@ func play_cutscene():
 	if !players: return
 	for player in players:
 		player.in_control = false
+		player.velocity = Vector2.ZERO
 		
 	#disable invisible walls
 	for wall in invisible_walls:
@@ -56,12 +58,17 @@ func play_cutscene():
 		
 	#prep bone to break
 	bone.ready_to_break = true
-		
+	controller.sadie.sprite.scale = Vector2(0.25,0.25)
+	controller.sadie.sprite.play("Idle")
 	await get_tree().create_timer(1.5).timeout
+	controller.sadie.sprite.scale = Vector2(0.5,0.5)
+	controller.sadie.sprite.play("Walk")
 	cutscene.play("Cutscenes/Move To Edge")
 	await get_tree().create_timer(3.5).timeout
 	cutscene.pause()
 	await get_tree().create_timer(1).timeout
+	controller.sadie.sprite.play("Jump")
+	controller.sadie.sprite.scale = Vector2(0.25,0.25)
 	cutscene.play("Cutscenes/Jump")
 	await get_tree().create_timer(2.2).timeout
 	for player in players:

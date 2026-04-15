@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var in_control : bool = true
+@export var sprite : AnimatedSprite2D
 @onready var velocity_comp : VelocityComponent = $"Velocity Component"
 @onready var jump_comp : JumpComponent = $"Jump Component"
 @onready var gravity_comp : GravityComponent = $"Gravity Component"
@@ -35,9 +36,10 @@ func _ready() -> void:
 	jump_comp.jump.connect(begin_variable_jump)
 	
 func _physics_process(delta: float) -> void:
+	
 	if is_on_floor():
 		is_jumping = false
-		if is_jump_queued:
+		if is_jump_queued and in_control:
 			is_jump_queued = false
 			squish_manager.light_squish()
 			jump_comp.apply_jump_impulse()

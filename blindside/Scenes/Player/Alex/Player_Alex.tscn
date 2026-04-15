@@ -500,11 +500,12 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_rivyw"]
 gradient = SubResource("Gradient_oly0s")
 
-[node name="PlayerAlex" type="CharacterBody2D" unique_id=1511516036 node_paths=PackedStringArray("light") groups=["Player"]]
+[node name="PlayerAlex" type="CharacterBody2D" unique_id=1511516036 node_paths=PackedStringArray("sprite", "light") groups=["Player"]]
 light_mask = 0
 z_index = 1
 collision_mask = 10
 script = ExtResource("1_p71sf")
+sprite = NodePath("AnimatedSprite2D")
 light = NodePath("PointLight2D")
 input_left = &"Player2_Left"
 input_right = &"Player2_Right"

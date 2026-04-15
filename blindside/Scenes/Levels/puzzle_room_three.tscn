@@ -279,7 +279,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tg6hl"]
-size = Vector2(502, 1179)
+size = Vector2(502, 844)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_7iset"]
 a = Vector2(16, 63)
@@ -448,7 +448,7 @@ collision_mask = 0
 position = Vector2(-58.5, -1462)
 shape = SubResource("RectangleShape2D_qo53q")
 
-[node name="Cutscene Manager" type="Node2D" parent="." unique_id=1653307289 node_paths=PackedStringArray("invisible_walls", "bone", "cutscene", "sadie_icon", "alex_icon", "sadie_area", "alex_area")]
+[node name="Cutscene Manager" type="Node2D" parent="." unique_id=1653307289 node_paths=PackedStringArray("invisible_walls", "bone", "cutscene", "sadie_icon", "alex_icon", "sadie_area", "controller", "alex_area")]
 script = ExtResource("9_6uuda")
 invisible_walls = [NodePath("../Invisible Wall 1/CollisionShape2D"), NodePath("../Invisible Wall 2/CollisionShape2D")]
 bone = NodePath("../Bone")
@@ -456,6 +456,7 @@ cutscene = NodePath("Jump Down Cutscene")
 sadie_icon = NodePath("../Icons/Sadie Icon")
 alex_icon = NodePath("../Icons/Alex Icon")
 sadie_area = NodePath("Sadie Area")
+controller = NodePath("Jump Down Cutscene/Player Controller")
 alex_area = NodePath("Alex Area")
 
 [node name="Sadie Area" type="Area2D" parent="Cutscene Manager" unique_id=822321363]
@@ -587,12 +588,13 @@ position = Vector2(2007, -1113)
 corresponding_platform = NodePath("../Platform10_1")
 
 [node name="Transition Area" type="Area2D" parent="." unique_id=478018699]
+visible = false
 script = ExtResource("14_2pqgm")
 scene_to_load = ExtResource("15_7iset")
 player_coords = Array[Vector2]([Vector2(0, 0), Vector2(0, 0)])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Transition Area" unique_id=766414867]
-position = Vector2(241, 1045.5)
+position = Vector2(241, 1213)
 shape = SubResource("RectangleShape2D_tg6hl")
 
 [node name="Icons" type="CanvasLayer" parent="." unique_id=1414121671]

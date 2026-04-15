@@ -72,6 +72,7 @@ func play_cutscene():
 	if !players: return
 	for player in players:
 		player.in_control = false
+		player.velocity = Vector2.ZERO
 	await get_tree().create_timer(1).timeout
 	sadie_icon.disable()
 	alex_icon.disable()

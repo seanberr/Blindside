@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var in_control : bool = true
 @export var id = 0
+@export var sprite : AnimatedSprite2D
 @onready var velocity_comp : VelocityComponent = $"Velocity Component"
 @onready var jump_comp : JumpComponent = $"Jump Component"
 @onready var gravity_comp : GravityComponent = $"Gravity Component"
@@ -36,7 +37,7 @@ func _ready() -> void:
 var push_force = 80.0
 
 func _physics_process(delta: float) -> void:
-	if is_on_floor():
+	if is_on_floor() and in_control:
 		is_jumping = false
 		if is_jump_queued:
 			is_jump_queued = false
