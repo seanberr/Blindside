@@ -9,21 +9,23 @@ func exit():
 	pass
 	
 func update(delta: float):
-	player.direction_comp.update_sprite_direction()
+	if player.in_control:
+		player.direction_comp.update_sprite_direction()
 	evaluate_state()
 	
 func physics_update(delta: float):
-	#handle velocity
-	var direction : int = player.direction_comp.update_direction()
-	if direction and player.in_control:
-		player.velocity_comp.apply_ground_acceleration(delta, direction)
-	else:
-		player.velocity_comp.apply_ground_friction(delta)
+	if player.in_control:
+		#handle velocity
+		var direction : int = player.direction_comp.update_direction()
+		if direction and player.in_control:
+			player.velocity_comp.apply_ground_acceleration(delta, direction)
+		else:
+			player.velocity_comp.apply_ground_friction(delta)
 
-	#handle jump
-	if Input.is_action_just_pressed(player.input_jump) and player.in_control:
-		player.state_machine.change_state("Prepare To Jump State")
-	
+		#handle jump
+		if Input.is_action_just_pressed(player.input_jump):
+			player.state_machine.change_state("Prepare To Jump State")
+		
 	player.move_and_slide()
 
 func evaluate_state():
