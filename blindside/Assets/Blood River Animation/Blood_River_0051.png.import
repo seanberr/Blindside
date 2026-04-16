@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rt2wircplby1"
-path="res://.godot/imported/Blood_River_0003.png-17c6ff873cef33ff7fce5ac20baa348c.ctex"
+uid="uid://ivamxganhiru"
+path="res://.godot/imported/Blood_River_0051.png-a86d9c070b2f9eacfc5c707370f9f439.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Blood River Animation/Blood_River_0003.png"
-dest_files=["res://.godot/imported/Blood_River_0003.png-17c6ff873cef33ff7fce5ac20baa348c.ctex"]
+source_file="res://Assets/Blood River Animation/Blood_River_0051.png"
+dest_files=["res://.godot/imported/Blood_River_0051.png-a86d9c070b2f9eacfc5c707370f9f439.ctex"]
 
 [params]
 
