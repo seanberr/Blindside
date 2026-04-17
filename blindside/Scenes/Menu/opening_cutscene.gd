@@ -15,7 +15,8 @@ The ghost of Sadie’s fear – a scar left by her childhood dog named
 Gretel – threatens to ensnare her in its insidious embrace.",
 ]
 
-
+func _ready() -> void:
+	AudioManager.music_manager.fade_out_track()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

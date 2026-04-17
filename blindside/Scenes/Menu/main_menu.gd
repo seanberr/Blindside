@@ -5,7 +5,8 @@ var memory_scene = preload("uid://cwpxtqk02ml5d")
 @export var memory_layer : CanvasLayer
 
 func _ready() -> void:
-	
+	AudioManager.music_manager.transition_to_track("TitleScreen")
+	Global.splashscreen = false
 	if !Global.splashscreen:
 		$Splashscreen.visible = true
 		await get_tree().create_timer(2).timeout

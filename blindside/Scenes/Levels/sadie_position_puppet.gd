@@ -40,6 +40,8 @@ func alex_move_to_edge():
 	alex = get_alex()
 	if alex.position.x >= 530:
 		alex.position.x -= 2
+	elif alex.sprite.animation != "Idle":
+		alex.sprite.play("Idle")
 	
 
 func sadie_jump():

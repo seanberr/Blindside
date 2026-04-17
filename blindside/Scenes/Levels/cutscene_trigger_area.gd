@@ -58,16 +58,22 @@ func play_cutscene():
 		
 	#prep bone to break
 	bone.ready_to_break = true
+	AudioManager.music_manager.transition_to_track("Quiet")
 	controller.sadie.sprite.scale = Vector2(0.25,0.25)
 	controller.sadie.sprite.play("Idle")
+	controller.alex.sprite.play("Idle")
 	await get_tree().create_timer(1.5).timeout
 	controller.sadie.sprite.scale = Vector2(0.5,0.5)
 	controller.sadie.sprite.play("Walk")
+	controller.alex.sprite.play("Walk")
 	cutscene.play("Cutscenes/Move To Edge")
 	await get_tree().create_timer(3.5).timeout
 	cutscene.pause()
 	await get_tree().create_timer(1).timeout
 	controller.sadie.sprite.play("Jump")
+	controller.alex.sprite.play("Jump")
+	AudioManager.sfx_manager.play_sound_default("Sadie_Grass_Jump", 0.0, 1.0)
+	AudioManager.sfx_manager.play_sound_default("Alex_Grass_Jump", 0.0, 1.0)
 	controller.sadie.sprite.scale = Vector2(0.25,0.25)
 	cutscene.play("Cutscenes/Jump")
 	await get_tree().create_timer(2.2).timeout
