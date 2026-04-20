@@ -16,7 +16,7 @@ var memories_collected = {
 		14 : false
 }
 
-var extrasUnlocked = false
+var extras_unlocked = false
 var splashscreen = false
 
 func set_memory_collected(id : int):

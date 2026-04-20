@@ -30,7 +30,7 @@ func _ready() -> void:
 	
 	
 func _enter_tree() -> void:
-	if Global.extrasUnlocked:
+	if Global.extras_unlocked:
 		$Control/Extras.visible = true
 
 func memory_row_invisible():
