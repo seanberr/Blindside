@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dmsfoy3tlhdat" path="res://Assets/Main Menu/Foreground_Menu_Gradient_3.png" id="9_4qbh4"]
 [ext_resource type="Texture2D" uid="uid://drvoda7k055lg" path="res://Assets/Main Menu/Foreground_Menu_Gradient_2.png" id="9_nbh3q"]
 [ext_resource type="Texture2D" uid="uid://cxiwny7q6fnyj" path="res://Assets/Menu/Midnight_Studios_Logo.png" id="14_jqrnd"]
+[ext_resource type="Script" uid="uid://b0uqw0j7yihhn" path="res://Scenes/Menu/camera_2d.gd" id="15_2sy2r"]
 
 [sub_resource type="Gradient" id="Gradient_w1xia"]
 offsets = PackedFloat32Array(0, 0.05639098, 0.65037596)
@@ -448,6 +449,10 @@ texture = ExtResource("14_jqrnd")
 
 [node name="Memory Layer" type="CanvasLayer" parent="." unique_id=1535597584]
 layer = 999
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=536588466]
+position = Vector2(960, 540)
+script = ExtResource("15_2sy2r")
 
 [connection signal="toggled" from="CenterContainer/Settings Menu/Fullscreen" to="." method="_on_fullscreen_toggled"]
 [connection signal="value_changed" from="CenterContainer/Settings Menu/Main Volume" to="." method="_on_main_volume_value_changed"]

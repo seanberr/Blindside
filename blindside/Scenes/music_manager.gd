@@ -5,7 +5,10 @@ signal music_started
 signal music_ended
 
 var music_dict : Dictionary = {
-	"Overworld" : preload("res://Audio/Music/blindside_overworld.mp3")
+	"Overworld" : preload("res://Audio/Music/blindside_overworld.mp3"),
+	"TitleScreen" : preload("uid://8fat1632gcei"),
+	"Quiet" : preload("uid://cu2o0tq3hamn6"),
+	"Credits" : preload("uid://s74ewt3cybu2")
 }
 
 func transition_to_track(name: String):

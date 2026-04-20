@@ -2,7 +2,7 @@ extends RigidBody2D
 class_name BaseBoulder
 
 var player_in_hole = false
-var resetScene = preload("uid://rytqp8xg8cab")
+var reset_scene = preload("uid://rytqp8xg8cab")
 
 func reset():
 	var players = get_tree().get_nodes_in_group("Player")
@@ -10,9 +10,9 @@ func reset():
 	for player in players:
 		player.in_control = false
 
-	TransitionHandler.transition_to_scene(resetScene, [Vector2(-1500, 400), Vector2(-1500, 400)])
+	TransitionHandler.transition_to_scene(reset_scene, [Vector2(-1500, 400), Vector2(-1500, 400)])
 	
-func getPlayer(push : bool, player : String):
+func get_player(push : bool, player : String):
 	var players = get_tree().get_nodes_in_group("Player")
 	
 	for character in players:
@@ -36,13 +36,13 @@ func in_place():
 
 
 func make_unpushable(player: String):
-	getPlayer(false, player)
+	get_player(false, player)
 	player_in_hole = true
 	#sadie.able_to_push = false
 
 
 func make_pushable(player: String):
-	getPlayer(true, player)
+	get_player(true, player)
 	#sadie.able_to_push = true
 	player_in_hole = false
 	
