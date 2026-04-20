@@ -7,7 +7,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_i0gme"]
 font = ExtResource("1_1bnu5")
-font_size = 64
+font_size = 56
 shadow_size = 15
 shadow_color = Color(0.09983812, 0.1318598, 0.3480061, 1)
 shadow_offset = Vector2(2, 2)

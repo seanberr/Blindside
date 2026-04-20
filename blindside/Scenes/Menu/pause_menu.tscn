@@ -67,17 +67,20 @@ grow_horizontal = 2
 [node name="Unpause" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1041053658]
 layout_mode = 2
 theme_override_font_sizes/font_size = 75
-text = "unpause"
+text = "CONTINUE"
+flat = true
 
 [node name="MainMenu" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=997847835]
 layout_mode = 2
 theme_override_font_sizes/font_size = 75
-text = "main menu"
+text = "MAIN MENU"
+flat = true
 
 [node name="Quit" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1225790481]
 layout_mode = 2
 theme_override_font_sizes/font_size = 75
-text = "quit"
+text = "QUIT"
+flat = true
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Unpause" to="." method="_on_unpause_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]
