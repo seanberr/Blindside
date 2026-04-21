@@ -45,12 +45,12 @@ func _physics_process(delta: float) -> void:
 			jump_comp.apply_jump_impulse()
 					
 	
-	## Enter the pushing state when E is pressed
+	# Enter the pushing state when E is pressed
 	if Input.is_action_just_pressed("Player1_Interact"):
 		if able_to_push:
 			state_machine.change_state("Pushing State")
 
-	## Exit the pushing state when E is released
+	# Exit the pushing state when E is released
 	if Input.is_action_just_released("Player1_Interact"):
 		state_machine.change_state("Idle State")
 		

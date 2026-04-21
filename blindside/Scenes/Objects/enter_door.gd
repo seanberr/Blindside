@@ -11,6 +11,10 @@ func _process(delta: float) -> void:
 	pass
 	
 func _on_body_entered(body: Node2D) -> void:
+	
+	# Gets all player
 	var players = get_tree().get_nodes_in_group("Player")
+	
+	# Give each player the ability to push boulders
 	for player in players:
 		player.able_to_push = true	

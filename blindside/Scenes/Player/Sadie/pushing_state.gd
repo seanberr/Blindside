@@ -4,12 +4,12 @@ extends State
 @export var layer_to_push : int
 
 func enter():
-	## Allows the player to push objects on the collision mask 7
+	# Allows the player to push objects on the collision mask 7
 	player.set_collision_mask_value(layer_to_push, true)
 	
 			
 func exit():
-	## Stops the player from pushing objects on the collision mask 7
+	# Stops the player from pushing objects on the collision mask 7
 	player.set_collision_mask_value(layer_to_push, false)
 
 func update(delta: float):
@@ -18,7 +18,7 @@ func update(delta: float):
 	
 func physics_update(delta: float):
 	
-	#handle velocity
+	# Handle velocity
 	var direction : int = player.direction_comp.update_direction()
 	if !player.in_control:
 		direction = 0
@@ -30,7 +30,7 @@ func physics_update(delta: float):
 	
 	player.move_and_slide()
 	
-	## Apply a force to relevant objects
+	# Apply a force to relevant objects
 	for i in player.get_slide_collision_count():
 		var c = player.get_slide_collision(i)
 		if c.get_collider() is RigidBody2D:

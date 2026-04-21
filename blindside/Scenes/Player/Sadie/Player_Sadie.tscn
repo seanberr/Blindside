@@ -34,7 +34,6 @@
 [ext_resource type="Texture2D" uid="uid://bsw18drfjxcj7" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20009.png" id="20_xpwq8"]
 [ext_resource type="Texture2D" uid="uid://cc2uu6qxaagci" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20010.png" id="21_dpmcx"]
 [ext_resource type="PackedScene" uid="uid://ccpr8qj4o416v" path="res://Scenes/Menu/pause_menu.tscn" id="22_2nd5c"]
-[ext_resource type="Script" uid="uid://c2ictn21iwl6w" path="res://Scenes/Player/Sadie/debug_label.gd" id="22_pnvk2"]
 [ext_resource type="Texture2D" uid="uid://dc5ay1maqav6g" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20011.png" id="22_ym4cj"]
 [ext_resource type="Texture2D" uid="uid://cantkm6onww4" path="res://Assets/Player/Sadie Idle/Idle Sadie backup 20012.png" id="23_fihl5"]
 [ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Memories/Memory Assets/Light/new_gradient_texture_2d.tres" id="23_ualsr"]
@@ -822,14 +821,6 @@ drag_vertical_offset = 0.2
 
 [node name="PauseMenu" parent="MainCamera" unique_id=557337590 instance=ExtResource("22_2nd5c")]
 visible = false
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=565877108]
-layer = 1000
-
-[node name="Debug Label" type="Label" parent="CanvasLayer" unique_id=40425055]
-offset_right = 40.0
-offset_bottom = 23.0
-script = ExtResource("22_pnvk2")
 
 [node name="CharacterLight" type="PointLight2D" parent="." unique_id=1349586705]
 enabled = false
