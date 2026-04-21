@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b66ihf8u48hee" path="res://Scenes/Menu/pause_menu.gd" id="1_i0al5"]
 [ext_resource type="Texture2D" uid="uid://cecabi5ease76" path="res://Assets/Menu/PausedFiller.png" id="2_6pfc5"]
+[ext_resource type="Theme" uid="uid://byka4n8bsg171" path="res://Assets/Themes/theme.tres" id="3_jnmi5"]
 
 [node name="PauseMenu" type="Control" unique_id=557337590]
 process_mode = 3
@@ -63,21 +64,22 @@ offset_top = 540.0
 offset_right = 160.5
 offset_bottom = 651.0
 grow_horizontal = 2
+theme = ExtResource("3_jnmi5")
 
 [node name="Unpause" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1041053658]
 layout_mode = 2
 theme_override_font_sizes/font_size = 75
-text = "unpause"
+text = "RESUME"
 
 [node name="MainMenu" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=997847835]
 layout_mode = 2
 theme_override_font_sizes/font_size = 75
-text = "main menu"
+text = "MAIN MENU"
 
 [node name="Quit" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1225790481]
 layout_mode = 2
 theme_override_font_sizes/font_size = 75
-text = "quit"
+text = "QUIT"
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Unpause" to="." method="_on_unpause_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]
