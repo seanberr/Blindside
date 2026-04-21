@@ -15,9 +15,115 @@
 [ext_resource type="Script" uid="uid://b5p0op1da1b75" path="res://Scenes/Levels/ending_cutscene.gd" id="13_rc17o"]
 [ext_resource type="PackedScene" uid="uid://t8m7skbs0j0n" path="res://Scenes/Player/player_icon.tscn" id="14_n8enb"]
 [ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player/Player Icon/Sadie_Player_Icon.png" id="15_wcev3"]
-[ext_resource type="Texture2D" uid="uid://b16adlkaahg0h" path="res://Assets/Cerberus Side Profile Placeholder/Cerberus_side_profile_1920x1080.png" id="16_n8enb"]
+[ext_resource type="Texture2D" uid="uid://ba30gxt5jw2f8" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0001.png" id="17_06htq"]
+[ext_resource type="Texture2D" uid="uid://bxxaxvcj83opy" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0002.png" id="18_nekm5"]
 [ext_resource type="FontFile" uid="uid://kxh4xiv4r82w" path="res://Assets/Fonts/CormorantInfant-Medium.ttf" id="18_vxi8b"]
 [ext_resource type="Texture2D" uid="uid://c8ofm6y5tlxvj" path="res://Assets/Doors/Stone_door_open_right_side_1930x1886.png" id="18_y6grg"]
+[ext_resource type="Texture2D" uid="uid://g0xc2htvvvbu" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0003.png" id="19_05u2k"]
+[ext_resource type="Texture2D" uid="uid://boaru65t0w3m3" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0004.png" id="20_yq5o0"]
+[ext_resource type="Texture2D" uid="uid://b41l3856ahdwt" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0005.png" id="21_3kpyv"]
+[ext_resource type="Texture2D" uid="uid://6oen7578de7s" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0006.png" id="22_s1l7q"]
+[ext_resource type="Texture2D" uid="uid://bdl1502v22jgc" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0007.png" id="23_bnrx4"]
+[ext_resource type="Texture2D" uid="uid://soy2dqewyycy" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0008.png" id="24_5c735"]
+[ext_resource type="Texture2D" uid="uid://bjai6owt5eur5" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0009.png" id="25_0o822"]
+[ext_resource type="Texture2D" uid="uid://bc603ec8tt4rs" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0010.png" id="26_pm1l7"]
+[ext_resource type="Texture2D" uid="uid://bqvlr7cfowpgq" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0011.png" id="27_1wn8v"]
+[ext_resource type="Texture2D" uid="uid://dxspwl5cnok5r" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0012.png" id="28_b8yvd"]
+[ext_resource type="Texture2D" uid="uid://bfbpx5h8hn15h" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0013.png" id="29_shlsm"]
+[ext_resource type="Texture2D" uid="uid://ruao0pp1i0f1" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0014.png" id="30_8ksrb"]
+[ext_resource type="Texture2D" uid="uid://bocpjlocl5nf4" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0015.png" id="31_gylus"]
+[ext_resource type="Texture2D" uid="uid://bqf35050nd3c0" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0016.png" id="32_0fru2"]
+[ext_resource type="Texture2D" uid="uid://cp1ewoulv1wqe" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0017.png" id="33_a0fhl"]
+[ext_resource type="Texture2D" uid="uid://bfw5xu8qnyvfq" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0018.png" id="34_n5gpi"]
+[ext_resource type="Texture2D" uid="uid://cwes1p5ehidn8" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0019.png" id="35_jokvi"]
+[ext_resource type="Texture2D" uid="uid://dgb2g4btgb4ky" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0020.png" id="36_fa1xp"]
+[ext_resource type="Texture2D" uid="uid://cyv60n1qf6kdj" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0021.png" id="37_skt0t"]
+[ext_resource type="Texture2D" uid="uid://ed0sjxir0man" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0022.png" id="38_wxamb"]
+[ext_resource type="Texture2D" uid="uid://2mox2d0ei6xn" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0023.png" id="39_00qy8"]
+[ext_resource type="Texture2D" uid="uid://b7jurgas2jh1t" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0024.png" id="40_vdu4l"]
+[ext_resource type="Texture2D" uid="uid://bjf4so5554l2f" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0025.png" id="41_1umf6"]
+[ext_resource type="Texture2D" uid="uid://dvfsoqbgx71nm" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0026.png" id="42_yalmx"]
+[ext_resource type="Texture2D" uid="uid://y2qdyk3n8mgt" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0027.png" id="43_u4p7l"]
+[ext_resource type="Texture2D" uid="uid://8jxsukei20bb" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0028.png" id="44_lhtur"]
+[ext_resource type="Texture2D" uid="uid://v54w06ds4wcb" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0029.png" id="45_nvp7c"]
+[ext_resource type="Texture2D" uid="uid://dyy4ow5n7n3qj" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0030.png" id="46_abmhf"]
+[ext_resource type="Texture2D" uid="uid://dwf5fxiavbru1" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0031.png" id="47_aj74j"]
+[ext_resource type="Texture2D" uid="uid://bt113skdi2m5n" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0032.png" id="48_tmghw"]
+[ext_resource type="Texture2D" uid="uid://cey668bn8h4cq" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0033.png" id="49_cet0r"]
+[ext_resource type="Texture2D" uid="uid://bcqylrh8mluhe" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0034.png" id="50_h7t2v"]
+[ext_resource type="Texture2D" uid="uid://bmwom2tnsoxeo" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0035.png" id="51_gpl1x"]
+[ext_resource type="Texture2D" uid="uid://euukvem0g1h4" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0036.png" id="52_1kphb"]
+[ext_resource type="Texture2D" uid="uid://r8jpodmk3uvf" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0037.png" id="53_5hh01"]
+[ext_resource type="Texture2D" uid="uid://cqmrixkrumk6b" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0038.png" id="54_i2a6f"]
+[ext_resource type="Texture2D" uid="uid://pojs0gwe5y6m" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0039.png" id="55_nim6v"]
+[ext_resource type="Texture2D" uid="uid://drb88t30gu8qb" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0040.png" id="56_7kccy"]
+[ext_resource type="Texture2D" uid="uid://c3klt5hdnspxs" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0041.png" id="57_7twd5"]
+[ext_resource type="Texture2D" uid="uid://bfasaj3i0cld8" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0042.png" id="58_13jsx"]
+[ext_resource type="Texture2D" uid="uid://c0puh1l3esc33" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0043.png" id="59_6s5m2"]
+[ext_resource type="Texture2D" uid="uid://uvktsw8h6te1" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0044.png" id="60_7ehfx"]
+[ext_resource type="Texture2D" uid="uid://bjhgr7h0v5yv1" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0045.png" id="61_kgrvw"]
+[ext_resource type="Texture2D" uid="uid://da14jvrv0rio0" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0046.png" id="62_mcpns"]
+[ext_resource type="Texture2D" uid="uid://bibu7b4613ej7" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0047.png" id="63_1mv0y"]
+[ext_resource type="Texture2D" uid="uid://b2ni70dmn60dd" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0048.png" id="64_0od8l"]
+[ext_resource type="Texture2D" uid="uid://dlt22fbng7125" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0049.png" id="65_ma13s"]
+[ext_resource type="Texture2D" uid="uid://blsuuc1abxr7s" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0050.png" id="66_lk3hu"]
+[ext_resource type="Texture2D" uid="uid://0niessrnhmg2" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0051.png" id="67_ahtyk"]
+[ext_resource type="Texture2D" uid="uid://d4hnau8y8yqit" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0052.png" id="68_o88an"]
+[ext_resource type="Texture2D" uid="uid://cdwd1qbstfe4e" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0053.png" id="69_1cx24"]
+[ext_resource type="Texture2D" uid="uid://cpkve3r52dewb" path="res://Assets/Cerberus Side Profile Animation/Cerberus_0054.png" id="70_36cow"]
+[ext_resource type="Script" uid="uid://cnhjymte6bin2" path="res://Scenes/Levels/cerberus_sprite.gd" id="71_i34vk"]
+[ext_resource type="Texture2D" uid="uid://cbxj651ls8k3q" path="res://Assets/Blood River Animation/Blood_River_0001.png" id="73_1cx24"]
+[ext_resource type="Texture2D" uid="uid://c3y7a5rt8y276" path="res://Assets/Blood River Animation/Blood_River_0002.png" id="74_36cow"]
+[ext_resource type="Texture2D" uid="uid://rt2wircplby1" path="res://Assets/Blood River Animation/Blood_River_0003.png" id="75_i34vk"]
+[ext_resource type="Texture2D" uid="uid://bsge6uo1lulnp" path="res://Assets/Blood River Animation/Blood_River_0004.png" id="76_ujjj5"]
+[ext_resource type="Texture2D" uid="uid://bdwp8b6mjm50k" path="res://Assets/Blood River Animation/Blood_River_0005.png" id="77_w5d4o"]
+[ext_resource type="Texture2D" uid="uid://1cldsmpdkuyr" path="res://Assets/Blood River Animation/Blood_River_0006.png" id="78_3k6hu"]
+[ext_resource type="Texture2D" uid="uid://bvmvoy2wh61dl" path="res://Assets/Blood River Animation/Blood_River_0007.png" id="79_cck12"]
+[ext_resource type="Texture2D" uid="uid://c4iwnbiy4y18l" path="res://Assets/Blood River Animation/Blood_River_0008.png" id="80_xbknc"]
+[ext_resource type="Texture2D" uid="uid://dpppuqjlgaf0h" path="res://Assets/Blood River Animation/Blood_River_0009.png" id="81_wslp4"]
+[ext_resource type="Texture2D" uid="uid://be4uo5s7be24b" path="res://Assets/Blood River Animation/Blood_River_0010.png" id="82_ndkb0"]
+[ext_resource type="Texture2D" uid="uid://dtdrcym61kdvk" path="res://Assets/Blood River Animation/Blood_River_0011.png" id="83_4f38v"]
+[ext_resource type="Texture2D" uid="uid://3wacnef1a0cn" path="res://Assets/Blood River Animation/Blood_River_0012.png" id="84_siaxd"]
+[ext_resource type="Texture2D" uid="uid://cpvss51l7e3kh" path="res://Assets/Blood River Animation/Blood_River_0013.png" id="85_bpdg1"]
+[ext_resource type="Texture2D" uid="uid://c5htsxgd2gqps" path="res://Assets/Blood River Animation/Blood_River_0014.png" id="86_uuvwx"]
+[ext_resource type="Texture2D" uid="uid://vmfndrqlrf2k" path="res://Assets/Blood River Animation/Blood_River_0015.png" id="87_v24ow"]
+[ext_resource type="Texture2D" uid="uid://clpn823soktaa" path="res://Assets/Blood River Animation/Blood_River_0016.png" id="88_v8brk"]
+[ext_resource type="Texture2D" uid="uid://csr5qg0i22k65" path="res://Assets/Blood River Animation/Blood_River_0017.png" id="89_r7xch"]
+[ext_resource type="Texture2D" uid="uid://d3ysbmpgdhq0e" path="res://Assets/Blood River Animation/Blood_River_0018.png" id="90_1s4wg"]
+[ext_resource type="Texture2D" uid="uid://cr5juogd44cf4" path="res://Assets/Blood River Animation/Blood_River_0019.png" id="91_gaqrl"]
+[ext_resource type="Texture2D" uid="uid://cb1iqltsmlmuw" path="res://Assets/Blood River Animation/Blood_River_0020.png" id="92_gb7r1"]
+[ext_resource type="Texture2D" uid="uid://cgb0jsa1ripex" path="res://Assets/Blood River Animation/Blood_River_0021.png" id="93_vv8ne"]
+[ext_resource type="Texture2D" uid="uid://dhhmbyjy5pd55" path="res://Assets/Blood River Animation/Blood_River_0022.png" id="94_yrxua"]
+[ext_resource type="Texture2D" uid="uid://3u4hx2h36uh" path="res://Assets/Blood River Animation/Blood_River_0023.png" id="95_5g42y"]
+[ext_resource type="Texture2D" uid="uid://ce2ndoe3dwx12" path="res://Assets/Blood River Animation/Blood_River_0024.png" id="96_qv2vv"]
+[ext_resource type="Texture2D" uid="uid://bflwq6fpjqh3h" path="res://Assets/Blood River Animation/Blood_River_0025.png" id="97_3o4m3"]
+[ext_resource type="Texture2D" uid="uid://fadojg4noh1f" path="res://Assets/Blood River Animation/Blood_River_0026.png" id="98_gdkdj"]
+[ext_resource type="Texture2D" uid="uid://b45mg4ia88fx" path="res://Assets/Blood River Animation/Blood_River_0027.png" id="99_mmymj"]
+[ext_resource type="Texture2D" uid="uid://b308o0d2xrc6b" path="res://Assets/Blood River Animation/Blood_River_0028.png" id="100_3wut2"]
+[ext_resource type="Texture2D" uid="uid://bxelnd8745glj" path="res://Assets/Blood River Animation/Blood_River_0029.png" id="101_25tk2"]
+[ext_resource type="Texture2D" uid="uid://dkp8wqof4uv6d" path="res://Assets/Blood River Animation/Blood_River_0030.png" id="102_fv0jn"]
+[ext_resource type="Texture2D" uid="uid://bjfwxix6adowq" path="res://Assets/Blood River Animation/Blood_River_0031.png" id="103_khaun"]
+[ext_resource type="Texture2D" uid="uid://y04uowuhsu0a" path="res://Assets/Blood River Animation/Blood_River_0032.png" id="104_r2exv"]
+[ext_resource type="Texture2D" uid="uid://blwcbrpmrlxfb" path="res://Assets/Blood River Animation/Blood_River_0033.png" id="105_x3ysc"]
+[ext_resource type="Texture2D" uid="uid://d2qc1j0b65w4d" path="res://Assets/Blood River Animation/Blood_River_0034.png" id="106_wjhx5"]
+[ext_resource type="Texture2D" uid="uid://r27bvha6xiad" path="res://Assets/Blood River Animation/Blood_River_0035.png" id="107_1lwdf"]
+[ext_resource type="Texture2D" uid="uid://ca378ejvtodaw" path="res://Assets/Blood River Animation/Blood_River_0036.png" id="108_fg36a"]
+[ext_resource type="Texture2D" uid="uid://c4m0cpqh0ubey" path="res://Assets/Blood River Animation/Blood_River_0037.png" id="109_w1v6w"]
+[ext_resource type="Texture2D" uid="uid://c3duqihmmmhwf" path="res://Assets/Blood River Animation/Blood_River_0038.png" id="110_xtclf"]
+[ext_resource type="Texture2D" uid="uid://cwo32p826v1bx" path="res://Assets/Blood River Animation/Blood_River_0039.png" id="111_kx00l"]
+[ext_resource type="Texture2D" uid="uid://fq55ilwartme" path="res://Assets/Blood River Animation/Blood_River_0040.png" id="112_6jk80"]
+[ext_resource type="Texture2D" uid="uid://c7tfw7rgvlktb" path="res://Assets/Blood River Animation/Blood_River_0041.png" id="113_ddgt3"]
+[ext_resource type="Texture2D" uid="uid://cxoq62eey6x6n" path="res://Assets/Blood River Animation/Blood_River_0042.png" id="114_q1twi"]
+[ext_resource type="Texture2D" uid="uid://b8fv0cnkrp7fx" path="res://Assets/Blood River Animation/Blood_River_0043.png" id="115_bf6ac"]
+[ext_resource type="Texture2D" uid="uid://daqrwm406ej76" path="res://Assets/Blood River Animation/Blood_River_0044.png" id="116_6hsue"]
+[ext_resource type="Texture2D" uid="uid://wy1pih7wj65u" path="res://Assets/Blood River Animation/Blood_River_0045.png" id="117_boa8q"]
+[ext_resource type="Texture2D" uid="uid://bnlicmtktafib" path="res://Assets/Blood River Animation/Blood_River_0046.png" id="118_vncfs"]
+[ext_resource type="Texture2D" uid="uid://dr0lo4s7aojor" path="res://Assets/Blood River Animation/Blood_River_0047.png" id="119_xdreq"]
+[ext_resource type="Texture2D" uid="uid://c1a6l8jsp3r0r" path="res://Assets/Blood River Animation/Blood_River_0048.png" id="120_xd1st"]
+[ext_resource type="Texture2D" uid="uid://bhy77r0oi2erg" path="res://Assets/Blood River Animation/Blood_River_0049.png" id="121_afylh"]
+[ext_resource type="Texture2D" uid="uid://1eacmn3hv71d" path="res://Assets/Blood River Animation/Blood_River_0050.png" id="122_gxmni"]
+[ext_resource type="Texture2D" uid="uid://ivamxganhiru" path="res://Assets/Blood River Animation/Blood_River_0051.png" id="123_yiqwm"]
+[ext_resource type="Texture2D" uid="uid://2bd4lashthjd" path="res://Assets/Blood River Animation/Blood_River_0052.png" id="124_7q5xm"]
 
 [sub_resource type="Gradient" id="Gradient_7iset"]
 colors = PackedColorArray(0.34816602, 0.03641322, 0.048169516, 1, 0.5294118, 0.16470589, 0.19607843, 1)
@@ -171,32 +277,216 @@ size = Vector2(709, 64.5)
 font = ExtResource("18_vxi8b")
 font_size = 32
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ujjj5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_06htq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_nekm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_05u2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_yq5o0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_3kpyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_s1l7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_bnrx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_5c735")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_0o822")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_pm1l7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_1wn8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_b8yvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_shlsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_8ksrb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_gylus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_0fru2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_a0fhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_n5gpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_jokvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_fa1xp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_skt0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_wxamb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_00qy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_vdu4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_1umf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_yalmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_u4p7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_lhtur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_nvp7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_abmhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_aj74j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_tmghw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_cet0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_h7t2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_gpl1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_1kphb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_5hh01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_i2a6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_nim6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_7kccy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_7twd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_13jsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_6s5m2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_7ehfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_kgrvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_mcpns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_1mv0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_0od8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ma13s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_lk3hu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_ahtyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_o88an")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_1cx24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_36cow")
+}],
+"loop": false,
+"name": &"default",
+"speed": 30.0
+}]
+
 [sub_resource type="Animation" id="Animation_y6grg"]
 resource_name = "Appear"
-length = 1.5
+length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:offset")
+tracks/0/path = NodePath("CerberusSprite:offset")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.4666667),
 "transitions": PackedFloat32Array(-2, 1),
 "update": 0,
-"values": [Vector2(400, 0), Vector2(700, 0)]
+"values": [Vector2(600, 0), Vector2(850, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:modulate:a")
+tracks/1/path = NodePath("CerberusSprite:modulate:a")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.16666669),
 "transitions": PackedFloat32Array(2, 1),
 "update": 0,
 "values": [0.0, 1.0]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CerberusSprite")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_anim"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_pbioe"]
@@ -204,7 +494,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:offset")
+tracks/0/path = NodePath("CerberusSprite:offset")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -216,7 +506,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:modulate:a")
+tracks/1/path = NodePath("CerberusSprite:modulate:a")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -228,7 +518,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:rotation")
+tracks/2/path = NodePath("CerberusSprite:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -244,7 +534,7 @@ length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/path = NodePath("CerberusSprite:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -260,6 +550,170 @@ _data = {
 &"RESET": SubResource("Animation_pbioe"),
 &"Roar": SubResource("Animation_ao8h3")
 }
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ribeu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("74_36cow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_i34vk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_ujjj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_1cx24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_w5d4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_3k6hu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_cck12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_xbknc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_wslp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_ndkb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_4f38v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_siaxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_bpdg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_uuvwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_v24ow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_v8brk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_r7xch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_1s4wg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_gaqrl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_gb7r1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_vv8ne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_yrxua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_5g42y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_qv2vv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_3o4m3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_gdkdj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_mmymj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_3wut2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_25tk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_fv0jn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_khaun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_r2exv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_x3ysc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_wjhx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_1lwdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_fg36a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_w1v6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_xtclf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_kx00l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_6jk80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_ddgt3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_q1twi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_bf6ac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_6hsue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_boa8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_vncfs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_xdreq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_xd1st")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_afylh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_gxmni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_yiqwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_7q5xm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
 
 [node name="Overworld Three" type="Node2D" unique_id=1631005632 groups=["Level"]]
 script = ExtResource("1_eve7n")
@@ -434,9 +888,13 @@ label_settings = SubResource("LabelSettings_y6grg")
 position = Vector2(4730, 900)
 scale = Vector2(1.5, 1.5)
 
-[node name="Sprite2D" type="Sprite2D" parent="CerberusBoat" unique_id=1089278603]
+[node name="CerberusSprite" type="AnimatedSprite2D" parent="CerberusBoat" unique_id=911627598]
 modulate = Color(1, 1, 1, 0)
-texture = ExtResource("16_n8enb")
+z_index = 10
+sprite_frames = SubResource("SpriteFrames_ujjj5")
+frame = 53
+frame_progress = 1.0
+script = ExtResource("71_i34vk")
 
 [node name="CerberusAnimator" type="AnimationPlayer" parent="CerberusBoat" unique_id=307862458]
 libraries/ = SubResource("AnimationLibrary_yjk31")
@@ -445,3 +903,11 @@ libraries/ = SubResource("AnimationLibrary_yjk31")
 z_index = 2
 position = Vector2(7676, 825)
 texture = ExtResource("18_y6grg")
+
+[node name="BloodRiver" type="AnimatedSprite2D" parent="." unique_id=173975022]
+z_index = 1
+position = Vector2(3683.9998, -81.00012)
+scale = Vector2(2.513889, 2.513889)
+sprite_frames = SubResource("SpriteFrames_ribeu")
+autoplay = "default"
+frame_progress = 0.54474

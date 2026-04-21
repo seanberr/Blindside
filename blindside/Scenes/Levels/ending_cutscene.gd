@@ -72,6 +72,9 @@ func play_cutscene():
 	if !players: return
 	for player in players:
 		player.in_control = false
+		player.sprite.play("Idle")
+		if player.id == 0:
+			player.sprite.scale = Vector2(0.25,0.25)
 		player.velocity = Vector2.ZERO
 	await get_tree().create_timer(1).timeout
 	sadie_icon.disable()
@@ -81,10 +84,8 @@ func play_cutscene():
 	is_cam_zoomed = true
 	is_screen_blurred = false
 	is_blindness_muted = true
-	await get_tree().create_timer(4).timeout
+	await get_tree().create_timer(10).timeout
 	cerberus.get_node("CerberusAnimator").play("Appear")
-	await get_tree().create_timer(3).timeout
-	cerberus.get_node("CerberusAnimator").play("Roar")
-	await get_tree().create_timer(6).timeout
+	await get_tree().create_timer(2.5).timeout
 	TransitionHandler.transition_to_scene(credits_scene, [Vector2.ZERO, Vector2.ZERO])
 	Global.extras_unlocked = true
