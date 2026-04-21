@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://b6303iltem4bp"]
 
-[ext_resource type="Script" uid="uid://cql8as07glsnb" path="res://Scenes/Objects/tooltip.gd" id="1_st7xw"]
-
 [sub_resource type="LabelSettings" id="LabelSettings_st7xw"]
 font_size = 32
 
@@ -59,13 +57,9 @@ _data = {
 &"RESET": SubResource("Animation_5pv2q")
 }
 
-[node name="Tooltip" type="Node2D" unique_id=11282240 node_paths=PackedStringArray("label", "animator", "timer")]
+[node name="Tooltip" type="Node2D" unique_id=11282240]
 self_modulate = Color(1, 1, 1, 0)
 z_index = 999
-script = ExtResource("1_st7xw")
-label = NodePath("Label")
-animator = NodePath("AnimationPlayer")
-timer = NodePath("Timer")
 
 [node name="Label" type="Label" parent="." unique_id=1309537900]
 offset_right = 40.0

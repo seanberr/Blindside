@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://ck8uic3tgkep1"]
 
 [ext_resource type="Texture2D" uid="uid://bl2ygo0v5cqjr" path="res://Assets/Puzzle Assets/Puzzle Rocks/Puzzle_Rock_728x380_Shape_2.png" id="1_06g4f"]
-[ext_resource type="Script" uid="uid://c5in5l60elee4" path="res://Scenes/Objects/boulder.gd" id="1_81che"]
 [ext_resource type="Texture2D" uid="uid://d4ikeave5ahuw" path="res://Assets/Memories/Memory Assets/Light/new_gradient_texture_2d.tres" id="2_ahc4t"]
 [ext_resource type="PackedScene" uid="uid://t8m7skbs0j0n" path="res://Scenes/Player/player_icon.tscn" id="4_083a5"]
 [ext_resource type="Texture2D" uid="uid://08wfg1bag5bu" path="res://Assets/Player/Player Icon/Sadie_Player_Icon.png" id="5_1jrv7"]
@@ -17,7 +16,6 @@ radius = 101.44183
 collision_layer = 192
 collision_mask = 130
 freeze_mode = 1
-script = ExtResource("1_81che")
 
 [node name="Rock 1" type="Sprite2D" parent="." unique_id=1222469127]
 position = Vector2(-63, -40.000004)
