@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://c3jwa7r1tb61w" path="res://Scenes/Levels/overworld_three.tscn" id="15_7iset"]
 [ext_resource type="Script" uid="uid://dj1b1r6btnmv7" path="res://Scenes/Levels/cerberus.gd" id="16_fgoe1"]
 [ext_resource type="Script" uid="uid://d4k7mnpr1ydkk" path="res://Scenes/Levels/trigger_area.gd" id="17_eg6a0"]
-[ext_resource type="Texture2D" uid="uid://cxv7j3rqavng0" path="res://Assets/Cerberus/Cerberus_no_extra_silhouette_1930x1886.png" id="18_0fosp"]
+[ext_resource type="Texture2D" uid="uid://w8f2idbtvuyj" path="res://Assets/Cerberus/Cerberus_Skull_no_neck_977x1199.png" id="18_fgoe1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bqv5r"]
 size = Vector2(1516, 2017.5)
@@ -636,13 +636,14 @@ collision_mask = 7
 script = ExtResource("17_eg6a0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cerberus/TriggerArea" unique_id=1249070218]
-position = Vector2(1322, -1374)
+position = Vector2(1098, -1330)
 shape = SubResource("CircleShape2D_p73ln")
 
 [node name="Sprite2D" type="Sprite2D" parent="Cerberus" unique_id=506929854]
-position = Vector2(1328, -1381)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("18_0fosp")
+z_index = -1
+position = Vector2(987, -1201)
+scale = Vector2(0.7273936, 0.80277663)
+texture = ExtResource("18_fgoe1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Cerberus" unique_id=573685497]
 libraries/ = SubResource("AnimationLibrary_ohy35")

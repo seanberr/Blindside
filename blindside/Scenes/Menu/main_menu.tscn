@@ -140,7 +140,7 @@ texture = SubResource("GradientTexture1D_nbh3q")
 layout_mode = 2
 theme_override_constants/h_separation = 13
 theme_override_font_sizes/font_size = 75
-text = "fullscreen"
+text = "Fullscreen?"
 
 [node name="Main Volume" type="HSlider" parent="CenterContainer/Settings Menu" unique_id=195465989]
 custom_minimum_size = Vector2(0, 80)
@@ -195,7 +195,7 @@ custom_minimum_size = Vector2(353, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("7_1di0l")
-text = "back"
+text = "BACK"
 
 [node name="Extras Menu" type="VBoxContainer" parent="CenterContainer" unique_id=1722465516]
 visible = false
@@ -207,21 +207,21 @@ custom_minimum_size = Vector2(353, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("7_1di0l")
-text = "memories"
+text = "MEMORIES"
 
 [node name="Concept Art" type="Button" parent="CenterContainer/Extras Menu" unique_id=2048115788]
 custom_minimum_size = Vector2(353, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("7_1di0l")
-text = "concept art"
+text = "CONCEPT ART"
 
 [node name="Back" type="Button" parent="CenterContainer/Extras Menu" unique_id=1027836151]
 custom_minimum_size = Vector2(353, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("7_1di0l")
-text = "back"
+text = "BACK"
 
 [node name="Memories Menu" type="VBoxContainer" parent="CenterContainer" unique_id=2143046397]
 visible = false
@@ -311,7 +311,7 @@ text = "14"
 custom_minimum_size = Vector2(353, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-text = "back"
+text = "BACK"
 
 [node name="Concept Art Menu" type="VBoxContainer" parent="CenterContainer" unique_id=1192138553]
 visible = false
@@ -322,7 +322,7 @@ custom_minimum_size = Vector2(353, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 75
-text = "back"
+text = "BACK"
 
 [node name="ExitBG" type="Control" parent="." unique_id=1702864540]
 visible = false
@@ -434,7 +434,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("7_1di0l")
 theme_override_font_sizes/font_size = 175
-text = "back"
+text = "BACK"
 
 [node name="Splashscreen" type="Sprite2D" parent="." unique_id=470735503]
 visible = false

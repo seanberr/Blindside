@@ -41,7 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://55dfksuyr4d2" path="res://Assets/Doors/Wooden_door_closed_960x1692.png" id="40_eac0b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eac0b"]
-size = Vector2(946.5, 2091)
+size = Vector2(946.5, 1137)
 
 [node name="Overworld One" type="Node2D" unique_id=1972606243]
 script = ExtResource("1_wpepl")
@@ -61,6 +61,7 @@ scale = Vector2(2.0878305, 2.1789265)
 texture = ExtResource("6_csdph")
 
 [node name="Blindless Modulate" parent="." unique_id=1509691114 instance=ExtResource("9_1tvsh")]
+visible = false
 color = Color(0.06800488, 0.07132318, 0.12444902, 1)
 
 [node name="Parallax2D - foreground" type="Parallax2D" parent="." unique_id=938469175]
@@ -278,7 +279,7 @@ scene_to_load = ExtResource("8_1tvsh")
 player_coords = Array[Vector2]([Vector2(400, -3600), Vector2(400, -3600)])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaRoomTrigger" unique_id=2014244829]
-position = Vector2(3313.75, 1605.5)
+position = Vector2(3313.75, 2082.5)
 shape = SubResource("RectangleShape2D_eac0b")
 
 [node name="WoodenDoorClosed960x1692" type="Sprite2D" parent="." unique_id=1667399594]
