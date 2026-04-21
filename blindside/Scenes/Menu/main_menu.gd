@@ -13,11 +13,20 @@ func _ready() -> void:
 		for x in range(10,0,-1):
 			var temp : float = x
 			temp = (temp / 10) - 0.015
-			print(temp)	
+			await get_tree().create_timer(0.05).timeout
+			$Splashscreen/Midnight.modulate.a = temp
+		
+		$Splashscreen/Midnight.visible = false
+		$Splashscreen/Blindside.visible = true
+		await get_tree().create_timer(1).timeout
+		for x in range(10,0,-1):
+			var temp : float = x
+			temp = (temp / 10) - 0.015
 			await get_tree().create_timer(0.05).timeout
 			$Splashscreen.modulate.a = temp
-		
+			
 		$Splashscreen.visible = false
+
 		Global.splashscreen = true
 	$"Control/Play".grab_focus()
 	$"CenterContainer/Settings Menu/Fullscreen".button_pressed = true if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN else false

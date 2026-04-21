@@ -447,6 +447,12 @@ position = Vector2(-1.6889572, -0.0046571195)
 scale = Vector2(0.12064092, 0.00084674003)
 texture = ExtResource("14_jqrnd")
 
+[node name="Blindside" type="Sprite2D" parent="Splashscreen" unique_id=1893931132]
+visible = false
+position = Vector2(-1.6889572, -0.0046571195)
+scale = Vector2(0.12064092, 0.00084674003)
+texture = ExtResource("2_7jtkx")
+
 [node name="Memory Layer" type="CanvasLayer" parent="." unique_id=1535597584]
 layer = 999
 
