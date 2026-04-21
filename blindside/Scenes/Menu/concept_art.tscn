@@ -63,6 +63,7 @@
 [ext_resource type="Texture2D" uid="uid://c7hws0p56qt5q" path="res://Assets/Concept Art/Enviroment/envConcept6.png" id="60_bybbl"]
 [ext_resource type="Texture2D" uid="uid://duoyla5mgibyl" path="res://Assets/Concept Art/Enviroment/envConcept7.png" id="61_0ngfl"]
 [ext_resource type="Texture2D" uid="uid://c2rrbrknhkvcy" path="res://Assets/Concept Art/Enviroment/envConcept37.png" id="62_ordcx"]
+[ext_resource type="Script" uid="uid://b0uqw0j7yihhn" path="res://Scenes/Menu/camera_2d.gd" id="64_shxbg"]
 
 [node name="Node2D" type="Node2D" unique_id=358560902]
 script = ExtResource("1_unpr2")
@@ -514,6 +515,10 @@ offset_right = 411.0
 offset_bottom = 1043.0
 theme = ExtResource("5_nncve")
 text = "BACK"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=370891670]
+position = Vector2(960, 540)
+script = ExtResource("64_shxbg")
 
 [connection signal="pressed" from="Arrows/HBoxContainer/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="Arrows/HBoxContainer/Right" to="." method="_on_right_pressed"]
