@@ -87,4 +87,4 @@ func play_cutscene():
 	cerberus.get_node("CerberusAnimator").play("Roar")
 	await get_tree().create_timer(6).timeout
 	TransitionHandler.transition_to_scene(credits_scene, [Vector2.ZERO, Vector2.ZERO])
-	Global.extrasUnlocked = true
+	Global.extras_unlocked = true

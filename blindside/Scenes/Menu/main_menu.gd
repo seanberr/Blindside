@@ -30,6 +30,7 @@ func _ready() -> void:
 	
 	
 func _enter_tree() -> void:
+	
 	if Global.extras_unlocked:
 		$Control/Extras.visible = true
 
