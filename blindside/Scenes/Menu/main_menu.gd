@@ -12,7 +12,7 @@ func _ready() -> void:
 	# Play the splashscreen animation if it is the first time on the main menu
 	if !Global.splashscreen:
 		$Splashscreen.visible = true
-		
+		$Control.visible = false
 		# Wait before making the splashscreen disappear
 		await get_tree().create_timer(2).timeout
 		
@@ -43,12 +43,13 @@ func _ready() -> void:
 			await get_tree().create_timer(0.05).timeout
 			
 			$Splashscreen.modulate.a = temp
-			
+		
+		$Control.visible = true
 		$Splashscreen.visible = false
 
 		# Set the splashscreen variable to be false so the game won't show the splashscreen again
 		Global.splashscreen = true
-	
+		
 	# Defaults the focus to be on the play button
 	$"Control/Play".grab_focus()
 	
