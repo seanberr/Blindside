@@ -104,9 +104,9 @@ centered = false
 visible = false
 clip_contents = true
 custom_minimum_size = Vector2(299, 200)
-offset_left = 616.0
+offset_left = 500.0
 offset_top = 223.0
-offset_right = 1285.0
+offset_right = 1422.0
 offset_bottom = 861.0
 color = Color(0, 0, 0, 0.6156863)
 
