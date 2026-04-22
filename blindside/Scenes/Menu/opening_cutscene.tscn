@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cljjlf7epio02" path="res://Scenes/Menu/opening_cutscene.gd" id="1_toxby"]
 [ext_resource type="PackedScene" uid="uid://cdlqgiadt8tu8" path="res://Scenes/Levels/puzzle_room_one.tscn" id="2_akkj4"]
 [ext_resource type="Script" uid="uid://bwsam4aftr22a" path="res://Scenes/Menu/intro_text.gd" id="3_akkj4"]
+[ext_resource type="Script" uid="uid://b0uqw0j7yihhn" path="res://Scenes/Menu/camera_2d.gd" id="5_4hov2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_i0gme"]
 font = ExtResource("1_1bnu5")
@@ -113,3 +114,7 @@ offset_right = 1671.0
 offset_bottom = 855.0
 text = "Press E to advance"
 label_settings = SubResource("LabelSettings_1bnu5")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1900321167]
+position = Vector2(960, 540)
+script = ExtResource("5_4hov2")
