@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://cstnbnb776u2j" path="res://Assets/Environment Assets/Tree Assets/Foreground Tree Leaves 1920 x 1080/Tree_Leaves_1920x1080_Shape_3_1_Blockout.png" id="7_mvvfc"]
 [ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="8_alkur"]
 [ext_resource type="Texture2D" uid="uid://dmdx17og8u4o" path="res://Assets/Environment Assets/Flowers/Flowers_49x49_Shape_6.png" id="8_y125q"]
-[ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/sketch_4.png" id="9_alkur"]
+[ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/placeholder_bg.png" id="9_alkur"]
 [ext_resource type="Texture2D" uid="uid://d1ue2pelsj0aq" path="res://Assets/Environment Assets/Flowers/Flowers_49x49_Shape_7.png" id="9_jdr1h"]
 [ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="11_c4d4o"]
 [ext_resource type="Texture2D" uid="uid://h16m87pcte0i" path="res://Assets/Environment Assets/Flowers/Flowers_967x105_Shape_1.png" id="11_tain3"]
@@ -128,7 +128,7 @@ tile_map_data = PackedByteArray("AAACABYAAwABAAAAAAABABYAAwABAAAAAAAAABYAAwABAAA
 [node name="Door2" parent="." unique_id=1600814949 instance=ExtResource("4_oecpd")]
 position = Vector2(1407, 907)
 scene_to_load = ExtResource("5_xh675")
-player_coords = Array[Vector2]([Vector2(-1411, 300), Vector2(-1411, 300)])
+player_coords = Array[Vector2]([Vector2(-1411, 450), Vector2(-1411, 450)])
 
 [node name="Blindless Modulate" parent="." unique_id=1509691114 instance=ExtResource("8_alkur")]
 color = Color(0.06800488, 0.07132318, 0.12444902, 1)

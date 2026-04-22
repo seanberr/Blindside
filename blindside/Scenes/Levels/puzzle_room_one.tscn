@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bui05tqig5ktw" path="res://Scenes/Test Rooms/Objects/testing_pressure_plate.tscn" id="5_1udun"]
 [ext_resource type="PackedScene" uid="uid://dl6lckb1ahnpm" path="res://Scenes/Test Rooms/Objects/testing_locked_door.tscn" id="6_1g2nm"]
 [ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="8_8cf2k"]
-[ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/sketch_4.png" id="9_vb710"]
+[ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/placeholder_bg.png" id="9_vb710"]
 [ext_resource type="Shader" uid="uid://bbx0aks44plfh" path="res://colourswap.gdshader" id="10_kttiu"]
 [ext_resource type="Texture2D" uid="uid://d2jygat7yay0j" path="res://Assets/Environment Assets/Tree Assets/Tree Leaves 3840 x 2160 for Background Parallax/Tree_Leaves_3840x2160_Shape_5_4_Background.png" id="10_qq2eo"]
 [ext_resource type="Texture2D" uid="uid://biqefscvrilyx" path="res://Assets/Environment Assets/Rock Assets/Rocks 364x190/Rock_364x190_Shape_2_1_BaseShadow.png" id="10_t04cc"]
@@ -38,7 +38,7 @@ diffuse_texture = ExtResource("16_usyps")
 
 [node name="Puzzle Room One" type="Node2D" unique_id=1429758268]
 script = ExtResource("1_vb710")
-spawn_positions = Array[Vector2]([Vector2(-540, 258), Vector2(-565, 258)])
+spawn_positions = Array[Vector2]([Vector2(-540, 300), Vector2(-565, 300)])
 track_name = "Overworld"
 
 [node name="Tilesets" parent="." unique_id=515895555 instance=ExtResource("4_glmga")]
@@ -61,9 +61,10 @@ position = Vector2(578, 82)
 pressure_plate_one = NodePath("../Pressure Plate")
 pressure_plate_two = NodePath("../Pressure Plate2")
 scene_to_load = ExtResource("4_6thti")
-player_coords = Array[Vector2]([Vector2(-1750, 10), Vector2(-1750, 10)])
+player_coords = Array[Vector2]([Vector2(-1750, 100), Vector2(-1750, 100)])
 
 [node name="Blindless Modulate" parent="." unique_id=1509691114 instance=ExtResource("8_8cf2k")]
+visible = false
 show_behind_parent = true
 light_mask = 0
 visibility_layer = 0
