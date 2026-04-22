@@ -118,6 +118,7 @@
 [ext_resource type="PackedScene" uid="uid://rqjisc3phlln" path="res://Scenes/Components/squish_manager.tscn" id="78_24tup"]
 [ext_resource type="Script" uid="uid://cs4etoru42oar" path="res://Scenes/Player/Sadie/prepare_to_jump_state.gd" id="107_2yv8j"]
 [ext_resource type="PackedScene" uid="uid://cnbywaf1vqeef" path="res://Scenes/Components/sfx_player.tscn" id="118_qa2q0"]
+[ext_resource type="Script" uid="uid://mpvg1o10jh8g" path="res://Scenes/Player/Sadie/tile_handler.gd" id="119_haujn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_car5t"]
 size = Vector2(110, 76)
@@ -500,6 +501,9 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_rivyw"]
 gradient = SubResource("Gradient_oly0s")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4wwb"]
+size = Vector2(40, 20)
+
 [node name="PlayerAlex" type="CharacterBody2D" unique_id=1511516036 node_paths=PackedStringArray("sprite", "light") groups=["Player"]]
 light_mask = 0
 z_index = 1
@@ -641,9 +645,17 @@ sprite = NodePath("../AnimatedSprite2D")
 x_scale_original = 0.3
 y_scale_original = 0.3
 
-[node name="SFXPlayer" parent="." unique_id=1514722886 node_paths=PackedStringArray("player") instance=ExtResource("118_qa2q0")]
-grass_jump_string = "Alex_Grass_Jump"
+[node name="SFXPlayer" parent="." unique_id=1514722886 node_paths=PackedStringArray("player", "tile_handler") instance=ExtResource("118_qa2q0")]
 player = NodePath("..")
+tile_handler = NodePath("../TileHandler")
+
+[node name="TileHandler" type="Node2D" parent="." unique_id=618912803]
+script = ExtResource("119_haujn")
+
+[node name="ShapeCast2D" type="ShapeCast2D" parent="TileHandler" unique_id=1463789382]
+position = Vector2(10, 37)
+shape = SubResource("RectangleShape2D_m4wwb")
+collision_mask = 2
 
 [connection signal="area_entered" from="AlexCircle" to="." method="_on_alex_circle_area_entered"]
 [connection signal="area_exited" from="AlexCircle" to="." method="_on_alex_circle_area_exited"]

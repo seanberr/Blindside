@@ -3,10 +3,18 @@ extends State
 @export var player : CharacterBody2D
 
 func enter():
-	pass
+	player.sprite.frame_changed.connect(handle_footstep)
 	
 func exit():
-	pass
+	player.sprite.frame_changed.disconnect(handle_footstep)
+	
+func handle_footstep():
+	if player.id == 0:
+		if player.sprite.frame == 0 or player.sprite.frame == 4:
+			player.footstep.emit()
+	else:
+		if player.sprite.frame == 0 or player.sprite.frame == 12:
+			player.footstep.emit()
 	
 func update(delta: float):
 	if player.in_control:

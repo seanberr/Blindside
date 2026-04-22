@@ -26,6 +26,8 @@ var is_jumping : bool
 var variable_jump_timer : SceneTreeTimer
 @export var variable_jump_window : float = 0.2
 
+signal footstep
+
 #jump buffer values
 var is_jump_queued : bool = false
 var jump_buffer_timer : SceneTreeTimer
@@ -62,6 +64,7 @@ func buffer_jump():
 func end_jump_buffer():
 	is_jump_queued = false
 	
+			
 func begin_variable_jump():
 	is_jumping = true
 	variable_jump_timer = get_tree().create_timer(variable_jump_window)

@@ -27,6 +27,7 @@ CameraTransition="*uid://dbml3441q5d0o"
 TooltipManager="*uid://woveedsiqeak"
 ExitHandler="*uid://chuwypsyhr4vu"
 AudioManager="*uid://blwjhpbd6ehmi"
+TilesetManager="*uid://dvmbyetcdxpvw"
 
 [display]
 

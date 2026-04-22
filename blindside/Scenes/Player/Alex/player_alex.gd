@@ -26,6 +26,7 @@ var is_jumping : bool
 var variable_jump_timer : SceneTreeTimer
 @export var variable_jump_window : float = 0.2
 
+signal footstep
 #jump buffer values
 var is_jump_queued : bool = false
 var jump_buffer_timer : SceneTreeTimer
@@ -36,7 +37,6 @@ func _ready() -> void:
 	jump_comp.jump.connect(begin_variable_jump)
 	
 func _physics_process(delta: float) -> void:
-	
 	if is_on_floor():
 		is_jumping = false
 		if is_jump_queued and in_control:

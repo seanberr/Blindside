@@ -5,10 +5,18 @@ var audio_streams : Array[AudioStreamPlayer] = []
 var sfx_dict : Dictionary = {
 	"Menu_Change" : preload("uid://bbffuofq1w08c"),
 	"Menu_Select" : preload("uid://bteultbhdn5f8"),
-	"Alex_Grass_Jump" : preload("uid://bfu7y7rprrmi1"),
-	"Sadie_Grass_Jump" : preload("uid://bbdmnowl7jsfy"),
-	"Alex_Grass_Walk" : preload("uid://13kdss06wojt"),
-	"Sadie_Grass_Walk" : preload("uid://ty6tv7thm0a"),
+	"Alex_Jump_Grass" : preload("uid://bfu7y7rprrmi1"),
+	"Alex_Jump_Rock" : preload("uid://dddknhr1gbah4"),
+	"Sadie_Jump_Grass" : preload("uid://bbdmnowl7jsfy"),
+	"Sadie_Jump_Rock" : preload("uid://gwpb0k3m2an3"),
+	"Alex_Walk_Grass" : preload("uid://13kdss06wojt"),
+	"Alex_Walk_Rock" : preload("uid://bspda2x7xy165"),
+	"Sadie_Walk_Grass" : preload("uid://ty6tv7thm0a"),
+	"Sadie_Walk_Rock" : preload("uid://gygtfhg3mx6m"),
+	"Rock_Moving" : preload("uid://cmjodo7j1dhd7"),
+	"Memory_1" : preload("uid://cwvup1xte0muq"),
+	"Memory_2" : preload("uid://bsg55ch3hw0cu"),
+	"Memory_Bad" : preload("uid://d3asp5k82w023")
 }
 
 # Called when the node enters the scene tree for the first time.
