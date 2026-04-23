@@ -1,11 +1,20 @@
 extends RigidBody2D
 class_name BaseBoulder
 
+var sound_playing : bool = false
+
 # Initialise the player to not be in an indentation 
 var player_in_hole = false
 # Loads the scene so resets are faster
 var reset_scene = preload("uid://rytqp8xg8cab")
 
+func _physics_process(delta: float) -> void:
+	if linear_velocity.length() > 3 and !sound_playing:
+		#AudioManager.sfx_manager.play_sound_randomizer(["Rock_Moving"] as Array[String], 0.0, 0.1, 7.0, 1.0)
+		sound_playing = true
+	elif linear_velocity.length() <= 3 and sound_playing:
+		sound_playing = false
+		#AudioManager.sfx_manager.end_specific_sound("Rock_Moving")
 func reset():
 	# Gets the player
 	var players = get_tree().get_nodes_in_group("Player")

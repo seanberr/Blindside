@@ -13,10 +13,14 @@ var sfx_dict : Dictionary = {
 	"Alex_Walk_Rock" : preload("uid://bspda2x7xy165"),
 	"Sadie_Walk_Grass" : preload("uid://ty6tv7thm0a"),
 	"Sadie_Walk_Rock" : preload("uid://gygtfhg3mx6m"),
-	"Rock_Moving" : preload("uid://cmjodo7j1dhd7"),
+	"Rock_Moving" : preload("uid://yo4gliru3ki"),
 	"Memory_1" : preload("uid://cwvup1xte0muq"),
 	"Memory_2" : preload("uid://bsg55ch3hw0cu"),
-	"Memory_Bad" : preload("uid://d3asp5k82w023")
+	"Memory_Bad" : preload("uid://d3asp5k82w023"),
+	"Cerberus_Screech" : preload("uid://dan4shksmbaor"),
+	"Cerberus_Splash" : preload("uid://pl8k1y6fcylo"),
+	"Waterfall" : preload("uid://db2qhi8xxqudm")
+	
 }
 
 # Called when the node enters the scene tree for the first time.
@@ -39,6 +43,15 @@ func play_sound(id: String, volume_db: float, pitch_scale: float): #internal fun
 			audio_stream.play()
 			return
 			
+func end_all_sounds():
+	for stream in audio_streams:
+		stream.stop()
+		
+func end_specific_sound(id: String):
+	for stream in audio_streams:
+		if stream.stream == sfx_dict[id]:
+			stream.stop()
+
 func play_sound_randomizer(possible_ids: Array[String], volume_variance: float, pitch_variance: float, volume_base : float, pitch_base : float): #play sound with some random variance
 	var id = possible_ids[randi_range(0,possible_ids.size() - 1)]
 	var volume_modifier = randf_range(volume_variance, -volume_variance)
