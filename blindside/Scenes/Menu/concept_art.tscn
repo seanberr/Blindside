@@ -501,12 +501,12 @@ text = "Tiles"
 [node name="Extra" type="Label" parent="Titles" unique_id=1776575268]
 visible = false
 layout_mode = 2
-text = "Enviroment"
+text = "Environment"
 
 [node name="Extra2" type="Label" parent="Titles" unique_id=46828454]
 visible = false
 layout_mode = 2
-text = "Enviroment"
+text = "Environment"
 
 [node name="Back" type="Button" parent="." unique_id=1360267169]
 offset_left = 56.0
