@@ -196,6 +196,7 @@ image_id = 2
 alex_only_id = 2
 memory_layer = NodePath("../Memory Layer")
 is_sadie_interactable = false
+uses_bad_sfx = true
 
 [node name="Memory Layer" type="CanvasLayer" parent="." unique_id=58658506]
 layer = 999

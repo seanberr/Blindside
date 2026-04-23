@@ -216,6 +216,7 @@ position = Vector2(-1, 135)
 image_id = 4
 memory_layer = NodePath("../Memory Layer")
 is_sadie_interactable = false
+uses_bad_sfx = true
 
 [node name="Memory Layer" type="CanvasLayer" parent="." unique_id=451312409]
 layer = 999

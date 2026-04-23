@@ -149,6 +149,7 @@ position = Vector2(-2237, 825)
 image_id = 6
 memory_layer = NodePath("../Memory Layer")
 is_sadie_interactable = false
+uses_bad_sfx = true
 
 [node name="Main Memory3" parent="." unique_id=1521126494 node_paths=PackedStringArray("memory_layer") instance=ExtResource("11_c4d4o")]
 position = Vector2(2490, 552)

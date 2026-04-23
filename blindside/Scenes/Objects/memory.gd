@@ -5,20 +5,20 @@ extends Sprite2D
 var memory_ended : bool = false
 var memory_endable : bool = false
 var memory_textures = ["uid://c0wgbjhgfelgw", 
-"uid://b0w2nj7tlapbk",
-"uid://cclfbeatgyc7v",
-"uid://bgu8kddr2xont",
-"uid://xj6weorafexr",
-"uid://dlxailk3mgf5",
-"uid://dl5qmrswwexri",
-"uid://b8giyahoseggc",
-"uid://dx8n0yjqkb771",
-"uid://c61tp7g8crcb4",
-"uid://b6bjf7xa7r4y6",
-"uid://chronnsem5dds",
-"uid://ccera5gq5hlfj",
-"uid://cplbvvlphvp",
-"uid://bnmlppuerqs7m"]
+"uid://35g645ejforj",
+"uid://cfvv6a15da5hj",
+"uid://4whdiacpsb82",
+"uid://cn2an080micv5",
+"uid://cmhr8ke27k8se",
+"uid://cvmgqi3by2bo4",
+"uid://d1tcq6puc1fda",
+"uid://cqv2jpxm6y47o",
+"uid://c0a608ccpqp4a",
+"uid://dljd3dqlac6se",
+"uid://cvmg6aa6n5a5o",
+"uid://bpe8t8iomvur1",
+"uid://buvvyk4ui0803",
+"uid://bysyi04r8cass",]
 
 func start(id : int):
 	self_modulate.a = 0

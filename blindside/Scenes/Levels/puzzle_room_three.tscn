@@ -530,18 +530,21 @@ position = Vector2(956, -487)
 image_id = 10
 memory_layer = NodePath("../Memory Layer")
 is_sadie_interactable = false
+uses_bad_sfx = true
 
 [node name="Memory3" parent="." unique_id=47255754 node_paths=PackedStringArray("memory_layer") instance=ExtResource("12_bqv5r")]
 position = Vector2(-540, -1290)
 image_id = 11
 memory_layer = NodePath("../Memory Layer")
 is_alex_interactable = false
+uses_bad_sfx = true
 
 [node name="Memory4" parent="." unique_id=1984929154 node_paths=PackedStringArray("memory_layer") instance=ExtResource("12_bqv5r")]
 position = Vector2(1068, -1288)
 image_id = 12
 memory_layer = NodePath("../Memory Layer")
 is_sadie_interactable = false
+uses_bad_sfx = true
 
 [node name="Memory Layer" type="CanvasLayer" parent="." unique_id=1119221503]
 layer = 999
