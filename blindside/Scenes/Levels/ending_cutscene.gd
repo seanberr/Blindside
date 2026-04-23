@@ -19,6 +19,7 @@ var screen_blur : float = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	AudioManager.sfx_manager.play_sound_randomizer(["Waterfall"] as Array[String], 0.0, 0.1, -25.0, 1.0)
 	sadie_area.body_entered.connect(on_sadie_entered)
 	alex_area.body_entered.connect(on_alex_entered)
 	sadie_area.body_exited.connect(on_sadie_exited)
@@ -85,7 +86,10 @@ func play_cutscene():
 	is_screen_blurred = false
 	is_blindness_muted = true
 	await get_tree().create_timer(10).timeout
+	AudioManager.sfx_manager.play_sound_randomizer(["Cerberus_Screech"] as Array[String], 0.0, 0.1, 0.0, 1.0)
+	AudioManager.sfx_manager.play_sound_randomizer(["Cerberus_Splash"] as Array[String], 0.0, 0.1, 0.0, 1.0)
 	cerberus.get_node("CerberusAnimator").play("Appear")
 	await get_tree().create_timer(2.5).timeout
+	AudioManager.sfx_manager.end_all_sounds()
 	TransitionHandler.transition_to_scene(credits_scene, [Vector2.ZERO, Vector2.ZERO])
 	Global.extras_unlocked = true

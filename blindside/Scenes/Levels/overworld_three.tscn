@@ -769,12 +769,14 @@ position = Vector2(678, 941)
 image_id = 13
 memory_layer = NodePath("../Memory Layer")
 is_alex_interactable = false
+uses_bad_sfx = true
 
 [node name="Memory4" parent="." unique_id=1756966620 node_paths=PackedStringArray("memory_layer") instance=ExtResource("10_q5dyw")]
 position = Vector2(-165, 1068)
 image_id = 14
 memory_layer = NodePath("../Memory Layer")
 is_sadie_interactable = false
+uses_bad_sfx = true
 
 [node name="Memory Layer" type="CanvasLayer" parent="." unique_id=1600111457]
 layer = 999

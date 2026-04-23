@@ -8,6 +8,7 @@ extends Node2D
 @export var is_alex_interactable : bool = false
 @export var destruction_timer : Timer
 @export var animator_scale : AnimationPlayer
+@export var uses_bad_sfx : bool
 var disabled : bool = false
 
 var memory_scene = preload("uid://cwpxtqk02ml5d")
@@ -22,6 +23,11 @@ func _ready() -> void:
 func interact():
 	if disabled:
 		return
+		
+	if !uses_bad_sfx:
+		AudioManager.sfx_manager.play_sound_randomizer(["Memory_2", "Memory_1"] as Array[String], 0.0, 0.1, -10.0, 1.0)
+	else:
+		AudioManager.sfx_manager.play_sound_randomizer(["Memory_Bad"] as Array[String], 0.0, 0.1, -10.0, 1.0)
 	
 	var new_memory = memory_scene.instantiate()
 	memory_layer.add_child(new_memory)
