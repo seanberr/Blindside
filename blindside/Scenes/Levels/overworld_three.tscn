@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b6dfhua1w4u1p" path="res://Scenes/Levels/level.gd" id="1_eve7n"]
 [ext_resource type="PackedScene" uid="uid://dyjicgdjdwsip" path="res://Scenes/Tileset/Test_Tileset.tscn" id="1_n62o8"]
-[ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="2_o3tq0"]
+[ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindness_modulate.tscn" id="2_o3tq0"]
 [ext_resource type="Texture2D" uid="uid://b5m2nx3wemc6l" path="res://Assets/Environment Assets/Vertical Transition foregrounds/Vertical_Transition_1920x1080_Shape_1_2.png" id="2_ssrkm"]
 [ext_resource type="Texture2D" uid="uid://bvf8leunmq4pe" path="res://Assets/Environment Assets/Vines/Vines_219x904_Shape_4_1_blockout.png" id="3_g05i1"]
 [ext_resource type="Texture2D" uid="uid://c4illhfd2lgbo" path="res://Assets/Environment Assets/Vines/Vines_219x904_Shape_5_1_blockout.png" id="3_hcjec"]

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dyjicgdjdwsip" path="res://Scenes/Tileset/Test_Tileset.tscn" id="4_on4bf"]
 [ext_resource type="Script" uid="uid://yqxrxe65rk32" path="res://Scenes/Objects/tiny_boulder.gd" id="5_tgk04"]
 [ext_resource type="PackedScene" uid="uid://ck8uic3tgkep1" path="res://Scenes/Objects/middeling_boulder.tscn" id="6_2nygi"]
-[ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="7_on4bf"]
+[ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindness_modulate.tscn" id="7_on4bf"]
 [ext_resource type="PackedScene" uid="uid://xd0tqko77cut" path="res://Scenes/Objects/ample_boulder.tscn" id="7_tgk04"]
 [ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/placeholder_bg.png" id="8_tgk04"]
 [ext_resource type="Script" uid="uid://df8jehy8wf8dx" path="res://Scenes/Objects/middeling_boulder.gd" id="8_wbehg"]

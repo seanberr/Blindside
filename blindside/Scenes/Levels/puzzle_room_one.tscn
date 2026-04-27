@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dyjicgdjdwsip" path="res://Scenes/Tileset/Test_Tileset.tscn" id="4_glmga"]
 [ext_resource type="PackedScene" uid="uid://bui05tqig5ktw" path="res://Scenes/Test Rooms/Objects/testing_pressure_plate.tscn" id="5_1udun"]
 [ext_resource type="PackedScene" uid="uid://dl6lckb1ahnpm" path="res://Scenes/Test Rooms/Objects/testing_locked_door.tscn" id="6_1g2nm"]
-[ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="8_8cf2k"]
+[ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindness_modulate.tscn" id="8_8cf2k"]
 [ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/placeholder_bg.png" id="9_vb710"]
 [ext_resource type="Shader" uid="uid://bbx0aks44plfh" path="res://colourswap.gdshader" id="10_kttiu"]
 [ext_resource type="Texture2D" uid="uid://d2jygat7yay0j" path="res://Assets/Environment Assets/Tree Assets/Tree Leaves 3840 x 2160 for Background Parallax/Tree_Leaves_3840x2160_Shape_5_4_Background.png" id="10_qq2eo"]

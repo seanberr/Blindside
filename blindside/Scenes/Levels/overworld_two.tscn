@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://303uanehxcp4" path="res://Assets/Environment Assets/Tree Assets/Foreground Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_5_1_Blockout.png" id="6_wwd1d"]
 [ext_resource type="Texture2D" uid="uid://bbja47mqh1f4s" path="res://Assets/Environment Assets/Flowers/Flowers_49x49_Shape_5.png" id="7_h58ll"]
 [ext_resource type="Texture2D" uid="uid://cstnbnb776u2j" path="res://Assets/Environment Assets/Tree Assets/Foreground Tree Leaves 1920 x 1080/Tree_Leaves_1920x1080_Shape_3_1_Blockout.png" id="7_mvvfc"]
-[ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="8_alkur"]
+[ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindness_modulate.tscn" id="8_alkur"]
 [ext_resource type="Texture2D" uid="uid://dmdx17og8u4o" path="res://Assets/Environment Assets/Flowers/Flowers_49x49_Shape_6.png" id="8_y125q"]
 [ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/placeholder_bg.png" id="9_alkur"]
 [ext_resource type="Texture2D" uid="uid://d1ue2pelsj0aq" path="res://Assets/Environment Assets/Flowers/Flowers_49x49_Shape_7.png" id="9_jdr1h"]

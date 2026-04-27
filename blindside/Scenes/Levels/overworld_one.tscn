@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bmupi1lyosig0" path="res://Assets/Puzzle Assets/Tree Blockade/Tree_Blockade_1920x1080_Shape_1_7.png" id="7_q8ch1"]
 [ext_resource type="PackedScene" uid="uid://chfo7m0gwps5d" path="res://Scenes/Levels/overworld_two.tscn" id="8_1tvsh"]
 [ext_resource type="Texture2D" uid="uid://b77yo5gjls264" path="res://Assets/Environment Assets/Tree Assets/Foreground Trees 1920 x 1080/Tree_1920x1080_Shape_3_1_Blockout.png" id="8_cn0fm"]
-[ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindless_modulate.tscn" id="9_1tvsh"]
+[ext_resource type="PackedScene" uid="uid://bvojyqwoxgdac" path="res://Scenes/Canvas Modulates/blindness_modulate.tscn" id="9_1tvsh"]
 [ext_resource type="Texture2D" uid="uid://dtgna48q1s80y" path="res://Assets/Environment Assets/Tree Assets/Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_7_1_Blockout.png" id="9_lg5ic"]
 [ext_resource type="Texture2D" uid="uid://rvqe3fyykkcu" path="res://Assets/Environment Assets/Tree Assets/Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_10_1_Blockout.png" id="10_vykd2"]
 [ext_resource type="Texture2D" uid="uid://ddbvtmmmy4xoj" path="res://Assets/Environment Assets/Rock Assets/Rocks 728x380/Rock_728x380_Shape_3_1_BaseShadow.png" id="11_x0idg"]
