@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://dm273486elj8x" path="res://Assets/Environment Assets/Tree Assets/Trees 1920 x 1080/Tree_1920x1080_Shape_3_4.png" id="17_e5u1x"]
 [ext_resource type="Texture2D" uid="uid://c1nhyr35fegyo" path="res://Assets/Environment Assets/Tree Assets/Trees 1920 x 1080/Tree_1920x1080_Shape_4_2.png" id="18_1dqk1"]
 [ext_resource type="Texture2D" uid="uid://cstnbnb776u2j" path="res://Assets/Environment Assets/Tree Assets/Foreground Tree Leaves 1920 x 1080/Tree_Leaves_1920x1080_Shape_3_1_Blockout.png" id="19_3mihu"]
-[ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="19_kjshs"]
+[ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/interactable_memory.tscn" id="19_kjshs"]
 [ext_resource type="Texture2D" uid="uid://biqefscvrilyx" path="res://Assets/Environment Assets/Rock Assets/Rocks 364x190/Rock_364x190_Shape_2_1_BaseShadow.png" id="20_7hj02"]
 [ext_resource type="Texture2D" uid="uid://c8w6gyc0aee6" path="res://Assets/Environment Assets/Rock Assets/Rocks 364x190/Rock_364x190_Shape_3_1_BaseShadow.png" id="21_ei8l1"]
 [ext_resource type="Texture2D" uid="uid://csk57yy8l126y" path="res://Assets/Environment Assets/Rock Assets/Rocks 364x190/Rock_364x190_Shape_4_1_BaseShadow.png" id="22_eac0b"]

@@ -19,7 +19,7 @@
 [ext_resource type="Script" uid="uid://dib3u6wfvt43w" path="res://Scenes/Levels/end_tree.gd" id="16_t0vj2"]
 [ext_resource type="PackedScene" uid="uid://dddc45n5ss4es" path="res://Scenes/Objects/door.tscn" id="18_rn02p"]
 [ext_resource type="PackedScene" uid="uid://dvfktk3cubbiv" path="res://Scenes/Levels/puzzle_room_three.tscn" id="19_1qgvn"]
-[ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="20_1qgvn"]
+[ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/interactable_memory.tscn" id="20_1qgvn"]
 [ext_resource type="Texture2D" uid="uid://5dsqkma71nda" path="res://Assets/Rock Platforms/Rock_Platform_500x500_shape_1.png" id="21_uaovn"]
 [ext_resource type="Texture2D" uid="uid://dejyldi4doqrb" path="res://Assets/Rock Platforms/Rock_Platform_500x500_shape_4.png" id="22_4mdi2"]
 [ext_resource type="Texture2D" uid="uid://bmvvmnoqu56qw" path="res://Assets/Environment Assets/Rock Assets/Rocks 364x190/Rock_364x190_Shape_1_1_BaseShadow.png" id="23_q4q7l"]

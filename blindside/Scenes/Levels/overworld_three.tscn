@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/placeholder_bg.png" id="3_hyhhq"]
 [ext_resource type="Texture2D" uid="uid://kgdnky8veqfj" path="res://Assets/Environment Assets/Vines/Vines_219x904_Shape_6_1_blockout.png" id="4_q5dyw"]
 [ext_resource type="Texture2D" uid="uid://c6gvndi3ejplh" path="res://Assets/Background/BG Gradients/BG_Gradient_Four.png" id="5_wkvbi"]
-[ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="10_q5dyw"]
+[ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/interactable_memory.tscn" id="10_q5dyw"]
 [ext_resource type="Texture2D" uid="uid://cf3bvfddc1e6p" path="res://Assets/Boat/Boat_954x793_whole.png" id="11_ccd06"]
 [ext_resource type="Texture2D" uid="uid://6jpvnvxadbj3" path="res://Assets/Doors/Stone_door_open_1930x1886.png" id="12_mcfoa"]
 [ext_resource type="Script" uid="uid://b5p0op1da1b75" path="res://Scenes/Levels/ending_cutscene.gd" id="13_rc17o"]

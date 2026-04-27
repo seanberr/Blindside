@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c5wkmoo2jh5is" path="res://Scenes/Objects/glowing_platform.tscn" id="10_qo53q"]
 [ext_resource type="PackedScene" uid="uid://ccqeg5kw75naw" path="res://Scenes/Objects/player_detection_area.tscn" id="11_6uuda"]
 [ext_resource type="Script" uid="uid://d3ilcs6g8h07p" path="res://Scenes/Levels/sadie_position_puppet.gd" id="11_r2jiu"]
-[ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="12_bqv5r"]
+[ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/interactable_memory.tscn" id="12_bqv5r"]
 [ext_resource type="Script" uid="uid://chd3hhtgy0aey" path="res://Scenes/Levels/transition_area.gd" id="14_2pqgm"]
 [ext_resource type="Texture2D" uid="uid://b5m2nx3wemc6l" path="res://Assets/Environment Assets/Vertical Transition foregrounds/Vertical_Transition_1920x1080_Shape_1_2.png" id="15_4dgjf"]
 [ext_resource type="PackedScene" uid="uid://c3jwa7r1tb61w" path="res://Scenes/Levels/overworld_three.tscn" id="15_7iset"]

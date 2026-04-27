@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dmdx17og8u4o" path="res://Assets/Environment Assets/Flowers/Flowers_49x49_Shape_6.png" id="8_y125q"]
 [ext_resource type="Texture2D" uid="uid://hq3y3shxinjd" path="res://Assets/Background/placeholder_bg.png" id="9_alkur"]
 [ext_resource type="Texture2D" uid="uid://d1ue2pelsj0aq" path="res://Assets/Environment Assets/Flowers/Flowers_49x49_Shape_7.png" id="9_jdr1h"]
-[ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="11_c4d4o"]
+[ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/interactable_memory.tscn" id="11_c4d4o"]
 [ext_resource type="Texture2D" uid="uid://h16m87pcte0i" path="res://Assets/Environment Assets/Flowers/Flowers_967x105_Shape_1.png" id="11_tain3"]
 [ext_resource type="Texture2D" uid="uid://bk26g6oujheq8" path="res://Assets/Environment Assets/Vines/Vines_219x904_Shape_3_2.png" id="12_gw21k"]
 [ext_resource type="Texture2D" uid="uid://bhqwxk3obeywn" path="res://Assets/Environment Assets/Vines/Vines_219x904_Shape_2_2.png" id="13_jgg8d"]

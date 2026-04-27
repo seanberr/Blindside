@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dbcbof1f0e3ko" path="res://Assets/Environment Assets/Bush Assets/Bush_364x190_Shape_5_6.png" id="18_17e3n"]
 [ext_resource type="Script" uid="uid://iu1gogkp5rn7" path="res://Scenes/Levels/input_tooltip.gd" id="19_fisls"]
 [ext_resource type="Texture2D" uid="uid://8sdpn42l8yer" path="res://Assets/Environment Assets/Bush Assets/Bush_364x190_Shape_2_6.png" id="19_n6c8m"]
-[ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/testing_memory.tscn" id="20_1ciky"]
+[ext_resource type="PackedScene" uid="uid://dk6kso1q6jnw0" path="res://Scenes/Test Rooms/Objects/interactable_memory.tscn" id="20_1ciky"]
 [ext_resource type="Texture2D" uid="uid://c87pgyrfdrbuv" path="res://Assets/Environment Assets/Tree Assets/Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_1_1.png" id="20_1w24a"]
 [ext_resource type="Texture2D" uid="uid://d0m2yuwvlp6mb" path="res://Assets/Environment Assets/Tree Assets/Tree Trunks 1920 x 1080/Tree_Trunk_1920x1080_Shape_3_2.png" id="21_kcwya"]
 [ext_resource type="Texture2D" uid="uid://gdxh30v12p58" path="res://Assets/Background/BG Gradients/Gradient_BG_1.tres" id="26_usyps"]
